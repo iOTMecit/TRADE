@@ -10,6 +10,7 @@ For linux:
 
 After installation go to directory of code to be analyze by terminal
 After:
+
 	pmd cpd --minimum-tokens 30 --dir components/ --language python --format text > cpd_results.xml
 
 
