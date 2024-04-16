@@ -2,15 +2,15 @@
 
 For linux:
 
-$ cd $HOME
-$ wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F7.0.0/pmd-dist-7.0.0-bin.zip
-$ unzip pmd-dist-7.0.0-bin.zip
-$ alias pmd="$HOME/pmd-bin-7.0.0/bin/pmd"
-$ pmd check -d /usr/src -R rulesets/java/quickstart.xml -f text
+	cd $HOME
+	wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F7.0.0/pmd-dist-7.0.0-bin.zip
+	unzip pmd-dist-7.0.0-bin.zip
+	alias pmd="$HOME/pmd-bin-7.0.0/bin/pmd"
+	pmd check -d /usr/src -R rulesets/java/quickstart.xml -f text
 
 After installation go to directory of code to be analyze by terminal
 After:
-$ pmd cpd --minimum-tokens 30 --dir components/ --language python --format text > cpd_results.xml
+	pmd cpd --minimum-tokens 30 --dir components/ --language python --format text > cpd_results.xml
 
 
 # Nicad
