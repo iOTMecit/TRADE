@@ -1,0 +1,102 @@
+<clones>
+<systeminfo processor="nicad6" system="Controllerx" granularity="functions-blind" threshold="30%" minlines="10" maxlines="2500"/>
+<cloneinfo npcs="30" npairs="5"/>
+<runinfo ncompares="21" cputime="18795"/>
+<classinfo nclasses="2"/>
+
+<class classid="1" nclones="2" nlines="12" similarity="83">
+<source file="systems/Controllerx/tests/unit_tests/cx_core/action-types/predefined_action_type_test.py" startline="87" endline="101" pcid="12">
+def test_get_arguments_general(
+    action_args: ActionParams,
+    user_args: Dict[str, Any],
+    expected: Optional[Tuple[ActionParams, Dict[str, Any]]],
+) -> None:
+    async def test_fn(a: str, b: int = 2) -> None:
+        pass
+
+    with wrap_execution(error_expected=expected is None, exception=ValueError):
+        output = _get_arguments(test_fn, action_args, user_args, None)
+
+    if expected is not None:
+        assert expected == output
+
+
+</source>
+<source file="systems/Controllerx/tests/unit_tests/cx_core/action-types/predefined_action_type_test.py" startline="125" endline="138" pcid="14">
+def test_get_arguments_with_extra(
+    action_args: ActionParams,
+    user_args: Dict[str, Any],
+    extra: Optional[EventData],
+    expected: Optional[Tuple[ActionParams, Dict[str, Any]]],
+) -> None:
+    async def test_fn(a: str, b: int, extra: Optional[EventData] = None) -> None:
+        pass
+
+    with wrap_execution(error_expected=expected is None, exception=ValueError):
+        output = _get_arguments(test_fn, action_args, user_args, extra)
+
+    if expected is not None:
+        assert expected == output
+</source>
+</class>
+
+<class classid="2" nclones="4" nlines="12" similarity="81">
+<source file="systems/Controllerx/tests/unit_tests/cx_core/stepper/bounce_stepper_test.py" startline="26" endline="38" pcid="17">
+def test_bounce_stepper(
+    min_max: MinMax,
+    value: int,
+    steps: int,
+    direction: Literal["up", "down"],
+    expected_value: int,
+    expected_direction: Literal["up", "down"],
+) -> None:
+    stepper = BounceStepper(min_max, steps)
+    stepper_output = stepper.step(value, direction)
+    assert stepper_output.next_value == expected_value
+    assert stepper_output.next_direction == expected_direction
+    assert not stepper_output.exceeded
+</source>
+<source file="systems/Controllerx/tests/unit_tests/cx_core/stepper/loop_stepper_test.py" startline="28" endline="38" pcid="18">
+def test_loop_stepper(
+    min_max: MinMax,
+    value: int,
+    steps: int,
+    direction: Literal["up", "down"],
+    expected_value: int,
+) -> None:
+    stepper = LoopStepper(min_max, steps)
+    stepper_output = stepper.step(value, direction)
+    assert stepper_output.next_value == expected_value
+    assert not stepper_output.exceeded
+</source>
+<source file="systems/Controllerx/tests/unit_tests/cx_core/stepper/stop_stepper_test.py" startline="141" endline="154" pcid="20">
+def test_stop_stepper_step(
+    min_max: MinMax,
+    value: int,
+    steps: int,
+    direction: Literal["up", "down"],
+    expected_value: int,
+    expected_exceeded: bool,
+) -> None:
+    stepper = StopStepper(min_max, steps)
+
+    stepper_output = stepper.step(value, direction)
+
+    assert stepper_output.next_value == expected_value
+    assert stepper_output.exceeded == expected_exceeded
+</source>
+<source file="systems/Controllerx/tests/unit_tests/cx_core/stepper/index_loop_stepper_test.py" startline="20" endline="29" pcid="26">
+def test_index_loop_stepper(
+    size: int,
+    value: int,
+    direction: Literal["up", "down"],
+    expected_value: int,
+) -> None:
+    stepper = IndexLoopStepper(size)
+    stepper_output = stepper.step(value, direction)
+    assert stepper_output.next_value == expected_value
+    assert not stepper_output.exceeded
+</source>
+</class>
+
+</clones>

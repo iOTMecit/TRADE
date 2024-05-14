@@ -1,0 +1,19 @@
+<clones>
+<systeminfo processor="nicad6" system="Controllerx" granularity="functions-blind" threshold="30%" minlines="10" maxlines="2500"/>
+<cloneinfo npcs="30" npairs="5"/>
+<runinfo ncompares="21" cputime="18795"/>
+<classinfo nclasses="2"/>
+
+<class classid="1" nclones="2" nlines="12" similarity="83">
+<source file="systems/Controllerx/tests/unit_tests/cx_core/action-types/predefined_action_type_test.py" startline="87" endline="101" pcid="12"></source>
+<source file="systems/Controllerx/tests/unit_tests/cx_core/action-types/predefined_action_type_test.py" startline="125" endline="138" pcid="14"></source>
+</class>
+
+<class classid="2" nclones="4" nlines="12" similarity="81">
+<source file="systems/Controllerx/tests/unit_tests/cx_core/stepper/bounce_stepper_test.py" startline="26" endline="38" pcid="17"></source>
+<source file="systems/Controllerx/tests/unit_tests/cx_core/stepper/loop_stepper_test.py" startline="28" endline="38" pcid="18"></source>
+<source file="systems/Controllerx/tests/unit_tests/cx_core/stepper/stop_stepper_test.py" startline="141" endline="154" pcid="20"></source>
+<source file="systems/Controllerx/tests/unit_tests/cx_core/stepper/index_loop_stepper_test.py" startline="20" endline="29" pcid="26"></source>
+</class>
+
+</clones>

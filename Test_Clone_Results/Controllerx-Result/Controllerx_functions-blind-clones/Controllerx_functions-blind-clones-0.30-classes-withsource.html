@@ -1,0 +1,179 @@
+<html>
+<head>
+    <title>NiCad6 Clone Report</title>
+    <style type="text/css">
+        body {font-family:sans-serif;}
+        table {background-color:white; border:0px; padding:0px; border-spacing:4px; width:auto; margin-left:30px; margin-right:auto;}
+        td {background-color:rgba(192,212,238,0.8); border:0px; padding:8px; width:auto; vertical-align:top; border-radius:8px}
+        pre {background-color:white; padding:4px;}
+        a {color:darkblue;}
+    </style>
+</head>
+<body>
+<h2>NiCad6 Clone Report</h2>
+<table>
+<tr style="font-size:14pt">
+<td><b>System:</b> &nbsp; Controllerx</td>
+<td><b>Clone pairs:</b> &nbsp; 5</td>
+<td><b>Clone classes:</b> &nbsp; 2</td>
+</tr>
+<tr style="font-size:12pt">
+<td style="background-color:white">Clone type: &nbsp; 3-2</td>
+<td style="background-color:white">Granularity: &nbsp; functions-blind</td>
+<td style="background-color:white">Max diff threshold: &nbsp; 30%</td>
+<td style="background-color:white">Clone size: &nbsp; 10 - 2500 lines</td>
+<td style="background-color:white">Total functions-blind: &nbsp; 30</td>
+</tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 1:</b> &nbsp; 2 fragments, nominal size 12 lines, similarity 83%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag12')" href="javascript:;">
+Controllerx/tests/unit_tests/cx_core/action-types/predefined_action_type_test.py: 87-101
+</a>
+<div class="mid" id="frag12" style="display:none"><pre>
+def test_get_arguments_general(
+    action_args: ActionParams,
+    user_args: Dict[str, Any],
+    expected: Optional[Tuple[ActionParams, Dict[str, Any]]],
+) -&gt; None:
+    async def test_fn(a: str, b: int = 2) -&gt; None:
+        pass
+
+    with wrap_execution(error_expected=expected is None, exception=ValueError):
+        output = _get_arguments(test_fn, action_args, user_args, None)
+
+    if expected is not None:
+        assert expected == output
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag14')" href="javascript:;">
+Controllerx/tests/unit_tests/cx_core/action-types/predefined_action_type_test.py: 125-138
+</a>
+<div class="mid" id="frag14" style="display:none"><pre>
+def test_get_arguments_with_extra(
+    action_args: ActionParams,
+    user_args: Dict[str, Any],
+    extra: Optional[EventData],
+    expected: Optional[Tuple[ActionParams, Dict[str, Any]]],
+) -&gt; None:
+    async def test_fn(a: str, b: int, extra: Optional[EventData] = None) -&gt; None:
+        pass
+
+    with wrap_execution(error_expected=expected is None, exception=ValueError):
+        output = _get_arguments(test_fn, action_args, user_args, extra)
+
+    if expected is not None:
+        assert expected == output
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 2:</b> &nbsp; 4 fragments, nominal size 12 lines, similarity 81%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag17')" href="javascript:;">
+Controllerx/tests/unit_tests/cx_core/stepper/bounce_stepper_test.py: 26-38
+</a>
+<div class="mid" id="frag17" style="display:none"><pre>
+def test_bounce_stepper(
+    min_max: MinMax,
+    value: int,
+    steps: int,
+    direction: Literal["up", "down"],
+    expected_value: int,
+    expected_direction: Literal["up", "down"],
+) -&gt; None:
+    stepper = BounceStepper(min_max, steps)
+    stepper_output = stepper.step(value, direction)
+    assert stepper_output.next_value == expected_value
+    assert stepper_output.next_direction == expected_direction
+    assert not stepper_output.exceeded
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag18')" href="javascript:;">
+Controllerx/tests/unit_tests/cx_core/stepper/loop_stepper_test.py: 28-38
+</a>
+<div class="mid" id="frag18" style="display:none"><pre>
+def test_loop_stepper(
+    min_max: MinMax,
+    value: int,
+    steps: int,
+    direction: Literal["up", "down"],
+    expected_value: int,
+) -&gt; None:
+    stepper = LoopStepper(min_max, steps)
+    stepper_output = stepper.step(value, direction)
+    assert stepper_output.next_value == expected_value
+    assert not stepper_output.exceeded
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag20')" href="javascript:;">
+Controllerx/tests/unit_tests/cx_core/stepper/stop_stepper_test.py: 141-154
+</a>
+<div class="mid" id="frag20" style="display:none"><pre>
+def test_stop_stepper_step(
+    min_max: MinMax,
+    value: int,
+    steps: int,
+    direction: Literal["up", "down"],
+    expected_value: int,
+    expected_exceeded: bool,
+) -&gt; None:
+    stepper = StopStepper(min_max, steps)
+
+    stepper_output = stepper.step(value, direction)
+
+    assert stepper_output.next_value == expected_value
+    assert stepper_output.exceeded == expected_exceeded
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag26')" href="javascript:;">
+Controllerx/tests/unit_tests/cx_core/stepper/index_loop_stepper_test.py: 20-29
+</a>
+<div class="mid" id="frag26" style="display:none"><pre>
+def test_index_loop_stepper(
+    size: int,
+    value: int,
+    direction: Literal["up", "down"],
+    expected_value: int,
+) -&gt; None:
+    stepper = IndexLoopStepper(size)
+    stepper_output = stepper.step(value, direction)
+    assert stepper_output.next_value == expected_value
+    assert not stepper_output.exceeded
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<script language="JavaScript">
+function ShowHide(divId) { 
+    if(document.getElementById(divId).style.display == 'none') {
+        document.getElementById(divId).style.display='block';
+    } else { 
+        document.getElementById(divId).style.display = 'none';
+    } 
+}
+</script>
+</body>
+</html>

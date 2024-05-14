@@ -1,0 +1,1438 @@
+<source file="systems/Domogik/tests/common/testserial.py" startline="46" endline="53">
+def to_bytes(seq) :
+INDENT
+    b = bytearray()
+    for item in seq :
+    INDENT
+        b.append(item)
+    DEDENT
+    return bytes(b)
+
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testserial.py" startline="69" endline="72">
+def __init__(self, value) :
+INDENT
+    Exception.__init__(self)
+    self.value = value
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testserial.py" startline="73" endline="76">
+def __str__(self) :
+INDENT
+    return repr(self.value)
+
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testserial.py" startline="81" endline="112">
+def __init__(self, port, baudrate = None, bytesize = None, parity = None, stopbits = None, timeout = None, xonxoff = None, rtscts = None, writeTimeout = None, dsrdtr = None, interCharTimeout = None) :
+INDENT
+    print (u"Fake serial device created. The fake data in the file '{0}' will be used".format(port))
+    try :
+    INDENT
+        json_fp = open(port)
+        self.data = json.load(json_fp)
+        json_fp.close()
+    DEDENT
+    except :
+    INDENT
+        raise SerialException(u"Error while opening fake serial device from file {0} : {1}".format(port, traceback.format_exc()))
+    DEDENT
+    self.history_idx = 0
+    self.loop_idx = 0
+
+    self.first_read = True
+
+    self.next_responses = None
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testserial.py" startline="113" endline="115">
+def flush(self) :
+INDENT
+    pass
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testserial.py" startline="116" endline="118">
+def close(self) :
+INDENT
+    pass
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testserial.py" startline="119" endline="139">
+def write(self, data) :
+INDENT
+    found = False
+    for mock in self.data ['responses'] :
+    INDENT
+        if mock ['type'] == "data" :
+        INDENT
+            if data == mock ['when'] :
+            INDENT
+                found = True
+                responses = mock ['do']
+                data_for_log = data
+            DEDENT
+        DEDENT
+        elif mock ['type'] == "data-hex" :
+        INDENT
+            if binascii.hexlify(data).lower() == mock ['when'].lower() :
+            INDENT
+                found = True
+                responses = mock ['do']
+                data_for_log = binascii.hexlify(data)
+            DEDENT
+        DEDENT
+    DEDENT
+    if found :
+    INDENT
+        print (u"Found mock responses for data written : {0}. Response is {1}".format(data_for_log, responses))
+        self.next_responses = responses
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testserial.py" startline="140" endline="142">
+def readline(self, length = 1) :
+INDENT
+    return self.read(length)
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testserial.py" startline="143" endline="225">
+def read(self, length = 1) :
+INDENT
+    if self.first_read :
+    INDENT
+        print ("Before the first read, we wait for 30 seconds...")
+        time.sleep(30)
+        self.first_read = False
+    DEDENT
+    while True :
+    INDENT
+        if self.next_responses ! = None :
+        INDENT
+            response = self.next_responses [0]
+            if response ['type'] == "data-hex" :
+            INDENT
+                print (u"Action = reply to a write action / Delay = {0} / Data = {1}".format(response ['delay'], response ['data']))
+                data = binascii.unhexlify(response ['data'])
+            DEDENT
+            elif response ['type'] == "data" :
+            INDENT
+                print (u"Action = reply to a write action / Delay = {0} / Data = {1}".format(response ['delay'], binascii.hexlify(response ['data'])))
+                data = response ['data']
+            DEDENT
+            time.sleep(int(response ['delay']))
+            self.next_responses.pop(0)
+            if self.next_responses == [] :
+            INDENT
+                self.next_responses = None
+            DEDENT
+            return data
+
+        DEDENT
+        elif self.history_idx < len(self.data ['history']) :
+        INDENT
+            action = self.data ['history'] [self.history_idx] ['action']
+            description = self.data ['history'] [self.history_idx] ['description']
+            print (u"Action = {0} / Description = {1}".format(action, description))
+            if action == 'data' :
+            INDENT
+                value = self.data ['history'] [self.history_idx] ['data']
+                print (value)
+                self.history_idx += 1
+                return value
+            DEDENT
+            elif action == 'data-hex' :
+            INDENT
+                value = binascii.unhexlify(self.data ['history'] [self.history_idx] ['data'])
+                self.history_idx += 1
+                return value
+            DEDENT
+            elif action == 'wait' :
+            INDENT
+                delay = self.data ['history'] [self.history_idx] ['delay']
+                print (u" => wait for {0}s".format(delay))
+                self.history_idx += 1
+                time.sleep(delay)
+            DEDENT
+            else :
+            INDENT
+                print (u"Unkwown action : {0}".format(action))
+                self.history_idx += 1
+            DEDENT
+        DEDENT
+        else :
+        INDENT
+            if self.data ['loop'] == [] :
+            INDENT
+                raise SerialException(u"There is nothing else to read in the fake serial device")
+            DEDENT
+            else :
+            INDENT
+                print ("The history has ended...we are in the loop")
+                if self.loop_idx == len(self.data ['loop']) :
+                INDENT
+                    self.loop_idx = 0
+                DEDENT
+                action = self.data ['loop'] [self.loop_idx] ['action']
+                description = self.data ['loop'] [self.loop_idx] ['description']
+                print (u"Action = {0} / Description = {1}".format(action, description))
+                if action == 'data' :
+                INDENT
+                    value = self.data ['loop'] [self.loop_idx] ['data']
+                    print (value)
+                    self.loop_idx += 1
+                    return value
+                DEDENT
+                elif action == 'data-hex' :
+                INDENT
+                    value = binascii.unhexlify(self.data ['loop'] [self.loop_idx] ['data'])
+                    self.loop_idx += 1
+                    return value
+                DEDENT
+                elif action == 'wait' :
+                INDENT
+                    delay = self.data ['loop'] [self.loop_idx] ['delay']
+                    print (u" => wait for {0}s".format(delay))
+                    self.loop_idx += 1
+                    time.sleep(delay)
+                DEDENT
+                else :
+                INDENT
+                    print (u"Unkwown action : {0}".format(action))
+                    self.loop_idx += 1
+
+                DEDENT
+            DEDENT
+        DEDENT
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/templatetestcase.py" startline="57" endline="62">
+def setUp(self) :
+INDENT
+    print (u"\n------------------------------------------------------------------")
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/templatetestcase.py" startline="66" endline="136">
+def wait_for_mq(self, device_id = None, data = {}, timeout = 10) :
+INDENT
+    msg = MQMessage()
+    msg.set_action('device.get')
+    mq_client = MQSyncReq(zmq.Context())
+    result = mq_client.request('admin', msg.get(), timeout = 10)
+    if not result :
+    INDENT
+        raise RuntimeError(u"Unable to retrieve the device list, max attempt achieved : {0}".format(max_attempt))
+        return False
+    DEDENT
+    else :
+    INDENT
+        device_list = result.get_data() ['devices']
+    DEDENT
+    for dev in device_list :
+    INDENT
+        if dev ['id'] == device_id :
+        INDENT
+            device = dev
+
+        DEDENT
+    DEDENT
+    timeout = timeout * 1.05
+
+    do_loop = True
+    time_start = time.time()
+    while do_loop :
+    INDENT
+        cli = MQSyncSub(zmq.Context(), "test", ["client.sensor", "plugin.status"])
+        resp = cli.wait_for_event()
+        if resp ['id'].startswith("client.sensor") :
+        INDENT
+            res = json.loads(resp ['content'])
+            print ("MQ client.sensor message received. Data = {0}".format(res))
+            sensors_id = {}
+            is_ok = True
+            for key in data :
+            INDENT
+                for a_sensor in device ['sensors'] :
+                INDENT
+                    if key == a_sensor :
+                    INDENT
+                        sensor_id = str(device ['sensors'] [a_sensor] ['id'])
+                        print ("{0} vs {1}".format(res [sensor_id], data [key]))
+                        if res [sensor_id] ! = data [key] :
+                        INDENT
+                            is_ok = False
+                        DEDENT
+                    DEDENT
+                DEDENT
+            DEDENT
+            if is_ok :
+            INDENT
+                return True
+
+            DEDENT
+            if time.time() - time_start > timeout :
+            INDENT
+                raise RuntimeError("No MQ message received before the timeout reached")
+            DEDENT
+        DEDENT
+        else :
+        INDENT
+            if (time.time() - time_start) > timeout :
+            INDENT
+                raise RuntimeError("No MQ message received before the timeout reached")
+            DEDENT
+        DEDENT
+    DEDENT
+    return False
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/templatetestcase.py" startline="137" endline="140">
+def on_message(self, msg_id, content) :
+INDENT
+    print ("MQ => {0}".format(msg_id))
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/templatetestcase.py" startline="143" endline="174">
+def wait_for_xpl(self, xpltype = None, xplschema = None, xplsource = None, data = {}, timeout = 10) :
+INDENT
+    self._xpl_received = Event()
+    criteria = {'schema' : xplschema,
+        'xpltype' : xpltype,
+        'xplsource' : xplsource}
+    for key in data :
+    INDENT
+        criteria [key] = str(data [key])
+    DEDENT
+    listener = Listener(self._wait_for_xpl_cb,
+        self.myxpl,
+        criteria)
+
+    timeout = timeout * 1.05
+    self._xpl_received.wait(timeout)
+    if not self._xpl_received.is_set() :
+    INDENT
+        raise RuntimeError("No xPL message received")
+    DEDENT
+    print (u"xPL message received : {0}".format(self.xpl_data))
+    listener.unregister()
+    return True
+
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/templatetestcase.py" startline="175" endline="184">
+def _wait_for_xpl_cb(self, message) :
+INDENT
+    self._xpl_received.set()
+    self.xpl_data = message
+
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/templatetestcase.py" startline="185" endline="201">
+def is_interval_of(self, interval, delta_to_check) :
+INDENT
+    delta_seconds = delta_to_check.total_seconds()
+    print (u"Compare the delta of {0} seconds to the required interval of {1} seconds".format(delta_seconds, interval))
+    diff = abs(delta_seconds - interval)
+    five_percent_of_interval = 0.05 * interval
+    if diff > five_percent_of_interval :
+    INDENT
+        raise RuntimeError("There is a difference of {0} seconds between the required interval and the measured time. This is more than 5% of the required interval (5% = {1} seconds)".format(diff, five_percent_of_interval))
+    DEDENT
+    else :
+    INDENT
+        print (u"There is a difference of {0} seconds between the required interval and the measured time. This is less than 5% of the required interval (5% = {1} seconds)".format(diff, five_percent_of_interval))
+        return True
+
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testsensor.py" startline="50" endline="66">
+def __init__(self, device_id, sensor_reference) :
+INDENT
+    self.rest_url = get_rest_url()
+
+    self.device_id = device_id
+    self.sensor_reference = sensor_reference
+    try :
+    INDENT
+        self.sensor_id = self.get_sensor_id()
+    DEDENT
+    except :
+    INDENT
+        self.sensor_id = None
+
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testsensor.py" startline="67" endline="94">
+def get_sensor_id(self) :
+INDENT
+    print (u"Get the sensor id for device_id={0}, sensor_reference={1}".format(self.device_id, self.sensor_reference))
+    response = requests.get("{0}/device/{1}".format(self.rest_url, self.device_id), headers = {'content-type' : 'application/x-www-form-urlencoded'})
+    print (u"Response : [{0}]".format(response.status_code))
+    if response.status_code ! = 200 :
+    INDENT
+        raise RuntimeError("Error when looking for the sensor id")
+    DEDENT
+    device = json.loads(response.text)
+    if not device ['sensors'].has_key(self.sensor_reference) :
+    INDENT
+        raise RuntimeError("There is no sensor named '{0}' for the device id {1}".format(self.sensor_reference, self.device_id))
+    DEDENT
+    sensor_id = device ['sensors'] [self.sensor_reference] ['id']
+
+    print (u"The sensor id is '{0}'".format(sensor_id))
+    return sensor_id
+
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testsensor.py" startline="95" endline="118">
+def get_last_value(self) :
+INDENT
+    print (u"Get the last value for sensor id={0} / name={1}".format(self.sensor_id, self.sensor_reference))
+    print (u"(but before, wait for 1s to be sure the value has been inserted in database...)")
+    time.sleep(1)
+    response = requests.get("{0}/sensor/{1}".format(self.rest_url, self.sensor_id), headers = {'content-type' : 'application/x-www-form-urlencoded'})
+    print (u"Response : [{0}]".format(response.status_code))
+    if response.status_code ! = 200 :
+    INDENT
+        raise RuntimeError("Error when looking for the sensor")
+    DEDENT
+    sensor = json.loads(response.text)
+    value = sensor ['last_value']
+    timestamp = sensor ['last_received']
+    print (u"Last value : timestamp = {0} / value = {1}".format(timestamp, value))
+    return (timestamp, value)
+
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testplugin.py" startline="48" endline="59">
+def __init__(self, name, host) :
+INDENT
+    self.name = name
+    self.host = host
+    self.type = "plugin"
+    self.plugin_status = None
+    self.count = 0
+    MQAsyncSub.__init__(self, zmq.Context(), 'test', ['plugin.status'])
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testplugin.py" startline="60" endline="83">
+def request_startup(self) :
+INDENT
+    print (u"Request plugin startup to the manager for '{0}' on '{1}'".format(self.name, self.host))
+    cli = MQSyncReq(zmq.Context())
+    msg = MQMessage()
+    msg.set_action('plugin.start.do')
+    msg.add_data('type', "plugin")
+    msg.add_data('name', self.name)
+    msg.add_data('host', self.host)
+    result = cli.request('manager', msg.get(), timeout = 10)
+    if result :
+    INDENT
+        msgid, content = result.get()
+        content = json.loads(content)
+        print (u"Response from the manager : {0}".format(content))
+        if content ['status'] :
+        INDENT
+            print (u"Plugin started")
+            return True
+        DEDENT
+        else :
+        INDENT
+            print (u"Error : plugin not started")
+            return False
+        DEDENT
+    DEDENT
+    else :
+    INDENT
+        raise RuntimeError("MQ Timeout when requesting manager to start the plugin")
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testplugin.py" startline="84" endline="113">
+def request_stop(self) :
+INDENT
+    print (u"Request plugin to stop : '{0}' on '{1}'".format(self.name, self.host))
+    cli = MQSyncReq(zmq.Context())
+    msg = MQMessage()
+    msg.set_action('plugin.stop.do')
+    msg.add_data('type', "plugin")
+    msg.add_data('name', self.name)
+    msg.add_data('host', self.host)
+    result = cli.request("plugin-{0}.{1}".format(self.name, self.host), msg.get(), timeout = 10)
+    return True
+
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testplugin.py" startline="114" endline="133">
+def wait_for_event(self, event, timeout = 60) :
+INDENT
+    self.count = 0
+    print (u"Start listening to MQ...")
+    IOLoop.instance().start()
+
+    if self.plugin_status == event :
+    INDENT
+        print (u"Event '{0}' detected".format(event))
+        return True
+    DEDENT
+    else :
+    INDENT
+        print (u"Plugin not in status '{0}' : status = {1}".format(event, self.plugin_status))
+        return False
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testplugin.py" startline="134" endline="162">
+def on_message(self, msgid, content) :
+INDENT
+    if msgid == "plugin.status" :
+    INDENT
+        if self.count == 0 :
+        INDENT
+            print (u"Message skipped (we skip the first one) : msgid={0}, content={1}".format(msgid, content))
+            self.count = 1
+            return
+        DEDENT
+        print (u"Message received : msgid={0}, content={1}".format(msgid, content))
+        if content ['name'] == self.name and content ['type'] == self.type and content ['host'] == self.host :
+        INDENT
+            self.plugin_status = content ['event']
+            if content ['event'] == STATUS_ALIVE :
+            INDENT
+                print (u"Plugin is started")
+                print (u"Stop listening to MQ as we get our result")
+                IOLoop.instance().stop()
+
+            DEDENT
+            elif content ['event'] == STATUS_STOPPED :
+            INDENT
+                print (u"Plugin is stopped")
+                print (u"Stop listening to MQ as we get our result")
+                IOLoop.instance().stop()
+
+            DEDENT
+        DEDENT
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/plugintestcase.py" startline="52" endline="66">
+def __init__(self, testname, xpl_plugin, name, configuration) :
+INDENT
+    super(PluginTestCase, self).__init__(testname)
+    self.myxpl = xpl_plugin.myxpl
+    self.name = name
+    self.configuration = configuration
+
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/plugintestcase.py" startline="67" endline="70">
+def test_0001_domogik_is_running(self) :
+INDENT
+    self.assertTrue(check_domogik_is_running())
+
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/plugintestcase.py" startline="71" endline="82">
+def test_0010_configure_the_plugin(self) :
+INDENT
+    print (u"Delete the current plugin configuration")
+    self.assertTrue(delete_configuration("plugin", self.name, get_sanitized_hostname()))
+    for key in self.configuration :
+    INDENT
+        print (u"Set up configuration : {0} = {1}".format(key, self.configuration [key]))
+        self.assertTrue(configure("plugin", self.name, get_sanitized_hostname(), key, self.configuration [key]))
+    DEDENT
+    for key in self.configuration :
+    INDENT
+        print (u"Validate the configuration : {0} = {1}".format(key, self.configuration [key]))
+        self.assertTrue(check_config("plugin", self.name, get_sanitized_hostname(), key, self.configuration [key]))
+
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/plugintestcase.py" startline="83" endline="85">
+def test_0020_create_the_devices(self) :
+INDENT
+    pass
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/plugintestcase.py" startline="87" endline="94">
+def test_0050_start_the_plugin(self) :
+INDENT
+    tp = TestPlugin(self.name, get_sanitized_hostname())
+    self.assertTrue(tp.request_startup())
+    self.assertTrue(tp.wait_for_event(STATUS_ALIVE))
+    time.sleep(5)
+
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/plugintestcase.py" startline="95" endline="102">
+def test_9900_hbeat(self) :
+INDENT
+    print (u"Check that a heartbeat is sent. This could take up to 5 minutes.")
+    self.assertTrue(self.wait_for_xpl(xpltype = "xpl-stat",
+            xplschema = "hbeat.app",
+            xplsource = "domogik-{0}.{1}".format(self.name, get_sanitized_hostname()),
+            timeout = 600))
+
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/plugintestcase.py" startline="103" endline="107">
+def test_9990_stop_the_plugin(self) :
+INDENT
+    tp = TestPlugin(self.name, get_sanitized_hostname())
+    tp.request_stop()
+    self.assertTrue(tp.wait_for_event(STATUS_STOPPED))
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/plugintestcase.py" startline="108" endline="110">
+def configure(self) :
+INDENT
+    raise NotImplementedError
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/plugintestcase.py" startline="111" endline="112">
+def create_device(self) :
+INDENT
+    raise NotImplementedError
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testdevice.py" startline="55" endline="69">
+def __init__(self) :
+INDENT
+    self.rest_url = get_rest_url()
+    self.rest_ssl = get_rest_ssl()
+
+    self.client_id = None
+
+    self.device_name = None
+    self.device_type = None
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testdevice.py" startline="70" endline="89">
+def get_params(self, client_id, device_type) :
+INDENT
+    print (u"{0} : Getting device_type params {1}".format(datetime.now(), device_type))
+    cli = MQSyncReq(zmq.Context())
+    msg = MQMessage()
+    msg.set_action('device.params')
+    msg.add_data('device_type', device_type)
+    msg.add_data('client_id', client_id)
+    response = cli.request('admin', msg.get(), timeout = 15)
+    if response is not None :
+    INDENT
+        response = response.get_data()
+        if 'result' in response :
+        INDENT
+            print (u"{0} : The params are: {1}".format(datetime.now(), response ['result']))
+            return response ['result']
+        DEDENT
+        else :
+        INDENT
+            raise RuntimeError("Error when getting devices param for {0} : {1}".format(client_id, response))
+        DEDENT
+    DEDENT
+    else :
+    INDENT
+        raise RuntimeError("Error when getting devices param for {0}".format(client_id))
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testdevice.py" startline="90" endline="110">
+def create_device(self, params) :
+INDENT
+    print (u"{0} : Create a test device <{1}> with {2} device type".format(datetime.now(), params ['name'], params ['device_type']))
+    cli = MQSyncReq(zmq.Context())
+    msg = MQMessage()
+    msg.set_action('device.create')
+    msg.set_data({'data' : params})
+    response = cli.request('admin', msg.get(), timeout = 20)
+    if response is not None :
+    INDENT
+        response = response.get_data()
+        if 'result' in response :
+        INDENT
+            print (u"{0} : The new device is: {1}".format(datetime.now(), response ['result']))
+            return response ['result']
+        DEDENT
+        else :
+        INDENT
+            raise RuntimeError("Error when creating the device : {0} : {1}".format(params, response))
+        DEDENT
+    DEDENT
+    else :
+    INDENT
+        raise RuntimeError("Error when creating the device : {0}".format(params))
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testdevice.py" startline="111" endline="126">
+def del_device(self, id) :
+INDENT
+    print (u"{0} : Delete the device : id = {1}".format(datetime.now(), id))
+    cli = MQSyncReq(zmq.Context())
+    msg = MQMessage()
+    msg.set_action('device.delete')
+    msg.add_data('did', id)
+    response = cli.request('admin', msg.get(), timeout = 15)
+    if response is not None :
+    INDENT
+        response = response.get_data()
+        print (u"{0} : Delete response : {1}".format(datetime.now(), response))
+    DEDENT
+    else :
+    INDENT
+        raise RuntimeError("Error when deleting the device")
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testdevice.py" startline="127" endline="157">
+def del_devices_by_client(self, client_id) :
+INDENT
+    print (u"{0} : Delete all the devices for the client id '{1}'".format(datetime.now(), client_id))
+    clId = clId = re.split(r"[-.]+", client_id)
+    cli = MQSyncReq(zmq.Context())
+    msg = MQMessage()
+    msg.set_action('device.get')
+    msg.add_data('type', clId [0])
+    msg.add_data('name', clId [1])
+    msg.add_data('host', clId [2])
+    response = cli.request('admin', msg.get(), timeout = 15)
+    if response is not None :
+    INDENT
+        response = response.get_data()
+        print (u"{0} : Response : {1}".format(datetime.now(), response))
+        if 'devices' in response :
+        INDENT
+            if response ['devices'] == [] :
+            INDENT
+                print (u"{0} : There is no device to delete".format(datetime.now()))
+                return
+            DEDENT
+            for device in response ['devices'] :
+            INDENT
+                if device ['client_id'] == client_id :
+                INDENT
+                    self.del_device(device ['id'])
+                DEDENT
+            DEDENT
+        DEDENT
+        else :
+        INDENT
+            raise RuntimeError("Error when getting devices list for {0} : {1}".format(client_id, response))
+        DEDENT
+    DEDENT
+    else :
+    INDENT
+        raise RuntimeError("Error when getting devices list for {0}".format(client_id))
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/helpers.py" startline="45" endline="66">
+def ask(question) :
+INDENT
+    while True :
+    INDENT
+        print (u"{0}\n[yes/no]".format(question))
+        yes = set(['yes', 'y', 'ye'])
+        no = set(['no', 'n'])
+        choice = raw_input().lower()
+        if choice in yes :
+        INDENT
+            return True
+        DEDENT
+        elif choice in no :
+        INDENT
+            return False
+        DEDENT
+        else :
+        INDENT
+            print (u"Please respond with 'yes' or 'no'")
+        DEDENT
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/helpers.py" startline="67" endline="91">
+def check_domogik_is_running() :
+INDENT
+    ret = True
+    to_check = ['dmg_hub', 'dmg_broker', 'dmg_forwarder']
+    for chk in to_check :
+    INDENT
+        status = is_already_launched(None, "core", chk, False)
+        if not status [0] :
+        INDENT
+            print ("ERROR : component {0} is not running".format(chk))
+            ret = False
+        DEDENT
+        else :
+        INDENT
+            print ("component {0} is running".format(chk))
+        DEDENT
+    DEDENT
+    to_check = ['xplgw', 'manager', 'admin', 'scenario']
+    for chk in to_check :
+    INDENT
+        status = is_already_launched(None, "core", chk, False)
+        if not status [0] :
+        INDENT
+            print ("ERROR : component {0} is not running".format(chk))
+            ret = False
+        DEDENT
+        else :
+        INDENT
+            print ("component {0} is running".format(chk))
+        DEDENT
+    DEDENT
+    return ret
+
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/helpers.py" startline="92" endline="111">
+def delete_configuration(type, name, host) :
+INDENT
+    cli = MQSyncReq(zmq.Context())
+    msg = MQMessage()
+    msg.set_action('config.delete')
+    msg.add_data('type', type)
+    msg.add_data('host', host)
+    msg.add_data('name', name)
+    result = cli.request('admin', msg.get(), timeout = 20)
+    if result :
+    INDENT
+        data = result.get_data()
+        if 'status' in data :
+        INDENT
+            if not data ['status'] :
+            INDENT
+                raise RuntimeError("DbMgr did not return status true on a config.delete for {0}-{1}.{2}: {3}".format(type, name, host), result.get())
+            DEDENT
+            else :
+            INDENT
+                return True
+            DEDENT
+        DEDENT
+        else :
+        INDENT
+            raise RuntimeError("DbMgr did bad return status on a config.delete for {0}-{1}.{2}: {3}".format(type, name, host), result.get())
+        DEDENT
+    DEDENT
+    else :
+    INDENT
+        raise RuntimeError("Timeout while deleting configuration for {0}-{1}.{2}".format(type, name, host))
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/helpers.py" startline="112" endline="133">
+def configure(type, name, host, key, value) :
+INDENT
+    cli = MQSyncReq(zmq.Context())
+    msg = MQMessage()
+    msg.set_action('config.set')
+    msg.add_data('type', type)
+    msg.add_data('host', host)
+    msg.add_data('name', name)
+    msg.add_data('data', {key : value})
+    result = cli.request('admin', msg.get(), timeout = 15)
+    if result :
+    INDENT
+        data = result.get_data()
+        if 'status' in data :
+        INDENT
+            if not data ['status'] :
+            INDENT
+                print (result.get())
+                raise RuntimeError("DbMgr did not return status true on a config.set for {0}-{1}.{2} : {3} = {4}".format(type, name, host, key, value))
+            DEDENT
+            else :
+            INDENT
+                return True
+            DEDENT
+        DEDENT
+        else :
+        INDENT
+            raise RuntimeError("DbMgr did bad return status on a config.set for {0}-{1}.{2}: {3}".format(type, name, host), result.get())
+        DEDENT
+    DEDENT
+    else :
+    INDENT
+        raise RuntimeError("Error while setting configuration for {0}-{1}.{2} : {3} = {4}".format(type, name, host, key, value))
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/helpers.py" startline="134" endline="164">
+def check_config(type, name, host, key, exp_value) :
+INDENT
+    cli = MQSyncReq(zmq.Context())
+    msg = MQMessage()
+    msg.set_action('config.get')
+    msg.add_data('type', type)
+    msg.add_data('host', host)
+    msg.add_data('name', name)
+    msg.add_data('key', key)
+    result = cli.request('admin', msg.get(), timeout = 15)
+    if result :
+    INDENT
+        data = result.get_data()
+        if 'status' in data :
+        INDENT
+            if not data ['status'] :
+            INDENT
+                print (result.get())
+                raise RuntimeError("DbMgr did not return status true on a config.get for {0}-{1}.{2} : {3} = {4}".format(type, name, host, key, exp_value))
+            DEDENT
+            else :
+            INDENT
+                if 'value' in data :
+                INDENT
+                    if data ['value'] ! = exp_value :
+                    INDENT
+                        print (result.get())
+                        raise RuntimeError("The returned value is not the expected value for {0}-{1}.{2} : {3} = {4} but received {5}".format(type, name, host, key, exp_value, data ['value']))
+                    DEDENT
+                    else :
+                    INDENT
+                        return True
+                    DEDENT
+                DEDENT
+                else :
+                INDENT
+                    print (result.get())
+                    raise RuntimeError("DbMgr did not return a value on a config.get for {0}-{1}.{2} : {3} = {4}".format(type, name, host, key, exp_value))
+                DEDENT
+            DEDENT
+        DEDENT
+        else :
+        INDENT
+            raise RuntimeError("DbMgr did bad return status on a config.get for {0}-{1}.{2}: {3}".format(type, name, host), result.get())
+        DEDENT
+    DEDENT
+    else :
+    INDENT
+        raise RuntimeError("Error while setting configuration for {0}-{1}.{2} : {3} = {4}".format(type, name, host, key, exp_value))
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testcommand.py" startline="51" endline="68">
+def __init__(self, device_id, command_reference) :
+INDENT
+    self.rest_url = get_rest_url()
+
+    self.device_id = device_id
+    self.command_reference = command_reference
+    try :
+    INDENT
+        self.command_id, self.command_keys = self.get_command_id()
+    DEDENT
+    except :
+    INDENT
+        self.command_id = None
+        self.command_keys = None
+
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testcommand.py" startline="69" endline="91">
+def get_command_id(self) :
+INDENT
+    print (u"Get the command id for device_id={0}, command_reference={1}".format(self.device_id, self.command_reference))
+    response = requests.get("{0}/device/{1}".format(self.rest_url, self.device_id), headers = {'content-type' : 'application/x-www-form-urlencoded'})
+    print (u"Response : [{0}]".format(response.status_code))
+    print (u"Response : [{0}] {1}".format(response.status_code, response.text))
+    if response.status_code ! = 200 :
+    INDENT
+        raise RuntimeError("Error when looking for the command id")
+    DEDENT
+    device = json.loads(response.text)
+    if not device ['commands'].has_key(self.command_reference) :
+    INDENT
+        raise RuntimeError("There is no command named '{0}' for the device id {1}".format(self.command_reference, self.device_id))
+    DEDENT
+    command_id = device ['commands'] [self.command_reference] ['id']
+    command_keys = []
+    for cmd_key in device ['commands'] [self.command_reference] ['parameters'] :
+    INDENT
+        command_keys.append(cmd_key ["key"])
+    DEDENT
+    print (u"The command id is '{0}'".format(command_id))
+    print (u"The command keys are '{0}'".format(command_keys))
+    return command_id, command_keys
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testcommand.py" startline="92" endline="100">
+def send_command(self, value) :
+INDENT
+    thr_send_command = Thread(None,
+        self._send_command_thr,
+        "send_command",
+        (value,),
+        {})
+    thr_send_command.start()
+
+DEDENT
+</source>
+<source file="systems/Domogik/tests/common/testcommand.py" startline="101" endline="131">
+def _send_command_thr(self, value) :
+INDENT
+    if isinstance(value, dict) :
+    INDENT
+        url = "{0}/cmd/id/{1}?".format(self.rest_url, self.command_id)
+        for param in self.command_keys :
+        INDENT
+            try :
+            INDENT
+                url = "{0}{1}={2}&".format(url, param, value [param])
+            DEDENT
+            except KeyError :
+            INDENT
+                print ("ERROR : there is no key '{0}' for this command!".format(param))
+            DEDENT
+        DEDENT
+    DEDENT
+    else :
+    INDENT
+        url = "{0}/cmd/id/{1}?{2}={3}".format(self.rest_url, self.command_id, self.command_keys [0], value)
+    DEDENT
+    print (u"Wait 2 seconds before calling a command...")
+    time.sleep(2)
+    print (u"Call the command id={0} / name={1}".format(self.command_id, self.command_reference))
+    print (u"Url = {0}".format(url))
+    response = requests.get(url,
+        headers = {'content-type' : 'application/x-www-form-urlencoded'})
+    print (u"Response : [{0}]".format(response.status_code))
+    if response.status_code ! = 204 :
+    INDENT
+        raise RuntimeError("Error when sending the command")
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/bin/testrunner.py" startline="61" endline="118">
+def __init__(self) :
+INDENT
+    l = logger.Logger("testrunner")
+    l.set_format_mode("messageOnly")
+    self.log = l.get_logger()
+
+    try :
+    INDENT
+        cfg = Loader('domogik')
+        config = cfg.load()
+        conf = dict(config [1])
+
+        self._libraries_path = conf ['libraries_path']
+        self.log.debug("Libraries path is : {0}".format(self._libraries_path))
+    DEDENT
+    except :
+    INDENT
+        self.log.error(u"Error while reading the configuration file '{0}' : {1}".format(CONFIG_FILE, traceback.format_exc()))
+        return
+    DEDENT
+    parser = ArgumentParser(description = "Launch all the tests that don't need hardware.")
+    parser.add_argument("directory",
+        help = "What directory to run")
+    parser.add_argument("-a",
+        "--allow-alter",
+        dest = "allow_alter",
+        action = "store_true",
+        help = "Launch the tests that can alter the configuration of the plugin or the setup (devices, ...)")
+    parser.add_argument("-c",
+        "--criticity",
+        dest = "criticity",
+        help = "Set the minimum level of criticity to use to filter the tests to execute. low/medium/high. Default is low.")
+    self.options = parser.parse_args()
+    self.testcases = {}
+    self.results = {}
+
+    self.log.info("Domogik release : {0}".format(DMG_VERSION))
+    self.log.info("Running test with the folowing parameters:")
+    if self.options.allow_alter :
+    INDENT
+        self.log.info("- allow to alter the configuration or setup.")
+    DEDENT
+    if self.options.criticity not in (LOW, MEDIUM, HIGH) :
+    INDENT
+        self.options.criticity = LOW
+    DEDENT
+    self.log.info("- criticity : {0}".format(self.options.criticity))
+
+    self.log.info("- path {0}".format(self.options.directory))
+    if not self.check_dir() :
+    INDENT
+        return
+    DEDENT
+    self.log.info("- json file {0}".format(self.json_file))
+    if not self.load_json() :
+    INDENT
+        return
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/bin/testrunner.py" startline="119" endline="141">
+def check_dir(self) :
+INDENT
+    self.path = None
+    if self.options.directory == "." :
+    INDENT
+        self.path = os.path.dirname(os.path.realpath(__file__))
+    DEDENT
+    elif self.options.directory.startswith('/') :
+    INDENT
+        self.path = self.options.directory
+    DEDENT
+    else :
+    INDENT
+        self.path = "{0}/{1}".format(os.path.dirname(os.path.realpath(__file__)), self.options.directory)
+
+    DEDENT
+    if not os.path.isdir(self.path) :
+    INDENT
+        self.log.error("Path {0} is not a directory".format(self.path))
+        return False
+
+    DEDENT
+    self.json_file = "{0}/tests.json".format(self.path)
+    if not os.path.isfile(self.json_file) :
+    INDENT
+        self.log.error("{0} is not a valid 'tests.json' file".format(self.json_file))
+        return False
+    DEDENT
+    return True
+DEDENT
+</source>
+<source file="systems/Domogik/tests/bin/testrunner.py" startline="142" endline="168">
+def load_json(self) :
+INDENT
+    try :
+    INDENT
+        self.json = json.loads(open(self.json_file).read())
+    DEDENT
+    except :
+    INDENT
+        self.log.error("Error during json file reading: {0}".format(traceback.format_exc()))
+        return False
+    DEDENT
+    self.log.info("List of the tests (keep in mind that tests which need hardware will be skipped) :")
+    for test in sorted(self.json) :
+    INDENT
+        config = self.json [test]
+        to_run = True
+        if config ['automatic'] == False :
+        INDENT
+            to_run = False
+        DEDENT
+        if config ['need_hardware'] :
+        INDENT
+            to_run = False
+        DEDENT
+        if (not self.options.allow_alter) and config ['alter_configuration_or_setup'] :
+        INDENT
+            to_run = False
+        DEDENT
+        if criticity_level [self.options.criticity] > criticity_level [config ['criticity']] :
+        INDENT
+            to_run = False
+        DEDENT
+        if to_run :
+        INDENT
+            indicator = "[ TO RUN  ]"
+            self.testcases [test] = config
+        DEDENT
+        else :
+        INDENT
+            indicator = "[ SKIPPED ]"
+        DEDENT
+        self.log.info("{0} {1} : need hardware={2}, alter config or setup={3}, criticity={4}".format(indicator, test, config ['need_hardware'], config ['alter_configuration_or_setup'], config ['criticity']))
+    DEDENT
+    return True
+DEDENT
+</source>
+<source file="systems/Domogik/tests/bin/testrunner.py" startline="169" endline="198">
+def run_testcases(self) :
+INDENT
+    for test in sorted(self.testcases) :
+    INDENT
+        config = self.testcases [test]
+        self.log.info("")
+        self.log.info("---------------------------------------------------------------------------------------")
+        self.log.info("Launching {0}".format(test))
+        self.log.info("---------------------------------------------------------------------------------------")
+        cmd = "export PYTHONPATH={0} && {1} && cd {2} && python ./{3}.py".format(self._libraries_path, STARTED_BY_MANAGER, self.path, test)
+        subp = Popen(cmd,
+            shell = True)
+        pid = subp.pid
+        subp.communicate()
+        self.results [test] = {'return_code' : subp.returncode}
+        self.log.debug("Do a 30s pause... (yeah, this is a lot but Travis CI is not so quick!!!)")
+        time.sleep(30)
+    DEDENT
+    rc = 0
+    self.log.info("")
+    self.log.info("Tests summary :")
+    self.log.info("---------------")
+    for res in self.results :
+    INDENT
+        if self.results [res] ['return_code'] == 0 :
+        INDENT
+            self.log.info("Test {0} : OK".format(res))
+        DEDENT
+        else :
+        INDENT
+            self.log.info("Test {0} : ERROR".format(res))
+            rc = 1
+        DEDENT
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/bin/testrunner.py" startline="199" endline="210">
+def get_result(self) :
+INDENT
+    for res in self.results :
+    INDENT
+        if self.results [res] ['return_code'] ! = 0 :
+        INDENT
+            return 1
+        DEDENT
+    DEDENT
+    return 0
+
+DEDENT
+</source>
+<source file="systems/Domogik/tests/bin/testrunner.py" startline="211" endline="220">
+def main() :
+INDENT
+    try :
+    INDENT
+        testr = TestRunner()
+        testr.run_testcases()
+        cr = testr.get_result()
+    DEDENT
+    except Exception as exp :
+    INDENT
+        print exp
+        cr = 1
+    DEDENT
+    sys.exit(cr)
+DEDENT
+</source>
+<source file="systems/Domogik/tests/benchmarks/database_stats_benchmarks.py" startline="44" endline="128">
+def run_stats_filter(period_filter_list) :
+INDENT
+    print (u"Running stats filtering, with : %s" % period_filter_list)
+    if _insert_data :
+    INDENT
+        remove_all_stats()
+        init_required_data_for_stats()
+        add_data(start_p = time.mktime(config.DATA_START_DATE), end_p = time.mktime(config.DATA_END_DATE),
+            insert_step = config.DATA_INSERT_STEP, key = 'keysample')
+    DEDENT
+    else :
+    INDENT
+        global _device1
+        ds = _db._DbHelper__session.query(DeviceStats).first()
+        _device1 = _db.get_device(ds.device_id)
+
+    DEDENT
+    start_p = time.mktime(config.MINUTE_START_PERIOD)
+    end_p = time.mktime(config.MINUTE_END_PERIOD)
+    if 'minute' in period_filter_list :
+    INDENT
+        print (u"Executing minute filter : period = %s / %s" % (datetime.datetime.utcfromtimestamp(start_p),
+                datetime.datetime.utcfromtimestamp(end_p)))
+        start_t = time.time()
+        results = _db.filter_stats_of_device_by_key(ds_key = 'keysample', ds_device_id = _device1.id, start_date_ts = start_p,
+            end_date_ts = end_p, step_used = 'minute', function_used = 'avg')
+        print (u"\tExecution time = %s" % (time.time() - start_t))
+    DEDENT
+    start_p = time.mktime(config.HOUR_START_PERIOD)
+    end_p = time.mktime(config.HOUR_END_PERIOD)
+    if 'hour' in period_filter_list :
+    INDENT
+        print (u"Executing hour filter : period = %s / %s" % (datetime.datetime.utcfromtimestamp(start_p),
+                datetime.datetime.utcfromtimestamp(end_p)))
+        start_t = time.time()
+        results = _db.filter_stats_of_device_by_key(ds_key = 'keysample', ds_device_id = _device1.id, start_date_ts = start_p,
+            end_date_ts = end_p, step_used = 'hour', function_used = 'avg')
+        print (u"\tExecution time = %s" % (time.time() - start_t))
+    DEDENT
+    start_p = time.mktime(config.DAY_START_PERIOD)
+    end_p = time.mktime(config.DAY_END_PERIOD)
+    if 'day' in period_filter_list :
+    INDENT
+        print (u"Executing day filter : period = %s / %s" % (datetime.datetime.utcfromtimestamp(start_p),
+                datetime.datetime.utcfromtimestamp(end_p)))
+        start_t = time.time()
+        results = _db.filter_stats_of_device_by_key(ds_key = 'keysample', ds_device_id = _device1.id, start_date_ts = start_p,
+            end_date_ts = end_p, step_used = 'day', function_used = 'avg')
+        print (u"\tExecution time = %s" % (time.time() - start_t))
+    DEDENT
+    start_p = time.mktime(config.WEEK_START_PERIOD)
+    end_p = time.mktime(config.WEEK_END_PERIOD)
+    if 'week' in period_filter_list :
+    INDENT
+        print (u"Executing week filter : period = %s / %s" % (datetime.datetime.utcfromtimestamp(start_p),
+                datetime.datetime.utcfromtimestamp(end_p)))
+        start_t = time.time()
+        results = _db.filter_stats_of_device_by_key(ds_key = 'keysample', ds_device_id = _device1.id, start_date_ts = start_p,
+            end_date_ts = end_p, step_used = 'week', function_used = 'avg')
+        print (u"\tExecution time = %s" % (time.time() - start_t))
+    DEDENT
+    start_p = time.mktime(config.MONTH_START_PERIOD)
+    end_p = time.mktime(config.MONTH_END_PERIOD)
+    if 'month' in period_filter_list :
+    INDENT
+        print (u"Executing month filter : period = %s / %s" % (datetime.datetime.utcfromtimestamp(start_p),
+                datetime.datetime.utcfromtimestamp(end_p)))
+        start_t = time.time()
+        results = _db.filter_stats_of_device_by_key(ds_key = 'keysample', ds_device_id = _device1.id, start_date_ts = start_p,
+            end_date_ts = end_p, step_used = 'month', function_used = 'avg')
+        print (u"\tExecution time = %s" % (time.time() - start_t))
+    DEDENT
+    start_p = time.mktime(config.YEAR_START_PERIOD)
+    end_p = time.mktime(config.YEAR_END_PERIOD)
+    if 'year' in period_filter_list :
+    INDENT
+        print (u"Executing year filter : period = %s / %s" % (datetime.datetime.utcfromtimestamp(start_p),
+                datetime.datetime.utcfromtimestamp(end_p)))
+        start_t = time.time()
+        results = _db.filter_stats_of_device_by_key(ds_key = 'keysample', ds_device_id = _device1.id, start_date_ts = start_p,
+            end_date_ts = end_p, step_used = 'year', function_used = 'avg')
+        print (u"Execution time = %s" % (time.time() - start_t))
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/benchmarks/database_stats_benchmarks.py" startline="129" endline="157">
+def add_data(start_p, end_p, insert_step, key) :
+INDENT
+    print (u"Inserting sample stats data, period = %s / %s, step = %s secs (%s values)" % (datetime.datetime.utcfromtimestamp(start_p), datetime.datetime.utcfromtimestamp(end_p), insert_step,
+            (end_p - start_p) / insert_step))
+    conn = _db._DbHelper__engine.connect()
+    ds_table = DeviceStats.__table__
+    count = 0
+    start_t = time.time()
+    for i in range(0, int(end_p - start_p), insert_step) :
+    INDENT
+        count += 1
+        cur_date = start_p + i
+        ins = ds_table.insert().values(date = datetime.datetime.utcfromtimestamp(cur_date), timestamp = cur_date,
+            key = u'val', value = i / insert_step, value_num = i / insert_step, device_id = _device1.id)
+        conn.execute(ins)
+        """
+        if (count % 50000 == 0):
+            print(u"\t%s values inserted, date = %s" % (count, datetime.datetime.utcfromtimestamp(cur_date)),)
+        """
+    DEDENT
+    print (u"\t%s values inserted" % count)
+    print (u"\tExecution time = %s" % (time.time() - start_t))
+DEDENT
+</source>
+<source file="systems/Domogik/tests/benchmarks/database_stats_benchmarks.py" startline="158" endline="169">
+def init_required_data_for_stats() :
+INDENT
+    print (init_required_data_for_stats.__doc__)
+    global _device1
+    dt1 = _db.add_device_technology('x10', 'x10', 'this is x10')
+    dty1 = _db.add_device_type(dty_id = 'x10.switch', dty_name = 'x10 Switch', dty_description = 'desc1', dt_id = dt1.id)
+    du1 = _db.add_device_usage('lighting', 'Lighting')
+    area1 = _db.add_area('area1', 'description 1')
+    room1 = _db.add_room('room1', area1.id)
+    _device1 = _db.add_device(d_name = 'device1', d_address = "A1", d_type_id = dty1.id, d_usage_id = du1.id)
+
+DEDENT
+</source>
+<source file="systems/Domogik/tests/benchmarks/database_stats_benchmarks.py" startline="170" endline="183">
+def remove_all_stats() :
+INDENT
+    print (u"Removing existing data")
+    engine = _db._DbHelper__engine
+    ds_table = DeviceStats.__table__
+    print (u"\tdropping DeviceStats table")
+    ds_table.drop(bind = engine)
+    print (u"\tcreating DeviceStats table")
+    ds_table.create(bind = engine)
+    for dt in _db.list_device_technologies() :
+    INDENT
+        _db.del_device_technology(dt.id, cascade_delete = True)
+    DEDENT
+    _db._DbHelper__session.commit()
+DEDENT
+</source>
+<source file="systems/Domogik/tests/benchmarks/database_stats_benchmarks.py" startline="184" endline="187">
+def check_args(argv) :
+INDENT
+    """Check arguments passed to the program"""
+
+DEDENT
+</source>
+<source file="systems/Domogik/tests/benchmarks/database_stats_benchmarks.py" startline="188" endline="193">
+def usage(prog_name) :
+INDENT
+    print (u"Usage : %s [-s [all|minute[,hour][,day][,week][,month[,year]]] [-I]" % prog_name)
+    print (u"-s, --statistics=STATS_LIST\tSTATS_LIST can be : all or minute,hours,day,week,month,year")
+    print (u"-I, --noinsert\t\t\tUse existing data in the database")
+DEDENT
+</source>
+<source file="systems/Domogik/tests/external_xpl_clients/rfxcom_lan.py" startline="49" endline="57">
+def __init__(self) :
+INDENT
+    XplPlugin.__init__(self, name = 'test', test = True, source = 'rfxcom-lan.0004a31bb6ac')
+    self.send_xpl(schema = "sensor.basic", data = {"current" : 13, "address" : "foo", "type" : "temp"})
+
+DEDENT
+</source>
+<source file="systems/Domogik/tests/external_xpl_clients/rfxcom_lan.py" startline="58" endline="74">
+def send_xpl(self, message = None, schema = None, data = {}) :
+INDENT
+    if message ! = None :
+    INDENT
+        self.log.debug(u"send_xpl : send full message : {0}".format(message))
+        self.myxpl.send(message)
+    DEDENT
+    else :
+    INDENT
+        self.log.debug(u"send_xpl : Send xPL message xpl-trig : schema:{0}, data:{1}".format(schema, data))
+        msg = XplMessage()
+        msg.set_type("xpl-trig")
+        msg.set_schema(schema)
+        for key in data :
+        INDENT
+            msg.add_data({key : data [key]})
+        DEDENT
+        self.myxpl.send(msg)
+
+    DEDENT
+DEDENT
+</source>
+<source file="systems/Domogik/tests/external_xpl_clients/xpl_client.py" startline="49" endline="57">
+def __init__(self) :
+INDENT
+    XplPlugin.__init__(self, name = 'test', test = True, source = 'arduino-temp.chambre')
+    self.send_xpl(schema = "sensor.basic", data = {"current" : 13, "address" : "foo", "type" : "temp"})
+
+DEDENT
+</source>
+<source file="systems/Domogik/tests/external_xpl_clients/xpl_client.py" startline="58" endline="74">
+def send_xpl(self, message = None, schema = None, data = {}) :
+INDENT
+    if message ! = None :
+    INDENT
+        self.log.debug(u"send_xpl : send full message : {0}".format(message))
+        self.myxpl.send(message)
+    DEDENT
+    else :
+    INDENT
+        self.log.debug(u"send_xpl : Send xPL message xpl-trig : schema:{0}, data:{1}".format(schema, data))
+        msg = XplMessage()
+        msg.set_type("xpl-trig")
+        msg.set_schema(schema)
+        for key in data :
+        INDENT
+            msg.add_data({key : data [key]})
+        DEDENT
+        self.myxpl.send(msg)
+
+    DEDENT
+DEDENT
+</source>

@@ -1,0 +1,176 @@
+Fri May 10 10:55:36 AM +03 2024
+./txl/py-extract-functions.x ALL.py >> systems/Controllerx_functions.xml
+[/tmp/systems_Controllerx_tests_test_utils.py-pyindent, py-extract-functions.txl] : TXL0192E line 32 of /tmp/systems_Controllerx_tests_test_utils.py-pyindent - Syntax error at or near:
+	def inner_fake_async_fn ( * args >>> : <<< Any , ** kwargs : 
+[/tmp/systems_Controllerx_tests_integ_tests_integ_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 58 of /tmp/systems_Controllerx_tests_integ_tests_integ_test.py-pyindent - Syntax error at or near:
+	ExtraIterator : INDENT 
+ iterator >>> : <<< Iterator [ Optional [ Dict 
+[/tmp/systems_Controllerx_tests_conftest.py-pyindent, py-extract-functions.txl] : TXL0192E line 16 of /tmp/systems_Controllerx_tests_conftest.py-pyindent - Syntax error at or near:
+	: float , ** kwargs >>> : <<< Any 
+ ) -> "Task[None]" 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_devices_devices_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 62 of /tmp/systems_Controllerx_tests_unit_tests_cx_devices_devices_test.py-pyindent - Syntax error at or near:
+	keys ( ) 
+ integration_mappings_funcs >>> : <<< List [ Callable [ [ 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_zha_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 51 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_zha_test.py-pyindent - Syntax error at or near:
+	{ } ) 
+ await >>> zha_integration <<< . event_callback ( "test" , 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_shellyforhass_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 37 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_shellyforhass_test.py-pyindent - Syntax error at or near:
+	{ } ) 
+ await >>> shellyforhass_integration <<< . event_callback ( "test" , 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_mqtt_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 64 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_mqtt_test.py-pyindent - Syntax error at or near:
+	) : INDENT 
+ await >>> mqtt_integration <<< . event_callback ( "test" , 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_state_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 21 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_state_test.py-pyindent - Syntax error at or near:
+	kwargs ) 
+ 
+ await >>> state_integration <<< . listen_changes ( controller_id ) 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_tasmota_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 68 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_tasmota_test.py-pyindent - Syntax error at or near:
+	) : INDENT 
+ await >>> mqtt_integration <<< . event_callback ( "test" , 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_homematic_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 16 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_homematic_test.py-pyindent - Syntax error at or near:
+	} , 
+ { "MyController" >>> } <<< , 
+ "PRESS_SHORT_1" , 
+ 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_z2m_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 49 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_z2m_test.py-pyindent - Syntax error at or near:
+	, "handle_action" ) 
+ kwargs >>> : <<< Dict [ str , Any 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_shelly_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 43 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_shelly_test.py-pyindent - Syntax error at or near:
+	{ } ) 
+ await >>> shelly_integration <<< . event_callback ( "test" , 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_lutron_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 45 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_lutron_test.py-pyindent - Syntax error at or near:
+	{ } ) 
+ await >>> lutron_integration <<< . event_callback ( "test" , 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_event_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 57 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_event_test.py-pyindent - Syntax error at or near:
+	} 
+ ) 
+ await >>> event_integration <<< . event_callback ( "test" , 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_deconz_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 39 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_deconz_test.py-pyindent - Syntax error at or near:
+	, kwargs ) 
+ await >>> deconz_integration <<< . event_callback ( "test" , 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_integration_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 7 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_integration_integration_test.py-pyindent - Syntax error at or near:
+	= { i . name >>> for <<< i in integrations } 
+ 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_type_switch_controller_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 21 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_type_switch_controller_test.py-pyindent - Syntax error at or near:
+	, "call_service" ) 
+ await >>> sut <<< . on ( ) 
+ 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_type_light_controller_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 37 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_type_light_controller_test.py-pyindent - Syntax error at or near:
+	: ENTITY_NAME } 
+ await >>> controller <<< . init ( ) 
+ 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_type_cover_controller_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 30 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_type_cover_controller_test.py-pyindent - Syntax error at or near:
+	: ENTITY_NAME } 
+ await >>> controller <<< . init ( ) 
+ 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_type_media_player_controller_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 22 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_type_media_player_controller_test.py-pyindent - Syntax error at or near:
+	: ENTITY_NAME } 
+ await >>> controller <<< . init ( ) 
+ 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_type_type_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 23 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_type_type_test.py-pyindent - Syntax error at or near:
+	) 
+ DEDENT fn , >>> * <<< _ = v 
+ if 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_type_controller_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 17 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_type_controller_test.py-pyindent - Syntax error at or near:
+	) : INDENT 
+ attr_test >>> : <<< str 
+ 
+ def __init__ 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_custom_controller_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 95 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_custom_controller_test.py-pyindent - Syntax error at or near:
+	) 
+ 
+ 
+ await >>> sut <<< . initialize ( ) 
+ 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_feature_support_light_support_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 42 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_feature_support_light_support_test.py-pyindent - Syntax error at or near:
+	: INDENT 
+ assert await >>> feature_support <<< . is_supported ( expected_supported_feature ) 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_feature_support_media_player_support_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 42 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_feature_support_media_player_support_test.py-pyindent - Syntax error at or near:
+	: INDENT 
+ assert await >>> feature_support <<< . is_supported ( expected_supported_feature ) 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_feature_support_feature_support_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 25 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_feature_support_feature_support_test.py-pyindent - Syntax error at or near:
+	number 
+ is_supported = await >>> feature_support <<< . is_supported ( feature ) 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_feature_support_cover_support_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 41 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_feature_support_cover_support_test.py-pyindent - Syntax error at or near:
+	: INDENT 
+ assert await >>> feature_support <<< . is_supported ( expected_supported_feature ) 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_release_hold_controller_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 13 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_release_hold_controller_test.py-pyindent - Syntax error at or near:
+	( self , * args >>> : <<< Any ) -> bool : 
+[/tmp/systems_Controllerx_tests_unit_tests_cx_core_controller_test.py-pyindent, py-extract-functions.txl] : TXL0192E line 35 of /tmp/systems_Controllerx_tests_unit_tests_cx_core_controller_test.py-pyindent - Syntax error at or near:
+	Controller : INDENT 
+ await >>> sut_before_init <<< . initialize ( ) 
+ 
+
+Fri May 10 10:55:39 AM +03 2024
+
+Fri May 10 10:55:39 AM +03 2024
+./tools/streamprocess.x './txl/py-rename-blind-functions.x stdin' < systems/Controllerx_functions.xml > systems/Controllerx_functions-blind.xml
+
+real	0m0.010s
+user	0m0.010s
+sys	0m0.001s
+
+Fri May 10 10:55:39 AM +03 2024
+
+Fri May 10 10:55:39 AM +03 2024
+./tools/clonepairs.x systems/Controllerx_functions-blind.xml 0.30 10 2500 > systems/Controllerx_functions-blind-clones/Controllerx_functions-blind-clones-0.30.xml
+Processing systems/Controllerx_functions-blind.xml with difference threshold 30%, clone size 10 .. 2500 lines
+Reading pcs . done.
+Total 30/6000000 potential clones of 10 lines or more
+Used 82/100000000 total pc lines
+Used 5041/600000000 unique line text chars
+ and 85/12000000 unique lines
+Sorting pcs . done.
+Finding clones  done.
+Total 21 pc comparisons
+Pruning embedded clone pairs .. done.
+Pruned 0 embedded clone pairs
+Found 5 clone pairs
+Generating XML output . done.
+
+
+real	0m0.021s
+user	0m0.000s
+sys	0m0.020s
+
+Fri May 10 10:55:39 AM +03 2024
+
+Fri May 10 10:55:39 AM +03 2024
+./tools/cloneclasses.x systems/Controllerx_functions-blind-clones/Controllerx_functions-blind-clones-0.30.xml > systems/Controllerx_functions-blind-clones/Controllerx_functions-blind-clones-0.30-classes.xml
+Processing systems/Controllerx_functions-blind-clones/Controllerx_functions-blind-clones-0.30.xml
+Reading clone pairs . done.
+Total 5 pairs
+Sorting pairs . done.
+Indexing pairs . done.
+Computing classes . done.
+Clustered clone pairs into 2 classes
+Generating XML output . done.
+
+
+real	0m0.025s
+user	0m0.004s
+sys	0m0.020s
+
+Fri May 10 10:55:39 AM +03 2024
+
+Fri May 10 10:55:39 AM +03 2024
+./tools/getsource.x systems/Controllerx_functions-blind-clones/Controllerx_functions-blind-clones-0.30-classes.xml systems/Controllerx_functions-blind-clones/Controllerx_functions-blind-clones-0.30-classes-withsource.xml
+systems/Controllerx_functions-blind-clones/Controllerx_functions-blind-clones-0.30-classes.xml
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+
+Fri May 10 10:55:39 AM +03 2024
+
+Fri May 10 10:55:39 AM +03 2024
+./tools/tohtmlpairs.x systems/Controllerx_functions-blind-clones/Controllerx_functions-blind-clones-0.30-classes-withsource.xml systems/Controllerx_functions-blind-clones/Controllerx_functions-blind-clones-0.30-classes-withsource.html
+functions-blind
+30%
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+
+Fri May 10 10:55:39 AM +03 2024
+

@@ -1,0 +1,207 @@
+<clones>
+<systeminfo processor="nicad6" system="Vestel-Code" granularity="functions-blind" threshold="30%" minlines="10" maxlines="2500"/>
+<cloneinfo npcs="239" npairs="618"/>
+<runinfo ncompares="6545" cputime="22693"/>
+<classinfo nclasses="18"/>
+
+<class classid="1" nclones="3" nlines="413" similarity="71">
+<source file="systems/Vestel-Code/EPG/epg__5_tcg.py" startline="296" endline="787" pcid="4"></source>
+<source file="systems/Vestel-Code/EPG/epg__5_tcg.py" startline="788" endline="1341" pcid="5"></source>
+<source file="systems/Vestel-Code/EPG/epg__5_tcg.py" startline="1342" endline="2033" pcid="6"></source>
+</class>
+
+<class classid="2" nclones="5" nlines="31" similarity="100">
+<source file="systems/Vestel-Code/EPG/epg__1_init.py" startline="108" endline="140" pcid="8"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__1_init.py" startline="105" endline="137" pcid="181"></source>
+<source file="systems/Vestel-Code/Parental Rating/pr__1_init.py" startline="105" endline="137" pcid="39"></source>
+<source file="systems/Vestel-Code/Single Channel List/scl__1_init.py" startline="106" endline="138" pcid="227"></source>
+<source file="systems/Vestel-Code/Teletext/txt__1_init.py" startline="103" endline="135" pcid="101"></source>
+</class>
+
+<class classid="3" nclones="5" nlines="20" similarity="78">
+<source file="systems/Vestel-Code/EPG/epg__1_init.py" startline="141" endline="161" pcid="9"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__1_init.py" startline="138" endline="164" pcid="182"></source>
+<source file="systems/Vestel-Code/Parental Rating/pr__1_init.py" startline="138" endline="158" pcid="40"></source>
+<source file="systems/Vestel-Code/Single Channel List/scl__1_init.py" startline="139" endline="159" pcid="228"></source>
+<source file="systems/Vestel-Code/Teletext/txt__1_init.py" startline="136" endline="167" pcid="102"></source>
+</class>
+
+<class classid="4" nclones="5" nlines="16" similarity="100">
+<source file="systems/Vestel-Code/EPG/epg__1_init.py" startline="162" endline="179" pcid="10"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__1_init.py" startline="165" endline="182" pcid="183"></source>
+<source file="systems/Vestel-Code/Parental Rating/pr__1_init.py" startline="159" endline="176" pcid="41"></source>
+<source file="systems/Vestel-Code/Single Channel List/scl__1_init.py" startline="160" endline="177" pcid="229"></source>
+<source file="systems/Vestel-Code/Teletext/txt__1_init.py" startline="168" endline="185" pcid="103"></source>
+</class>
+
+<class classid="5" nclones="5" nlines="136" similarity="100">
+<source file="systems/Vestel-Code/EPG/epg__1_init.py" startline="200" endline="344" pcid="13"></source>
+<source file="systems/Vestel-Code/Teletext/txt__1_init.py" startline="206" endline="350" pcid="106"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__1_init.py" startline="208" endline="352" pcid="186"></source>
+<source file="systems/Vestel-Code/Single Channel List/scl__1_init.py" startline="198" endline="342" pcid="232"></source>
+<source file="systems/Vestel-Code/Parental Rating/pr__1_init.py" startline="197" endline="341" pcid="44"></source>
+</class>
+
+<class classid="6" nclones="5" nlines="15" similarity="100">
+<source file="systems/Vestel-Code/EPG/epg__1_init.py" startline="355" endline="370" pcid="15"></source>
+<source file="systems/Vestel-Code/Parental Rating/pr__1_init.py" startline="352" endline="367" pcid="46"></source>
+<source file="systems/Vestel-Code/Single Channel List/scl__1_init.py" startline="353" endline="368" pcid="234"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__1_init.py" startline="363" endline="378" pcid="188"></source>
+<source file="systems/Vestel-Code/Teletext/txt__1_init.py" startline="361" endline="376" pcid="108"></source>
+</class>
+
+<class classid="7" nclones="3" nlines="112" similarity="73">
+<source file="systems/Vestel-Code/Parental Rating/pr__5_tcg.py" startline="1035" endline="1243" pcid="32"></source>
+<source file="systems/Vestel-Code/Parental Rating/pr__5_tcg.py" startline="1244" endline="1403" pcid="33"></source>
+<source file="systems/Vestel-Code/Parental Rating/pr__5_tcg.py" startline="1404" endline="1527" pcid="34"></source>
+</class>
+
+<class classid="8" nclones="43" nlines="15" similarity="70">
+<source file="systems/Vestel-Code/Parental Rating/pr__5_tcg.py" startline="1528" endline="1544" pcid="35"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="315" endline="334" pcid="67"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="485" endline="501" pcid="75"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="77" endline="91" pcid="55"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="421" endline="437" pcid="72"></source>
+<source file="systems/Vestel-Code/Parental Rating/pr__5_tcg.py" startline="1600" endline="1615" pcid="38"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="502" endline="518" pcid="76"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="188" endline="204" pcid="61"></source>
+<source file="systems/Vestel-Code/Parental Rating/pr__5_tcg.py" startline="1545" endline="1561" pcid="36"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="92" endline="106" pcid="56"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="107" endline="121" pcid="57"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="335" endline="358" pcid="68"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="122" endline="135" pcid="58"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="384" endline="398" pcid="70"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1387" endline="1399" pcid="165"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1400" endline="1412" pcid="166"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1374" endline="1386" pcid="164"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="205" endline="216" pcid="62"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1334" endline="1347" pcid="161"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1361" endline="1373" pcid="163"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1252" endline="1264" pcid="158"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1348" endline="1360" pcid="162"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="136" endline="157" pcid="59"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="595" endline="617" pcid="80"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="264" endline="289" pcid="65"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="572" endline="594" pcid="79"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="548" endline="571" pcid="78"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="217" endline="237" pcid="63"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="238" endline="263" pcid="64"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="290" endline="314" pcid="66"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="438" endline="459" pcid="73"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="618" endline="645" pcid="81"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="646" endline="671" pcid="82"></source>
+<source file="systems/Vestel-Code/Single Channel List/scl__5_tcg.py" startline="823" endline="845" pcid="207"></source>
+<source file="systems/Vestel-Code/Single Channel List/scl__5_tcg.py" startline="1083" endline="1109" pcid="219"></source>
+<source file="systems/Vestel-Code/Single Channel List/scl__5_tcg.py" startline="1137" endline="1163" pcid="221"></source>
+<source file="systems/Vestel-Code/Single Channel List/scl__5_tcg.py" startline="1110" endline="1136" pcid="220"></source>
+<source file="systems/Vestel-Code/Single Channel List/scl__5_tcg.py" startline="1056" endline="1082" pcid="218"></source>
+<source file="systems/Vestel-Code/Single Channel List/scl__5_tcg.py" startline="1240" endline="1261" pcid="224"></source>
+<source file="systems/Vestel-Code/Single Channel List/scl__5_tcg.py" startline="696" endline="722" pcid="204"></source>
+<source file="systems/Vestel-Code/Single Channel List/scl__5_tcg.py" startline="1019" endline="1055" pcid="217"></source>
+<source file="systems/Vestel-Code/Single Channel List/scl__5_tcg.py" startline="1164" endline="1200" pcid="222"></source>
+<source file="systems/Vestel-Code/Single Channel List/scl__5_tcg.py" startline="1201" endline="1239" pcid="223"></source>
+</class>
+
+<class classid="9" nclones="2" nlines="21" similarity="73">
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="50" endline="76" pcid="54"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="359" endline="383" pcid="69"></source>
+</class>
+
+<class classid="10" nclones="2" nlines="23" similarity="76">
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="158" endline="187" pcid="60"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="460" endline="484" pcid="74"></source>
+</class>
+
+<class classid="11" nclones="7" nlines="38" similarity="87">
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="672" endline="716" pcid="83"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="998" endline="1039" pcid="95"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="867" endline="907" pcid="91"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="932" endline="972" pcid="93"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="1055" endline="1095" pcid="97"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="801" endline="841" pcid="89"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="743" endline="783" pcid="86"></source>
+</class>
+
+<class classid="12" nclones="2" nlines="23" similarity="82">
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="842" endline="866" pcid="90"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="908" endline="931" pcid="92"></source>
+</class>
+
+<class classid="13" nclones="2" nlines="22" similarity="82">
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="973" endline="997" pcid="94"></source>
+<source file="systems/Vestel-Code/Teletext/txt__6_tcg.py" startline="1096" endline="1117" pcid="98"></source>
+</class>
+
+<class classid="14" nclones="41" nlines="25" similarity="70">
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="83" endline="111" pcid="119"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="149" endline="177" pcid="121"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="302" endline="330" pcid="126"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="217" endline="245" pcid="123"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="368" endline="396" pcid="128"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="434" endline="462" pcid="130"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="500" endline="528" pcid="132"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="566" endline="594" pcid="134"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="632" endline="660" pcid="136"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="923" endline="945" pcid="145"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1310" endline="1333" pcid="160"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1229" endline="1251" pcid="157"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="946" endline="969" pcid="146"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="970" endline="993" pcid="147"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="994" endline="1017" pcid="148"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1018" endline="1041" pcid="149"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1042" endline="1065" pcid="150"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="832" endline="860" pcid="142"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="766" endline="794" pcid="140"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="698" endline="726" pcid="138"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="246" endline="282" pcid="124"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="331" endline="367" pcid="127"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="795" endline="831" pcid="141"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="397" endline="433" pcid="129"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="861" endline="897" pcid="143"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="529" endline="565" pcid="133"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="661" endline="697" pcid="137"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="595" endline="631" pcid="135"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="463" endline="499" pcid="131"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="283" endline="301" pcid="125"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="898" endline="922" pcid="144"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1204" endline="1228" pcid="156"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1066" endline="1089" pcid="151"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1180" endline="1203" pcid="155"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1413" endline="1432" pcid="167"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="178" endline="216" pcid="122"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="727" endline="765" pcid="139"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="112" endline="148" pcid="120"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1150" endline="1179" pcid="154"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1090" endline="1119" pcid="152"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1120" endline="1149" pcid="153"></source>
+</class>
+
+<class classid="15" nclones="2" nlines="42" similarity="92">
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1265" endline="1309" pcid="159"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1433" endline="1478" pcid="168"></source>
+</class>
+
+<class classid="16" nclones="10" nlines="22" similarity="90">
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1479" endline="1504" pcid="169"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1608" endline="1633" pcid="174"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1530" endline="1555" pcid="171"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1505" endline="1529" pcid="170"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1582" endline="1607" pcid="173"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1712" endline="1737" pcid="178"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1556" endline="1581" pcid="172"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1686" endline="1711" pcid="177"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1634" endline="1659" pcid="175"></source>
+<source file="systems/Vestel-Code/Installation Based On Menu/ibom__5_tcg.py" startline="1660" endline="1685" pcid="176"></source>
+</class>
+
+<class classid="17" nclones="2" nlines="11" similarity="90">
+<source file="systems/Vestel-Code/Single Channel List/scl__5_tcg.py" startline="43" endline="53" pcid="192"></source>
+<source file="systems/Vestel-Code/Single Channel List/scl__5_tcg.py" startline="54" endline="65" pcid="193"></source>
+</class>
+
+<class classid="18" nclones="2" nlines="32" similarity="75">
+<source file="systems/Vestel-Code/Single Channel List/scl__5_tcg.py" startline="66" endline="106" pcid="194"></source>
+<source file="systems/Vestel-Code/Single Channel List/scl__5_tcg.py" startline="532" endline="572" pcid="200"></source>
+</class>
+
+</clones>

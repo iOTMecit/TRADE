@@ -1,0 +1,230 @@
+<html>
+<head>
+    <title>NiCad6 Clone Report</title>
+    <style type="text/css">
+        body {font-family:sans-serif;}
+        table {background-color:white; border:0px; padding:0px; border-spacing:4px; width:auto; margin-left:30px; margin-right:auto;}
+        td {background-color:rgba(192,212,238,0.8); border:0px; padding:8px; width:auto; vertical-align:top; border-radius:8px}
+        pre {background-color:white; padding:4px;}
+        a {color:darkblue;}
+    </style>
+</head>
+<body>
+<h2>NiCad6 Clone Report</h2>
+<table>
+<tr style="font-size:14pt">
+<td><b>System:</b> &nbsp; Domogik</td>
+<td><b>Clone pairs:</b> &nbsp; 3</td>
+<td><b>Clone classes:</b> &nbsp; 3</td>
+</tr>
+<tr style="font-size:12pt">
+<td style="background-color:white">Clone type: &nbsp; 3-2</td>
+<td style="background-color:white">Granularity: &nbsp; functions-blind</td>
+<td style="background-color:white">Max diff threshold: &nbsp; 30%</td>
+<td style="background-color:white">Clone size: &nbsp; 10 - 2500 lines</td>
+<td style="background-color:white">Total functions-blind: &nbsp; 62</td>
+</tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 1:</b> &nbsp; 2 fragments, nominal size 17 lines, similarity 76%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag34')" href="javascript:;">
+Domogik/tests/common/testdevice.py: 70-89
+</a>
+<div class="mid" id="frag34" style="display:none"><pre>
+    def get_params(self, client_id, device_type):
+        """CALL GET /device/params/&lt;device_Type&gt;
+        """
+        print(u"{0} : Getting device_type params {1}".format(datetime.now(), device_type))
+        cli = MQSyncReq(zmq.Context())
+        msg = MQMessage()
+        msg.set_action('device.params')
+        msg.add_data('device_type', device_type)
+        msg.add_data('client_id', client_id)
+        response = cli.request('admin', msg.get(), timeout=15)
+        if response is not None:
+            response = response.get_data()
+            if 'result' in response :
+                print(u"{0} : The params are: {1}".format(datetime.now(), response['result']))
+                return response['result']
+            else :
+                raise RuntimeError("Error when getting devices param for {0} : {1}".format(client_id, response))
+        else :
+            raise RuntimeError("Error when getting devices param for {0}".format(client_id))
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag35')" href="javascript:;">
+Domogik/tests/common/testdevice.py: 90-110
+</a>
+<div class="mid" id="frag35" style="display:none"><pre>
+    def create_device(self, params):
+        """ Call POST /device/... to create the device
+            @param params : The filled params
+            @return : the device id for the device created
+        """
+        print(u"{0} : Create a test device &lt;{1}&gt; with {2} device type".format(datetime.now(), params['name'], params['device_type']))
+        cli = MQSyncReq(zmq.Context())
+        msg = MQMessage()
+        msg.set_action('device.create')
+        msg.set_data({'data': params})
+        response = cli.request('admin', msg.get(), timeout=20)
+        if response is not None:
+            response = response.get_data()
+            if 'result' in response :
+                print(u"{0} : The new device is: {1}".format(datetime.now(), response['result']))
+                return response['result']
+            else :
+                raise RuntimeError("Error when creating the device : {0} : {1}".format(params, response))
+        else :
+            raise RuntimeError("Error when creating the device : {0}".format(params))
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 2:</b> &nbsp; 2 fragments, nominal size 20 lines, similarity 76%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag40')" href="javascript:;">
+Domogik/tests/common/helpers.py: 92-111
+</a>
+<div class="mid" id="frag40" style="display:none"><pre>
+def delete_configuration(type, name, host):
+    cli = MQSyncReq(zmq.Context())
+    msg = MQMessage()
+    msg.set_action('config.delete')
+    msg.add_data('type', type)
+    msg.add_data('host', host)
+    msg.add_data('name', name)
+    result = cli.request('admin', msg.get(), timeout=20)
+    if result:
+        data = result.get_data()
+        if 'status' in data:
+            if not data['status']:
+                raise RuntimeError("DbMgr did not return status true on a config.delete for {0}-{1}.{2}: {3}".format(type, name, host), result.get())
+            else:
+                return True
+        else:
+            raise RuntimeError("DbMgr did bad return status on a config.delete for {0}-{1}.{2}: {3}".format(type, name, host), result.get())
+    else:
+        raise RuntimeError("Timeout while deleting configuration for {0}-{1}.{2}".format(type, name, host))
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag41')" href="javascript:;">
+Domogik/tests/common/helpers.py: 112-133
+</a>
+<div class="mid" id="frag41" style="display:none"><pre>
+def configure(type, name, host, key, value):
+    cli = MQSyncReq(zmq.Context())
+    msg = MQMessage()
+    msg.set_action('config.set')
+    msg.add_data('type', type)
+    msg.add_data('host', host)
+    msg.add_data('name', name)
+    msg.add_data('data', {key : value})
+    result = cli.request('admin', msg.get(), timeout=15)
+    if result:
+        data = result.get_data()
+        if 'status' in data:
+            if not data['status']:
+                print(result.get())
+                raise RuntimeError("DbMgr did not return status true on a config.set for {0}-{1}.{2} : {3} = {4}".format(type, name, host, key, value))
+            else:
+                return True
+        else:
+            raise RuntimeError("DbMgr did bad return status on a config.set for {0}-{1}.{2}: {3}".format(type, name, host), result.get())
+    else:
+        raise RuntimeError("Error while setting configuration for {0}-{1}.{2} : {3} = {4}".format(type, name, host, key, value))
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 3:</b> &nbsp; 2 fragments, nominal size 12 lines, similarity 100%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag60')" href="javascript:;">
+Domogik/tests/external_xpl_clients/rfxcom_lan.py: 58-74
+</a>
+<div class="mid" id="frag60" style="display:none"><pre>
+    def send_xpl(self, message = None, schema = None, data = {}):
+        """ Send xPL message on network
+        """
+        if message != None:
+            self.log.debug(u"send_xpl : send full message : {0}".format(message))
+            self.myxpl.send(message)
+
+        else:
+            self.log.debug(u"send_xpl : Send xPL message xpl-trig : schema:{0}, data:{1}".format(schema, data))
+            msg = XplMessage()
+            msg.set_type("xpl-trig")
+            msg.set_schema(schema)
+            for key in data:
+                msg.add_data({key : data[key]})
+            self.myxpl.send(msg)
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag62')" href="javascript:;">
+Domogik/tests/external_xpl_clients/xpl_client.py: 58-74
+</a>
+<div class="mid" id="frag62" style="display:none"><pre>
+    def send_xpl(self, message = None, schema = None, data = {}):
+        """ Send xPL message on network
+        """
+        if message != None:
+            self.log.debug(u"send_xpl : send full message : {0}".format(message))
+            self.myxpl.send(message)
+
+        else:
+            self.log.debug(u"send_xpl : Send xPL message xpl-trig : schema:{0}, data:{1}".format(schema, data))
+            msg = XplMessage()
+            msg.set_type("xpl-trig")
+            msg.set_schema(schema)
+            for key in data:
+                msg.add_data({key : data[key]})
+            self.myxpl.send(msg)
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<script language="JavaScript">
+function ShowHide(divId) { 
+    if(document.getElementById(divId).style.display == 'none') {
+        document.getElementById(divId).style.display='block';
+    } else { 
+        document.getElementById(divId).style.display = 'none';
+    } 
+}
+</script>
+</body>
+</html>

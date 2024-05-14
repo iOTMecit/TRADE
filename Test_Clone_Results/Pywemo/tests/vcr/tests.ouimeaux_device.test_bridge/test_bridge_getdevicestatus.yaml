@@ -1,0 +1,47 @@
+interactions:
+- request:
+    body: '<?xml version="1.0" encoding="utf-8"?>
+
+      <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" s:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+
+      <s:Body>
+
+      <u:GetDeviceStatus xmlns:u="urn:Belkin:service:bridge:1">
+
+      <DeviceIDs>F0D1B8000001420C</DeviceIDs>
+
+      </u:GetDeviceStatus>
+
+      </s:Body>
+
+      </s:Envelope>'
+    headers:
+      Content-Type:
+      - text/xml
+      SOAPACTION:
+      - '"urn:Belkin:service:bridge:1#GetDeviceStatus"'
+    method: POST
+    uri: http://192.168.1.100:49153/upnp/control/bridge1
+  response:
+    body:
+      string: "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\" s:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\"><s:Body>\n<u:GetDeviceStatusResponse
+        xmlns:u=\"urn:Belkin:service:bridge:1\">\r\n<DeviceStatusList>&lt;?xml version=&quot;1.0&quot;
+        encoding=&quot;utf-8&quot;?&gt;&lt;DeviceStatusList&gt;&lt;DeviceStatus&gt;&lt;IsGroupAction&gt;NO&lt;/IsGroupAction&gt;&lt;DeviceID\navailable=&quot;YES&quot;&gt;F0D1B8000001420C&lt;/DeviceID&gt;&lt;CapabilityID&gt;10006,10008,10300,30008,30009,3000A,30301&lt;/CapabilityID&gt;&lt;CapabilityValue&gt;0,120:0,45940:19594:50,,,,200:0&lt;/CapabilityValue&gt;&lt;LastEventTimeStamp&gt;0&lt;/LastEventTimeStamp&gt;&lt;/DeviceStatus&gt;&lt;/DeviceStatusList&gt;\n</DeviceStatusList>\r\n</u:GetDeviceStatusResponse>\r\n</s:Body>
+        </s:Envelope>"
+    headers:
+      CONTENT-LENGTH:
+      - '781'
+      CONTENT-TYPE:
+      - text/xml; charset="utf-8"
+      DATE:
+      - Wed, 05 Jan 2022 05:49:31 GMT
+      EXT:
+      - ''
+      SERVER:
+      - Unspecified, UPnP/1.0, Unspecified
+      X-User-Agent:
+      - redsonic
+    status:
+      code: 200
+      message: OK
+version: 1

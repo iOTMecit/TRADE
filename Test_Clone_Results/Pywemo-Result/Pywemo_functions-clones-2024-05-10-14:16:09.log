@@ -1,0 +1,107 @@
+Fri May 10 02:16:09 PM +03 2024
+./txl/py-extract-functions.x ALL.py >> systems/Pywemo_functions.xml
+[/tmp/systems_Pywemo_tests_test_registry_notify_fuzz.py-pyindent, py-extract-functions.txl] : TXL0192E line 168 of /tmp/systems_Pywemo_tests_test_registry_notify_fuzz.py-pyindent - Syntax error at or near:
+	make_device ( device ) 
+ >>> for <<< device in ( 
+ 
+ 
+[/tmp/systems_Pywemo_tests_ouimeaux_device_api_unit_test_long_press.py-pyindent, py-extract-functions.txl] : TXL0127E input file '/tmp/systems_Pywemo_tests_ouimeaux_device_api_unit_test_long_press.py-pyindent' - Parse time limit (161000000 cycles) exceeded
+[/tmp/systems_Pywemo_tests_ouimeaux_device_api_unit_test_long_press.py-pyindent, py-extract-functions.txl] : TXL0192E line 55 of /tmp/systems_Pywemo_tests_ouimeaux_device_api_unit_test_long_press.py-pyindent - Syntax error at or near:
+	
+ ) , 
+ ) >>> , <<< 
+ ] , 
+ ) 
+[/tmp/systems_Pywemo_tests_ouimeaux_device_api_unit_test_service.py-pyindent, py-extract-functions.txl] : TXL0127E input file '/tmp/systems_Pywemo_tests_ouimeaux_device_api_unit_test_service.py-pyindent' - Parse time limit (161000000 cycles) exceeded
+[/tmp/systems_Pywemo_tests_ouimeaux_device_api_unit_test_service.py-pyindent, py-extract-functions.txl] : TXL0192E line 305 of /tmp/systems_Pywemo_tests_ouimeaux_device_api_unit_test_service.py-pyindent - Syntax error at or near:
+	= InvalidSchemaError , 
+ ) >>> , <<< pytest . raises ( InvalidSchemaError 
+[/tmp/systems_Pywemo_tests_ouimeaux_device_api_unit_test_xsd_types.py-pyindent, py-extract-functions.txl] : TXL0192E line 68 of /tmp/systems_Pywemo_tests_ouimeaux_device_api_unit_test_xsd_types.py-pyindent - Syntax error at or near:
+	( SERVICE_PARSER ) as mock_parser >>> , <<< pytest . raises ( 
+ 
+[/tmp/systems_Pywemo_tests_ouimeaux_device_test_crockpot.py-pyindent, py-extract-functions.txl] : TXL0192E line 42 of /tmp/systems_Pywemo_tests_ouimeaux_device_test_crockpot.py-pyindent - Syntax error at or near:
+	str ( value ) 
+ >>> for <<< key , value in draw 
+[/tmp/systems_Pywemo_tests_ouimeaux_device_test_device.py-pyindent, py-extract-functions.txl] : TXL0192E line 182 of /tmp/systems_Pywemo_tests_ouimeaux_device_test_device.py-pyindent - Syntax error at or near:
+	mocked_requests_get ( * args , >>> url <<< = None , ** kwargs 
+[/tmp/systems_Pywemo_tests_test_discovery.py-pyindent, py-extract-functions.txl] : TXL0192E line 41 of /tmp/systems_Pywemo_tests_test_discovery.py-pyindent - Syntax error at or near:
+	( "pywemo.discovery.ssdp" ) as mock_ssdp >>> , <<< mock . patch ( 
+ 
+[/tmp/systems_Pywemo_tests_conftest.py-pyindent, py-extract-functions.txl] : TXL0192E line 36 of /tmp/systems_Pywemo_tests_conftest.py-pyindent - Syntax error at or near:
+	. sub ( 
+ rb >>> "uuid:([A-Z][a-z]+-\d_\d)-[A-Za-z0-9]+" <<< , 
+ rb "uuid:\1-SERIALNUMBER" , 
+
+Fri May 10 02:16:15 PM +03 2024
+
+Fri May 10 02:16:15 PM +03 2024
+./tools/streamprocess.x './txl/py-rename-blind-functions.x stdin' < systems/Pywemo_functions.xml > systems/Pywemo_functions-blind.xml
+
+real	0m0.030s
+user	0m0.026s
+sys	0m0.003s
+
+Fri May 10 02:16:15 PM +03 2024
+
+Fri May 10 02:16:15 PM +03 2024
+./tools/clonepairs.x systems/Pywemo_functions-blind.xml 0.30 10 2500 > systems/Pywemo_functions-blind-clones/Pywemo_functions-blind-clones-0.30.xml
+Processing systems/Pywemo_functions-blind.xml with difference threshold 30%, clone size 10 .. 2500 lines
+Reading pcs . done.
+Total 145/6000000 potential clones of 10 lines or more
+Used 709/100000000 total pc lines
+Used 18428/600000000 unique line text chars
+ and 437/12000000 unique lines
+Sorting pcs . done.
+Finding clones  done.
+Total 280 pc comparisons
+Pruning embedded clone pairs .. done.
+Pruned 0 embedded clone pairs
+Found 3 clone pairs
+Generating XML output . done.
+
+
+real	0m0.023s
+user	0m0.009s
+sys	0m0.014s
+
+Fri May 10 02:16:15 PM +03 2024
+
+Fri May 10 02:16:15 PM +03 2024
+./tools/cloneclasses.x systems/Pywemo_functions-blind-clones/Pywemo_functions-blind-clones-0.30.xml > systems/Pywemo_functions-blind-clones/Pywemo_functions-blind-clones-0.30-classes.xml
+Processing systems/Pywemo_functions-blind-clones/Pywemo_functions-blind-clones-0.30.xml
+Reading clone pairs . done.
+Total 3 pairs
+Sorting pairs . done.
+Indexing pairs . done.
+Computing classes . done.
+Clustered clone pairs into 3 classes
+Generating XML output . done.
+
+
+real	0m0.028s
+user	0m0.009s
+sys	0m0.018s
+
+Fri May 10 02:16:15 PM +03 2024
+
+Fri May 10 02:16:15 PM +03 2024
+./tools/getsource.x systems/Pywemo_functions-blind-clones/Pywemo_functions-blind-clones-0.30-classes.xml systems/Pywemo_functions-blind-clones/Pywemo_functions-blind-clones-0.30-classes-withsource.xml
+systems/Pywemo_functions-blind-clones/Pywemo_functions-blind-clones-0.30-classes.xml
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+
+Fri May 10 02:16:15 PM +03 2024
+
+Fri May 10 02:16:15 PM +03 2024
+./tools/tohtmlpairs.x systems/Pywemo_functions-blind-clones/Pywemo_functions-blind-clones-0.30-classes-withsource.xml systems/Pywemo_functions-blind-clones/Pywemo_functions-blind-clones-0.30-classes-withsource.html
+functions-blind
+30%
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s
+
+Fri May 10 02:16:15 PM +03 2024
+

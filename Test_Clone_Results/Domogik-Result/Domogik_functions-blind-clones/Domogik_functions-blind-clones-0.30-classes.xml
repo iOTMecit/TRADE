@@ -1,0 +1,22 @@
+<clones>
+<systeminfo processor="nicad6" system="Domogik" granularity="functions-blind" threshold="30%" minlines="10" maxlines="2500"/>
+<cloneinfo npcs="62" npairs="3"/>
+<runinfo ncompares="220" cputime="16154"/>
+<classinfo nclasses="3"/>
+
+<class classid="1" nclones="2" nlines="17" similarity="76">
+<source file="systems/Domogik/tests/common/testdevice.py" startline="70" endline="89" pcid="34"></source>
+<source file="systems/Domogik/tests/common/testdevice.py" startline="90" endline="110" pcid="35"></source>
+</class>
+
+<class classid="2" nclones="2" nlines="20" similarity="76">
+<source file="systems/Domogik/tests/common/helpers.py" startline="92" endline="111" pcid="40"></source>
+<source file="systems/Domogik/tests/common/helpers.py" startline="112" endline="133" pcid="41"></source>
+</class>
+
+<class classid="3" nclones="2" nlines="12" similarity="100">
+<source file="systems/Domogik/tests/external_xpl_clients/rfxcom_lan.py" startline="58" endline="74" pcid="60"></source>
+<source file="systems/Domogik/tests/external_xpl_clients/xpl_client.py" startline="58" endline="74" pcid="62"></source>
+</class>
+
+</clones>

@@ -1,0 +1,3926 @@
+<html>
+<head>
+    <title>NiCad6 Clone Report</title>
+    <style type="text/css">
+        body {font-family:sans-serif;}
+        table {background-color:white; border:0px; padding:0px; border-spacing:4px; width:auto; margin-left:30px; margin-right:auto;}
+        td {background-color:rgba(192,212,238,0.8); border:0px; padding:8px; width:auto; vertical-align:top; border-radius:8px}
+        pre {background-color:white; padding:4px;}
+        a {color:darkblue;}
+    </style>
+</head>
+<body>
+<h2>NiCad6 Clone Report</h2>
+<table>
+<tr style="font-size:14pt">
+<td><b>System:</b> &nbsp; Home Assistant</td>
+<td><b>Clone pairs:</b> &nbsp; 141</td>
+<td><b>Clone classes:</b> &nbsp; 40</td>
+</tr>
+<tr style="font-size:12pt">
+<td style="background-color:white">Clone type: &nbsp; 3-2</td>
+<td style="background-color:white">Granularity: &nbsp; functions-blind</td>
+<td style="background-color:white">Max diff threshold: &nbsp; 30%</td>
+<td style="background-color:white">Clone size: &nbsp; 10 - 2500 lines</td>
+<td style="background-color:white">Total functions-blind: &nbsp; 1347</td>
+</tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 1:</b> &nbsp; 2 fragments, nominal size 11 lines, similarity 90%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag46')" href="javascript:;">
+Home Assistant/tests/util/test_json.py: 100-116
+</a>
+<div class="mid" id="frag46" style="display:none"><pre>
+def test_json_loads_array() -&gt; None:
+    """Test json_loads_array validates result."""
+    assert json_loads_array('[{"c":1.2}]') == [{"c": 1.2}]
+    with pytest.raises(
+        ValueError, match="Expected JSON to be parsed as a list got &lt;class 'dict'&gt;"
+    ):
+        json_loads_array("{}")
+    with pytest.raises(
+        ValueError, match="Expected JSON to be parsed as a list got &lt;class 'bool'&gt;"
+    ):
+        json_loads_array("true")
+    with pytest.raises(
+        ValueError, match="Expected JSON to be parsed as a list got &lt;class 'NoneType'&gt;"
+    ):
+        json_loads_array("null")
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag47')" href="javascript:;">
+Home Assistant/tests/util/test_json.py: 117-133
+</a>
+<div class="mid" id="frag47" style="display:none"><pre>
+def test_json_loads_object() -&gt; None:
+    """Test json_loads_object validates result."""
+    assert json_loads_object('{"c":1.2}') == {"c": 1.2}
+    with pytest.raises(
+        ValueError, match="Expected JSON to be parsed as a dict got &lt;class 'list'&gt;"
+    ):
+        json_loads_object("[]")
+    with pytest.raises(
+        ValueError, match="Expected JSON to be parsed as a dict got &lt;class 'bool'&gt;"
+    ):
+        json_loads_object("true")
+    with pytest.raises(
+        ValueError, match="Expected JSON to be parsed as a dict got &lt;class 'NoneType'&gt;"
+    ):
+        json_loads_object("null")
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 2:</b> &nbsp; 2 fragments, nominal size 10 lines, similarity 100%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag66')" href="javascript:;">
+Home Assistant/tests/util/test_ssl.py: 22-38
+</a>
+<div class="mid" id="frag66" style="display:none"><pre>
+def test_client_context(mock_sslcontext) -&gt; None:
+    """Test client context."""
+    with patch("homeassistant.util.ssl.ssl.SSLContext", return_value=mock_sslcontext):
+        client_context()
+        mock_sslcontext.set_ciphers.assert_not_called()
+
+        client_context(SSLCipherList.MODERN)
+        mock_sslcontext.set_ciphers.assert_called_with(
+            SSL_CIPHER_LISTS[SSLCipherList.MODERN]
+        )
+
+        client_context(SSLCipherList.INTERMEDIATE)
+        mock_sslcontext.set_ciphers.assert_called_with(
+            SSL_CIPHER_LISTS[SSLCipherList.INTERMEDIATE]
+        )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag67')" href="javascript:;">
+Home Assistant/tests/util/test_ssl.py: 39-55
+</a>
+<div class="mid" id="frag67" style="display:none"><pre>
+def test_no_verify_ssl_context(mock_sslcontext) -&gt; None:
+    """Test no verify ssl context."""
+    with patch("homeassistant.util.ssl.ssl.SSLContext", return_value=mock_sslcontext):
+        create_no_verify_ssl_context()
+        mock_sslcontext.set_ciphers.assert_not_called()
+
+        create_no_verify_ssl_context(SSLCipherList.MODERN)
+        mock_sslcontext.set_ciphers.assert_called_with(
+            SSL_CIPHER_LISTS[SSLCipherList.MODERN]
+        )
+
+        create_no_verify_ssl_context(SSLCipherList.INTERMEDIATE)
+        mock_sslcontext.set_ciphers.assert_called_with(
+            SSL_CIPHER_LISTS[SSLCipherList.INTERMEDIATE]
+        )
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 3:</b> &nbsp; 2 fragments, nominal size 12 lines, similarity 83%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag104')" href="javascript:;">
+Home Assistant/tests/util/test_scaling.py: 158-175
+</a>
+<div class="mid" id="frag104" style="display:none"><pre>
+async def test_scale_ranged_value_to_scaled_range_starting_zero(
+    input_val: float, output_int: int, output_float: float
+) -&gt; None:
+    """Test a range that starts with 0."""
+    source_range = (0, 3)
+    dest_range = (1, 100)
+
+    assert (
+        scale_ranged_value_to_int_range(source_range, dest_range, input_val)
+        == output_int
+    )
+    assert scale_to_ranged_value(source_range, dest_range, input_val) == output_float
+    assert scale_ranged_value_to_int_range(
+        dest_range, source_range, output_float
+    ) == int(input_val)
+    assert scale_to_ranged_value(dest_range, source_range, output_float) == input_val
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag107')" href="javascript:;">
+Home Assistant/tests/util/test_scaling.py: 230-249
+</a>
+<div class="mid" id="frag107" style="display:none"><pre>
+async def test_scale_ranged_value_to_int_range_starting_zero_with_zero_offset(
+    input_val: float, output_int: int, output_float: float
+) -&gt; None:
+    """Test a ranges that start with 0.
+
+    In case a range starts with 0, this means value 0 is the first value,
+    and the values shift -1.
+    """
+    source_range = (0, 3)
+    dest_range = (0, 7)
+
+    assert (
+        scale_ranged_value_to_int_range(source_range, dest_range, input_val)
+        == output_int
+    )
+    assert scale_to_ranged_value(source_range, dest_range, input_val) == output_float
+    assert scale_ranged_value_to_int_range(dest_range, source_range, output_int) == int(
+        input_val
+    )
+    assert scale_to_ranged_value(dest_range, source_range, output_float) == input_val
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 4:</b> &nbsp; 2 fragments, nominal size 19 lines, similarity 94%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag121')" href="javascript:;">
+Home Assistant/tests/helpers/test_script_variables.py: 58-79
+</a>
+<div class="mid" id="frag121" style="display:none"><pre>
+async def test_template_vars_run_args(hass: HomeAssistant) -&gt; None:
+    """Test template vars."""
+    var = cv.SCRIPT_VARIABLES_SCHEMA(
+        {
+            "something": "{{ run_var_ex + 1 }}",
+            "something_2": "{{ run_var_ex + 1 }}",
+        }
+    )
+    rendered = var.async_render(
+        hass,
+        {
+            "run_var_ex": 5,
+            "something_2": 1,
+        },
+    )
+    assert rendered == {
+        "run_var_ex": 5,
+        "something": 6,
+        "something_2": 1,
+    }
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag123')" href="javascript:;">
+Home Assistant/tests/helpers/test_script_variables.py: 87-109
+</a>
+<div class="mid" id="frag123" style="display:none"><pre>
+async def test_template_vars_run_args_no_default(hass: HomeAssistant) -&gt; None:
+    """Test template vars."""
+    var = cv.SCRIPT_VARIABLES_SCHEMA(
+        {
+            "something": "{{ run_var_ex + 1 }}",
+            "something_2": "{{ run_var_ex + 1 }}",
+        }
+    )
+    rendered = var.async_render(
+        hass,
+        {
+            "run_var_ex": 5,
+            "something_2": 1,
+        },
+        render_as_defaults=False,
+    )
+    assert rendered == {
+        "run_var_ex": 5,
+        "something": 6,
+        "something_2": 6,
+    }
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 5:</b> &nbsp; 2 fragments, nominal size 20 lines, similarity 95%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag127')" href="javascript:;">
+Home Assistant/tests/helpers/test_sun.py: 116-143
+</a>
+<div class="mid" id="frag127" style="display:none"><pre>
+def test_date_events_default_date(hass: HomeAssistant) -&gt; None:
+    """Test retrieving next sun events."""
+    utc_now = datetime(2016, 11, 1, 8, 0, 0, tzinfo=dt_util.UTC)
+    from astral import LocationInfo
+    import astral.sun
+
+    utc_today = utc_now.date()
+
+    location = LocationInfo(
+        latitude=hass.config.latitude, longitude=hass.config.longitude
+    )
+
+    dawn = astral.sun.dawn(location.observer, date=utc_today)
+    dusk = astral.sun.dusk(location.observer, date=utc_today)
+    midnight = astral.sun.midnight(location.observer, date=utc_today)
+    noon = astral.sun.noon(location.observer, date=utc_today)
+    sunrise = astral.sun.sunrise(location.observer, date=utc_today)
+    sunset = astral.sun.sunset(location.observer, date=utc_today)
+
+    with freeze_time(utc_now):
+        assert dawn == sun.get_astral_event_date(hass, "dawn", utc_today)
+        assert dusk == sun.get_astral_event_date(hass, "dusk", utc_today)
+        assert midnight == sun.get_astral_event_date(hass, "midnight", utc_today)
+        assert noon == sun.get_astral_event_date(hass, "noon", utc_today)
+        assert sunrise == sun.get_astral_event_date(hass, SUN_EVENT_SUNRISE, utc_today)
+        assert sunset == sun.get_astral_event_date(hass, SUN_EVENT_SUNSET, utc_today)
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag128')" href="javascript:;">
+Home Assistant/tests/helpers/test_sun.py: 144-170
+</a>
+<div class="mid" id="frag128" style="display:none"><pre>
+def test_date_events_accepts_datetime(hass: HomeAssistant) -&gt; None:
+    """Test retrieving next sun events."""
+    utc_now = datetime(2016, 11, 1, 8, 0, 0, tzinfo=dt_util.UTC)
+    from astral import LocationInfo
+    import astral.sun
+
+    utc_today = utc_now.date()
+
+    location = LocationInfo(
+        latitude=hass.config.latitude, longitude=hass.config.longitude
+    )
+
+    dawn = astral.sun.dawn(location.observer, date=utc_today)
+    dusk = astral.sun.dusk(location.observer, date=utc_today)
+    midnight = astral.sun.midnight(location.observer, date=utc_today)
+    noon = astral.sun.noon(location.observer, date=utc_today)
+    sunrise = astral.sun.sunrise(location.observer, date=utc_today)
+    sunset = astral.sun.sunset(location.observer, date=utc_today)
+
+    assert dawn == sun.get_astral_event_date(hass, "dawn", utc_now)
+    assert dusk == sun.get_astral_event_date(hass, "dusk", utc_now)
+    assert midnight == sun.get_astral_event_date(hass, "midnight", utc_now)
+    assert noon == sun.get_astral_event_date(hass, "noon", utc_now)
+    assert sunrise == sun.get_astral_event_date(hass, SUN_EVENT_SUNRISE, utc_now)
+    assert sunset == sun.get_astral_event_date(hass, SUN_EVENT_SUNSET, utc_now)
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 6:</b> &nbsp; 2 fragments, nominal size 17 lines, similarity 88%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag168')" href="javascript:;">
+Home Assistant/tests/testing_config/custom_components/test/lock.py: 13-36
+</a>
+<div class="mid" id="frag168" style="display:none"><pre>
+def init(empty=False):
+    """Initialize the platform with entities."""
+    global ENTITIES
+
+    ENTITIES = (
+        {}
+        if empty
+        else {
+            "support_open": MockLock(
+                name="Support open Lock",
+                is_locked=True,
+                supported_features=LockEntityFeature.OPEN,
+                unique_id="unique_support_open",
+            ),
+            "no_support_open": MockLock(
+                name="No support open Lock",
+                is_locked=True,
+                supported_features=0,
+                unique_id="unique_no_support_open",
+            ),
+        }
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag185')" href="javascript:;">
+Home Assistant/tests/testing_config/custom_components/test/alarm_control_panel.py: 24-45
+</a>
+<div class="mid" id="frag185" style="display:none"><pre>
+def init(empty=False):
+    """Initialize the platform with entities."""
+    global ENTITIES
+
+    ENTITIES = (
+        {}
+        if empty
+        else {
+            "arm_code": MockAlarm(
+                name="Alarm arm code",
+                code_arm_required=True,
+                unique_id="unique_arm_code",
+            ),
+            "no_arm_code": MockAlarm(
+                name="Alarm no arm code",
+                code_arm_required=False,
+                unique_id="unique_no_arm_code",
+            ),
+        }
+    )
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 7:</b> &nbsp; 5 fragments, nominal size 11 lines, similarity 81%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag175')" href="javascript:;">
+Home Assistant/tests/testing_config/custom_components/test/date.py: 30-46
+</a>
+<div class="mid" id="frag175" style="display:none"><pre>
+def init(empty=False):
+    """Initialize the platform with entities."""
+    global ENTITIES
+
+    ENTITIES = (
+        []
+        if empty
+        else [
+            MockDateEntity(
+                name="test",
+                unique_id=UNIQUE_DATE,
+                native_value=date(2020, 1, 1),
+            ),
+        ]
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag199')" href="javascript:;">
+Home Assistant/tests/testing_config/custom_components/test/datetime.py: 30-46
+</a>
+<div class="mid" id="frag199" style="display:none"><pre>
+def init(empty=False):
+    """Initialize the platform with entities."""
+    global ENTITIES
+
+    ENTITIES = (
+        []
+        if empty
+        else [
+            MockDateTimeEntity(
+                name="test",
+                unique_id=UNIQUE_DATETIME,
+                native_value=datetime(2020, 1, 1, 1, 2, 3, tzinfo=UTC),
+            ),
+        ]
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag183')" href="javascript:;">
+Home Assistant/tests/testing_config/custom_components/test/button.py: 27-42
+</a>
+<div class="mid" id="frag183" style="display:none"><pre>
+def init(empty=False):
+    """Initialize the platform with entities."""
+    global ENTITIES
+
+    ENTITIES = (
+        []
+        if empty
+        else [
+            MockButtonEntity(
+                name="button 1",
+                unique_id="unique_button_1",
+            ),
+        ]
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag219')" href="javascript:;">
+Home Assistant/tests/testing_config/custom_components/test/time.py: 30-46
+</a>
+<div class="mid" id="frag219" style="display:none"><pre>
+def init(empty=False):
+    """Initialize the platform with entities."""
+    global ENTITIES
+
+    ENTITIES = (
+        []
+        if empty
+        else [
+            MockTimeEntity(
+                name="test",
+                unique_id=UNIQUE_TIME,
+                native_value=time(1, 2, 3),
+            ),
+        ]
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag178')" href="javascript:;">
+Home Assistant/tests/testing_config/custom_components/test/event.py: 22-38
+</a>
+<div class="mid" id="frag178" style="display:none"><pre>
+def init(empty=False):
+    """Initialize the platform with entities."""
+    global ENTITIES
+
+    ENTITIES = (
+        []
+        if empty
+        else [
+            MockEventEntity(
+                name="doorbell",
+                unique_id="unique_doorbell",
+                event_types=["short_press", "long_press"],
+            ),
+        ]
+    )
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 8:</b> &nbsp; 4 fragments, nominal size 24 lines, similarity 70%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag249')" href="javascript:;">
+Home Assistant/tests/pylint/test_enforce_sorted_platforms.py: 59-86
+</a>
+<div class="mid" id="frag249" style="display:none"><pre>
+def test_enforce_sorted_platforms_bad(
+    linter: UnittestLinter,
+    enforce_sorted_platforms_checker: BaseChecker,
+) -&gt; None:
+    """Bad test case."""
+    assign_node = astroid.extract_node(
+        """
+    PLATFORMS = [Platform.SENSOR, Platform.BINARY_SENSOR, Platform.BUTTON]
+    """,
+        "homeassistant.components.pylint_test",
+    )
+
+    with assert_adds_messages(
+        linter,
+        MessageTest(
+            msg_id="hass-enforce-sorted-platforms",
+            line=2,
+            node=assign_node,
+            args=None,
+            confidence=UNDEFINED,
+            col_offset=0,
+            end_line=2,
+            end_col_offset=70,
+        ),
+    ):
+        enforce_sorted_platforms_checker.visit_assign(assign_node)
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag252')" href="javascript:;">
+Home Assistant/tests/pylint/test_enforce_coordinator_module.py: 56-89
+</a>
+<div class="mid" id="frag252" style="display:none"><pre>
+def test_enforce_coordinator_module_bad_simple(
+    linter: UnittestLinter,
+    enforce_coordinator_module_checker: BaseChecker,
+) -&gt; None:
+    """Bad test case with coordinator extending directly."""
+    root_node = astroid.parse(
+        """
+    class DataUpdateCoordinator:
+        pass
+
+    class TestCoordinator(DataUpdateCoordinator):
+        pass
+    """,
+        "homeassistant.components.pylint_test",
+    )
+    walker = ASTWalker(linter)
+    walker.add_checker(enforce_coordinator_module_checker)
+
+    with assert_adds_messages(
+        linter,
+        MessageTest(
+            msg_id="hass-enforce-coordinator-module",
+            line=5,
+            node=root_node.body[1],
+            args=None,
+            confidence=UNDEFINED,
+            col_offset=0,
+            end_line=5,
+            end_col_offset=21,
+        ),
+    ):
+        walker.walk(root_node)
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag250')" href="javascript:;">
+Home Assistant/tests/pylint/test_enforce_sorted_platforms.py: 87-112
+</a>
+<div class="mid" id="frag250" style="display:none"><pre>
+def test_enforce_sorted_platforms_bad_typed(
+    linter: UnittestLinter,
+    enforce_sorted_platforms_checker: BaseChecker,
+) -&gt; None:
+    """Bad typed test case."""
+    assign_node = astroid.extract_node(
+        """
+    PLATFORMS: list[str] = [Platform.SENSOR, Platform.BINARY_SENSOR, Platform.BUTTON]
+    """,
+        "homeassistant.components.pylint_test",
+    )
+
+    with assert_adds_messages(
+        linter,
+        MessageTest(
+            msg_id="hass-enforce-sorted-platforms",
+            line=2,
+            node=assign_node,
+            args=None,
+            confidence=UNDEFINED,
+            col_offset=0,
+            end_line=2,
+            end_col_offset=81,
+        ),
+    ):
+        enforce_sorted_platforms_checker.visit_annassign(assign_node)
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag253')" href="javascript:;">
+Home Assistant/tests/pylint/test_enforce_coordinator_module.py: 90-134
+</a>
+<div class="mid" id="frag253" style="display:none"><pre>
+def test_enforce_coordinator_module_bad_nested(
+    linter: UnittestLinter,
+    enforce_coordinator_module_checker: BaseChecker,
+) -&gt; None:
+    """Bad test case with nested coordinators."""
+    root_node = astroid.parse(
+        """
+    class DataUpdateCoordinator:
+        pass
+
+    class TestCoordinator(DataUpdateCoordinator):
+        pass
+
+    class NopeCoordinator(TestCoordinator):
+        pass
+    """,
+        "homeassistant.components.pylint_test",
+    )
+    walker = ASTWalker(linter)
+    walker.add_checker(enforce_coordinator_module_checker)
+
+    with assert_adds_messages(
+        linter,
+        MessageTest(
+            msg_id="hass-enforce-coordinator-module",
+            line=5,
+            node=root_node.body[1],
+            args=None,
+            confidence=UNDEFINED,
+            col_offset=0,
+            end_line=5,
+            end_col_offset=21,
+        ),
+        MessageTest(
+            msg_id="hass-enforce-coordinator-module",
+            line=8,
+            node=root_node.body[2],
+            args=None,
+            confidence=UNDEFINED,
+            col_offset=0,
+            end_line=8,
+            end_col_offset=21,
+        ),
+    ):
+        walker.walk(root_node)
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 9:</b> &nbsp; 2 fragments, nominal size 15 lines, similarity 81%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag254')" href="javascript:;">
+Home Assistant/tests/pylint/test_imports.py: 41-59
+</a>
+<div class="mid" id="frag254" style="display:none"><pre>
+def test_good_import(
+    linter: UnittestLinter,
+    imports_checker: BaseChecker,
+    module_name: str,
+    import_from: str,
+    import_what: str,
+) -&gt; None:
+    """Ensure good imports pass through ok."""
+
+    import_node = astroid.extract_node(
+        f"from {import_from} import {import_what} #@",
+        module_name,
+    )
+    imports_checker.visit_module(import_node.parent)
+
+    with assert_no_messages(linter):
+        imports_checker.visit_importfrom(import_node)
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag256')" href="javascript:;">
+Home Assistant/tests/pylint/test_imports.py: 175-195
+</a>
+<div class="mid" id="frag256" style="display:none"><pre>
+def test_good_root_import(
+    linter: UnittestLinter,
+    imports_checker: BaseChecker,
+    import_node: str,
+    module_name: str,
+) -&gt; None:
+    """Ensure bad root imports are rejected."""
+
+    node = astroid.extract_node(
+        f"{import_node} #@",
+        module_name,
+    )
+    imports_checker.visit_module(node.parent)
+
+    with assert_no_messages(linter):
+        if import_node.startswith("import"):
+            imports_checker.visit_import(node)
+        if import_node.startswith("from"):
+            imports_checker.visit_importfrom(node)
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 10:</b> &nbsp; 2 fragments, nominal size 27 lines, similarity 81%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag255')" href="javascript:;">
+Home Assistant/tests/pylint/test_imports.py: 119-149
+</a>
+<div class="mid" id="frag255" style="display:none"><pre>
+def test_bad_import(
+    linter: UnittestLinter,
+    imports_checker: BaseChecker,
+    module_name: str,
+    import_from: str,
+    import_what: str,
+    error_code: str,
+) -&gt; None:
+    """Ensure bad imports are rejected."""
+
+    import_node = astroid.extract_node(
+        f"from {import_from} import {import_what} #@",
+        module_name,
+    )
+    imports_checker.visit_module(import_node.parent)
+
+    with assert_adds_messages(
+        linter,
+        pylint.testutils.MessageTest(
+            msg_id=error_code,
+            node=import_node,
+            args=None,
+            line=1,
+            col_offset=0,
+            end_line=1,
+            end_col_offset=len(import_from) + len(import_what) + 13,
+        ),
+    ):
+        imports_checker.visit_importfrom(import_node)
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag257')" href="javascript:;">
+Home Assistant/tests/pylint/test_imports.py: 225-254
+</a>
+<div class="mid" id="frag257" style="display:none"><pre>
+def test_bad_root_import(
+    linter: UnittestLinter,
+    imports_checker: BaseChecker,
+    import_node: str,
+    module_name: str,
+) -&gt; None:
+    """Ensure bad root imports are rejected."""
+
+    node = astroid.extract_node(
+        f"{import_node} #@",
+        module_name,
+    )
+    imports_checker.visit_module(node.parent)
+
+    with assert_adds_messages(
+        linter,
+        pylint.testutils.MessageTest(
+            msg_id="hass-component-root-import",
+            node=node,
+            args=None,
+            line=1,
+            col_offset=0,
+            end_line=1,
+            end_col_offset=len(import_node),
+        ),
+    ):
+        if import_node.startswith("import"):
+            imports_checker.visit_import(node)
+        if import_node.startswith("from"):
+            imports_checker.visit_importfrom(node)
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 11:</b> &nbsp; 8 fragments, nominal size 16 lines, similarity 100%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag272')" href="javascript:;">
+Home Assistant/tests/components/drop_connect/common.py: 69-87
+</a>
+<div class="mid" id="frag272" style="display:none"><pre>
+def config_entry_hub() -&gt; ConfigEntry:
+    """Config entry version 1 fixture."""
+    return MockConfigEntry(
+        domain=DOMAIN,
+        unique_id="DROP-1_C0FFEE_255",
+        data={
+            CONF_COMMAND_TOPIC: "drop_connect/DROP-1_C0FFEE/255/cmd",
+            CONF_DATA_TOPIC: "drop_connect/DROP-1_C0FFEE/255/#",
+            CONF_DEVICE_DESC: "Hub",
+            CONF_DEVICE_ID: 255,
+            CONF_DEVICE_NAME: "Hub DROP-1_C0FFEE",
+            CONF_DEVICE_TYPE: "hub",
+            CONF_HUB_ID: "DROP-1_C0FFEE",
+            CONF_DEVICE_OWNER_ID: "DROP-1_C0FFEE_255",
+        },
+        version=1,
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag273')" href="javascript:;">
+Home Assistant/tests/components/drop_connect/common.py: 88-106
+</a>
+<div class="mid" id="frag273" style="display:none"><pre>
+def config_entry_salt() -&gt; ConfigEntry:
+    """Config entry version 1 fixture."""
+    return MockConfigEntry(
+        domain=DOMAIN,
+        unique_id="DROP-1_C0FFEE_8",
+        data={
+            CONF_COMMAND_TOPIC: "drop_connect/DROP-1_C0FFEE/8/cmd",
+            CONF_DATA_TOPIC: "drop_connect/DROP-1_C0FFEE/8/#",
+            CONF_DEVICE_DESC: "Salt Sensor",
+            CONF_DEVICE_ID: 8,
+            CONF_DEVICE_NAME: "Salt Sensor",
+            CONF_DEVICE_TYPE: "salt",
+            CONF_HUB_ID: "DROP-1_C0FFEE",
+            CONF_DEVICE_OWNER_ID: "DROP-1_C0FFEE_255",
+        },
+        version=1,
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag277')" href="javascript:;">
+Home Assistant/tests/components/drop_connect/common.py: 164-182
+</a>
+<div class="mid" id="frag277" style="display:none"><pre>
+def config_entry_protection_valve() -&gt; ConfigEntry:
+    """Config entry version 1 fixture."""
+    return MockConfigEntry(
+        domain=DOMAIN,
+        unique_id="DROP-1_C0FFEE_78",
+        data={
+            CONF_COMMAND_TOPIC: "drop_connect/DROP-1_C0FFEE/78/cmd",
+            CONF_DATA_TOPIC: "drop_connect/DROP-1_C0FFEE/78/#",
+            CONF_DEVICE_DESC: "Protection Valve",
+            CONF_DEVICE_ID: 78,
+            CONF_DEVICE_NAME: "Protection Valve",
+            CONF_DEVICE_TYPE: "pv",
+            CONF_HUB_ID: "DROP-1_C0FFEE",
+            CONF_DEVICE_OWNER_ID: "DROP-1_C0FFEE_255",
+        },
+        version=1,
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag279')" href="javascript:;">
+Home Assistant/tests/components/drop_connect/common.py: 202-218
+</a>
+<div class="mid" id="frag279" style="display:none"><pre>
+def config_entry_ro_filter() -&gt; ConfigEntry:
+    """Config entry version 1 fixture."""
+    return MockConfigEntry(
+        domain=DOMAIN,
+        unique_id="DROP-1_C0FFEE_255",
+        data={
+            CONF_COMMAND_TOPIC: "drop_connect/DROP-1_C0FFEE/95/cmd",
+            CONF_DATA_TOPIC: "drop_connect/DROP-1_C0FFEE/95/#",
+            CONF_DEVICE_DESC: "RO Filter",
+            CONF_DEVICE_ID: 95,
+            CONF_DEVICE_NAME: "RO Filter",
+            CONF_DEVICE_TYPE: "ro",
+            CONF_HUB_ID: "DROP-1_C0FFEE",
+            CONF_DEVICE_OWNER_ID: "DROP-1_C0FFEE_255",
+        },
+        version=1,
+    )
+</pre></div>
+</td>
+</tr><tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag278')" href="javascript:;">
+Home Assistant/tests/components/drop_connect/common.py: 183-201
+</a>
+<div class="mid" id="frag278" style="display:none"><pre>
+def config_entry_pump_controller() -&gt; ConfigEntry:
+    """Config entry version 1 fixture."""
+    return MockConfigEntry(
+        domain=DOMAIN,
+        unique_id="DROP-1_C0FFEE_83",
+        data={
+            CONF_COMMAND_TOPIC: "drop_connect/DROP-1_C0FFEE/83/cmd",
+            CONF_DATA_TOPIC: "drop_connect/DROP-1_C0FFEE/83/#",
+            CONF_DEVICE_DESC: "Pump Controller",
+            CONF_DEVICE_ID: 83,
+            CONF_DEVICE_NAME: "Pump Controller",
+            CONF_DEVICE_TYPE: "pc",
+            CONF_HUB_ID: "DROP-1_C0FFEE",
+            CONF_DEVICE_OWNER_ID: "DROP-1_C0FFEE_255",
+        },
+        version=1,
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag276')" href="javascript:;">
+Home Assistant/tests/components/drop_connect/common.py: 145-163
+</a>
+<div class="mid" id="frag276" style="display:none"><pre>
+def config_entry_filter() -&gt; ConfigEntry:
+    """Config entry version 1 fixture."""
+    return MockConfigEntry(
+        domain=DOMAIN,
+        unique_id="DROP-1_C0FFEE_4",
+        data={
+            CONF_COMMAND_TOPIC: "drop_connect/DROP-1_C0FFEE/4/cmd",
+            CONF_DATA_TOPIC: "drop_connect/DROP-1_C0FFEE/4/#",
+            CONF_DEVICE_DESC: "Filter",
+            CONF_DEVICE_ID: 4,
+            CONF_DEVICE_NAME: "Filter",
+            CONF_DEVICE_TYPE: "filt",
+            CONF_HUB_ID: "DROP-1_C0FFEE",
+            CONF_DEVICE_OWNER_ID: "DROP-1_C0FFEE_255",
+        },
+        version=1,
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag275')" href="javascript:;">
+Home Assistant/tests/components/drop_connect/common.py: 126-144
+</a>
+<div class="mid" id="frag275" style="display:none"><pre>
+def config_entry_softener() -&gt; ConfigEntry:
+    """Config entry version 1 fixture."""
+    return MockConfigEntry(
+        domain=DOMAIN,
+        unique_id="DROP-1_C0FFEE_0",
+        data={
+            CONF_COMMAND_TOPIC: "drop_connect/DROP-1_C0FFEE/0/cmd",
+            CONF_DATA_TOPIC: "drop_connect/DROP-1_C0FFEE/0/#",
+            CONF_DEVICE_DESC: "Softener",
+            CONF_DEVICE_ID: 0,
+            CONF_DEVICE_NAME: "Softener",
+            CONF_DEVICE_TYPE: "soft",
+            CONF_HUB_ID: "DROP-1_C0FFEE",
+            CONF_DEVICE_OWNER_ID: "DROP-1_C0FFEE_255",
+        },
+        version=1,
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag274')" href="javascript:;">
+Home Assistant/tests/components/drop_connect/common.py: 107-125
+</a>
+<div class="mid" id="frag274" style="display:none"><pre>
+def config_entry_leak() -&gt; ConfigEntry:
+    """Config entry version 1 fixture."""
+    return MockConfigEntry(
+        domain=DOMAIN,
+        unique_id="DROP-1_C0FFEE_20",
+        data={
+            CONF_COMMAND_TOPIC: "drop_connect/DROP-1_C0FFEE/20/cmd",
+            CONF_DATA_TOPIC: "drop_connect/DROP-1_C0FFEE/20/#",
+            CONF_DEVICE_DESC: "Leak Detector",
+            CONF_DEVICE_ID: 20,
+            CONF_DEVICE_NAME: "Leak Detector",
+            CONF_DEVICE_TYPE: "leak",
+            CONF_HUB_ID: "DROP-1_C0FFEE",
+            CONF_DEVICE_OWNER_ID: "DROP-1_C0FFEE_255",
+        },
+        version=1,
+    )
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 12:</b> &nbsp; 2 fragments, nominal size 12 lines, similarity 100%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag370')" href="javascript:;">
+Home Assistant/tests/components/soundtouch/conftest.py: 147-161
+</a>
+<div class="mid" id="frag370" style="display:none"><pre>
+def device1_requests_mock(
+    requests_mock: Mocker,
+    device1_info: str,
+    device1_volume: str,
+    device1_presets: str,
+    device1_zone_master: str,
+) -&gt; Mocker:
+    """Mock SoundTouch device 1 API - base URLs."""
+    requests_mock.get(f"{DEVICE_1_URL}/info", text=device1_info)
+    requests_mock.get(f"{DEVICE_1_URL}/volume", text=device1_volume)
+    requests_mock.get(f"{DEVICE_1_URL}/presets", text=device1_presets)
+    requests_mock.get(f"{DEVICE_1_URL}/getZone", text=device1_zone_master)
+    return requests_mock
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag384')" href="javascript:;">
+Home Assistant/tests/components/soundtouch/conftest.py: 285-298
+</a>
+<div class="mid" id="frag384" style="display:none"><pre>
+def device2_requests_mock_standby(
+    requests_mock: Mocker,
+    device2_info: str,
+    device2_volume: str,
+    device2_now_playing_standby: str,
+    device2_zone_slave: str,
+) -&gt; Mocker:
+    """Mock SoundTouch device 2 API."""
+    requests_mock.get(f"{DEVICE_2_URL}/info", text=device2_info)
+    requests_mock.get(f"{DEVICE_2_URL}/volume", text=device2_volume)
+    requests_mock.get(f"{DEVICE_2_URL}/now_playing", text=device2_now_playing_standby)
+    requests_mock.get(f"{DEVICE_2_URL}/getZone", text=device2_zone_slave)
+
+    return requests_mock
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 13:</b> &nbsp; 4 fragments, nominal size 23 lines, similarity 70%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag387')" href="javascript:;">
+Home Assistant/tests/components/screenlogic/__init__.py: 56-77
+</a>
+<div class="mid" id="frag387" style="display:none"><pre>
+async def stub_async_connect(
+    data,
+    self,
+    ip=None,
+    port=None,
+    gtype=None,
+    gsubtype=None,
+    name=MOCK_ADAPTER_NAME,
+    connection_closed_callback: Callable = None,
+) -&gt; bool:
+    """Initialize minimum attributes needed for tests."""
+    self._ip = ip
+    self._port = port
+    self._type = gtype
+    self._subtype = gsubtype
+    self._name = name
+    self._custom_connection_closed_callback = connection_closed_callback
+    self._mac = MOCK_ADAPTER_MAC
+    self._data = data
+    _LOGGER.debug("Gateway mock connected")
+
+    return True
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1125')" href="javascript:;">
+Home Assistant/tests/components/geonetnz_volcano/__init__.py: 6-26
+</a>
+<div class="mid" id="frag1125" style="display:none"><pre>
+def _generate_mock_feed_entry(
+    external_id,
+    title,
+    alert_level,
+    distance_to_home,
+    coordinates,
+    attribution=None,
+    activity=None,
+    hazards=None,
+):
+    """Construct a mock feed entry for testing purposes."""
+    feed_entry = MagicMock()
+    feed_entry.external_id = external_id
+    feed_entry.title = title
+    feed_entry.alert_level = alert_level
+    feed_entry.distance_to_home = distance_to_home
+    feed_entry.coordinates = coordinates
+    feed_entry.attribution = attribution
+    feed_entry.activity = activity
+    feed_entry.hazards = hazards
+    return feed_entry
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag672')" href="javascript:;">
+Home Assistant/tests/components/geonetnz_quakes/__init__.py: 6-32
+</a>
+<div class="mid" id="frag672" style="display:none"><pre>
+def _generate_mock_feed_entry(
+    external_id,
+    title,
+    distance_to_home,
+    coordinates,
+    attribution=None,
+    depth=None,
+    magnitude=None,
+    mmi=None,
+    locality=None,
+    quality=None,
+    time=None,
+):
+    """Construct a mock feed entry for testing purposes."""
+    feed_entry = MagicMock()
+    feed_entry.external_id = external_id
+    feed_entry.title = title
+    feed_entry.distance_to_home = distance_to_home
+    feed_entry.coordinates = coordinates
+    feed_entry.attribution = attribution
+    feed_entry.depth = depth
+    feed_entry.magnitude = magnitude
+    feed_entry.mmi = mmi
+    feed_entry.locality = locality
+    feed_entry.quality = quality
+    feed_entry.time = time
+    return feed_entry
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag654')" href="javascript:;">
+Home Assistant/tests/components/gdacs/__init__.py: 6-42
+</a>
+<div class="mid" id="frag654" style="display:none"><pre>
+def _generate_mock_feed_entry(
+    external_id,
+    title,
+    distance_to_home,
+    coordinates,
+    attribution=None,
+    alert_level=None,
+    country=None,
+    duration_in_week=None,
+    event_name=None,
+    event_type_short=None,
+    event_type=None,
+    from_date=None,
+    to_date=None,
+    population=None,
+    severity=None,
+    vulnerability=None,
+):
+    """Construct a mock feed entry for testing purposes."""
+    feed_entry = MagicMock()
+    feed_entry.external_id = external_id
+    feed_entry.title = title
+    feed_entry.distance_to_home = distance_to_home
+    feed_entry.coordinates = coordinates
+    feed_entry.attribution = attribution
+    feed_entry.alert_level = alert_level
+    feed_entry.country = country
+    feed_entry.duration_in_week = duration_in_week
+    feed_entry.event_name = event_name
+    feed_entry.event_type_short = event_type_short
+    feed_entry.event_type = event_type
+    feed_entry.from_date = from_date
+    feed_entry.to_date = to_date
+    feed_entry.population = population
+    feed_entry.severity = severity
+    feed_entry.vulnerability = vulnerability
+    return feed_entry
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 14:</b> &nbsp; 2 fragments, nominal size 12 lines, similarity 100%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag388')" href="javascript:;">
+Home Assistant/tests/components/surepetcare/test_sensor.py: 18-31
+</a>
+<div class="mid" id="frag388" style="display:none"><pre>
+async def test_sensors(
+    hass: HomeAssistant, surepetcare, mock_config_entry_setup: MockConfigEntry
+) -&gt; None:
+    """Test the generation of unique ids."""
+    entity_registry = er.async_get(hass)
+    state_entity_ids = hass.states.async_entity_ids()
+
+    for entity_id, unique_id in EXPECTED_ENTITY_IDS.items():
+        assert entity_id in state_entity_ids
+        state = hass.states.get(entity_id)
+        assert state
+        assert state.state == "100"
+        entity = entity_registry.async_get(entity_id)
+        assert entity.unique_id == unique_id
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag389')" href="javascript:;">
+Home Assistant/tests/components/surepetcare/test_binary_sensor.py: 19-32
+</a>
+<div class="mid" id="frag389" style="display:none"><pre>
+async def test_binary_sensors(
+    hass: HomeAssistant, surepetcare, mock_config_entry_setup: MockConfigEntry
+) -&gt; None:
+    """Test the generation of unique ids."""
+    entity_registry = er.async_get(hass)
+    state_entity_ids = hass.states.async_entity_ids()
+
+    for entity_id, unique_id in EXPECTED_ENTITY_IDS.items():
+        assert entity_id in state_entity_ids
+        state = hass.states.get(entity_id)
+        assert state
+        assert state.state == "on"
+        entity = entity_registry.async_get(entity_id)
+        assert entity.unique_id == unique_id
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 15:</b> &nbsp; 2 fragments, nominal size 34 lines, similarity 96%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag457')" href="javascript:;">
+Home Assistant/tests/components/honeywell/conftest.py: 136-174
+</a>
+<div class="mid" id="frag457" style="display:none"><pre>
+def device_with_outdoor_sensor():
+    """Mock a somecomfort.Device."""
+    mock_device = create_autospec(aiosomecomfort.device.Device, instance=True)
+    mock_device.deviceid = 1234567
+    mock_device._data = {
+        "canControlHumidification": False,
+        "hasFan": False,
+    }
+    mock_device.system_mode = "off"
+    mock_device.name = "device3"
+    mock_device.current_temperature = CURRENTTEMPERATURE
+    mock_device.mac_address = "macaddress1"
+    mock_device.temperature_unit = "C"
+    mock_device.outdoor_temperature = OUTDOORTEMP
+    mock_device.outdoor_humidity = OUTDOORHUMIDITY
+    mock_device.raw_ui_data = {
+        "SwitchOffAllowed": True,
+        "SwitchAutoAllowed": True,
+        "SwitchCoolAllowed": True,
+        "SwitchHeatAllowed": True,
+        "SwitchEmergencyHeatAllowed": True,
+        "HeatUpperSetptLimit": HEATUPPERSETPOINTLIMIT,
+        "HeatLowerSetptLimit": HEATLOWERSETPOINTLIMIT,
+        "CoolUpperSetptLimit": COOLUPPERSETPOINTLIMIT,
+        "CoolLowerSetptLimit": COOLLOWERSETPOINTLIMIT,
+        "HeatNextPeriod": NEXTHEATPERIOD,
+        "CoolNextPeriod": NEXTCOOLPERIOD,
+    }
+    mock_device.raw_fan_data = {
+        "fanModeOnAllowed": True,
+        "fanModeAutoAllowed": True,
+        "fanModeCirculateAllowed": True,
+    }
+
+    mock_device.raw_dr_data = {"CoolSetpLimit": None, "HeatSetpLimit": None}
+
+    return mock_device
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag458')" href="javascript:;">
+Home Assistant/tests/components/honeywell/conftest.py: 176-212
+</a>
+<div class="mid" id="frag458" style="display:none"><pre>
+def another_device():
+    """Mock a somecomfort.Device."""
+    mock_device = create_autospec(aiosomecomfort.device.Device, instance=True)
+    mock_device.deviceid = 7654321
+    mock_device._data = {
+        "canControlHumidification": False,
+        "hasFan": False,
+    }
+    mock_device.system_mode = "off"
+    mock_device.name = "device2"
+    mock_device.current_temperature = CURRENTTEMPERATURE
+    mock_device.mac_address = "macaddress1"
+    mock_device.outdoor_temperature = None
+    mock_device.outdoor_humidity = None
+    mock_device.raw_ui_data = {
+        "SwitchOffAllowed": True,
+        "SwitchAutoAllowed": True,
+        "SwitchCoolAllowed": True,
+        "SwitchHeatAllowed": True,
+        "SwitchEmergencyHeatAllowed": True,
+        "HeatUpperSetptLimit": HEATUPPERSETPOINTLIMIT,
+        "HeatLowerSetptLimit": HEATLOWERSETPOINTLIMIT,
+        "CoolUpperSetptLimit": COOLUPPERSETPOINTLIMIT,
+        "CoolLowerSetptLimit": COOLLOWERSETPOINTLIMIT,
+        "HeatNextPeriod": NEXTHEATPERIOD,
+        "CoolNextPeriod": NEXTCOOLPERIOD,
+    }
+    mock_device.raw_fan_data = {
+        "fanModeOnAllowed": True,
+        "fanModeAutoAllowed": True,
+        "fanModeCirculateAllowed": True,
+    }
+
+    mock_device.raw_dr_data = {"CoolSetpLimit": None, "HeatSetpLimit": None}
+    return mock_device
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 16:</b> &nbsp; 2 fragments, nominal size 14 lines, similarity 80%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag490')" href="javascript:;">
+Home Assistant/tests/components/sfr_box/conftest.py: 43-60
+</a>
+<div class="mid" id="frag490" style="display:none"><pre>
+def get_config_entry_with_auth(hass: HomeAssistant) -&gt; ConfigEntry:
+    """Create and register mock config entry."""
+    config_entry_with_auth = MockConfigEntry(
+        domain=DOMAIN,
+        source=SOURCE_USER,
+        data={
+            CONF_HOST: "192.168.0.1",
+            CONF_USERNAME: "admin",
+            CONF_PASSWORD: "password",
+        },
+        unique_id="e4:5d:51:00:11:23",
+        options={},
+        entry_id="1234567",
+    )
+    config_entry_with_auth.add_to_hass(hass)
+    return config_entry_with_auth
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag897')" href="javascript:;">
+Home Assistant/tests/components/wallbox/conftest.py: 13-25
+</a>
+<div class="mid" id="frag897" style="display:none"><pre>
+def entry(hass: HomeAssistant) -&gt; MockConfigEntry:
+    """Return mock config entry."""
+    entry = MockConfigEntry(
+        domain=DOMAIN,
+        data={
+            CONF_USERNAME: "test_username",
+            CONF_PASSWORD: "test_password",
+            CONF_STATION: "12345",
+        },
+        entry_id="testEntry",
+    )
+    entry.add_to_hass(hass)
+    return entry
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 17:</b> &nbsp; 2 fragments, nominal size 14 lines, similarity 92%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag516')" href="javascript:;">
+Home Assistant/tests/components/dlna_dmr/conftest.py: 83-99
+</a>
+<div class="mid" id="frag516" style="display:none"><pre>
+def config_entry_mock() -&gt; MockConfigEntry:
+    """Mock a config entry for this platform."""
+    mock_entry = MockConfigEntry(
+        unique_id=MOCK_DEVICE_UDN,
+        domain=DLNA_DOMAIN,
+        data={
+            CONF_URL: MOCK_DEVICE_LOCATION,
+            CONF_DEVICE_ID: MOCK_DEVICE_UDN,
+            CONF_TYPE: MOCK_DEVICE_TYPE,
+            CONF_MAC: MOCK_MAC_ADDRESS,
+        },
+        title=MOCK_DEVICE_NAME,
+        options={},
+    )
+    return mock_entry
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag517')" href="javascript:;">
+Home Assistant/tests/components/dlna_dmr/conftest.py: 101-116
+</a>
+<div class="mid" id="frag517" style="display:none"><pre>
+def config_entry_mock_no_mac() -&gt; MockConfigEntry:
+    """Mock a config entry that does not already contain a MAC address."""
+    mock_entry = MockConfigEntry(
+        unique_id=MOCK_DEVICE_UDN,
+        domain=DLNA_DOMAIN,
+        data={
+            CONF_URL: MOCK_DEVICE_LOCATION,
+            CONF_DEVICE_ID: MOCK_DEVICE_UDN,
+            CONF_TYPE: MOCK_DEVICE_TYPE,
+        },
+        title=MOCK_DEVICE_NAME,
+        options={},
+    )
+    return mock_entry
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 18:</b> &nbsp; 4 fragments, nominal size 12 lines, similarity 75%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag562')" href="javascript:;">
+Home Assistant/tests/components/geo_json_events/conftest.py: 17-31
+</a>
+<div class="mid" id="frag562" style="display:none"><pre>
+def config_entry() -&gt; MockConfigEntry:
+    """Create a mock GeoJSON Events config entry."""
+    return MockConfigEntry(
+        domain=DOMAIN,
+        data={
+            CONF_URL: URL,
+            CONF_LATITUDE: -41.2,
+            CONF_LONGITUDE: 174.7,
+            CONF_RADIUS: 25.0,
+        },
+        title=f"{URL}, -41.2, 174.7",
+        unique_id=f"{URL}, -41.2, 174.7",
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1124')" href="javascript:;">
+Home Assistant/tests/components/geonetnz_volcano/conftest.py: 18-30
+</a>
+<div class="mid" id="frag1124" style="display:none"><pre>
+def config_entry():
+    """Create a mock GeoNet NZ Volcano config entry."""
+    return MockConfigEntry(
+        domain=DOMAIN,
+        data={
+            CONF_LATITUDE: -41.2,
+            CONF_LONGITUDE: 174.7,
+            CONF_RADIUS: 25,
+            CONF_UNIT_SYSTEM: "metric",
+            CONF_SCAN_INTERVAL: 300.0,
+        },
+        title="-41.2, 174.7",
+    )
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag653')" href="javascript:;">
+Home Assistant/tests/components/gdacs/conftest.py: 18-32
+</a>
+<div class="mid" id="frag653" style="display:none"><pre>
+def config_entry() -&gt; MockConfigEntry:
+    """Create a mock GDACS config entry."""
+    return MockConfigEntry(
+        domain=DOMAIN,
+        data={
+            CONF_LATITUDE: -41.2,
+            CONF_LONGITUDE: 174.7,
+            CONF_RADIUS: 25,
+            CONF_UNIT_SYSTEM: "metric",
+            CONF_SCAN_INTERVAL: 300.0,
+            CONF_CATEGORIES: [],
+        },
+        title="-41.2, 174.7",
+        unique_id="-41.2, 174.7",
+    )
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag671')" href="javascript:;">
+Home Assistant/tests/components/geonetnz_quakes/conftest.py: 22-37
+</a>
+<div class="mid" id="frag671" style="display:none"><pre>
+def config_entry():
+    """Create a mock GeoNet NZ Quakes config entry."""
+    return MockConfigEntry(
+        domain=DOMAIN,
+        data={
+            CONF_LATITUDE: -41.2,
+            CONF_LONGITUDE: 174.7,
+            CONF_RADIUS: 25,
+            CONF_UNIT_SYSTEM: "metric",
+            CONF_SCAN_INTERVAL: 300.0,
+            CONF_MMI: 4,
+            CONF_MINIMUM_MAGNITUDE: 0.0,
+        },
+        title="-41.2, 174.7",
+        unique_id="-41.2, 174.7",
+    )
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 19:</b> &nbsp; 2 fragments, nominal size 12 lines, similarity 100%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag578')" href="javascript:;">
+Home Assistant/tests/components/minecraft_server/conftest.py: 15-29
+</a>
+<div class="mid" id="frag578" style="display:none"><pre>
+def java_mock_config_entry() -&gt; MockConfigEntry:
+    """Create YouTube entry in Home Assistant."""
+    return MockConfigEntry(
+        domain=DOMAIN,
+        unique_id=None,
+        entry_id=TEST_CONFIG_ENTRY_ID,
+        data={
+            CONF_NAME: DEFAULT_NAME,
+            CONF_ADDRESS: TEST_ADDRESS,
+            CONF_TYPE: MinecraftServerType.JAVA_EDITION,
+        },
+        version=3,
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag579')" href="javascript:;">
+Home Assistant/tests/components/minecraft_server/conftest.py: 31-43
+</a>
+<div class="mid" id="frag579" style="display:none"><pre>
+def bedrock_mock_config_entry() -&gt; MockConfigEntry:
+    """Create YouTube entry in Home Assistant."""
+    return MockConfigEntry(
+        domain=DOMAIN,
+        unique_id=None,
+        entry_id=TEST_CONFIG_ENTRY_ID,
+        data={
+            CONF_NAME: DEFAULT_NAME,
+            CONF_ADDRESS: TEST_ADDRESS,
+            CONF_TYPE: MinecraftServerType.BEDROCK_EDITION,
+        },
+        version=3,
+    )
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 20:</b> &nbsp; 4 fragments, nominal size 16 lines, similarity 83%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag770')" href="javascript:;">
+Home Assistant/tests/components/bthome/__init__.py: 90-108
+</a>
+<div class="mid" id="frag770" style="display:none"><pre>
+def make_bthome_v1_adv(address: str, payload: bytes) -&gt; BluetoothServiceInfoBleak:
+    """Make a dummy advertisement."""
+    return BluetoothServiceInfoBleak(
+        name="Test Device",
+        address=address,
+        device=generate_ble_device(address, None),
+        rssi=-56,
+        manufacturer_data={},
+        service_data={
+            "0000181c-0000-1000-8000-00805f9b34fb": payload,
+        },
+        service_uuids=["0000181c-0000-1000-8000-00805f9b34fb"],
+        source="local",
+        advertisement=generate_advertisement_data(local_name="Test Device"),
+        time=0,
+        connectable=False,
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag771')" href="javascript:;">
+Home Assistant/tests/components/bthome/__init__.py: 109-129
+</a>
+<div class="mid" id="frag771" style="display:none"><pre>
+def make_encrypted_bthome_v1_adv(
+    address: str, payload: bytes
+) -&gt; BluetoothServiceInfoBleak:
+    """Make a dummy encrypted advertisement."""
+    return BluetoothServiceInfoBleak(
+        name="ATC 8F80A5",
+        address=address,
+        device=generate_ble_device(address, None),
+        rssi=-56,
+        manufacturer_data={},
+        service_data={
+            "0000181e-0000-1000-8000-00805f9b34fb": payload,
+        },
+        service_uuids=["0000181e-0000-1000-8000-00805f9b34fb"],
+        source="local",
+        advertisement=generate_advertisement_data(local_name="ATC 8F80A5"),
+        time=0,
+        connectable=False,
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag772')" href="javascript:;">
+Home Assistant/tests/components/bthome/__init__.py: 130-146
+</a>
+<div class="mid" id="frag772" style="display:none"><pre>
+def make_bthome_v2_adv(address: str, payload: bytes) -&gt; BluetoothServiceInfoBleak:
+    """Make a dummy advertisement."""
+    return BluetoothServiceInfoBleak(
+        name="Test Device",
+        address=address,
+        device=generate_ble_device(address, None),
+        rssi=-56,
+        manufacturer_data={},
+        service_data={
+            "0000fcd2-0000-1000-8000-00805f9b34fb": payload,
+        },
+        service_uuids=["0000fcd2-0000-1000-8000-00805f9b34fb"],
+        source="local",
+        advertisement=generate_advertisement_data(local_name="Test Device"),
+        time=0,
+        connectable=False,
+    )
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1139')" href="javascript:;">
+Home Assistant/tests/components/xiaomi_ble/__init__.py: 156-174
+</a>
+<div class="mid" id="frag1139" style="display:none"><pre>
+def make_advertisement(
+    address: str, payload: bytes, connectable: bool = True
+) -&gt; BluetoothServiceInfoBleak:
+    """Make a dummy advertisement."""
+    return BluetoothServiceInfoBleak(
+        name="Test Device",
+        address=address,
+        device=generate_ble_device(address, None),
+        rssi=-56,
+        manufacturer_data={},
+        service_data={
+            "0000fe95-0000-1000-8000-00805f9b34fb": payload,
+        },
+        service_uuids=["0000fe95-0000-1000-8000-00805f9b34fb"],
+        source="local",
+        advertisement=generate_advertisement_data(local_name="Test Device"),
+        time=0,
+        connectable=connectable,
+    )
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 21:</b> &nbsp; 2 fragments, nominal size 15 lines, similarity 100%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag773')" href="javascript:;">
+Home Assistant/tests/components/netgear_lte/test_sensor.py: 11-28
+</a>
+<div class="mid" id="frag773" style="display:none"><pre>
+async def test_sensors(
+    hass: HomeAssistant,
+    entity_registry_enabled_by_default: None,
+    setup_integration: None,
+    entity_registry: er.EntityRegistry,
+    snapshot: SnapshotAssertion,
+) -&gt; None:
+    """Test for successfully setting up the Netgear LTE sensor platform."""
+    entry = hass.config_entries.async_entries(DOMAIN)[0]
+    entity_entries = er.async_entries_for_config_entry(entity_registry, entry.entry_id)
+
+    assert entity_entries
+    for entity_entry in entity_entries:
+        if entity_entry.domain != SENSOR_DOMAIN:
+            continue
+        assert hass.states.get(entity_entry.entity_id) == snapshot(
+            name=entity_entry.entity_id
+        )
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag774')" href="javascript:;">
+Home Assistant/tests/components/netgear_lte/test_binary_sensor.py: 11-28
+</a>
+<div class="mid" id="frag774" style="display:none"><pre>
+async def test_binary_sensors(
+    hass: HomeAssistant,
+    entity_registry_enabled_by_default: None,
+    setup_integration: None,
+    entity_registry: er.EntityRegistry,
+    snapshot: SnapshotAssertion,
+) -&gt; None:
+    """Test for successfully setting up the Netgear LTE binary sensor platform."""
+    entry = hass.config_entries.async_entries(DOMAIN)[0]
+    entity_entries = er.async_entries_for_config_entry(entity_registry, entry.entry_id)
+
+    assert entity_entries
+    for entity_entry in entity_entries:
+        if entity_entry.domain != BINARY_SENSOR_DOMAIN:
+            continue
+        assert hass.states.get(entity_entry.entity_id) == snapshot(
+            name=entity_entry.entity_id
+        )
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 22:</b> &nbsp; 2 fragments, nominal size 61 lines, similarity 81%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag872')" href="javascript:;">
+Home Assistant/tests/components/gogogate2/__init__.py: 16-73
+</a>
+<div class="mid" id="frag872" style="display:none"><pre>
+def _mocked_gogogate_open_door_response():
+    return GogoGate2InfoResponse(
+        user="user1",
+        gogogatename="gogogatename0",
+        model="gogogate2",
+        apiversion="",
+        remoteaccessenabled=False,
+        remoteaccess="abc123.blah.blah",
+        firmwareversion="222",
+        apicode="",
+        door1=GogoGate2Door(
+            door_id=1,
+            permission=True,
+            name="Door1",
+            gate=False,
+            mode=DoorMode.GARAGE,
+            status=DoorStatus.OPENED,
+            sensor=True,
+            sensorid=None,
+            camera=False,
+            events=2,
+            temperature=None,
+            voltage=40,
+        ),
+        door2=GogoGate2Door(
+            door_id=2,
+            permission=True,
+            name=None,
+            gate=True,
+            mode=DoorMode.GARAGE,
+            status=DoorStatus.UNDEFINED,
+            sensor=True,
+            sensorid=None,
+            camera=False,
+            events=0,
+            temperature=None,
+            voltage=40,
+        ),
+        door3=GogoGate2Door(
+            door_id=3,
+            permission=True,
+            name=None,
+            gate=False,
+            mode=DoorMode.GARAGE,
+            status=DoorStatus.UNDEFINED,
+            sensor=True,
+            sensorid=None,
+            camera=False,
+            events=0,
+            temperature=None,
+            voltage=40,
+        ),
+        outputs=Outputs(output1=True, output2=False, output3=True),
+        network=Network(ip=""),
+        wifi=Wifi(SSID="", linkquality="", signal=""),
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag873')" href="javascript:;">
+Home Assistant/tests/components/gogogate2/__init__.py: 74-139
+</a>
+<div class="mid" id="frag873" style="display:none"><pre>
+def _mocked_ismartgate_closed_door_response():
+    return ISmartGateInfoResponse(
+        user="user1",
+        ismartgatename="ismartgatename0",
+        model="ismartgatePRO",
+        apiversion="",
+        remoteaccessenabled=True,
+        remoteaccess="abc321.blah.blah",
+        firmwareversion="555",
+        pin=123,
+        lang="en",
+        newfirmware=False,
+        door1=ISmartGateDoor(
+            door_id=1,
+            permission=True,
+            name="Door1",
+            gate=False,
+            mode=DoorMode.GARAGE,
+            status=DoorStatus.CLOSED,
+            sensor=True,
+            sensorid=None,
+            camera=False,
+            events=2,
+            temperature=None,
+            enabled=True,
+            apicode="apicode0",
+            customimage=False,
+            voltage=40,
+        ),
+        door2=ISmartGateDoor(
+            door_id=2,
+            permission=True,
+            name="Door2",
+            gate=True,
+            mode=DoorMode.GARAGE,
+            status=DoorStatus.CLOSED,
+            sensor=True,
+            sensorid=None,
+            camera=False,
+            events=2,
+            temperature=None,
+            enabled=True,
+            apicode="apicode0",
+            customimage=False,
+            voltage=40,
+        ),
+        door3=ISmartGateDoor(
+            door_id=3,
+            permission=True,
+            name=None,
+            gate=False,
+            mode=DoorMode.GARAGE,
+            status=DoorStatus.UNDEFINED,
+            sensor=True,
+            sensorid=None,
+            camera=False,
+            events=0,
+            temperature=None,
+            enabled=True,
+            apicode="apicode0",
+            customimage=False,
+            voltage=40,
+        ),
+        network=Network(ip=""),
+        wifi=Wifi(SSID="", linkquality="", signal=""),
+    )
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 23:</b> &nbsp; 3 fragments, nominal size 18 lines, similarity 76%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag903')" href="javascript:;">
+Home Assistant/tests/components/anova/conftest.py: 14-42
+</a>
+<div class="mid" id="frag903" style="display:none"><pre>
+async def anova_api(
+    hass: HomeAssistant,
+) -&gt; AnovaApi:
+    """Mock the api for Anova."""
+    api_mock = AsyncMock()
+
+    new_device = AnovaPrecisionCooker(None, DEVICE_UNIQUE_ID, "type_sample", None)
+
+    async def authenticate_side_effect():
+        api_mock.jwt = "my_test_jwt"
+
+    async def get_devices_side_effect():
+        if not api_mock.existing_devices:
+            api_mock.existing_devices = []
+        api_mock.existing_devices = api_mock.existing_devices + [new_device]
+        return [new_device]
+
+    api_mock.authenticate.side_effect = authenticate_side_effect
+    api_mock.get_devices.side_effect = get_devices_side_effect
+
+    with patch("homeassistant.components.anova.AnovaApi", return_value=api_mock):
+        api = AnovaApi(
+            None,
+            "sample@gmail.com",
+            "sample",
+        )
+        yield api
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag906')" href="javascript:;">
+Home Assistant/tests/components/anova/conftest.py: 44-67
+</a>
+<div class="mid" id="frag906" style="display:none"><pre>
+async def anova_api_no_devices(
+    hass: HomeAssistant,
+) -&gt; AnovaApi:
+    """Mock the api for Anova with no online devices."""
+    api_mock = AsyncMock()
+
+    async def authenticate_side_effect():
+        api_mock.jwt = "my_test_jwt"
+
+    async def get_devices_side_effect():
+        raise NoDevicesFound()
+
+    api_mock.authenticate.side_effect = authenticate_side_effect
+    api_mock.get_devices.side_effect = get_devices_side_effect
+
+    with patch("homeassistant.components.anova.AnovaApi", return_value=api_mock):
+        api = AnovaApi(
+            None,
+            "sample@gmail.com",
+            "sample",
+        )
+        yield api
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag909')" href="javascript:;">
+Home Assistant/tests/components/anova/conftest.py: 69-86
+</a>
+<div class="mid" id="frag909" style="display:none"><pre>
+async def anova_api_wrong_login(
+    hass: HomeAssistant,
+) -&gt; AnovaApi:
+    """Mock the api for Anova with a wrong login."""
+    api_mock = AsyncMock()
+
+    async def authenticate_side_effect():
+        raise InvalidLogin()
+
+    api_mock.authenticate.side_effect = authenticate_side_effect
+
+    with patch("homeassistant.components.anova.AnovaApi", return_value=api_mock):
+        api = AnovaApi(
+            None,
+            "sample@gmail.com",
+            "sample",
+        )
+        yield api
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 24:</b> &nbsp; 2 fragments, nominal size 24 lines, similarity 78%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag937')" href="javascript:;">
+Home Assistant/tests/components/prusalink/conftest.py: 61-87
+</a>
+<div class="mid" id="frag937" style="display:none"><pre>
+def mock_get_status_idle(hass):
+    """Mock PrusaLink printer API."""
+    resp = {
+        "storage": {
+            "path": "/usb/",
+            "name": "usb",
+            "read_only": False,
+        },
+        "printer": {
+            "state": "IDLE",
+            "temp_bed": 41.9,
+            "target_bed": 60.5,
+            "temp_nozzle": 47.8,
+            "target_nozzle": 210.1,
+            "axis_z": 1.8,
+            "axis_x": 7.9,
+            "axis_y": 8.4,
+            "flow": 100,
+            "speed": 100,
+            "fan_hotend": 100,
+            "fan_print": 75,
+        },
+    }
+    with patch("pyprusalink.PrusaLink.get_status", return_value=resp):
+        yield resp
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag938')" href="javascript:;">
+Home Assistant/tests/components/prusalink/conftest.py: 89-115
+</a>
+<div class="mid" id="frag938" style="display:none"><pre>
+def mock_get_status_printing(hass):
+    """Mock PrusaLink printer API."""
+    resp = {
+        "job": {
+            "id": 129,
+            "progress": 37.00,
+            "time_remaining": 73020,
+            "time_printing": 43987,
+        },
+        "storage": {"path": "/usb/", "name": "usb", "read_only": False},
+        "printer": {
+            "state": "PRINTING",
+            "temp_bed": 53.9,
+            "target_bed": 85.0,
+            "temp_nozzle": 6.0,
+            "target_nozzle": 0.0,
+            "axis_z": 5.0,
+            "flow": 100,
+            "speed": 100,
+            "fan_hotend": 5000,
+            "fan_print": 2500,
+        },
+    }
+    with patch("pyprusalink.PrusaLink.get_status", return_value=resp):
+        yield resp
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 25:</b> &nbsp; 4 fragments, nominal size 23 lines, similarity 75%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag976')" href="javascript:;">
+Home Assistant/tests/components/tomato/test_device_tracker.py: 68-91
+</a>
+<div class="mid" id="frag976" style="display:none"><pre>
+def test_config_missing_optional_params(hass: HomeAssistant, mock_session_send) -&gt; None:
+    """Test the setup without optional parameters."""
+    config = {
+        DOMAIN: tomato.PLATFORM_SCHEMA(
+            {
+                CONF_PLATFORM: tomato.DOMAIN,
+                CONF_HOST: "tomato-router",
+                CONF_USERNAME: "foo",
+                CONF_PASSWORD: "password",
+                tomato.CONF_HTTP_ID: "1234567890",
+            }
+        )
+    }
+    result = tomato.get_scanner(hass, config)
+    assert result.req.url == "http://tomato-router:80/update.cgi"
+    assert result.req.headers == {
+        "Content-Length": "32",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Authorization": "Basic Zm9vOnBhc3N3b3Jk",
+    }
+    assert "_http_id=1234567890" in result.req.body
+    assert "exec=devlist" in result.req.body
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag980')" href="javascript:;">
+Home Assistant/tests/components/tomato/test_device_tracker.py: 166-199
+</a>
+<div class="mid" id="frag980" style="display:none"><pre>
+def test_config_valid_verify_ssl_path(hass: HomeAssistant, mock_session_send) -&gt; None:
+    """Test the setup with a string for ssl_verify.
+
+    Representing the absolute path to a CA certificate bundle.
+    """
+    config = {
+        DOMAIN: tomato.PLATFORM_SCHEMA(
+            {
+                CONF_PLATFORM: tomato.DOMAIN,
+                CONF_HOST: "tomato-router",
+                CONF_PORT: 1234,
+                CONF_SSL: True,
+                CONF_VERIFY_SSL: "/test/tomato.crt",
+                CONF_USERNAME: "bar",
+                CONF_PASSWORD: "foo",
+                tomato.CONF_HTTP_ID: "0987654321",
+            }
+        )
+    }
+    result = tomato.get_scanner(hass, config)
+    assert result.req.url == "https://tomato-router:1234/update.cgi"
+    assert result.req.headers == {
+        "Content-Length": "32",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Authorization": "Basic YmFyOmZvbw==",
+    }
+    assert "_http_id=0987654321" in result.req.body
+    assert "exec=devlist" in result.req.body
+    assert mock_session_send.call_count == 1
+    assert mock_session_send.mock_calls[0] == mock.call(
+        result.req, timeout=60, verify="/test/tomato.crt"
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag981')" href="javascript:;">
+Home Assistant/tests/components/tomato/test_device_tracker.py: 200-230
+</a>
+<div class="mid" id="frag981" style="display:none"><pre>
+def test_config_valid_verify_ssl_bool(hass: HomeAssistant, mock_session_send) -&gt; None:
+    """Test the setup with a bool for ssl_verify."""
+    config = {
+        DOMAIN: tomato.PLATFORM_SCHEMA(
+            {
+                CONF_PLATFORM: tomato.DOMAIN,
+                CONF_HOST: "tomato-router",
+                CONF_PORT: 1234,
+                CONF_SSL: True,
+                CONF_VERIFY_SSL: "False",
+                CONF_USERNAME: "bar",
+                CONF_PASSWORD: "foo",
+                tomato.CONF_HTTP_ID: "0987654321",
+            }
+        )
+    }
+    result = tomato.get_scanner(hass, config)
+    assert result.req.url == "https://tomato-router:1234/update.cgi"
+    assert result.req.headers == {
+        "Content-Length": "32",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Authorization": "Basic YmFyOmZvbw==",
+    }
+    assert "_http_id=0987654321" in result.req.body
+    assert "exec=devlist" in result.req.body
+    assert mock_session_send.call_count == 1
+    assert mock_session_send.mock_calls[0] == mock.call(
+        result.req, timeout=60, verify=False
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag979')" href="javascript:;">
+Home Assistant/tests/components/tomato/test_device_tracker.py: 133-163
+</a>
+<div class="mid" id="frag979" style="display:none"><pre>
+def test_config_verify_ssl_but_no_ssl_enabled(
+    hass: HomeAssistant, mock_session_send
+) -&gt; None:
+    """Test the setup with a string with ssl_verify but ssl not enabled."""
+    config = {
+        DOMAIN: tomato.PLATFORM_SCHEMA(
+            {
+                CONF_PLATFORM: tomato.DOMAIN,
+                CONF_HOST: "tomato-router",
+                CONF_PORT: 1234,
+                CONF_SSL: False,
+                CONF_VERIFY_SSL: "/test/tomato.crt",
+                CONF_USERNAME: "foo",
+                CONF_PASSWORD: "password",
+                tomato.CONF_HTTP_ID: "1234567890",
+            }
+        )
+    }
+    result = tomato.get_scanner(hass, config)
+    assert result.req.url == "http://tomato-router:1234/update.cgi"
+    assert result.req.headers == {
+        "Content-Length": "32",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Authorization": "Basic Zm9vOnBhc3N3b3Jk",
+    }
+    assert "_http_id=1234567890" in result.req.body
+    assert "exec=devlist" in result.req.body
+    assert mock_session_send.call_count == 1
+    assert mock_session_send.mock_calls[0] == mock.call(result.req, timeout=60)
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 26:</b> &nbsp; 10 fragments, nominal size 13 lines, similarity 70%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag977')" href="javascript:;">
+Home Assistant/tests/components/tomato/test_device_tracker.py: 94-110
+</a>
+<div class="mid" id="frag977" style="display:none"><pre>
+def test_config_default_nonssl_port(hass: HomeAssistant, mock_session_send) -&gt; None:
+    """Test the setup without a default port set without ssl enabled."""
+    config = {
+        DOMAIN: tomato.PLATFORM_SCHEMA(
+            {
+                CONF_PLATFORM: tomato.DOMAIN,
+                CONF_HOST: "tomato-router",
+                CONF_USERNAME: "foo",
+                CONF_PASSWORD: "password",
+                tomato.CONF_HTTP_ID: "1234567890",
+            }
+        )
+    }
+    result = tomato.get_scanner(hass, config)
+    assert result.req.url == "http://tomato-router:80/update.cgi"
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag978')" href="javascript:;">
+Home Assistant/tests/components/tomato/test_device_tracker.py: 113-130
+</a>
+<div class="mid" id="frag978" style="display:none"><pre>
+def test_config_default_ssl_port(hass: HomeAssistant, mock_session_send) -&gt; None:
+    """Test the setup without a default port set with ssl enabled."""
+    config = {
+        DOMAIN: tomato.PLATFORM_SCHEMA(
+            {
+                CONF_PLATFORM: tomato.DOMAIN,
+                CONF_HOST: "tomato-router",
+                CONF_SSL: True,
+                CONF_USERNAME: "foo",
+                CONF_PASSWORD: "password",
+                tomato.CONF_HTTP_ID: "1234567890",
+            }
+        )
+    }
+    result = tomato.get_scanner(hass, config)
+    assert result.req.url == "https://tomato-router:443/update.cgi"
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag985')" href="javascript:;">
+Home Assistant/tests/components/tomato/test_device_tracker.py: 347-364
+</a>
+<div class="mid" id="frag985" style="display:none"><pre>
+def test_scan_devices(hass: HomeAssistant, mock_exception_logger) -&gt; None:
+    """Test scanning for new devices."""
+    config = {
+        DOMAIN: tomato.PLATFORM_SCHEMA(
+            {
+                CONF_PLATFORM: tomato.DOMAIN,
+                CONF_HOST: "tomato-router",
+                CONF_USERNAME: "foo",
+                CONF_PASSWORD: "bar",
+                tomato.CONF_HTTP_ID: "gimmie_good_data",
+            }
+        )
+    }
+
+    scanner = tomato.get_scanner(hass, config)
+    assert scanner.scan_devices() == ["F4:F5:D8:AA:AA:AA", "58:EF:68:00:00:00"]
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag983')" href="javascript:;">
+Home Assistant/tests/components/tomato/test_device_tracker.py: 301-322
+</a>
+<div class="mid" id="frag983" style="display:none"><pre>
+def test_config_bad_credentials(hass: HomeAssistant, mock_exception_logger) -&gt; None:
+    """Test the setup with bad credentials."""
+    config = {
+        DOMAIN: tomato.PLATFORM_SCHEMA(
+            {
+                CONF_PLATFORM: tomato.DOMAIN,
+                CONF_HOST: "tomato-router",
+                CONF_USERNAME: "i_am",
+                CONF_PASSWORD: "an_imposter",
+                tomato.CONF_HTTP_ID: "1234",
+            }
+        )
+    }
+
+    tomato.get_scanner(hass, config)
+
+    assert mock_exception_logger.call_count == 1
+    assert mock_exception_logger.mock_calls[0] == mock.call(
+        "Failed to authenticate, please check your username and password"
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag988')" href="javascript:;">
+Home Assistant/tests/components/tomato/test_device_tracker.py: 422-439
+</a>
+<div class="mid" id="frag988" style="display:none"><pre>
+def test_get_device_name(hass: HomeAssistant, mock_exception_logger) -&gt; None:
+    """Test getting device names."""
+    config = {
+        DOMAIN: tomato.PLATFORM_SCHEMA(
+            {
+                CONF_PLATFORM: tomato.DOMAIN,
+                CONF_HOST: "tomato-router",
+                CONF_USERNAME: "foo",
+                CONF_PASSWORD: "bar",
+                tomato.CONF_HTTP_ID: "gimmie_good_data",
+            }
+        )
+    }
+
+    scanner = tomato.get_scanner(hass, config)
+    assert scanner.get_device_name("F4:F5:D8:AA:AA:AA") == "chromecast"
+    assert scanner.get_device_name("58:EF:68:00:00:00") == "wemo"
+    assert scanner.get_device_name("AA:BB:CC:00:00:00") is None
+</pre></div>
+</td>
+</tr><tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag984')" href="javascript:;">
+Home Assistant/tests/components/tomato/test_device_tracker.py: 324-345
+</a>
+<div class="mid" id="frag984" style="display:none"><pre>
+def test_bad_response(hass: HomeAssistant, mock_exception_logger) -&gt; None:
+    """Test the setup with bad response from router."""
+    config = {
+        DOMAIN: tomato.PLATFORM_SCHEMA(
+            {
+                CONF_PLATFORM: tomato.DOMAIN,
+                CONF_HOST: "tomato-router",
+                CONF_USERNAME: "foo",
+                CONF_PASSWORD: "bar",
+                tomato.CONF_HTTP_ID: "gimmie_bad_data",
+            }
+        )
+    }
+
+    tomato.get_scanner(hass, config)
+
+    assert mock_exception_logger.call_count == 1
+    assert mock_exception_logger.mock_calls[0] == mock.call(
+        "Failed to parse response from router"
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag986')" href="javascript:;">
+Home Assistant/tests/components/tomato/test_device_tracker.py: 366-392
+</a>
+<div class="mid" id="frag986" style="display:none"><pre>
+def test_bad_connection(hass: HomeAssistant, mock_exception_logger) -&gt; None:
+    """Test the router with a connection error."""
+    config = {
+        DOMAIN: tomato.PLATFORM_SCHEMA(
+            {
+                CONF_PLATFORM: tomato.DOMAIN,
+                CONF_HOST: "tomato-router",
+                CONF_USERNAME: "foo",
+                CONF_PASSWORD: "bar",
+                tomato.CONF_HTTP_ID: "gimmie_good_data",
+            }
+        )
+    }
+
+    with requests_mock.Mocker() as adapter:
+        adapter.register_uri(
+            "POST",
+            "http://tomato-router:80/update.cgi",
+            exc=requests.exceptions.ConnectionError,
+        )
+        tomato.get_scanner(hass, config)
+    assert mock_exception_logger.call_count == 1
+    assert mock_exception_logger.mock_calls[0] == mock.call(
+        "Failed to connect to the router or invalid http_id supplied"
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag987')" href="javascript:;">
+Home Assistant/tests/components/tomato/test_device_tracker.py: 394-420
+</a>
+<div class="mid" id="frag987" style="display:none"><pre>
+def test_router_timeout(hass: HomeAssistant, mock_exception_logger) -&gt; None:
+    """Test the router with a timeout error."""
+    config = {
+        DOMAIN: tomato.PLATFORM_SCHEMA(
+            {
+                CONF_PLATFORM: tomato.DOMAIN,
+                CONF_HOST: "tomato-router",
+                CONF_USERNAME: "foo",
+                CONF_PASSWORD: "bar",
+                tomato.CONF_HTTP_ID: "gimmie_good_data",
+            }
+        )
+    }
+
+    with requests_mock.Mocker() as adapter:
+        adapter.register_uri(
+            "POST",
+            "http://tomato-router:80/update.cgi",
+            exc=requests.exceptions.Timeout,
+        )
+        tomato.get_scanner(hass, config)
+    assert mock_exception_logger.call_count == 1
+    assert mock_exception_logger.mock_calls[0] == mock.call(
+        "Connection to the router timed out"
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1259')" href="javascript:;">
+Home Assistant/tests/components/xiaomi/test_device_tracker.py: 218-236
+</a>
+<div class="mid" id="frag1259" style="display:none"><pre>
+async def test_valid_credential(mock_get, mock_post, hass: HomeAssistant) -&gt; None:
+    """Testing valid refresh."""
+    config = {
+        DOMAIN: xiaomi.PLATFORM_SCHEMA(
+            {
+                CONF_PLATFORM: xiaomi.DOMAIN,
+                CONF_HOST: "192.168.0.1",
+                CONF_USERNAME: "admin",
+                CONF_PASSWORD: "passwordTest",
+            }
+        )
+    }
+    scanner = get_scanner(hass, config)
+    assert scanner is not None
+    assert len(scanner.scan_devices()) == 2
+    assert scanner.get_device_name("23:83:BF:F6:38:A0") == "Device1"
+    assert scanner.get_device_name("1D:98:EC:5E:D5:A6") == "Device2"
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1260')" href="javascript:;">
+Home Assistant/tests/components/xiaomi/test_device_tracker.py: 239-258
+</a>
+<div class="mid" id="frag1260" style="display:none"><pre>
+async def test_token_timed_out(mock_get, mock_post, hass: HomeAssistant) -&gt; None:
+    """Testing refresh with a timed out token.
+
+    New token is requested and list is downloaded a second time.
+    """
+    config = {
+        DOMAIN: xiaomi.PLATFORM_SCHEMA(
+            {
+                CONF_PLATFORM: xiaomi.DOMAIN,
+                CONF_HOST: "192.168.0.1",
+                CONF_USERNAME: TOKEN_TIMEOUT_USERNAME,
+                CONF_PASSWORD: "passwordTest",
+            }
+        )
+    }
+    scanner = get_scanner(hass, config)
+    assert scanner is not None
+    assert len(scanner.scan_devices()) == 2
+    assert scanner.get_device_name("23:83:BF:F6:38:A0") == "Device1"
+    assert scanner.get_device_name("1D:98:EC:5E:D5:A6") == "Device2"
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 27:</b> &nbsp; 2 fragments, nominal size 10 lines, similarity 100%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag991')" href="javascript:;">
+Home Assistant/tests/components/recorder/db_schema_16.py: 103-114
+</a>
+<div class="mid" id="frag991" style="display:none"><pre>
+    def from_event(event, event_data=None):
+        """Create an event database object from a native event."""
+        return Events(
+            event_type=event.event_type,
+            event_data=event_data or json.dumps(event.data, cls=JSONEncoder),
+            origin=str(event.origin.value),
+            time_fired=event.time_fired,
+            context_id=event.context.id,
+            context_user_id=event.context.user_id,
+            context_parent_id=event.context.parent_id,
+        )
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1025')" href="javascript:;">
+Home Assistant/tests/components/recorder/db_schema_18.py: 101-112
+</a>
+<div class="mid" id="frag1025" style="display:none"><pre>
+    def from_event(event, event_data=None):
+        """Create an event database object from a native event."""
+        return Events(
+            event_type=event.event_type,
+            event_data=event_data or json.dumps(event.data, cls=JSONEncoder),
+            origin=str(event.origin.value),
+            time_fired=event.time_fired,
+            context_id=event.context.id,
+            context_user_id=event.context.user_id,
+            context_parent_id=event.context.parent_id,
+        )
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 28:</b> &nbsp; 6 fragments, nominal size 15 lines, similarity 70%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag992')" href="javascript:;">
+Home Assistant/tests/components/recorder/db_schema_16.py: 115-135
+</a>
+<div class="mid" id="frag992" style="display:none"><pre>
+    def to_native(self, validate_entity_id=True):
+        """Convert to a natve HA Event."""
+        context = Context(
+            id=self.context_id,
+            user_id=self.context_user_id,
+            parent_id=self.context_parent_id,
+        )
+        try:
+            return Event(
+                self.event_type,
+                json.loads(self.event_data),
+                EventOrigin(self.origin),
+                process_timestamp(self.time_fired),
+                context=context,
+            )
+        except ValueError:
+            # When json.loads fails
+            _LOGGER.exception("Error converting to event: %s", self)
+            return None
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag995')" href="javascript:;">
+Home Assistant/tests/components/recorder/db_schema_16.py: 200-219
+</a>
+<div class="mid" id="frag995" style="display:none"><pre>
+    def to_native(self, validate_entity_id=True):
+        """Convert to an HA state object."""
+        try:
+            return State(
+                self.entity_id,
+                self.state,
+                json.loads(self.attributes),
+                process_timestamp(self.last_changed),
+                process_timestamp(self.last_updated),
+                # Join the events table on event_id to get the context instead
+                # as it will always be there for state_changed events
+                context=Context(id=None),
+                validate_entity_id=validate_entity_id,
+            )
+        except ValueError:
+            # When json.loads fails
+            _LOGGER.exception("Error converting row to state: %s", self)
+            return None
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1026')" href="javascript:;">
+Home Assistant/tests/components/recorder/db_schema_18.py: 113-133
+</a>
+<div class="mid" id="frag1026" style="display:none"><pre>
+    def to_native(self, validate_entity_id=True):
+        """Convert to a natve HA Event."""
+        context = Context(
+            id=self.context_id,
+            user_id=self.context_user_id,
+            parent_id=self.context_parent_id,
+        )
+        try:
+            return Event(
+                self.event_type,
+                json.loads(self.event_data),
+                EventOrigin(self.origin),
+                process_timestamp(self.time_fired),
+                context=context,
+            )
+        except ValueError:
+            # When json.loads fails
+            _LOGGER.exception("Error converting to event: %s", self)
+            return None
+
+
+</pre></div>
+</td>
+</tr><tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1029')" href="javascript:;">
+Home Assistant/tests/components/recorder/db_schema_18.py: 194-213
+</a>
+<div class="mid" id="frag1029" style="display:none"><pre>
+    def to_native(self, validate_entity_id=True):
+        """Convert to an HA state object."""
+        try:
+            return State(
+                self.entity_id,
+                self.state,
+                json.loads(self.attributes),
+                process_timestamp(self.last_changed),
+                process_timestamp(self.last_updated),
+                # Join the events table on event_id to get the context instead
+                # as it will always be there for state_changed events
+                context=Context(id=None),
+                validate_entity_id=validate_entity_id,
+            )
+        except ValueError:
+            # When json.loads fails
+            _LOGGER.exception("Error converting row to state: %s", self)
+            return None
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1018')" href="javascript:;">
+Home Assistant/tests/components/recorder/db_schema_0.py: 54-68
+</a>
+<div class="mid" id="frag1018" style="display:none"><pre>
+    def to_native(self):
+        """Convert to a natve HA Event."""
+        try:
+            return Event(
+                self.event_type,
+                json.loads(self.event_data),
+                EventOrigin(self.origin),
+                _process_timestamp(self.time_fired),
+            )
+        except ValueError:
+            # When json.loads fails
+            _LOGGER.exception("Error converting to event: %s", self)
+            return None
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1020')" href="javascript:;">
+Home Assistant/tests/components/recorder/db_schema_0.py: 112-127
+</a>
+<div class="mid" id="frag1020" style="display:none"><pre>
+    def to_native(self):
+        """Convert to an HA state object."""
+        try:
+            return State(
+                self.entity_id,
+                self.state,
+                json.loads(self.attributes),
+                _process_timestamp(self.last_changed),
+                _process_timestamp(self.last_updated),
+            )
+        except ValueError:
+            # When json.loads fails
+            _LOGGER.exception("Error converting row to state: %s", self)
+            return None
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 29:</b> &nbsp; 3 fragments, nominal size 17 lines, similarity 100%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag994')" href="javascript:;">
+Home Assistant/tests/components/recorder/db_schema_16.py: 177-199
+</a>
+<div class="mid" id="frag994" style="display:none"><pre>
+    def from_event(event):
+        """Create object from a state_changed event."""
+        entity_id = event.data["entity_id"]
+        state = event.data.get("new_state")
+
+        dbstate = States(entity_id=entity_id)
+
+        # State got deleted
+        if state is None:
+            dbstate.state = ""
+            dbstate.domain = split_entity_id(entity_id)[0]
+            dbstate.attributes = "{}"
+            dbstate.last_changed = event.time_fired
+            dbstate.last_updated = event.time_fired
+        else:
+            dbstate.domain = state.domain
+            dbstate.state = state.state
+            dbstate.attributes = json.dumps(dict(state.attributes), cls=JSONEncoder)
+            dbstate.last_changed = state.last_changed
+            dbstate.last_updated = state.last_updated
+
+        return dbstate
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1028')" href="javascript:;">
+Home Assistant/tests/components/recorder/db_schema_18.py: 171-193
+</a>
+<div class="mid" id="frag1028" style="display:none"><pre>
+    def from_event(event):
+        """Create object from a state_changed event."""
+        entity_id = event.data["entity_id"]
+        state = event.data.get("new_state")
+
+        dbstate = States(entity_id=entity_id)
+
+        # State got deleted
+        if state is None:
+            dbstate.state = ""
+            dbstate.domain = split_entity_id(entity_id)[0]
+            dbstate.attributes = "{}"
+            dbstate.last_changed = event.time_fired
+            dbstate.last_updated = event.time_fired
+        else:
+            dbstate.domain = state.domain
+            dbstate.state = state.state
+            dbstate.attributes = json.dumps(dict(state.attributes), cls=JSONEncoder)
+            dbstate.last_changed = state.last_changed
+            dbstate.last_updated = state.last_updated
+
+        return dbstate
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1019')" href="javascript:;">
+Home Assistant/tests/components/recorder/db_schema_0.py: 89-111
+</a>
+<div class="mid" id="frag1019" style="display:none"><pre>
+    def from_event(event):
+        """Create object from a state_changed event."""
+        entity_id = event.data["entity_id"]
+        state = event.data.get("new_state")
+
+        dbstate = States(entity_id=entity_id)
+
+        # State got deleted
+        if state is None:
+            dbstate.state = ""
+            dbstate.domain = split_entity_id(entity_id)[0]
+            dbstate.attributes = "{}"
+            dbstate.last_changed = event.time_fired
+            dbstate.last_updated = event.time_fired
+        else:
+            dbstate.domain = state.domain
+            dbstate.state = state.state
+            dbstate.attributes = json.dumps(dict(state.attributes), cls=JSONEncoder)
+            dbstate.last_changed = state.last_changed
+            dbstate.last_updated = state.last_updated
+
+        return dbstate
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 30:</b> &nbsp; 3 fragments, nominal size 10 lines, similarity 90%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag998')" href="javascript:;">
+Home Assistant/tests/components/recorder/db_schema_16.py: 281-301
+</a>
+<div class="mid" id="frag998" style="display:none"><pre>
+    def entity_ids(self, point_in_time=None):
+        """Return the entity ids that existed in this run.
+
+        Specify point_in_time if you want to know which existed at that point
+        in time inside the run.
+        """
+        session = Session.object_session(self)
+
+        assert session is not None, "RecorderRuns need to be persisted"
+
+        query = session.query(distinct(States.entity_id)).filter(
+            States.last_updated &gt;= self.start
+        )
+
+        if point_in_time is not None:
+            query = query.filter(States.last_updated &lt; point_in_time)
+        elif self.end is not None:
+            query = query.filter(States.last_updated &lt; self.end)
+
+        return [row[0] for row in query]
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1033')" href="javascript:;">
+Home Assistant/tests/components/recorder/db_schema_18.py: 294-314
+</a>
+<div class="mid" id="frag1033" style="display:none"><pre>
+    def entity_ids(self, point_in_time=None):
+        """Return the entity ids that existed in this run.
+
+        Specify point_in_time if you want to know which existed at that point
+        in time inside the run.
+        """
+        session = Session.object_session(self)
+
+        assert session is not None, "RecorderRuns need to be persisted"
+
+        query = session.query(distinct(States.entity_id)).filter(
+            States.last_updated &gt;= self.start
+        )
+
+        if point_in_time is not None:
+            query = query.filter(States.last_updated &lt; point_in_time)
+        elif self.end is not None:
+            query = query.filter(States.last_updated &lt; self.end)
+
+        return [row[0] for row in query]
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1021')" href="javascript:;">
+Home Assistant/tests/components/recorder/db_schema_0.py: 138-160
+</a>
+<div class="mid" id="frag1021" style="display:none"><pre>
+    def entity_ids(self, point_in_time=None):
+        """Return the entity ids that existed in this run.
+
+        Specify point_in_time if you want to know which existed at that point
+        in time inside the run.
+        """
+        from sqlalchemy.orm.session import Session
+
+        session = Session.object_session(self)
+
+        assert session is not None, "RecorderRuns need to be persisted"
+
+        query = session.query(distinct(States.entity_id)).filter(
+            States.last_updated &gt;= self.start
+        )
+
+        if point_in_time is not None:
+            query = query.filter(States.last_updated &lt; point_in_time)
+        elif self.end is not None:
+            query = query.filter(States.last_updated &lt; self.end)
+
+        return [row[0] for row in query]
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 31:</b> &nbsp; 2 fragments, nominal size 18 lines, similarity 100%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1012')" href="javascript:;">
+Home Assistant/tests/components/recorder/db_schema_16.py: 422-447
+</a>
+<div class="mid" id="frag1012" style="display:none"><pre>
+    def as_dict(self):
+        """Return a dict representation of the LazyState.
+
+        Async friendly.
+        To be used for JSON serialization.
+        """
+        if self._last_changed:
+            last_changed_isoformat = self._last_changed.isoformat()
+        else:
+            last_changed_isoformat = process_timestamp_to_utc_isoformat(
+                self._row.last_changed
+            )
+        if self._last_updated:
+            last_updated_isoformat = self._last_updated.isoformat()
+        else:
+            last_updated_isoformat = process_timestamp_to_utc_isoformat(
+                self._row.last_updated
+            )
+        return {
+            "entity_id": self.entity_id,
+            "state": self.state,
+            "attributes": self._attributes or self.attributes,
+            "last_changed": last_changed_isoformat,
+            "last_updated": last_updated_isoformat,
+        }
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1047')" href="javascript:;">
+Home Assistant/tests/components/recorder/db_schema_18.py: 435-461
+</a>
+<div class="mid" id="frag1047" style="display:none"><pre>
+    def as_dict(self):
+        """Return a dict representation of the LazyState.
+
+        Async friendly.
+
+        To be used for JSON serialization.
+        """
+        if self._last_changed:
+            last_changed_isoformat = self._last_changed.isoformat()
+        else:
+            last_changed_isoformat = process_timestamp_to_utc_isoformat(
+                self._row.last_changed
+            )
+        if self._last_updated:
+            last_updated_isoformat = self._last_updated.isoformat()
+        else:
+            last_updated_isoformat = process_timestamp_to_utc_isoformat(
+                self._row.last_updated
+            )
+        return {
+            "entity_id": self.entity_id,
+            "state": self.state,
+            "attributes": self._attributes or self.attributes,
+            "last_changed": last_changed_isoformat,
+            "last_updated": last_updated_isoformat,
+        }
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 32:</b> &nbsp; 2 fragments, nominal size 14 lines, similarity 86%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1053')" href="javascript:;">
+Home Assistant/tests/components/recorder/test_models.py: 107-124
+</a>
+<div class="mid" id="frag1053" style="display:none"><pre>
+def test_states_repr_without_timestamp() -&gt; None:
+    """Test repr for a state without last_updated_ts."""
+    fixed_time = datetime(2016, 7, 9, 11, 0, 0, tzinfo=dt_util.UTC, microsecond=432432)
+    states = States(
+        entity_id="sensor.temp",
+        attributes=None,
+        context_id=None,
+        context_user_id=None,
+        context_parent_id=None,
+        origin_idx=None,
+        last_updated=fixed_time,
+        last_changed=fixed_time,
+        last_updated_ts=None,
+        last_changed_ts=None,
+    )
+    assert "2016-07-09 11:00:00+00:00" in repr(states)
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1054')" href="javascript:;">
+Home Assistant/tests/components/recorder/test_models.py: 125-140
+</a>
+<div class="mid" id="frag1054" style="display:none"><pre>
+def test_events_repr_without_timestamp() -&gt; None:
+    """Test repr for an event without time_fired_ts."""
+    fixed_time = datetime(2016, 7, 9, 11, 0, 0, tzinfo=dt_util.UTC, microsecond=432432)
+    events = Events(
+        event_type="any",
+        event_data=None,
+        origin_idx=None,
+        time_fired=fixed_time,
+        time_fired_ts=None,
+        context_id=None,
+        context_user_id=None,
+        context_parent_id=None,
+    )
+    assert "2016-07-09 11:00:00+00:00" in repr(events)
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 33:</b> &nbsp; 3 fragments, nominal size 29 lines, similarity 92%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1063')" href="javascript:;">
+Home Assistant/tests/components/recorder/test_models.py: 292-324
+</a>
+<div class="mid" id="frag1063" style="display:none"><pre>
+async def test_lazy_state_handles_different_last_updated_and_last_changed(
+    caplog: pytest.LogCaptureFixture,
+) -&gt; None:
+    """Test that the LazyState handles different last_updated and last_changed."""
+    now = datetime(2021, 6, 12, 3, 4, 1, 323, tzinfo=dt_util.UTC)
+    row = PropertyMock(
+        entity_id="sensor.valid",
+        state="off",
+        attributes='{"shared":true}',
+        last_updated_ts=now.timestamp(),
+        last_changed_ts=(now - timedelta(seconds=60)).timestamp(),
+    )
+    lstate = LazyState(
+        row, {}, None, row.entity_id, row.state, row.last_updated_ts, False
+    )
+    assert lstate.as_dict() == {
+        "attributes": {"shared": True},
+        "entity_id": "sensor.valid",
+        "last_changed": "2021-06-12T03:03:01.000323+00:00",
+        "last_updated": "2021-06-12T03:04:01.000323+00:00",
+        "state": "off",
+    }
+    assert lstate.last_updated.timestamp() == row.last_updated_ts
+    assert lstate.last_changed.timestamp() == row.last_changed_ts
+    assert lstate.as_dict() == {
+        "attributes": {"shared": True},
+        "entity_id": "sensor.valid",
+        "last_changed": "2021-06-12T03:03:01.000323+00:00",
+        "last_updated": "2021-06-12T03:04:01.000323+00:00",
+        "state": "off",
+    }
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1071')" href="javascript:;">
+Home Assistant/tests/components/recorder/test_models_legacy.py: 24-54
+</a>
+<div class="mid" id="frag1071" style="display:none"><pre>
+async def test_legacy_lazy_state_handles_different_last_updated_and_last_changed(
+    caplog: pytest.LogCaptureFixture,
+) -&gt; None:
+    """Test that the LazyState handles different last_updated and last_changed."""
+    now = datetime(2021, 6, 12, 3, 4, 1, 323, tzinfo=dt_util.UTC)
+    row = PropertyMock(
+        entity_id="sensor.valid",
+        state="off",
+        shared_attrs='{"shared":true}',
+        last_updated_ts=now.timestamp(),
+        last_changed_ts=(now - timedelta(seconds=60)).timestamp(),
+    )
+    lstate = LegacyLazyState(row, {}, None)
+    assert lstate.as_dict() == {
+        "attributes": {"shared": True},
+        "entity_id": "sensor.valid",
+        "last_changed": "2021-06-12T03:03:01.000323+00:00",
+        "last_updated": "2021-06-12T03:04:01.000323+00:00",
+        "state": "off",
+    }
+    assert lstate.last_updated.timestamp() == row.last_updated_ts
+    assert lstate.last_changed.timestamp() == row.last_changed_ts
+    assert lstate.as_dict() == {
+        "attributes": {"shared": True},
+        "entity_id": "sensor.valid",
+        "last_changed": "2021-06-12T03:03:01.000323+00:00",
+        "last_updated": "2021-06-12T03:04:01.000323+00:00",
+        "state": "off",
+    }
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1064')" href="javascript:;">
+Home Assistant/tests/components/recorder/test_models.py: 325-357
+</a>
+<div class="mid" id="frag1064" style="display:none"><pre>
+async def test_lazy_state_handles_same_last_updated_and_last_changed(
+    caplog: pytest.LogCaptureFixture,
+) -&gt; None:
+    """Test that the LazyState handles same last_updated and last_changed."""
+    now = datetime(2021, 6, 12, 3, 4, 1, 323, tzinfo=dt_util.UTC)
+    row = PropertyMock(
+        entity_id="sensor.valid",
+        state="off",
+        attributes='{"shared":true}',
+        last_updated_ts=now.timestamp(),
+        last_changed_ts=now.timestamp(),
+    )
+    lstate = LazyState(
+        row, {}, None, row.entity_id, row.state, row.last_updated_ts, False
+    )
+    assert lstate.as_dict() == {
+        "attributes": {"shared": True},
+        "entity_id": "sensor.valid",
+        "last_changed": "2021-06-12T03:04:01.000323+00:00",
+        "last_updated": "2021-06-12T03:04:01.000323+00:00",
+        "state": "off",
+    }
+    assert lstate.last_updated.timestamp() == row.last_updated_ts
+    assert lstate.last_changed.timestamp() == row.last_changed_ts
+    assert lstate.as_dict() == {
+        "attributes": {"shared": True},
+        "entity_id": "sensor.valid",
+        "last_changed": "2021-06-12T03:04:01.000323+00:00",
+        "last_updated": "2021-06-12T03:04:01.000323+00:00",
+        "state": "off",
+    }
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 34:</b> &nbsp; 2 fragments, nominal size 15 lines, similarity 92%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1080')" href="javascript:;">
+Home Assistant/tests/components/met_eireann/conftest.py: 9-23
+</a>
+<div class="mid" id="frag1080" style="display:none"><pre>
+def mock_weather():
+    """Mock weather data."""
+    with patch("meteireann.WeatherData") as mock_data:
+        mock_data = mock_data.return_value
+        mock_data.fetching_data = AsyncMock(return_value=True)
+        mock_data.get_current_weather.return_value = {
+            "condition": "Cloud",
+            "temperature": 15,
+            "pressure": 100,
+            "humidity": 50,
+            "wind_speed": 10,
+            "wind_bearing": "NE",
+        }
+        mock_data.get_forecast.return_value = {}
+        yield mock_data
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1126')" href="javascript:;">
+Home Assistant/tests/components/met/conftest.py: 9-24
+</a>
+<div class="mid" id="frag1126" style="display:none"><pre>
+def mock_weather():
+    """Mock weather data."""
+    with patch("metno.MetWeatherData") as mock_data:
+        mock_data = mock_data.return_value
+        mock_data.fetching_data = AsyncMock(return_value=True)
+        mock_data.get_current_weather.return_value = {
+            "condition": "cloudy",
+            "temperature": 15,
+            "pressure": 100,
+            "humidity": 50,
+            "wind_speed": 10,
+            "wind_bearing": "NE",
+            "dew_point": 12.1,
+        }
+        mock_data.get_forecast.return_value = {}
+        yield mock_data
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 35:</b> &nbsp; 2 fragments, nominal size 11 lines, similarity 100%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1108')" href="javascript:;">
+Home Assistant/tests/components/water_heater/test_significant_change.py: 85-97
+</a>
+<div class="mid" id="frag1108" style="display:none"><pre>
+async def test_significant_atributes_change(
+    hass: HomeAssistant,
+    unit_system: UnitSystem,
+    old_attrs: dict,
+    new_attrs: dict,
+    expected_result: bool,
+) -&gt; None:
+    """Detect Water Heater significant attribute changes."""
+    hass.config.units = unit_system
+    assert (
+        async_check_significant_change(hass, "state", old_attrs, "state", new_attrs)
+        == expected_result
+    )
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1189')" href="javascript:;">
+Home Assistant/tests/components/climate/test_significant_change.py: 118-130
+</a>
+<div class="mid" id="frag1189" style="display:none"><pre>
+async def test_significant_atributes_change(
+    hass: HomeAssistant,
+    unit_system: UnitSystem,
+    old_attrs: dict,
+    new_attrs: dict,
+    expected_result: bool,
+) -&gt; None:
+    """Detect Climate significant attribute changes."""
+    hass.config.units = unit_system
+    assert (
+        async_check_significant_change(hass, "state", old_attrs, "state", new_attrs)
+        == expected_result
+    )
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 36:</b> &nbsp; 3 fragments, nominal size 18 lines, similarity 88%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1110')" href="javascript:;">
+Home Assistant/tests/components/amberelectric/helpers.py: 13-32
+</a>
+<div class="mid" id="frag1110" style="display:none"><pre>
+def generate_actual_interval(
+    channel_type: ChannelType, end_time: datetime
+) -&gt; ActualInterval:
+    """Generate a mock actual interval."""
+    start_time = end_time - timedelta(minutes=30)
+    return ActualInterval(
+        duration=30,
+        spot_per_kwh=1.0,
+        per_kwh=8.0,
+        date=start_time.date(),
+        nem_time=end_time,
+        start_time=start_time,
+        end_time=end_time,
+        renewables=50,
+        channel_type=channel_type.value,
+        spike_status=SpikeStatus.NO_SPIKE.value,
+        descriptor=Descriptor.LOW.value,
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1112')" href="javascript:;">
+Home Assistant/tests/components/amberelectric/helpers.py: 54-74
+</a>
+<div class="mid" id="frag1112" style="display:none"><pre>
+def generate_forecast_interval(
+    channel_type: ChannelType, end_time: datetime
+) -&gt; ForecastInterval:
+    """Generate a mock forecast interval."""
+    start_time = end_time - timedelta(minutes=30)
+    return ForecastInterval(
+        duration=30,
+        spot_per_kwh=1.1,
+        per_kwh=8.8,
+        date=start_time.date(),
+        nem_time=end_time,
+        start_time=start_time,
+        end_time=end_time,
+        renewables=50,
+        channel_type=channel_type.value,
+        spike_status=SpikeStatus.NO_SPIKE.value,
+        descriptor=Descriptor.VERY_LOW.value,
+        estimate=True,
+    )
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1111')" href="javascript:;">
+Home Assistant/tests/components/amberelectric/helpers.py: 33-53
+</a>
+<div class="mid" id="frag1111" style="display:none"><pre>
+def generate_current_interval(
+    channel_type: ChannelType, end_time: datetime
+) -&gt; CurrentInterval:
+    """Generate a mock current price."""
+    start_time = end_time - timedelta(minutes=30)
+    return CurrentInterval(
+        duration=30,
+        spot_per_kwh=1.0,
+        per_kwh=8.0,
+        date=start_time.date(),
+        nem_time=end_time,
+        start_time=start_time,
+        end_time=end_time,
+        renewables=50.6,
+        channel_type=channel_type.value,
+        spike_status=SpikeStatus.NO_SPIKE.value,
+        descriptor=Descriptor.EXTREMELY_LOW.value,
+        estimate=True,
+    )
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 37:</b> &nbsp; 4 fragments, nominal size 23 lines, similarity 92%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1118')" href="javascript:;">
+Home Assistant/tests/components/nuheat/mocks.py: 17-42
+</a>
+<div class="mid" id="frag1118" style="display:none"><pre>
+def _get_mock_thermostat_run():
+    serial_number = "12345"
+    thermostat = Mock(
+        serial_number=serial_number,
+        room="Master bathroom",
+        online=True,
+        heating=True,
+        temperature=2222,
+        celsius=22,
+        fahrenheit=72,
+        max_celsius=69,
+        max_fahrenheit=157,
+        min_celsius=5,
+        min_fahrenheit=41,
+        schedule_mode=SCHEDULE_RUN,
+        target_celsius=22,
+        target_fahrenheit=72,
+        target_temperature=2217,
+    )
+
+    thermostat.get_data = Mock()
+    thermostat.resume_schedule = Mock()
+    thermostat.schedule_mode = Mock()
+    return thermostat
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1119')" href="javascript:;">
+Home Assistant/tests/components/nuheat/mocks.py: 43-68
+</a>
+<div class="mid" id="frag1119" style="display:none"><pre>
+def _get_mock_thermostat_schedule_hold_unavailable():
+    serial_number = "876"
+    thermostat = Mock(
+        serial_number=serial_number,
+        room="Guest bathroom",
+        online=False,
+        heating=False,
+        temperature=12,
+        celsius=12,
+        fahrenheit=102,
+        max_celsius=99,
+        max_fahrenheit=357,
+        min_celsius=9,
+        min_fahrenheit=21,
+        schedule_mode=SCHEDULE_HOLD,
+        target_celsius=23,
+        target_fahrenheit=79,
+        target_temperature=2609,
+    )
+
+    thermostat.get_data = Mock()
+    thermostat.resume_schedule = Mock()
+    thermostat.schedule_mode = Mock()
+    return thermostat
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1120')" href="javascript:;">
+Home Assistant/tests/components/nuheat/mocks.py: 69-94
+</a>
+<div class="mid" id="frag1120" style="display:none"><pre>
+def _get_mock_thermostat_schedule_hold_available():
+    serial_number = "876"
+    thermostat = Mock(
+        serial_number=serial_number,
+        room="Available bathroom",
+        online=True,
+        heating=False,
+        temperature=12,
+        celsius=12,
+        fahrenheit=102,
+        max_celsius=99,
+        max_fahrenheit=357,
+        min_celsius=9,
+        min_fahrenheit=21,
+        schedule_mode=SCHEDULE_HOLD,
+        target_celsius=23,
+        target_fahrenheit=79,
+        target_temperature=2609,
+    )
+
+    thermostat.get_data = Mock()
+    thermostat.resume_schedule = Mock()
+    thermostat.schedule_mode = Mock()
+    return thermostat
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1121')" href="javascript:;">
+Home Assistant/tests/components/nuheat/mocks.py: 95-122
+</a>
+<div class="mid" id="frag1121" style="display:none"><pre>
+def _get_mock_thermostat_schedule_temporary_hold():
+    serial_number = "999"
+    thermostat = Mock(
+        serial_number=serial_number,
+        room="Temp bathroom",
+        online=True,
+        heating=False,
+        temperature=14,
+        celsius=13,
+        fahrenheit=202,
+        max_celsius=39,
+        max_fahrenheit=357,
+        min_celsius=3,
+        min_fahrenheit=31,
+        schedule_mode=SCHEDULE_TEMPORARY_HOLD,
+        target_celsius=43,
+        target_fahrenheit=99,
+        target_temperature=3729,
+        max_temperature=5000,
+        min_temperature=1,
+    )
+
+    thermostat.get_data = Mock()
+    thermostat.resume_schedule = Mock()
+    thermostat.schedule_mode = Mock()
+    return thermostat
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 38:</b> &nbsp; 3 fragments, nominal size 14 lines, similarity 78%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1143')" href="javascript:;">
+Home Assistant/tests/components/renault/__init__.py: 52-68
+</a>
+<div class="mid" id="frag1143" style="display:none"><pre>
+def check_entities(
+    hass: HomeAssistant,
+    entity_registry: EntityRegistry,
+    expected_entities: MappingProxyType,
+) -&gt; None:
+    """Ensure that the expected_entities are correct."""
+    for expected_entity in expected_entities:
+        entity_id = expected_entity[ATTR_ENTITY_ID]
+        registry_entry = entity_registry.entities.get(entity_id)
+        assert registry_entry is not None
+        assert registry_entry.unique_id == expected_entity[ATTR_UNIQUE_ID]
+        state = hass.states.get(entity_id)
+        assert state.state == expected_entity[ATTR_STATE]
+        for attr in FIXED_ATTRIBUTES + DYNAMIC_ATTRIBUTES:
+            assert state.attributes.get(attr) == expected_entity.get(attr)
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1145')" href="javascript:;">
+Home Assistant/tests/components/renault/__init__.py: 87-101
+</a>
+<div class="mid" id="frag1145" style="display:none"><pre>
+def check_entities_unavailable(
+    hass: HomeAssistant,
+    entity_registry: EntityRegistry,
+    expected_entities: MappingProxyType,
+) -&gt; None:
+    """Ensure that the expected_entities are correct."""
+    for expected_entity in expected_entities:
+        entity_id = expected_entity[ATTR_ENTITY_ID]
+        registry_entry = entity_registry.entities.get(entity_id)
+        assert registry_entry is not None, f"{entity_id} not found in registry"
+        assert registry_entry.unique_id == expected_entity[ATTR_UNIQUE_ID]
+        state = hass.states.get(entity_id)
+        assert state.state == STATE_UNAVAILABLE
+        for attr in FIXED_ATTRIBUTES:
+            assert state.attributes.get(attr) == expected_entity.get(attr)
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1144')" href="javascript:;">
+Home Assistant/tests/components/renault/__init__.py: 69-86
+</a>
+<div class="mid" id="frag1144" style="display:none"><pre>
+def check_entities_no_data(
+    hass: HomeAssistant,
+    entity_registry: EntityRegistry,
+    expected_entities: MappingProxyType,
+    expected_state: str,
+) -&gt; None:
+    """Ensure that the expected_entities are correct."""
+    for expected_entity in expected_entities:
+        entity_id = expected_entity[ATTR_ENTITY_ID]
+        registry_entry = entity_registry.entities.get(entity_id)
+        assert registry_entry is not None
+        assert registry_entry.unique_id == expected_entity[ATTR_UNIQUE_ID]
+        state = hass.states.get(entity_id)
+        assert state.state == expected_state
+        for attr in FIXED_ATTRIBUTES:
+            assert state.attributes.get(attr) == expected_entity.get(attr)
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 39:</b> &nbsp; 2 fragments, nominal size 17 lines, similarity 94%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1256')" href="javascript:;">
+Home Assistant/tests/components/xiaomi/test_device_tracker.py: 152-172
+</a>
+<div class="mid" id="frag1256" style="display:none"><pre>
+async def test_config(xiaomi_mock, hass: HomeAssistant) -&gt; None:
+    """Testing minimal configuration."""
+    config = {
+        DOMAIN: xiaomi.PLATFORM_SCHEMA(
+            {
+                CONF_PLATFORM: xiaomi.DOMAIN,
+                CONF_HOST: "192.168.0.1",
+                CONF_PASSWORD: "passwordTest",
+            }
+        )
+    }
+    xiaomi.get_scanner(hass, config)
+    assert xiaomi_mock.call_count == 1
+    assert xiaomi_mock.call_args == call(config[DOMAIN])
+    call_arg = xiaomi_mock.call_args[0][0]
+    assert call_arg["username"] == "admin"
+    assert call_arg["password"] == "passwordTest"
+    assert call_arg["host"] == "192.168.0.1"
+    assert call_arg["platform"] == "device_tracker"
+
+
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1257')" href="javascript:;">
+Home Assistant/tests/components/xiaomi/test_device_tracker.py: 177-198
+</a>
+<div class="mid" id="frag1257" style="display:none"><pre>
+async def test_config_full(xiaomi_mock, hass: HomeAssistant) -&gt; None:
+    """Testing full configuration."""
+    config = {
+        DOMAIN: xiaomi.PLATFORM_SCHEMA(
+            {
+                CONF_PLATFORM: xiaomi.DOMAIN,
+                CONF_HOST: "192.168.0.1",
+                CONF_USERNAME: "alternativeAdminName",
+                CONF_PASSWORD: "passwordTest",
+            }
+        )
+    }
+    xiaomi.get_scanner(hass, config)
+    assert xiaomi_mock.call_count == 1
+    assert xiaomi_mock.call_args == call(config[DOMAIN])
+    call_arg = xiaomi_mock.call_args[0][0]
+    assert call_arg["username"] == "alternativeAdminName"
+    assert call_arg["password"] == "passwordTest"
+    assert call_arg["host"] == "192.168.0.1"
+    assert call_arg["platform"] == "device_tracker"
+
+
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<br>
+<table style="width:1000px; border:2px solid lightgrey; border-radius:8px;">
+<tr><td style="background-color:white">
+<p style="font-size:14pt"><b>Class 40:</b> &nbsp; 2 fragments, nominal size 13 lines, similarity 83%</p>
+<table cellpadding=4 border=2>
+<tr>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1288')" href="javascript:;">
+Home Assistant/tests/components/vultr/test_sensor.py: 117-135
+</a>
+<div class="mid" id="frag1288" style="display:none"><pre>
+def test_invalid_sensors(hass: HomeAssistant) -&gt; None:
+    """Test the VultrSensor fails."""
+    hass_devices = []
+
+    def add_entities(devices, action):
+        """Mock add devices."""
+        for device in devices:
+            device.hass = hass
+            hass_devices.append(device)
+
+    bad_conf = {
+        CONF_NAME: "Vultr {} {}",
+        CONF_SUBSCRIPTION: "",
+        CONF_MONITORED_CONDITIONS: vultr.SENSOR_KEYS,
+    }  # No subs at all
+
+    vultr.setup_platform(hass, bad_conf, add_entities, None)
+
+    assert len(hass_devices) == 0
+</pre></div>
+</td>
+<td width="auto">
+<a onclick="javascript:ShowHide('frag1294')" href="javascript:;">
+Home Assistant/tests/components/vultr/test_binary_sensor.py: 85-104
+</a>
+<div class="mid" id="frag1294" style="display:none"><pre>
+def test_invalid_sensors(hass: HomeAssistant) -&gt; None:
+    """Test the VultrBinarySensor fails."""
+    hass_devices = []
+
+    def add_entities(devices, action):
+        """Mock add devices."""
+        for device in devices:
+            device.hass = hass
+            hass_devices.append(device)
+
+    bad_conf = {}  # No subscription
+
+    vultr.setup_platform(hass, bad_conf, add_entities, None)
+
+    bad_conf = {
+        CONF_NAME: "Missing Server",
+        CONF_SUBSCRIPTION: "555555",
+    }  # Sub not associated with API key (not in server_list)
+
+    vultr.setup_platform(hass, bad_conf, add_entities, None)
+</pre></div>
+</td>
+</tr><tr>
+</tr>
+</table>
+</td></tr>
+</table>
+<script language="JavaScript">
+function ShowHide(divId) { 
+    if(document.getElementById(divId).style.display == 'none') {
+        document.getElementById(divId).style.display='block';
+    } else { 
+        document.getElementById(divId).style.display = 'none';
+    } 
+}
+</script>
+</body>
+</html>

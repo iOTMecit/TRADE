@@ -1,0 +1,4 @@
+entity_state: "on"
+fired_actions: [1002]
+expected_calls:
+  - service: fake_service1002
