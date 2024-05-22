@@ -30,7 +30,7 @@ Copy the entire source directory of the system you want to analyze to the analys
 
 Run the NiCad command, specifying the analysis granularity and language of the system you want to analyze. 
 
-	./nicad6 functions python systems/JHotDraw default-report
+	./nicad6 functions py systems/JHotDraw default-report
 
 # Simian
 
