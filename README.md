@@ -11,7 +11,7 @@ For linux:
 After installation go to directory of code to be analyze by terminal
 After:
 
-	pmd cpd --minimum-tokens 30 --dir components/ --language python --format text > cpd_results.xml
+	pmd cpd --minimum-tokens 35 --dir components/ --language python --format text > cpd_results.xml
 
 
 # Nicad
@@ -43,4 +43,8 @@ Copy the code to be analyze inside of simian directory
 Run simian command
 
 	java -jar simian.jar -formatter=xml:output.xml "**/*.py"
+ For Threshold:
+
+ 	java -jar simian.jar -formatter=xml:output.xml -threshold=5 "**/*.py"
+
 
