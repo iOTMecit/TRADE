@@ -70,7 +70,6 @@ def fix_print_statements(code):
 
 
 def is_class_dependency(node, class_names):
-    # Check if the node is a class definition, a method of a class, or an attribute of a known class
     if isinstance(node, ast.ClassDef):
         return True, node.name
     elif isinstance(node, ast.FunctionDef):
@@ -151,19 +150,86 @@ def analyze_dependencies(clone, base_path, project_path):
     return False, ""
 
 
+def extract_code(file_path, start_line, end_line):
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+    return lines[start_line - 1:end_line]
+
+
+def write_refactor_file(refactor_file_path, code_snippets):
+    with open(refactor_file_path, 'w') as refactor_file:
+        refactor_file.write("# This file contains refactored functions\n\n")
+        for idx, code_snippet in enumerate(code_snippets):
+            refactor_file.write(f"def refactored_function_{idx + 1}():\n")
+            refactor_file.write("    " + "    ".join(code_snippet))
+            refactor_file.write("\n\n")
+
+
+def replace_code_with_function_call(file_path, start_line, end_line, function_name, alias, another_function):
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+
+    import_statement = f"from after_refactor import {function_name} as {alias}\n"
+    new_function = f"def {another_function}():\n    {alias}.{function_name}()\n"
+
+    # Insert import statement at the beginning of the file
+    lines.insert(0, import_statement)
+
+    # Replace the code with a function call
+    lines[start_line - 1:end_line] = [new_function]
+
+    with open(file_path, 'w') as file:
+        file.writelines(lines)
+
+
+def update_function_calls(base_path, original_function, new_function):
+    for root, _, files in os.walk(base_path):
+        for file in files:
+            if file.endswith('.py'):
+                file_path = os.path.join(root, file)
+                with open(file_path, 'r') as f:
+                    content = f.read()
+
+                updated_content = re.sub(rf'\b{original_function}\b', new_function, content)
+
+                with open(file_path, 'w') as f:
+                    f.write(updated_content)
+
+
 def main():
     xml_file = '/home/vestel/Desktop/Otomatik/SadeceTestToga_functions-blind-clones-0.30-classes-withsource.xml'
     base_path = '/home/vestel/Desktop/Otomatik'
     project_path = os.path.join(base_path, 'systems/SadeceTestToga')
+    refactor_file_path = os.path.join(base_path, 'after_refactor.py')
 
     clones = parse_nicad_xml(xml_file)
+    code_snippets = []
 
     for clone_pair in clones:
         has_deps, reason = analyze_dependencies(clone_pair, base_path, project_path)
         if not has_deps:
             print(f"Clone pair {clone_pair} is refactorable.")
+            for file_path, start_line, end_line in clone_pair:
+                file_full_path = os.path.join(base_path, file_path)
+                code_snippets.append(extract_code(file_full_path, start_line, end_line))
         else:
             print(f"Clone pair {clone_pair} is unrefactorable. Reason: {reason}")
+
+    write_refactor_file(refactor_file_path, code_snippets)
+
+    for idx, clone_pair in enumerate(clones):
+        has_deps, reason = analyze_dependencies(clone_pair, base_path, project_path)
+        if not has_deps:
+            for file_path, start_line, end_line in clone_pair:
+                file_full_path = os.path.join(base_path, file_path)
+                function_name = f"refactored_function_{idx + 1}"
+                alias = f"xx_{idx + 1}"
+                another_function = f"another_function_{idx + 1}"
+                replace_code_with_function_call(file_full_path, start_line, end_line, function_name, alias, another_function)
+
+                original_function = extract_function_name(base_path, file_path, start_line)
+                if original_function:
+                    update_function_calls(base_path, original_function, another_function)
 
 
 if __name__ == "__main__":

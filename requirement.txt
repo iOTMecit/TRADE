@@ -1,5 +1,3 @@
 lxml
 pytest
-ast
 pydeps
-unittest
