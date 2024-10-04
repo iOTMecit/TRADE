@@ -1,9 +1,0 @@
-example_app:
-  module: controllerx
-  class: SwitchController
-  controller: sensor.my_controller
-  integration: z2m
-  switch:
-    name: switch.my_switch
-  mapping:
-    toggle: toggle

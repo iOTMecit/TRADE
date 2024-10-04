@@ -1,5 +1,0 @@
-fired_actions: [toggle]
-expected_calls:
-  - service: homeassistant/toggle
-    data:
-      entity_id: switch.my_switch

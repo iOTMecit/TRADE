@@ -1,3 +1,0 @@
-entity_state: "on"
-fired_actions: [fake_step]
-expected_calls_count: 0

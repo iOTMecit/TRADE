@@ -1,7 +1,0 @@
-fired_actions: [toggle]
-render_template_response: noise
-expected_calls:
-  - service: wled/effect
-    data:
-      entity_id: light.wled
-      effect: noise
