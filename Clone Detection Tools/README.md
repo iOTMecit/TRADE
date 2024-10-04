@@ -11,7 +11,7 @@ For linux:
 After installation go to directory of code to be analyze by terminal
 After:
 
-	pmd cpd --minimum-tokens 35 --dir components/ --language python --format text > cpd_results.xml
+	pmd cpd --minimum-tokens 35 --dir pmd-bin-7.0.0/HomeAssistant/ --language python --format text > cpd_results.xml
 
 
 # Nicad
@@ -35,7 +35,7 @@ Copy the entire source directory of the system you want to analyze to the analys
 
 Run the NiCad command, specifying the analysis granularity and language of the system you want to analyze. 
 
-	./nicad6 functions py systems/JHotDraw default-report
+	./nicad6 functions py systems/HomeAssistant/ default-report
 
 # Simian
 Install Simian from:
