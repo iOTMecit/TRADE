@@ -15,10 +15,12 @@ After:
 
 
 # Nicad
+Install Nicad from:
+	https://www.txl.ca/txl-nicaddownload.html
 
 After installation go to directory of code to be analyze by terminal 
 	
-	cd NiCad-6.1
+	cd NiCad-6.2
 
 Create a directory to hold the source systems and results of the NiCad clone analysis. If you're running NiCad in place, the ./systems directory in the NiCad distribution directory is appropriate.
 	
@@ -33,7 +35,9 @@ Run the NiCad command, specifying the analysis granularity and language of the s
 	./nicad6 functions py systems/JHotDraw default-report
 
 # Simian
-
+Install Simian from:
+	https://simian.quandarypeak.com/docs/
+ 
 After installation go to directory of code to be analyze by terminal 
 	
 	cd simian
