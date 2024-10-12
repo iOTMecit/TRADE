@@ -30,6 +30,10 @@ The project requires the BASE_PATH environment variable to be set. This variable
 ```shell
 	export BASE_PATH=$(pwd)  # On Windows: set BASE_PATH=%cd%
 ```
+Replace $(pwd) with the path where you downloaded TRADE. For example
+```shell
+	export BASE_PATH=/path/to/where/you/downloaded/Test\ Refactoring\ Tool
+```
 ### Step 5: Run the Project
 
 You can now run the project directly from the terminal:
