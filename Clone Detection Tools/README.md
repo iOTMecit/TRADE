@@ -18,9 +18,6 @@ After:
 Install Nicad from:
 	https://www.txl.ca/txl-nicaddownload.html
 
-Or you can use the one in this repo
-
-
 After installation go to directory of code to be analyze by terminal 
 	
 	cd NiCad-6.2
@@ -40,8 +37,6 @@ Run the NiCad command, specifying the analysis granularity and language of the s
 # Simian
 Install Simian from:
 	https://simian.quandarypeak.com/docs/
- 
-Or you can use the one in this repo
  
 After installation go to directory of code to be analyze by terminal 
 	
