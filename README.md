@@ -25,8 +25,8 @@ Extract the 'tests' folder from downloaded file `core.zip`.
 
 [Toga](https://github.com/beeware/toga/tree/main).
 This project has a test folder in 2 different locations. You need to get both of them.
-Extract the 'testbed' folder from downloaded file `toga-main.zip`.
-Extract the 'core/tests' folder from downloaded file `toga-main.zip`.
+Extract the '/testbed' folder from downloaded file `toga-main.zip`.
+Extract the '/core/tests' folder from downloaded file `toga-main.zip`.
 
 [Kivy](https://github.com/kivy/kivy/tree/master).
 Extract the 'kivy/tests' folder from downloaded file `core.zip`.
