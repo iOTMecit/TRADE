@@ -20,15 +20,15 @@ In the following sections, we describe how to replicate the results for our stud
 
 Download open source projects from below.
 
-Home Assistant[here](https://github.com/home-assistant/core).
+[Home Assistant](https://github.com/home-assistant/core).
 Extract the 'tests' folder from downloaded file `core.zip`.
 
-Toga[here](https://github.com/beeware/toga/tree/main).
+[Toga](https://github.com/beeware/toga/tree/main).
 This project has a test folder in 2 different locations. You need to get both of them.
 Extract the 'testbed' folder from downloaded file `toga-main.zip`.
 Extract the 'core/tests' folder from downloaded file `toga-main.zip`.
 
-Kivy[here](https://github.com/kivy/kivy/tree/master).
+[Kivy](https://github.com/kivy/kivy/tree/master).
 Extract the 'kivy/tests' folder from downloaded file `core.zip`.
 
 ## ⚠️ Caution!
