@@ -31,11 +31,12 @@ Copy the entire source directory of the system you want to analyze to the analys
 	cp -r ./examples/JHotDraw ./systems/
  
 Editing config file:
-	- Enter the 'config' folder and create the 'myconfig.cfg' and 'myconfig-report.cfg' file.
- 	- Copy default.cfg to myconfig.cfg and default-report.cfg to myconfig-report.cfg
-  	- Change 'minsize' from 10 to 5 for both files
-   	- For similarity rate bigger than 80% change 'threshold' to 0.2 for both files
-    	- Save and quit
+	
+ 	Enter the 'config' folder and create the 'myconfig.cfg' and 'myconfig-report.cfg' file.
+ 	Copy default.cfg to myconfig.cfg and default-report.cfg to myconfig-report.cfg
+  	Change 'minsize' from 10 to 5 for both files
+   	For similarity rate bigger than 80% change 'threshold' to 0.2 for both files
+    	Save and quit
 
 Run the NiCad command, specifying the analysis granularity and language of the system you want to analyze. 
 
