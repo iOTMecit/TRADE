@@ -13,6 +13,8 @@ After:
 
 	pmd cpd --minimum-tokens 35 --dir pmd-bin-7.0.0/HomeAssistant/ --language python --format text > cpd_results.xml
 
+## ⚠️ Caution!
+**Use --skip-lexical-errors for Toga project.** 
 
 # Nicad
 Install Nicad from:
