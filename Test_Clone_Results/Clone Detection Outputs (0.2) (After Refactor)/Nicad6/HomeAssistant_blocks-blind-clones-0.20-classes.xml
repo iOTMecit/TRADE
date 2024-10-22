@@ -1,0 +1,169 @@
+<clones>
+<systeminfo processor="nicad6" system="HomeAssistant" granularity="blocks-blind" threshold="20%" minlines="5" maxlines="2500"/>
+<cloneinfo npcs="1516" npairs="184"/>
+<runinfo ncompares="28476" cputime="19296"/>
+<classinfo nclasses="25"/>
+
+<class classid="1" nclones="5" nlines="5" similarity="83">
+<source file="systems/HomeAssistant/home/tests/util/test_percentage.py" startline="106" endline="113" pcid="6"></source>
+<source file="systems/HomeAssistant/home/tests/util/test_percentage.py" startline="160" endline="170" pcid="11"></source>
+<source file="systems/HomeAssistant/home/tests/util/test_percentage.py" startline="172" endline="178" pcid="12"></source>
+<source file="systems/HomeAssistant/home/tests/util/test_percentage.py" startline="152" endline="158" pcid="10"></source>
+<source file="systems/HomeAssistant/home/tests/util/test_percentage.py" startline="128" endline="138" pcid="8"></source>
+</class>
+
+<class classid="2" nclones="2" nlines="5" similarity="100">
+<source file="systems/HomeAssistant/home/tests/testing_config/custom_components/test/datetime.py" startline="18" endline="29" pcid="115"></source>
+<source file="systems/HomeAssistant/home/tests/testing_config/custom_components/test/time.py" startline="19" endline="29" pcid="138"></source>
+</class>
+
+<class classid="3" nclones="19" nlines="5" similarity="80">
+<source file="systems/HomeAssistant/home/tests/components/motionmount/conftest.py" startline="38" endline="44" pcid="180"></source>
+<source file="systems/HomeAssistant/home/tests/components/switchbot_cloud/conftest.py" startline="11" endline="16" pcid="1165"></source>
+<source file="systems/HomeAssistant/home/tests/components/swiss_public_transport/conftest.py" startline="11" endline="18" pcid="260"></source>
+<source file="systems/HomeAssistant/home/tests/components/landisgyr_heat_meter/conftest.py" startline="11" endline="18" pcid="1009"></source>
+<source file="systems/HomeAssistant/home/tests/components/slimproto/conftest.py" startline="27" endline="32" pcid="559"></source>
+<source file="systems/HomeAssistant/home/tests/components/dwd_weather_warnings/conftest.py" startline="11" endline="16" pcid="1227"></source>
+<source file="systems/HomeAssistant/home/tests/components/islamic_prayer_times/conftest.py" startline="11" endline="16" pcid="1237"></source>
+<source file="systems/HomeAssistant/home/tests/components/brottsplatskartan/conftest.py" startline="12" endline="19" pcid="365"></source>
+<source file="systems/HomeAssistant/home/tests/components/openexchangerates/conftest.py" startline="23" endline="30" pcid="321"></source>
+<source file="systems/HomeAssistant/home/tests/components/cloudflare/conftest.py" startline="13" endline="23" pcid="333"></source>
+<source file="systems/HomeAssistant/home/tests/components/onewire/conftest.py" startline="65" endline="72" pcid="270"></source>
+<source file="systems/HomeAssistant/home/tests/components/mqtt/conftest.py" startline="25" endline="31" pcid="1433"></source>
+<source file="systems/HomeAssistant/home/tests/components/cast/conftest.py" startline="51" endline="60" pcid="737"></source>
+<source file="systems/HomeAssistant/home/tests/components/openexchangerates/conftest.py" startline="35" endline="40" pcid="323"></source>
+<source file="systems/HomeAssistant/home/tests/components/cloudflare/conftest.py" startline="25" endline="33" pcid="335"></source>
+<source file="systems/HomeAssistant/home/tests/components/brottsplatskartan/conftest.py" startline="21" endline="28" pcid="367"></source>
+<source file="systems/HomeAssistant/home/tests/components/obihai/conftest.py" startline="22" endline="30" pcid="605"></source>
+<source file="systems/HomeAssistant/home/tests/components/gree/conftest.py" startline="30" endline="37" pcid="1235"></source>
+<source file="systems/HomeAssistant/home/tests/components/elmax/conftest.py" startline="83" endline="90" pcid="409"></source>
+</class>
+
+<class classid="4" nclones="10" nlines="5" similarity="80">
+<source file="systems/HomeAssistant/home/tests/components/hko/conftest.py" startline="13" endline="17" pcid="187"></source>
+<source file="systems/HomeAssistant/home/tests/components/waze_travel_time/conftest.py" startline="48" endline="55" pcid="346"></source>
+<source file="systems/HomeAssistant/home/tests/components/waze_travel_time/conftest.py" startline="58" endline="63" pcid="348"></source>
+<source file="systems/HomeAssistant/home/tests/components/lifx/__init__.py" startline="282" endline="288" pcid="1338"></source>
+<source file="systems/HomeAssistant/home/tests/components/lifx/conftest.py" startline="63" endline="70" pcid="1288"></source>
+<source file="systems/HomeAssistant/home/tests/components/elkm1/__init__.py" startline="38" endline="43" pcid="1020"></source>
+<source file="systems/HomeAssistant/home/tests/components/unifiprotect/__init__.py" startline="42" endline="47" pcid="846"></source>
+<source file="systems/HomeAssistant/home/tests/components/frontier_silicon/conftest.py" startline="25" endline="32" pcid="454"></source>
+<source file="systems/HomeAssistant/home/tests/components/frontier_silicon/conftest.py" startline="35" endline="42" pcid="456"></source>
+<source file="systems/HomeAssistant/home/tests/components/ccm15/conftest.py" startline="36" endline="42" pcid="1031"></source>
+</class>
+
+<class classid="5" nclones="2" nlines="5" similarity="100">
+<source file="systems/HomeAssistant/home/tests/components/signal_messenger/conftest.py" startline="44" endline="48" pcid="226"></source>
+<source file="systems/HomeAssistant/home/tests/components/signal_messenger/conftest.py" startline="50" endline="54" pcid="227"></source>
+</class>
+
+<class classid="6" nclones="3" nlines="6" similarity="83">
+<source file="systems/HomeAssistant/home/tests/components/signal_messenger/conftest.py" startline="56" endline="62" pcid="228"></source>
+<source file="systems/HomeAssistant/home/tests/components/signal_messenger/conftest.py" startline="64" endline="69" pcid="229"></source>
+<source file="systems/HomeAssistant/home/tests/components/discord/conftest.py" startline="39" endline="43" pcid="1274"></source>
+</class>
+
+<class classid="7" nclones="2" nlines="10" similarity="90">
+<source file="systems/HomeAssistant/home/tests/components/screenlogic/__init__.py" startline="66" endline="77" pcid="287"></source>
+<source file="systems/HomeAssistant/home/tests/components/geonetnz_volcano/__init__.py" startline="16" endline="26" pcid="1211"></source>
+</class>
+
+<class classid="8" nclones="2" nlines="7" similarity="85">
+<source file="systems/HomeAssistant/home/tests/components/vesync/conftest.py" startline="25" endline="34" pcid="288"></source>
+<source file="systems/HomeAssistant/home/tests/components/nuki/mock.py" startline="17" endline="26" pcid="1195"></source>
+</class>
+
+<class classid="9" nclones="2" nlines="13" similarity="100">
+<source file="systems/HomeAssistant/home/tests/components/kodi/util.py" startline="65" endline="92" pcid="310"></source>
+<source file="systems/HomeAssistant/home/tests/components/kodi/util.py" startline="94" endline="119" pcid="315"></source>
+</class>
+
+<class classid="10" nclones="2" nlines="5" similarity="80">
+<source file="systems/HomeAssistant/home/tests/components/frontier_silicon/conftest.py" startline="16" endline="22" pcid="453"></source>
+<source file="systems/HomeAssistant/home/tests/components/streamlabswater/conftest.py" startline="26" endline="33" pcid="543"></source>
+</class>
+
+<class classid="11" nclones="2" nlines="11" similarity="81">
+<source file="systems/HomeAssistant/home/tests/components/geo_json_events/conftest.py" startline="18" endline="31" pcid="473"></source>
+<source file="systems/HomeAssistant/home/tests/components/geonetnz_volcano/conftest.py" startline="19" endline="30" pcid="1210"></source>
+</class>
+
+<class classid="12" nclones="2" nlines="7" similarity="100">
+<source file="systems/HomeAssistant/home/tests/components/oralb/conftest.py" startline="17" endline="37" pcid="479"></source>
+<source file="systems/HomeAssistant/home/tests/components/xiaomi_ble/conftest.py" startline="17" endline="37" pcid="1218"></source>
+</class>
+
+<class classid="13" nclones="2" nlines="5" similarity="100">
+<source file="systems/HomeAssistant/home/tests/components/radio_browser/conftest.py" startline="17" endline="24" pcid="504"></source>
+<source file="systems/HomeAssistant/home/tests/components/slimproto/conftest.py" startline="18" endline="25" pcid="558"></source>
+</class>
+
+<class classid="14" nclones="2" nlines="5" similarity="80">
+<source file="systems/HomeAssistant/home/tests/components/keymitt_ble/__init__.py" startline="53" endline="68" pcid="518"></source>
+<source file="systems/HomeAssistant/home/tests/components/keymitt_ble/__init__.py" startline="70" endline="83" pcid="520"></source>
+</class>
+
+<class classid="15" nclones="3" nlines="7" similarity="85">
+<source file="systems/HomeAssistant/home/tests/components/tibber/conftest.py" startline="13" endline="20" pcid="688"></source>
+<source file="systems/HomeAssistant/home/tests/components/discord/__init__.py" startline="26" endline="35" pcid="1275"></source>
+<source file="systems/HomeAssistant/home/tests/components/laundrify/__init__.py" startline="15" endline="22" pcid="1450"></source>
+</class>
+
+<class classid="16" nclones="3" nlines="10" similarity="80">
+<source file="systems/HomeAssistant/home/tests/components/airnow/conftest.py" startline="16" endline="27" pcid="744"></source>
+<source file="systems/HomeAssistant/home/tests/components/ecoforest/conftest.py" startline="65" endline="74" pcid="994"></source>
+<source file="systems/HomeAssistant/home/tests/components/mystrom/conftest.py" startline="29" endline="37" pcid="938"></source>
+</class>
+
+<class classid="17" nclones="2" nlines="12" similarity="91">
+<source file="systems/HomeAssistant/home/tests/components/elkm1/__init__.py" startline="53" endline="64" pcid="1024"></source>
+<source file="systems/HomeAssistant/home/tests/components/airzone_cloud/conftest.py" startline="10" endline="21" pcid="1351"></source>
+</class>
+
+<class classid="18" nclones="2" nlines="11" similarity="90">
+<source file="systems/HomeAssistant/home/tests/components/recorder/db_schema_0.py" startline="56" endline="69" pcid="1078"></source>
+<source file="systems/HomeAssistant/home/tests/components/recorder/db_schema_0.py" startline="114" endline="128" pcid="1083"></source>
+</class>
+
+<class classid="19" nclones="3" nlines="7" similarity="85">
+<source file="systems/HomeAssistant/home/tests/components/recorder/db_schema_0.py" startline="58" endline="63" pcid="1079"></source>
+<source file="systems/HomeAssistant/home/tests/components/recorder/db_schema_18.py" startline="124" endline="130" pcid="1098"></source>
+<source file="systems/HomeAssistant/home/tests/components/recorder/db_schema_0.py" startline="116" endline="122" pcid="1084"></source>
+</class>
+
+<class classid="20" nclones="2" nlines="13" similarity="84">
+<source file="systems/HomeAssistant/home/tests/components/recorder/db_schema_0.py" startline="90" endline="128" pcid="1082"></source>
+<source file="systems/HomeAssistant/home/tests/components/recorder/db_schema_18.py" startline="198" endline="216" pcid="1105"></source>
+</class>
+
+<class classid="21" nclones="2" nlines="10" similarity="90">
+<source file="systems/HomeAssistant/home/tests/components/recorder/db_schema_0.py" startline="140" endline="161" pcid="1087"></source>
+<source file="systems/HomeAssistant/home/tests/components/recorder/db_schema_18.py" startline="298" endline="317" pcid="1114"></source>
+</class>
+
+<class classid="22" nclones="4" nlines="5" similarity="80">
+<source file="systems/HomeAssistant/home/tests/components/homekit/test_get_accessories.py" startline="185" endline="192" pcid="1176"></source>
+<source file="systems/HomeAssistant/home/tests/components/homekit/test_get_accessories.py" startline="382" endline="387" pcid="1184"></source>
+<source file="systems/HomeAssistant/home/tests/components/homekit/test_get_accessories.py" startline="345" endline="352" pcid="1180"></source>
+<source file="systems/HomeAssistant/home/tests/components/homekit/test_get_accessories.py" startline="369" endline="376" pcid="1182"></source>
+</class>
+
+<class classid="23" nclones="2" nlines="8" similarity="100">
+<source file="systems/HomeAssistant/home/tests/components/lifx/__init__.py" startline="201" endline="216" pcid="1321"></source>
+<source file="systems/HomeAssistant/home/tests/components/lifx/__init__.py" startline="265" endline="280" pcid="1334"></source>
+</class>
+
+<class classid="24" nclones="2" nlines="6" similarity="100">
+<source file="systems/HomeAssistant/home/tests/components/roborock/test_sensor.py" startline="70" endline="79" pcid="1390"></source>
+<source file="systems/HomeAssistant/home/tests/components/roborock/test_sensor.py" startline="84" endline="91" pcid="1391"></source>
+</class>
+
+<class classid="25" nclones="5" nlines="6" similarity="83">
+<source file="systems/HomeAssistant/home/tests/auth/permissions/test_entities.py" startline="103" endline="111" pcid="1501"></source>
+<source file="systems/HomeAssistant/home/tests/auth/permissions/test_entities.py" startline="123" endline="131" pcid="1503"></source>
+<source file="systems/HomeAssistant/home/tests/auth/permissions/test_entities.py" startline="113" endline="121" pcid="1502"></source>
+<source file="systems/HomeAssistant/home/tests/auth/permissions/test_entities.py" startline="133" endline="141" pcid="1504"></source>
+<source file="systems/HomeAssistant/home/tests/auth/permissions/test_entities.py" startline="143" endline="152" pcid="1505"></source>
+</class>
+
+</clones>

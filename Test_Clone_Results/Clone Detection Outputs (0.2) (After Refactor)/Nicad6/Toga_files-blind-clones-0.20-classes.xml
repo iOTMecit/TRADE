@@ -1,0 +1,17 @@
+<clones>
+<systeminfo processor="nicad6" system="Toga" granularity="files-blind" threshold="20%" minlines="5" maxlines="2500"/>
+<cloneinfo npcs="90" npairs="2"/>
+<runinfo ncompares="217" cputime="18283"/>
+<classinfo nclasses="2"/>
+
+<class classid="1" nclones="2" nlines="15" similarity="81">
+<source file="systems/Toga/toga/tests/testbed/interactive.py" startline="1" endline="29" pcid="60"></source>
+<source file="systems/Toga/toga/tests/testbed/subclassed/app.py" startline="1" endline="21" pcid="62"></source>
+</class>
+
+<class classid="2" nclones="2" nlines="49" similarity="81">
+<source file="systems/Toga/toga/tests/style/pack/layout/test_beeliza.py" startline="1" endline="56" pcid="71"></source>
+<source file="systems/Toga/toga/tests/style/pack/layout/test_tutorial3.py" startline="1" endline="54" pcid="72"></source>
+</class>
+
+</clones>
