@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="simian.xsl" type="text/xsl"?>
+<!--
+Simian Similarity Analyzer 4.0.0 - https://simian.quandarypeak.com
+Copyright (c) 2023 Quandary Peak Research. All rights reserved.
+Subject to the Quandary Peak Academic Software License.
+-->
+<simian version="4.0.0">
+    <check failOnDuplication="true" ignoreCharacterCase="true" ignoreCurlyBraces="true" ignoreIdentifierCase="true" ignoreModifiers="true" ignoreStringCase="true" threshold="5">
+        <set lineCount="5" fingerprint="a7aecdae9b1c6e98083d36d9d9c952fe">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="190" endLineNumber="195"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="170" endLineNumber="175"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="152" endLineNumber="157"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="134" endLineNumber="139"/>
+        </set>
+        <set lineCount="5" fingerprint="c152056fdd942aa1fec6019bab6e78eb">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="860" endLineNumber="866"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="623" endLineNumber="629"/>
+        </set>
+        <set lineCount="5" fingerprint="8acb32591abed6dcd13463f2b3714c72">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/async_common.py" startLineNumber="505" endLineNumber="510"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/async_common.py" startLineNumber="375" endLineNumber="380"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/async_common.py" startLineNumber="279" endLineNumber="284"/>
+        </set>
+        <set lineCount="5" fingerprint="a7498ada7c71ac7a0cd9e707dd7641d5">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="290" endLineNumber="294"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="260" endLineNumber="264"/>
+        </set>
+        <set lineCount="5" fingerprint="09c27a9d2ea9711607fcae9827332a36">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/perf_test_textinput.py" startLineNumber="155" endLineNumber="159"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/perf_test_textinput.py" startLineNumber="129" endLineNumber="133"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/perf_test_textinput.py" startLineNumber="92" endLineNumber="96"/>
+        </set>
+        <set lineCount="5" fingerprint="1aafb8098e5b91163a261a309d44a559">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_storage.py" startLineNumber="53" endLineNumber="58"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_storage.py" startLineNumber="45" endLineNumber="50"/>
+        </set>
+        <set lineCount="5" fingerprint="fdd23dbf9388717fc8bacff560a459b3">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="493" endLineNumber="497"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="471" endLineNumber="475"/>
+        </set>
+        <set lineCount="5" fingerprint="92632c6af7a94a15075e4b60ac5fa75a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_benchmark.py" startLineNumber="283" endLineNumber="287"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_benchmark.py" startLineNumber="77" endLineNumber="81"/>
+        </set>
+        <set lineCount="5" fingerprint="4334862dc2f215251b88703ffbee51a1">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="356" endLineNumber="360"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="166" endLineNumber="170"/>
+        </set>
+        <set lineCount="5" fingerprint="81638ddc8c3b614191507c9dfa0febae">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_knspace.py" startLineNumber="129" endLineNumber="135"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_knspace.py" startLineNumber="75" endLineNumber="81"/>
+        </set>
+        <set lineCount="5" fingerprint="5271130bfe42cb68ccd64be4ba44a311">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="853" endLineNumber="860"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="834" endLineNumber="839"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="760" endLineNumber="767"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="747" endLineNumber="752"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="678" endLineNumber="685"/>
+        </set>
+        <set lineCount="5" fingerprint="0ea24dad5c25be93f7b9e72a66841f5c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="461" endLineNumber="465"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="397" endLineNumber="401"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="303" endLineNumber="307"/>
+        </set>
+        <set lineCount="5" fingerprint="b554ab36160ffe962436370de9cd5606">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_clock.py" startLineNumber="122" endLineNumber="128"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_clock.py" startLineNumber="109" endLineNumber="115"/>
+        </set>
+        <set lineCount="5" fingerprint="9ce1a84fcfe312c329f7b4c9a860c4f4">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_knspace.py" startLineNumber="145" endLineNumber="151"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_knspace.py" startLineNumber="111" endLineNumber="118"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_knspace.py" startLineNumber="93" endLineNumber="99"/>
+        </set>
+        <set lineCount="5" fingerprint="dc89a6d18a40a574dfe8610a4572f961">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="831" endLineNumber="835"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="818" endLineNumber="822"/>
+        </set>
+        <set lineCount="5" fingerprint="b6b1b5e7b245a1daf044e4cb5c41ff4f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="998" endLineNumber="1002"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="985" endLineNumber="989"/>
+        </set>
+        <set lineCount="5" fingerprint="f4ab7c287af4e6808299cc30df65d48e">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang_pre_process_and_post_process.py" startLineNumber="305" endLineNumber="309"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang_pre_process_and_post_process.py" startLineNumber="296" endLineNumber="300"/>
+        </set>
+        <set lineCount="5" fingerprint="660503a4d80d16218daf9eef0c4b6f1b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_hover_event.py" startLineNumber="147" endLineNumber="152"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_hover_event.py" startLineNumber="137" endLineNumber="142"/>
+        </set>
+        <set lineCount="5" fingerprint="688a2045836651595506f5bab847c79d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="939" endLineNumber="943"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="926" endLineNumber="930"/>
+        </set>
+        <set lineCount="5" fingerprint="1b0f2a85d6ff08ca5e604a021419a501">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="297" endLineNumber="301"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="269" endLineNumber="273"/>
+        </set>
+        <set lineCount="5" fingerprint="bce13b85d005126886d4ea53a5c2a10d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="475" endLineNumber="480"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="465" endLineNumber="470"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="307" endLineNumber="311"/>
+        </set>
+        <set lineCount="5" fingerprint="8187ab2ab24394e2828c949806212987">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_textinput.py" startLineNumber="281" endLineNumber="288"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_textinput.py" startLineNumber="210" endLineNumber="217"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_textinput.py" startLineNumber="163" endLineNumber="171"/>
+        </set>
+        <set lineCount="5" fingerprint="172add1c87ed3ad061db28e6800ebc22">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/async_common.py" startLineNumber="417" endLineNumber="421"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/async_common.py" startLineNumber="328" endLineNumber="332"/>
+        </set>
+        <set lineCount="5" fingerprint="d35dedbbe1e9560663e876988d3cbe77">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_coverage.py" startLineNumber="77" endLineNumber="82"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_coverage.py" startLineNumber="57" endLineNumber="62"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_coverage.py" startLineNumber="38" endLineNumber="43"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_coverage.py" startLineNumber="20" endLineNumber="25"/>
+        </set>
+        <set lineCount="5" fingerprint="9047e4e2d5211a044e18469b6559e46b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="970" endLineNumber="976"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="911" endLineNumber="917"/>
+        </set>
+        <set lineCount="5" fingerprint="a9aa6711c0eef67578b2cf20bee40e77">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_hover_event.py" startLineNumber="209" endLineNumber="214"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_hover_event.py" startLineNumber="194" endLineNumber="199"/>
+        </set>
+        <set lineCount="5" fingerprint="641893e3020d73674bad1dea6e3bf36e">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="438" endLineNumber="442"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="268" endLineNumber="272"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="216" endLineNumber="220"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="63" endLineNumber="67"/>
+        </set>
+        <set lineCount="5" fingerprint="8623ee72500d7b6166554400e30e2ad0">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="675" endLineNumber="679"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="662" endLineNumber="666"/>
+        </set>
+        <set lineCount="5" fingerprint="22fc7681abf2b2db05108bbb66db6b07">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="471" endLineNumber="475"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="314" endLineNumber="318"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="260" endLineNumber="264"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="116" endLineNumber="120"/>
+        </set>
+        <set lineCount="5" fingerprint="bde874614d04349b46fd8bb24d20983b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="323" endLineNumber="327"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="286" endLineNumber="290"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="264" endLineNumber="268"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="230" endLineNumber="234"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="195" endLineNumber="199"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="169" endLineNumber="173"/>
+        </set>
+        <set lineCount="5" fingerprint="60127722b4688be1c57b7229a3c80cee">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="135" endLineNumber="139"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="125" endLineNumber="129"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="113" endLineNumber="117"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="62" endLineNumber="66"/>
+        </set>
+        <set lineCount="5" fingerprint="c99a5aee59216c2e0295e35f8be21920">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="624" endLineNumber="628"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="613" endLineNumber="617"/>
+        </set>
+        <set lineCount="5" fingerprint="f31e666fbd1eed0c84b1f9a86a8177b5">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="208" endLineNumber="212"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="185" endLineNumber="189"/>
+        </set>
+        <set lineCount="5" fingerprint="b85d84b6f2957c4afcec7bb1abc0ffb9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="223" endLineNumber="227"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="138" endLineNumber="142"/>
+        </set>
+        <set lineCount="5" fingerprint="9c6b0524521246a1cba37e4e9409725c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="292" endLineNumber="297"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="233" endLineNumber="238"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="58" endLineNumber="63"/>
+        </set>
+        <set lineCount="5" fingerprint="3f32ab6782591071702b20f38160b8f2">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_colorpicker.py" startLineNumber="50" endLineNumber="55"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_colorpicker.py" startLineNumber="31" endLineNumber="36"/>
+        </set>
+        <set lineCount="5" fingerprint="8c9349ce2f0be0ee9913eb386bd854b7">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="404" endLineNumber="410"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="107" endLineNumber="118"/>
+        </set>
+        <set lineCount="5" fingerprint="cb4f28b11da4810649be4b4333dc045d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="54" endLineNumber="60"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_actionbar.py" startLineNumber="78" endLineNumber="84"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_slider.py" startLineNumber="25" endLineNumber="31"/>
+        </set>
+        <set lineCount="5" fingerprint="b5990a2f0ab9a085030cef6570ff9658">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="362" endLineNumber="367"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="309" endLineNumber="314"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="229" endLineNumber="234"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="207" endLineNumber="212"/>
+        </set>
+        <set lineCount="5" fingerprint="5e9ed60df999be02ee6ddbce5d1c6701">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="123" endLineNumber="127"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="111" endLineNumber="115"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_slider.py" startLineNumber="115" endLineNumber="119"/>
+        </set>
+        <set lineCount="5" fingerprint="28463e9b966cfc70b7de0061468933e8">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/async_common.py" startLineNumber="155" endLineNumber="160"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/async_common.py" startLineNumber="2" endLineNumber="7"/>
+        </set>
+        <set lineCount="5" fingerprint="fb6a0448f37a92461434d9deb9426a87">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="290" endLineNumber="295"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="262" endLineNumber="267"/>
+        </set>
+        <set lineCount="5" fingerprint="613d3566280ac658186befd0c38dbc13">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_asyncimage.py" startLineNumber="81" endLineNumber="87"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_asyncimage.py" startLineNumber="65" endLineNumber="71"/>
+        </set>
+        <set lineCount="5" fingerprint="25239cd65741749080e53b08df84346a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_textinput.py" startLineNumber="488" endLineNumber="492"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_textinput.py" startLineNumber="466" endLineNumber="470"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_textinput.py" startLineNumber="430" endLineNumber="434"/>
+        </set>
+        <set lineCount="5" fingerprint="183a5c6fbd28aec15b77c204de6445cd">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="349" endLineNumber="355"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="248" endLineNumber="254"/>
+        </set>
+        <set lineCount="5" fingerprint="53ab84384969dec32a6d58f74a9f832e">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_audio.py" startLineNumber="47" endLineNumber="51"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_audio.py" startLineNumber="35" endLineNumber="39"/>
+        </set>
+        <set lineCount="5" fingerprint="6c4890964c0e11c569f170dfc9647f5c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="316" endLineNumber="321"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="237" endLineNumber="242"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="191" endLineNumber="196"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="145" endLineNumber="150"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="99" endLineNumber="104"/>
+        </set>
+        <set lineCount="5" fingerprint="bffaf3986390416c87f2b79d1ccf9d5c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="725" endLineNumber="732"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="719" endLineNumber="725"/>
+        </set>
+        <set lineCount="5" fingerprint="2820bd8a06b0d5663ca9ab0407a3a14b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="744" endLineNumber="748"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="731" endLineNumber="735"/>
+        </set>
+        <set lineCount="5" fingerprint="19db8b25359975e71bf6b5a0cfdcda1a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="290" endLineNumber="297"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="147" endLineNumber="153"/>
+        </set>
+        <set lineCount="5" fingerprint="60e30b097d136f8cf2734a4c49e1e690">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="1251" endLineNumber="1257"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="1218" endLineNumber="1224"/>
+        </set>
+        <set lineCount="5" fingerprint="17957103ed643f90f82db7db7b6cc8ff">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="339" endLineNumber="343"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="318" endLineNumber="323"/>
+        </set>
+        <set lineCount="5" fingerprint="d3aba73521c6e9ac45c27e3949efb9b2">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="297" endLineNumber="302"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="227" endLineNumber="232"/>
+        </set>
+        <set lineCount="5" fingerprint="63919def196602b89ce83004f30f7a0c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="334" endLineNumber="338"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="307" endLineNumber="311"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="227" endLineNumber="231"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="205" endLineNumber="209"/>
+        </set>
+        <set lineCount="5" fingerprint="ea1e70f217102748dd82e7d2fd37fce1">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_slider.py" startLineNumber="130" endLineNumber="134"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_slider.py" startLineNumber="96" endLineNumber="100"/>
+        </set>
+        <set lineCount="6" fingerprint="d6b15b4c2f1ca9cfdf301edaa94e1751">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="323" endLineNumber="328"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="286" endLineNumber="291"/>
+        </set>
+        <set lineCount="6" fingerprint="f9e17683c4877432d8a6473110c9573d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="190" endLineNumber="195"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="200" endLineNumber="205"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="210" endLineNumber="215"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="220" endLineNumber="225"/>
+        </set>
+        <set lineCount="6" fingerprint="da901bf3fafc9a6e44d3846d7ca6ff09">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/async_common.py" startLineNumber="353" endLineNumber="359"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/async_common.py" startLineNumber="437" endLineNumber="443"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/async_common.py" startLineNumber="490" endLineNumber="496"/>
+        </set>
+        <set lineCount="6" fingerprint="6242d0cb1eced85d5f2856412d255b40">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_coverage.py" startLineNumber="13" endLineNumber="19"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_coverage.py" startLineNumber="30" endLineNumber="36"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_coverage.py" startLineNumber="48" endLineNumber="54"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_coverage.py" startLineNumber="67" endLineNumber="73"/>
+        </set>
+        <set lineCount="6" fingerprint="704c0707213c4d69fdd06752f893858a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_knspace.py" startLineNumber="93" endLineNumber="100"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_knspace.py" startLineNumber="145" endLineNumber="152"/>
+        </set>
+        <set lineCount="6" fingerprint="d95ee40d05d5512c5d3941ee8efa8af2">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="194" endLineNumber="199"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="269" endLineNumber="274"/>
+        </set>
+        <set lineCount="6" fingerprint="3a8a2df3f7bcefbc781cc6c8e1066649">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_benchmark.py" startLineNumber="69" endLineNumber="76"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_benchmark.py" startLineNumber="90" endLineNumber="97"/>
+        </set>
+        <set lineCount="6" fingerprint="24ef0e132123c3cdf4d1166209866562">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="18" endLineNumber="26"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="244" endLineNumber="251"/>
+        </set>
+        <set lineCount="6" fingerprint="a6afd68c14118421d1e9918d3d808bff">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="274" endLineNumber="282"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="302" endLineNumber="310"/>
+        </set>
+        <set lineCount="6" fingerprint="260b6b873374333ba7e9ca2be4ef0c8c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_invalid_lang.py" startLineNumber="13" endLineNumber="18"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_invalid_lang.py" startLineNumber="33" endLineNumber="38"/>
+        </set>
+        <set lineCount="6" fingerprint="3fd221451dd448690ca7b3a30cb10fc9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="113" endLineNumber="118"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="125" endLineNumber="130"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="135" endLineNumber="140"/>
+        </set>
+        <set lineCount="6" fingerprint="8c40d68c2b4c357e320ca550de64bb1e">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="369" endLineNumber="378"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="385" endLineNumber="392"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="399" endLineNumber="407"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="414" endLineNumber="421"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="428" endLineNumber="435"/>
+        </set>
+        <set lineCount="6" fingerprint="330e18ae5a61db459ae7060a3b2262b9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="77" endLineNumber="83"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="123" endLineNumber="129"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="169" endLineNumber="175"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="215" endLineNumber="221"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="371" endLineNumber="377"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="317" endLineNumber="323"/>
+        </set>
+        <set lineCount="6" fingerprint="7c6c85dbaec75beeb078057d4990675a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="161" endLineNumber="167"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="187" endLineNumber="193"/>
+        </set>
+        <set lineCount="6" fingerprint="c7e15261ff18171ba35f572e6792ec35">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang_pre_process_and_post_process.py" startLineNumber="355" endLineNumber="360"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang_pre_process_and_post_process.py" startLineNumber="366" endLineNumber="371"/>
+        </set>
+        <set lineCount="6" fingerprint="a98b99a6504bf6bd8cd8a6ae73051020">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_textinput.py" startLineNumber="187" endLineNumber="194"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_textinput.py" startLineNumber="234" endLineNumber="245"/>
+        </set>
+        <set lineCount="6" fingerprint="00a5ff448fe7891bea2b7d7f99616776">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="142" endLineNumber="147"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="160" endLineNumber="165"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="178" endLineNumber="183"/>
+        </set>
+        <set lineCount="6" fingerprint="dd0fe515c8224085661af9c24606fbec">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="372" endLineNumber="378"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="318" endLineNumber="324"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="348" endLineNumber="354"/>
+        </set>
+        <set lineCount="6" fingerprint="3c9b27e330711e68a5ef8f7f7124d06c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="88" endLineNumber="95"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="172" endLineNumber="179"/>
+        </set>
+        <set lineCount="6" fingerprint="66e11358e1968c012a1bd657403901aa">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="33" endLineNumber="38"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="51" endLineNumber="56"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="121" endLineNumber="126"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="439" endLineNumber="444"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="408" endLineNumber="413"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="83" endLineNumber="88"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="99" endLineNumber="104"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="143" endLineNumber="148"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="159" endLineNumber="164"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="175" endLineNumber="180"/>
+        </set>
+        <set lineCount="6" fingerprint="25751cca5ba413b5de8de6a1841afd07">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="264" endLineNumber="269"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="230" endLineNumber="235"/>
+        </set>
+        <set lineCount="6" fingerprint="34e809a5fe5e27f41b3ad5f25a29afb1">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="287" endLineNumber="293"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="306" endLineNumber="311"/>
+        </set>
+        <set lineCount="6" fingerprint="507b05d6dc2d9e738fb041d770e445aa">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang_pre_process_and_post_process.py" startLineNumber="278" endLineNumber="283"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang_pre_process_and_post_process.py" startLineNumber="297" endLineNumber="302"/>
+        </set>
+        <set lineCount="6" fingerprint="837e373e4d8fe75705a29ff1cc2a4288">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="611" endLineNumber="619"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="694" endLineNumber="702"/>
+        </set>
+        <set lineCount="6" fingerprint="24b6ee17ecb95f802935410e9f2ba90c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="154" endLineNumber="163"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="175" endLineNumber="184"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="196" endLineNumber="205"/>
+        </set>
+        <set lineCount="6" fingerprint="e63546ca1e59bd816c9db6ab70b222d7">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="507" endLineNumber="512"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="547" endLineNumber="552"/>
+        </set>
+        <set lineCount="6" fingerprint="4b0bc0f95cbcbcc8941487fae1641c14">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_modal.py" startLineNumber="60" endLineNumber="67"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_modal.py" startLineNumber="87" endLineNumber="94"/>
+        </set>
+        <set lineCount="6" fingerprint="660f583610aabd6f311d6a8c678fd044">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="318" endLineNumber="325"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="480" endLineNumber="486"/>
+        </set>
+        <set lineCount="6" fingerprint="7048cec3ccfd5fb019f45d3335c6429e">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_recyclegridlayout.py" startLineNumber="6" endLineNumber="13"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_recyclegridlayout.py" startLineNumber="186" endLineNumber="193"/>
+        </set>
+        <set lineCount="6" fingerprint="87c1862823d710aea5a5e818aee9b020">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_multistroke.py" startLineNumber="97" endLineNumber="102"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_multistroke.py" startLineNumber="109" endLineNumber="114"/>
+        </set>
+        <set lineCount="6" fingerprint="62721dbf74800b199a590145dd0b1ff7">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_coverage.py" startLineNumber="37" endLineNumber="43"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_coverage.py" startLineNumber="76" endLineNumber="82"/>
+        </set>
+        <set lineCount="6" fingerprint="294f7bf872bc205194380d8dbef4f81d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="212" endLineNumber="218"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="196" endLineNumber="202"/>
+        </set>
+        <set lineCount="6" fingerprint="300ffa25d535a914c6d2f2de76d3b313">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/common.py" startLineNumber="448" endLineNumber="453"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/async_common.py" startLineNumber="29" endLineNumber="34"/>
+        </set>
+        <set lineCount="6" fingerprint="c768de3527a9160ea9745e261b898451">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="222" endLineNumber="228"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="256" endLineNumber="262"/>
+        </set>
+        <set lineCount="6" fingerprint="d3d32333a940baeacd0f97bb8d4a1c54">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="247" endLineNumber="252"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="231" endLineNumber="237"/>
+        </set>
+        <set lineCount="6" fingerprint="1c04fa3876418ab0d3941f7c2d5f6a52">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="315" endLineNumber="323"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="335" endLineNumber="342"/>
+        </set>
+        <set lineCount="6" fingerprint="e9a9fea2387e417bdbc4ab0b71b3a6a9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="519" endLineNumber="524"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="535" endLineNumber="540"/>
+        </set>
+        <set lineCount="6" fingerprint="9e38ef5c991c0d4635f6183f0ae25ea0">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics_svg.py" startLineNumber="39" endLineNumber="48"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics_svg.py" startLineNumber="55" endLineNumber="64"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics_svg.py" startLineNumber="71" endLineNumber="80"/>
+        </set>
+        <set lineCount="6" fingerprint="3c17b95dbc00187d8668c4d0b5fa34f9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="284" endLineNumber="289"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="196" endLineNumber="201"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="251" endLineNumber="256"/>
+        </set>
+        <set lineCount="6" fingerprint="4d14e2a3db302d45688d36c1ff4cc40b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="1049" endLineNumber="1056"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="1080" endLineNumber="1087"/>
+        </set>
+        <set lineCount="7" fingerprint="0fa25cc876430d36c4854cded57525c8">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="796" endLineNumber="806"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="642" endLineNumber="652"/>
+        </set>
+        <set lineCount="7" fingerprint="13763ba0bf909286485b66d67d976b0c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="439" endLineNumber="445"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="121" endLineNumber="127"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="408" endLineNumber="414"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="175" endLineNumber="181"/>
+        </set>
+        <set lineCount="7" fingerprint="8bae485028d47b17e095769267844331">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="237" endLineNumber="244"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="191" endLineNumber="198"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="145" endLineNumber="152"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="99" endLineNumber="106"/>
+        </set>
+        <set lineCount="7" fingerprint="e0b44cae495e36110e02f73436ce4d42">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_issues/test_6315.py" startLineNumber="41" endLineNumber="49"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_issues/test_6315.py" startLineNumber="28" endLineNumber="36"/>
+        </set>
+        <set lineCount="7" fingerprint="6531b86a44b3e149a3faf276dad7ed0d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="299" endLineNumber="308"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="216" endLineNumber="225"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="156" endLineNumber="165"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="115" endLineNumber="124"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="76" endLineNumber="85"/>
+        </set>
+        <set lineCount="7" fingerprint="377075a5327255e44aa5eb3da3d18249">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="178" endLineNumber="184"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="160" endLineNumber="166"/>
+        </set>
+        <set lineCount="7" fingerprint="6eb285a89594791dbbcb5ee6b637a652">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="367" endLineNumber="377"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="285" endLineNumber="295"/>
+        </set>
+        <set lineCount="7" fingerprint="2de17f3e9e6effa46a15040c2e741bae">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="379" endLineNumber="386"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="348" endLineNumber="355"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="328" endLineNumber="335"/>
+        </set>
+        <set lineCount="7" fingerprint="48c5d360050cdc20ae985586f198351d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_videoplayer.py" startLineNumber="41" endLineNumber="47"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_videoplayer.py" startLineNumber="26" endLineNumber="32"/>
+        </set>
+        <set lineCount="7" fingerprint="5132cfc435b6970ee3df3c37efcdc5db">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="317" endLineNumber="324"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="371" endLineNumber="378"/>
+        </set>
+        <set lineCount="7" fingerprint="e8c1a8bd0720873a323fb873b977d45b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="205" endLineNumber="213"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="145" endLineNumber="153"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="104" endLineNumber="112"/>
+        </set>
+        <set lineCount="7" fingerprint="c7ad4d3d62539e7954cb82bec3e209ad">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="483" endLineNumber="493"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="189" endLineNumber="199"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="366" endLineNumber="376"/>
+        </set>
+        <set lineCount="7" fingerprint="119ff4b1fc0205f1210ba2d9715d620e">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_stacklayout.py" startLineNumber="35" endLineNumber="42"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_stacklayout.py" startLineNumber="22" endLineNumber="29"/>
+        </set>
+        <set lineCount="7" fingerprint="b6b433e2961e7b70359bc01367c9a885">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="908" endLineNumber="916"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="812" endLineNumber="821"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="657" endLineNumber="666"/>
+        </set>
+        <set lineCount="7" fingerprint="94985e646634a7e471849419579bb45d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="404" endLineNumber="410"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="364" endLineNumber="370"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="349" endLineNumber="355"/>
+        </set>
+        <set lineCount="7" fingerprint="edd1d70b24368e30bd17be4d04f57b42">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="353" endLineNumber="359"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="267" endLineNumber="273"/>
+        </set>
+        <set lineCount="7" fingerprint="30e984f391b60226a6c23a2f464f04e0">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="832" endLineNumber="839"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="851" endLineNumber="860"/>
+        </set>
+        <set lineCount="7" fingerprint="6269da6bc1cecd6798c2c046a23e4021">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="188" endLineNumber="195"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="150" endLineNumber="157"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="132" endLineNumber="139"/>
+        </set>
+        <set lineCount="7" fingerprint="5b681ab3f36648533d694740a8e0ec8d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="196" endLineNumber="206"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="154" endLineNumber="164"/>
+        </set>
+        <set lineCount="7" fingerprint="1f69aa3c008c270389746e361a930f02">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="311" endLineNumber="319"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="108" endLineNumber="122"/>
+        </set>
+        <set lineCount="7" fingerprint="ab2e2032e2c3eb38b25cbadb95b02dc8">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="50" endLineNumber="60"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_slider.py" startLineNumber="21" endLineNumber="31"/>
+        </set>
+        <set lineCount="7" fingerprint="ee802cd9571af98757caaa44ae5815b7">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="122" endLineNumber="128"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="110" endLineNumber="116"/>
+        </set>
+        <set lineCount="7" fingerprint="098b37b2895bb71665ba844ba6862d5f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="387" endLineNumber="395"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="304" endLineNumber="312"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="233" endLineNumber="241"/>
+        </set>
+        <set lineCount="7" fingerprint="f2b9440d89443522ae56ee854a46536e">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_actionbar.py" startLineNumber="277" endLineNumber="287"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_actionbar.py" startLineNumber="147" endLineNumber="157"/>
+        </set>
+        <set lineCount="7" fingerprint="d1488cb38de842722e1530985d586a0c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_clock.py" startLineNumber="181" endLineNumber="189"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_clock.py" startLineNumber="144" endLineNumber="152"/>
+        </set>
+        <set lineCount="7" fingerprint="d183cf9af535fffdb00d9fc8b47f35ea">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/async_common.py" startLineNumber="490" endLineNumber="498"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/async_common.py" startLineNumber="437" endLineNumber="445"/>
+        </set>
+        <set lineCount="7" fingerprint="a80ffbf8c54cfbf933d2200c18ed57a8">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_urllib.py" startLineNumber="147" endLineNumber="155"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_urllib.py" startLineNumber="121" endLineNumber="129"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_urllib.py" startLineNumber="99" endLineNumber="107"/>
+        </set>
+        <set lineCount="7" fingerprint="12b751db376e950156c10c7142ea9d33">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="755" endLineNumber="761"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="711" endLineNumber="717"/>
+        </set>
+        <set lineCount="8" fingerprint="f2274826226d12b482bc8fb8953493dc">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="219" endLineNumber="231"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="245" endLineNumber="257"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="271" endLineNumber="283"/>
+        </set>
+        <set lineCount="8" fingerprint="4a3488585c713286962a94ea815ac9b5">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="1112" endLineNumber="1120"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="1141" endLineNumber="1149"/>
+        </set>
+        <set lineCount="8" fingerprint="38f0ca4b127e732958694240f4f04373">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="261" endLineNumber="268"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="320" endLineNumber="327"/>
+        </set>
+        <set lineCount="8" fingerprint="1baff8988622a428ba73ffd7f280f046">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="100" endLineNumber="108"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="274" endLineNumber="282"/>
+        </set>
+        <set lineCount="8" fingerprint="04e45df8f9870d910da86b12a38c5f7f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_boxlayout.py" startLineNumber="18" endLineNumber="26"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_anchorlayout.py" startLineNumber="15" endLineNumber="23"/>
+        </set>
+        <set lineCount="8" fingerprint="f55493b8b8bf58dcb4f36b932c6867c8">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="380" endLineNumber="393"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="427" endLineNumber="440"/>
+        </set>
+        <set lineCount="8" fingerprint="537346e1448d530196190116029d2ffd">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="364" endLineNumber="371"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="404" endLineNumber="411"/>
+        </set>
+        <set lineCount="8" fingerprint="26af57b20ed9244a0202e6bbefe197f8">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="955" endLineNumber="963"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="966" endLineNumber="975"/>
+        </set>
+        <set lineCount="8" fingerprint="535b99b1f5be833aa0012c41bfe25044">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="128" endLineNumber="136"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="213" endLineNumber="221"/>
+        </set>
+        <set lineCount="8" fingerprint="822e7d6431731bc90768c2536661afcf">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_coverage.py" startLineNumber="48" endLineNumber="56"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_coverage.py" startLineNumber="67" endLineNumber="75"/>
+        </set>
+        <set lineCount="8" fingerprint="97679180da0d392d486beb01e6e2ad42">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="188" endLineNumber="199"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="481" endLineNumber="493"/>
+        </set>
+        <set lineCount="8" fingerprint="a77d8086cf3fc7da6d15cd7ca092d993">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="758" endLineNumber="768"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="745" endLineNumber="753"/>
+        </set>
+        <set lineCount="8" fingerprint="55958230c6b125731410c2931588220d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="407" endLineNumber="414"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="120" endLineNumber="127"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="438" endLineNumber="445"/>
+        </set>
+        <set lineCount="8" fingerprint="87e8056f903d1ddb4df07a583b2e16ee">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="212" endLineNumber="222"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="234" endLineNumber="241"/>
+        </set>
+        <set lineCount="8" fingerprint="1738abec70d731f2afc58f3250220260">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_textinput.py" startLineNumber="209" endLineNumber="220"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_textinput.py" startLineNumber="280" endLineNumber="291"/>
+        </set>
+        <set lineCount="8" fingerprint="f49e6a2e663c2d6992cb7c638693f698">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/common.py" startLineNumber="146" endLineNumber="157"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/fixtures.py" startLineNumber="77" endLineNumber="87"/>
+        </set>
+        <set lineCount="9" fingerprint="ca833e7abd3990a6200f2a6f968508da">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="48" endLineNumber="57"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="30" endLineNumber="39"/>
+        </set>
+        <set lineCount="9" fingerprint="72e27a8eb97d3f3d3d78a45cbf87d9c6">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_widget.py" startLineNumber="68" endLineNumber="76"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_widget.py" startLineNumber="55" endLineNumber="63"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_widget.py" startLineNumber="42" endLineNumber="50"/>
+        </set>
+        <set lineCount="9" fingerprint="b1d86e64c5b254f36a6573f5f34fa381">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/common.py" startLineNumber="361" endLineNumber="373"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/common.py" startLineNumber="330" endLineNumber="342"/>
+        </set>
+        <set lineCount="9" fingerprint="696d231bc318af6c141da5843625324b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="306" endLineNumber="315"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="226" endLineNumber="235"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="204" endLineNumber="213"/>
+        </set>
+        <set lineCount="9" fingerprint="515ef11bc990bd1b1d364e0d73f71328">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="322" endLineNumber="333"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="126" endLineNumber="136"/>
+        </set>
+        <set lineCount="9" fingerprint="3926a790c9864dbea98eb984d60175a1">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_videoplayer.py" startLineNumber="71" endLineNumber="79"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_videoplayer.py" startLineNumber="38" endLineNumber="46"/>
+        </set>
+        <set lineCount="9" fingerprint="9525fbf8ba52136c6bcbaea2f43778fa">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_textinput.py" startLineNumber="488" endLineNumber="496"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_textinput.py" startLineNumber="466" endLineNumber="475"/>
+        </set>
+        <set lineCount="9" fingerprint="31c28ea1c8452825c8695ed3d9212fae">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_urllib.py" startLineNumber="121" endLineNumber="133"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_urllib.py" startLineNumber="99" endLineNumber="111"/>
+        </set>
+        <set lineCount="9" fingerprint="7f2987a231449721f3d202ccc90c5356">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="436" endLineNumber="445"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="118" endLineNumber="127"/>
+        </set>
+        <set lineCount="10" fingerprint="d06cce4ade89e5510ed47251af727fbc">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="29" endLineNumber="39"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="43" endLineNumber="54"/>
+        </set>
+        <set lineCount="10" fingerprint="b6d0ca000f8123812430bb3b4b7aad75">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/async_common.py" startLineNumber="316" endLineNumber="326"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/async_common.py" startLineNumber="406" endLineNumber="416"/>
+        </set>
+        <set lineCount="10" fingerprint="a91ee33b934b736727496c5957a45b4f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="112" endLineNumber="122"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="134" endLineNumber="144"/>
+        </set>
+        <set lineCount="10" fingerprint="f4fd4e19c08ecff1c1da944b4fa9c7fe">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="348" endLineNumber="359"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="379" endLineNumber="390"/>
+        </set>
+        <set lineCount="10" fingerprint="d1a11e92f313a6398dcf0743e3be6837">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="148" endLineNumber="157"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="179" endLineNumber="188"/>
+        </set>
+        <set lineCount="10" fingerprint="b6c5bebf013a279a8e3b80e35736fe87">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="204" endLineNumber="214"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="226" endLineNumber="236"/>
+        </set>
+        <set lineCount="10" fingerprint="fc0c5f03e75b7a5583680436fcdc9f9c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_textinput.py" startLineNumber="109" endLineNumber="123"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_textinput.py" startLineNumber="323" endLineNumber="336"/>
+        </set>
+        <set lineCount="10" fingerprint="4f1a83b823170c3e526d01242e98c552">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="80" endLineNumber="89"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="110" endLineNumber="119"/>
+        </set>
+        <set lineCount="10" fingerprint="049c38ccc6d6604488b54252981411e2">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="158" endLineNumber="168"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="180" endLineNumber="190"/>
+        </set>
+        <set lineCount="10" fingerprint="5fa9070bd0630706789bdbeee0dd6df0">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="1114" endLineNumber="1126"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="1145" endLineNumber="1157"/>
+        </set>
+        <set lineCount="10" fingerprint="25270474b527c1830afc547a27ef6b1b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/perf_test_textinput.py" startLineNumber="87" endLineNumber="96"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/perf_test_textinput.py" startLineNumber="124" endLineNumber="133"/>
+        </set>
+        <set lineCount="10" fingerprint="ebf0574d4655f702e860c5aa57aa393a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="76" endLineNumber="92"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="115" endLineNumber="131"/>
+        </set>
+        <set lineCount="10" fingerprint="162ebd35fb0e6867c375897cea519a3b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="219" endLineNumber="233"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_scrollview.py" startLineNumber="271" endLineNumber="285"/>
+        </set>
+        <set lineCount="10" fingerprint="af5d237138bf8a4c5d39908ab1e0ed4a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="66" endLineNumber="76"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="88" endLineNumber="98"/>
+        </set>
+        <set lineCount="11" fingerprint="5cc861180a9cfe40bef5bad053301720">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="240" endLineNumber="250"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="205" endLineNumber="215"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="299" endLineNumber="309"/>
+        </set>
+        <set lineCount="11" fingerprint="0096904c7e6429b64ce5dc881b07c47e">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="96" endLineNumber="106"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="81" endLineNumber="91"/>
+        </set>
+        <set lineCount="11" fingerprint="a2cc671136f18581d7bbacde15bf2c7f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="224" endLineNumber="234"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="280" endLineNumber="290"/>
+        </set>
+        <set lineCount="11" fingerprint="71117325240389377ac7fbd0a2ba4fcc">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="904" endLineNumber="916"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="886" endLineNumber="897"/>
+        </set>
+        <set lineCount="11" fingerprint="ad1dcd9032484285eb048fb5923a4622">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="430" endLineNumber="444"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="207" endLineNumber="222"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="55" endLineNumber="69"/>
+        </set>
+        <set lineCount="11" fingerprint="a6e05b77c4aafbd13f81d65c8743d93d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_actionbar.py" startLineNumber="182" endLineNumber="194"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_actionbar.py" startLineNumber="129" endLineNumber="141"/>
+        </set>
+        <set lineCount="11" fingerprint="a8c1f21745c68b4205aa1349f01b24a7">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="277" endLineNumber="288"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_urlrequest/test_urlrequest_requests.py" startLineNumber="250" endLineNumber="261"/>
+        </set>
+        <set lineCount="11" fingerprint="686d6537e2e31a7a94f79e4d19d34769">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_videoplayer.py" startLineNumber="53" endLineNumber="63"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_videoplayer.py" startLineNumber="21" endLineNumber="31"/>
+        </set>
+        <set lineCount="12" fingerprint="2b26c19a24bdc5527c93ef5fa253334a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="202" endLineNumber="215"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_logger.py" startLineNumber="237" endLineNumber="250"/>
+        </set>
+        <set lineCount="12" fingerprint="5bc4c977848995403509a302a8a86fa9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_actionbar.py" startLineNumber="253" endLineNumber="266"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_actionbar.py" startLineNumber="314" endLineNumber="327"/>
+        </set>
+        <set lineCount="12" fingerprint="dd89480b6d8c242b507c20f18bf39794">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_textinput.py" startLineNumber="223" endLineNumber="240"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_textinput.py" startLineNumber="293" endLineNumber="310"/>
+        </set>
+        <set lineCount="12" fingerprint="fc0951baa6db26bf62ec939b3b1cb65b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="793" endLineNumber="804"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_graphics.py" startLineNumber="843" endLineNumber="854"/>
+        </set>
+        <set lineCount="13" fingerprint="8ad0fdabf08794463887baa1f9f5a961">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="810" endLineNumber="828"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="655" endLineNumber="674"/>
+        </set>
+        <set lineCount="13" fingerprint="ceaa1f220c30a5f0ca656be41544d06d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_recyclegridlayout.py" startLineNumber="195" endLineNumber="207"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_uix_recyclegridlayout.py" startLineNumber="15" endLineNumber="27"/>
+        </set>
+        <set lineCount="14" fingerprint="5861cc80c08e964c2fd427d04aae7869">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="303" endLineNumber="318"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="461" endLineNumber="475"/>
+        </set>
+        <set lineCount="14" fingerprint="4d5bd8c7abefeeac891ab98506097ed3">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="198" endLineNumber="212"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="215" endLineNumber="229"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="232" endLineNumber="246"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_lang.py" startLineNumber="249" endLineNumber="263"/>
+        </set>
+        <set lineCount="17" fingerprint="8cc4b04311229c132bff4979ded3111d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="304" endLineNumber="326"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_animations.py" startLineNumber="233" endLineNumber="255"/>
+        </set>
+        <set lineCount="18" fingerprint="9fdbbf52c783ac8ca5ac8ade8cd0ef14">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="216" endLineNumber="245"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_module_inspector.py" startLineNumber="299" endLineNumber="328"/>
+        </set>
+        <set lineCount="22" fingerprint="ddd220fe6b0833307fd5d73bfa3f5630">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="193" endLineNumber="215"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_properties.py" startLineNumber="248" endLineNumber="270"/>
+        </set>
+        <set lineCount="27" fingerprint="3fc5cebaba21f7ca9e5c774ec028bbaa">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="204" endLineNumber="258"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy/KivyTest/tests/test_mouse_multitouchsim.py" startLineNumber="52" endLineNumber="98"/>
+        </set>
+        <summary duplicateFileCount="38" duplicateLineCount="2596" duplicateBlockCount="350" totalFileCount="88" totalRawLineCount="15922" totalSignificantLineCount="12016" processingTime="116"/>
+    </check>
+</simian>
