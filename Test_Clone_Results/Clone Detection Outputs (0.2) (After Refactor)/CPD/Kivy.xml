@@ -1,0 +1,3820 @@
+Found a 49 line (200 tokens) duplication in the following files: 
+Starting at line 50 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+Starting at line 201 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+
+    def multitouch_dot_touch(self, button, **kwargs):
+        # touch -> dot appears -> touch again -> dot disappears
+        eventloop, win, mouse, wid = self.mouse_init(**kwargs)
+
+        # register mouse provider
+        mouse.start()
+        eventloop.add_input_provider(mouse)
+
+        # no mouse touch anywhere
+        self.assertEqual(mouse.counter, 0)
+        self.assertEqual(mouse.touches, {})
+
+        # right button down, red dot should appear
+        win.dispatch(
+            'on_mouse_down',
+            10, self.correct_y(win, 10),
+            'right', {}
+        )
+        event_id = next(iter(mouse.touches))
+        self.assertEqual(mouse.counter, 1)
+
+        if 'on_demand' in kwargs and 'scatter' not in kwargs:
+            # doesn't do anything on a pure Button
+            self.render(wid)
+
+            # cleanup!
+            # remove mouse provider
+            mouse.stop()
+            eventloop.remove_input_provider(mouse)
+            return
+
+        elif 'on_demand' in kwargs and 'scatter' in kwargs:
+            self.assertIn(
+                'multitouch_sim',
+                mouse.touches[event_id].profile
+            )
+            self.assertTrue(mouse.multitouch_on_demand)
+
+            # multitouch_sim is changed in on_touch_down
+            # method of the widget that's able to handle
+            # multiple touches, therefore for Scatter we
+            # need to dispatch the method and because we
+            # triggered only on_mouse_down directly i.e.
+            # without ME dispatch, on_touch_down was not
+            # called == multitouch_sim is False
+            self.advance_frames(1)  # initialize stuff
+            wid.on_touch_down(mouse.touches[event_id])
+            wid.on_touch_up(mouse.touches[event_id])
+            self.assertTrue(mouse.touches[event_id].multitouch_sim)
+
+=====================================================================
+Found a 26 line (143 tokens) duplication in the following files: 
+Starting at line 233 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 304 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+
+        w = Widget()
+        ec = ec_cls(a)
+        ec1 = ec_cls(a.anim1)
+        ec2 = ec_cls(a.anim2)
+        a.start(w)
+
+        # right after the animation starts
+        ec.assert_(1, False, 0)
+        ec1.assert_(1, False, 0)
+        ec2.assert_(0, False, 0)
+        sleep(.2)
+
+        # during the first half of the animation
+        ec.assert_(1, True, 0)
+        ec1.assert_(1, True, 0)
+        ec2.assert_(0, False, 0)
+        sleep(.5)
+
+        # during the second half of the animation
+        ec.assert_(1, True, 0)
+        ec1.assert_(1, True, 1)
+        ec2.assert_(1, True, 0)
+        sleep(.5)
+
+        # after the animation completed
+        ec.assert_(1, True, 1)
+
+=====================================================================
+Found a 31 line (142 tokens) duplication in the following files: 
+Starting at line 215 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+Starting at line 298 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+
+    def test_widget_popup(self, *args):
+        EventLoop.ensure_window()
+        self._win = EventLoop.window
+
+        self.clean_garbage()
+
+        # build the widget tree & add Window as the main EL
+        self.root = self.builder.Builder.load_string(
+            KV, filename="InspectorTestCase.KV")
+        self.render(self.root)
+        self.assertLess(len(self._win.children), 2)
+
+        # checked widget
+        popup = self.root.ids.popup
+
+        # activate inspector with root as ctx
+        inspector.start(self._win, self.root)
+        self.advance_frames(1)
+
+        # pull the Inspector drawer from bottom,
+        # but don't inspect yet!
+        ins = self.root.inspector
+        ins.inspect_enabled = False
+        ins.activated = True
+        self.assertTrue(ins.at_bottom)
+
+        # touch button center to open the popup
+        touch = UnitTestTouch(*popup.center)
+        touch.touch_down()
+        touch.touch_up()
+        self.advance_frames(1)
+
+=====================================================================
+Found a 24 line (139 tokens) duplication in the following files: 
+Starting at line 192 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 247 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+def test_reference(self, set_name):
+    from kivy.properties import NumericProperty, ReferenceListProperty
+
+    x = NumericProperty(0)
+    if set_name:
+        x.set_name(wid, 'x')
+        x.link_eagerly(wid)
+    else:
+        x.link(wid, 'x')
+        x.link_deps(wid, 'x')
+    y = NumericProperty(0)
+    if set_name:
+        y.set_name(wid, 'y')
+        y.link_eagerly(wid)
+    else:
+        y.link(wid, 'y')
+        y.link_deps(wid, 'y')
+    pos = ReferenceListProperty(x, y)
+    if set_name:
+        pos.set_name(wid, 'pos')
+        pos.link_eagerly(wid)
+    else:
+        pos.link(wid, 'pos')
+        pos.link_deps(wid, 'pos')
+
+=====================================================================
+Found a 11 line (111 tokens) duplication in the following files: 
+Starting at line 21 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+Starting at line 33 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+
+        wgts = [Widget(size_hint=(.5, .5)) for i in range(4)]
+        for wgt in wgts:
+            sl.add_widget(wgt)
+        sl.do_layout()
+
+        self.assertEqual(wgts[0].pos, [0, sl.height / 2.])
+        self.assertEqual(wgts[1].pos, [sl.width / 2., sl.height / 2.])
+        self.assertEqual(wgts[2].pos, [0, 0])
+        self.assertEqual(wgts[3].pos, [sl.width / 2., 0])
+
+    def test_stacklayout_fixed_size(self):
+
+=====================================================================
+Found a 23 line (110 tokens) duplication in the following files: 
+Starting at line 653 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 807 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+            _get_prop, _set_prop, watch_before_use=watch_before_use)
+
+        def __init__(self, **kwargs):
+            super(CustomAlias, self).__init__(**kwargs)
+            self.getter_called = 0
+            self.setter_called = 0
+            self.callback_called = 0
+
+    def callback(widget, value):
+        widget.callback_called += 1
+
+    # Initial checks
+    wid = CustomAlias()
+    wid.bind(prop=callback)
+    self.assertEqual(wid.getter_called, 0)
+    self.assertEqual(wid.setter_called, 0)
+    self.assertEqual(wid.callback_called, 0)
+
+    # Set property, should call setter to set the value
+    # Getter and callback should not be called because `_set_prop` doesn't
+    # returns True
+    wid.prop = 1
+    self.assertEqual(wid.getter_called, 0)
+
+=====================================================================
+Found a 17 line (109 tokens) duplication in the following files: 
+Starting at line 217 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+Starting at line 269 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+
+        scroll = _TestScrollbarHorizontalMargin()
+        margin = scroll.bar_margin
+        scroll.add_widget(grid)
+        win.add_widget(scroll)
+
+        # get widgets ready
+        EventLoop.idle()
+
+        left, right = scroll.to_window(scroll.x, scroll.right)
+        bottom, top = scroll.to_window(scroll.y, scroll.top)
+
+        # touch in the half of the bar
+        m = margin + scroll.bar_width / 2.0
+        points = [
+            [left, bottom + m, right, bottom + m, 'bottom', 'right', False],
+            [left, top - m, right, top - m, 'top', 'right', False],
+            [left, bottom, right, bottom, 'bottom', 'right', True],
+
+=====================================================================
+Found a 23 line (98 tokens) duplication in the following files: 
+Starting at line 244 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_actionbar.py
+Starting at line 308 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_actionbar.py
+
+    def test_3_openpress(self, *args):
+        # click on Group 2 to open its DropDown
+        # - DropDown shows up
+        # then click on Group 2 DropDown button
+        # - DropDown disappears
+        # click on Group 1 to open its DropDown
+        # - DropDown shows up
+        # then click on Group 1 DropDown button
+        # - DropDown disappears
+        self._win = EventLoop.window
+        self.clean_garbage()
+        root = Builder.load_string(KV)
+        self.render(root)
+        self.assertLess(len(self._win.children), 2)
+        group2 = root.ids.group2
+        group2button = root.ids.group2button
+        group1 = root.ids.group1
+        group1button = root.ids.group1button
+        self.move_frames(5)
+
+        # no DropDown present yet
+        self.check_dropdown(present=False)
+        self.assertFalse(group2.is_open)
+
+=====================================================================
+Found a 19 line (92 tokens) duplication in the following files: 
+Starting at line 75 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+Starting at line 114 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+
+    def test_activate_deactivate_bottom(self, *args):
+        EventLoop.ensure_window()
+        self._win = EventLoop.window
+
+        self.clean_garbage()
+
+        # build the widget tree & add Window as the main EL
+        self.root = self.builder.Builder.load_string(
+            KV, filename="InspectorTestCase.KV")
+        self.render(self.root)
+        self.assertLess(len(self._win.children), 2)
+
+        # activate inspector with root as ctx
+        inspector.start(self._win, self.root)
+        self.advance_frames(2)
+
+        # pull the Inspector drawer from bottom
+        ins = self.root.inspector
+        ins.activated = True
+
+=====================================================================
+Found a 22 line (92 tokens) duplication in the following files: 
+Starting at line 120 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_actionbar.py
+Starting at line 175 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_actionbar.py
+
+    def test_1_openclose(self, *args):
+        # click on Group 2 to open its DropDown
+        # - DropDown shows up
+        # then click away
+        # - Group 2 DropDown disappears
+        # click on Group 1 to open its DropDown
+        # - DropDown shows up
+        # then click away
+        # - Group 1 DropDown disappears
+        self._win = EventLoop.window
+        self.clean_garbage()
+        root = Builder.load_string(KV)
+        self.render(root)
+        self.assertLess(len(self._win.children), 2)
+        group2 = root.ids.group2
+        group1 = root.ids.group1
+        self.move_frames(5)
+
+        # no DropDown present yet
+        self.check_dropdown(present=False)
+        self.assertFalse(group2.is_open)
+        self.assertFalse(group1.is_open)
+
+=====================================================================
+Found a 18 line (88 tokens) duplication in the following files: 
+Starting at line 223 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+Starting at line 293 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+
+        for _ in range(steps_skip):
+            ti._key_down(
+                (None, None, 'cursor_left', 1),
+                repeat=False
+            )
+        # cursor at the place of ^
+        # some_random_te^xt
+
+        # push selection
+        ti._key_down((None, None, 'shift', 1), repeat=False)
+        for _ in range(steps_select):
+            ti._key_down(
+                (None, None, 'cursor_left', 1),
+                repeat=False
+            )
+
+        # pop selection
+        ti._key_up((None, None, 'shift', 1), repeat=False)
+
+=====================================================================
+Found a 11 line (88 tokens) duplication in the following files: 
+Starting at line 41 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_widget.py
+Starting at line 54 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_widget.py
+Starting at line 67 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_widget.py
+
+    def test_add_widget_index_0(self):
+        from kivy.uix.widget import Widget
+        from kivy.uix.button import Button
+        r = self.render
+        root = Widget()
+        a = Button(text='Hello')
+        b = Button(text='World', pos=(50, 10))
+        c = Button(text='Kivy', pos=(10, 50))
+        root.add_widget(a)
+        root.add_widget(b)
+        root.add_widget(c, 0)
+
+=====================================================================
+Found a 10 line (84 tokens) duplication in the following files: 
+Starting at line 47 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_coverage.py
+Starting at line 66 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_coverage.py
+
+def test_coverage_trigger_event():
+    from kivy.lang.builder import Builder
+    cov = coverage.Coverage(source=[os.path.dirname(__file__)])
+    cov.start()
+
+    fname = os.path.join(os.path.dirname(__file__), 'coverage_lang.kv')
+    try:
+        widget = Builder.load_file(fname)
+        widget.children[0].x = 65
+        widget.children[0].width = 97
+
+=====================================================================
+Found a 15 line (84 tokens) duplication in the following files: 
+Starting at line 347 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 377 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+    bnp = BoundedNumericProperty(0, min=-5, max=5, errorvalue=1)
+    if set_name:
+        bnp.set_name(wid, 'bnp')
+        bnp.link_eagerly(wid)
+    else:
+        bnp.link(wid, 'bnp')
+        bnp.link_deps(wid, 'bnp')
+
+    bnp.set(wid, 1)
+    self.assertEqual(bnp.get(wid), 1)
+
+    bnp.set(wid, 5)
+    self.assertEqual(bnp.get(wid), 5)
+
+    bnp.set(wid, 6)
+
+=====================================================================
+Found a 11 line (81 tokens) duplication in the following files: 
+Starting at line 466 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+Starting at line 488 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+
+            touch = UTMotionEvent("unittest", next(touch_id), {
+                "x": ti.center_x / float(win.width),
+                "y": ti.center_y / float(win.height),
+            })
+            touch.profile.append('button')
+            touch.button = 'scrollup'
+
+            EventLoop.post_dispatch_input("begin", touch)
+            EventLoop.post_dispatch_input("end", touch)
+            self.advance_frames(1)
+        assert ti._visible_lines_range == (20, 30)
+
+=====================================================================
+Found a 13 line (78 tokens) duplication in the following files: 
+Starting at line 80 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 95 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+
+    def test_cancel_all(self):
+        from kivy.animation import Animation
+        from kivy.uix.widget import Widget
+        a1 = Animation(x=100)
+        a2 = Animation(y=100)
+        w1 = Widget()
+        w2 = Widget()
+        a1.start(w1)
+        a1.start(w2)
+        a2.start(w1)
+        a2.start(w2)
+        assert not no_animations_being_played()
+        Animation.cancel_all(None)
+
+=====================================================================
+Found a 14 line (78 tokens) duplication in the following files: 
+Starting at line 101 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+Starting at line 142 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+
+        self.assertLess(ins.layout.pos[1], self._win.height / 2.0)
+
+        # close Inspector
+        ins.inspect_enabled = False
+        ins.activated = False
+        self.render(self.root)
+        self.advance_frames(1)
+
+        # stop Inspector completely
+        inspector.stop(self._win, self.root)
+        self.assertLess(len(self._win.children), 2)
+        self.render(self.root)
+
+    def test_activate_deactivate_top(self, *args):
+
+=====================================================================
+Found a 14 line (77 tokens) duplication in the following files: 
+Starting at line 99 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_urllib.py
+Starting at line 121 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_urllib.py
+
+        req_headers=head,
+        debug=True
+    )
+    wait_request_is_finished(kivy_clock, req, timeout=60)
+
+    if req.error and req.error.errno == 11001:
+        pytest.skip('Cannot connect to get address')
+
+    ensure_called_from_thread(queue)
+    check_queue_values(queue)
+    assert queue[-1][2] == ({'authenticated': True, 'user': 'user'}, )
+
+
+@pytest.mark.skipif(os.environ.get('NONETWORK'), reason="No network")
+
+=====================================================================
+Found a 18 line (76 tokens) duplication in the following files: 
+Starting at line 52 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+Starting at line 204 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+Starting at line 427 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+
+        eventloop, win, mouse, wid = self.mouse_init(**kwargs)
+
+        # register mouse provider
+        mouse.start()
+        eventloop.add_input_provider(mouse)
+
+        # no mouse touch anywhere
+        self.assertEqual(mouse.counter, 0)
+        self.assertEqual(mouse.touches, {})
+
+        # right button down, red dot should appear
+        win.dispatch(
+            'on_mouse_down',
+            10, self.correct_y(win, 10),
+            'right', {}
+        )
+        event_id = next(iter(mouse.touches))
+        self.assertEqual(mouse.counter, 1)
+
+=====================================================================
+Found a 16 line (75 tokens) duplication in the following files: 
+Starting at line 145 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_actionbar.py
+Starting at line 274 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_actionbar.py
+
+            active, passive = item
+            # click on active Group
+            TouchPoint(*active.center)
+
+            # active Group DropDown shows up
+            self.check_dropdown(present=True)
+            gdd = WeakProxy(self._win.children[0])
+
+            # active Group DropDown == value in WeakProxy
+            self.assertIn(gdd, self._win.children)
+            self.assertEqual(gdd, self._win.children[0])
+            self.assertTrue(active.is_open)
+            self.assertFalse(passive.is_open)
+
+            # click away
+            TouchPoint(0, 0)
+
+=====================================================================
+Found a 13 line (73 tokens) duplication in the following files: 
+Starting at line 60 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 74 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+        assert {0: (200, 0), 1: (100, 0), 2: (0, 0)} == self.compute_layout(
+            n_data=3, orientation=orientation, n_cols=n_cols, n_rows=n_rows,
+            clock=kivy_clock)
+
+    # |---|
+    # | 0 |
+    # |---|
+    # | 1 |
+    # |---|
+    # | 2 |
+    # |---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(1, None), (None, 3), (1, 3)])
+    @pytest.mark.parametrize("orientation", "tb-lr tb-rl lr-tb rl-tb".split())
+
+=====================================================================
+Found a 4 line (72 tokens) duplication in the following files: 
+Starting at line 224 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_knspace.py
+Starting at line 232 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_knspace.py
+
+        self.assertEqual(w.ids.first.ids.child.text, 'Goodbye')
+        self.assertEqual(w.ids.second.ids.child.text, 'Hello')
+        self.assertEqual(w.ids.first.knspace.child_label.text, 'Goodbye')
+        self.assertEqual(w.ids.second.knspace.child_label.text, 'Hello')
+
+=====================================================================
+Found a 9 line (71 tokens) duplication in the following files: 
+Starting at line 29 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_coverage.py
+Starting at line 47 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_coverage.py
+Starting at line 66 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_coverage.py
+
+def test_coverage_multiline_on_event():
+    from kivy.lang.builder import Builder
+    cov = coverage.Coverage(source=[os.path.dirname(__file__)])
+    cov.start()
+
+    fname = os.path.join(os.path.dirname(__file__), 'coverage_lang.kv')
+    try:
+        widget = Builder.load_file(fname)
+        widget.children[0].y = 65
+
+=====================================================================
+Found a 12 line (71 tokens) duplication in the following files: 
+Starting at line 117 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 435 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+def test_numericcheck(self, set_name):
+    from kivy.properties import NumericProperty
+
+    a = NumericProperty()
+    if set_name:
+        a.set_name(wid, 'a')
+        a.link_eagerly(wid)
+    else:
+        a.link(wid, 'a')
+        a.link_deps(wid, 'a')
+    self.assertEqual(a.get(wid), 0)
+    a.set(wid, 99)
+
+=====================================================================
+Found a 15 line (69 tokens) duplication in the following files: 
+Starting at line 217 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+Starting at line 243 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+Starting at line 269 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+
+        scroll = _TestScrollbarHorizontalMargin()
+        margin = scroll.bar_margin
+        scroll.add_widget(grid)
+        win.add_widget(scroll)
+
+        # get widgets ready
+        EventLoop.idle()
+
+        left, right = scroll.to_window(scroll.x, scroll.right)
+        bottom, top = scroll.to_window(scroll.y, scroll.top)
+
+        # touch in the half of the bar
+        m = margin + scroll.bar_width / 2.0
+        points = [
+            [left, bottom + m, right, bottom + m, 'bottom', 'right', False],
+
+=====================================================================
+Found a 12 line (68 tokens) duplication in the following files: 
+Starting at line 29 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 43 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+                pos=(50, 50),
+                size=(150, 150),
+                offset=(0, 10),
+                spread_radius=(10, -10),
+                border_radius=(10, 10, 10, 10),
+                blur_radius=80,
+            )
+        r(wid)
+
+        wid = Widget()
+        with wid.canvas:
+            Color(0, 1, 0, 1)
+
+=====================================================================
+Found a 11 line (68 tokens) duplication in the following files: 
+Starting at line 29 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 47 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+def test_base(self, set_name):
+    from kivy.properties import Property
+
+    a = Property(-1)
+    if set_name:
+        a.set_name(wid, 'a')
+        a.link_eagerly(wid)
+    else:
+        a.link(wid, 'a')
+        a.link_deps(wid, 'a')
+    self.assertEqual(a.get(wid), -1)
+
+=====================================================================
+Found a 12 line (68 tokens) duplication in the following files: 
+Starting at line 14 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_anchorlayout.py
+Starting at line 17 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+
+        wid = Widget(size_hint=(None, None), size=(100, 100))
+        with wid.canvas:
+            Color(r, g, b)
+            r = Rectangle(pos=wid.pos, size=wid.size)
+
+        def linksp(instance, *largs):
+            r.pos = instance.pos
+            r.size = instance.size
+        wid.bind(pos=linksp, size=linksp)
+        return wid
+
+    def test_anchorlayout_default(self):
+
+=====================================================================
+Found a 13 line (67 tokens) duplication in the following files: 
+Starting at line 792 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 842 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+            ellipse = SmoothEllipse(pos=(100, 100), size=(150, 150))
+        r(wid)
+        ellipse_center = [
+            ellipse.pos[0] + ellipse.size[0] / 2,
+            ellipse.pos[1] + ellipse.size[1] / 2,
+        ]
+        filtered_points = self._filtered_points(
+            ellipse.points + ellipse_center
+        )
+        assert (
+            ellipse.antialiasing_line_points
+            == filtered_points + filtered_points[:2]
+        )
+
+=====================================================================
+Found a 12 line (67 tokens) duplication in the following files: 
+Starting at line 125 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 138 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+
+        assert [(200, 0), (100, 0), (0, 0)] == self.compute_layout(
+            n_children=3, ori=ori, n_cols=n_cols, n_rows=n_rows)
+
+    # |---|
+    # | 0 |
+    # |---|
+    # | 1 |
+    # |---|
+    # | 2 |
+    # |---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(1, None), (None, 3), (1, 3)])
+    @pytest.mark.parametrize("ori", "tb-lr tb-rl lr-tb rl-tb".split())
+
+=====================================================================
+Found a 15 line (67 tokens) duplication in the following files: 
+Starting at line 109 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+Starting at line 323 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+
+        ti = TextInput(multiline=True, text=text)
+        ti.focus = True
+
+        self.render(ti)
+        self.assertTrue(ti.focus)
+
+        # assert cursor is here:
+        # multiline
+        # text$
+        self.assertEqual(
+            ti.cursor, (
+                len(text.split('\n')[-1]),
+                len(text.split('\n')) - 1
+            )
+        )
+
+=====================================================================
+Found a 15 line (66 tokens) duplication in the following files: 
+Starting at line 379 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+Starting at line 426 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+
+    def test_multitouch_dontappear(self):
+        eventloop, win, mouse, wid = self.mouse_init()
+
+        # register mouse provider
+        mouse.start()
+        eventloop.add_input_provider(mouse)
+
+        # no mouse touch anywhere
+        self.assertEqual(mouse.counter, 0)
+        self.assertEqual(mouse.touches, {})
+
+        # left button down
+        win.dispatch(
+            'on_mouse_down',
+            10, self.correct_y(win, 10),
+
+=====================================================================
+Found a 12 line (65 tokens) duplication in the following files: 
+Starting at line 146 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/common.py
+Starting at line 77 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/fixtures.py
+
+        from os import environ
+        environ['KIVY_USE_DEFAULTCONFIG'] = '1'
+
+        # force window size + remove all inputs
+        from kivy.config import Config
+        Config.set('graphics', 'width', '320')
+        Config.set('graphics', 'height', '240')
+        for items in Config.items('input'):
+            Config.remove_option('input', items[0])
+
+        # bind ourself for the later screenshot
+        from kivy.core.window import Window
+
+=====================================================================
+Found a 11 line (65 tokens) duplication in the following files: 
+Starting at line 75 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+Starting at line 114 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+Starting at line 155 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+Starting at line 215 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+Starting at line 298 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+
+    def test_activate_deactivate_bottom(self, *args):
+        EventLoop.ensure_window()
+        self._win = EventLoop.window
+
+        self.clean_garbage()
+
+        # build the widget tree & add Window as the main EL
+        self.root = self.builder.Builder.load_string(
+            KV, filename="InspectorTestCase.KV")
+        self.render(self.root)
+        self.assertLess(len(self._win.children), 2)
+
+=====================================================================
+Found a 8 line (64 tokens) duplication in the following files: 
+Starting at line 12 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_coverage.py
+Starting at line 29 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_coverage.py
+Starting at line 47 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_coverage.py
+Starting at line 66 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_coverage.py
+
+def test_coverage_base():
+    from kivy.lang.builder import Builder
+    cov = coverage.Coverage(source=[os.path.dirname(__file__)])
+    cov.start()
+
+    fname = os.path.join(os.path.dirname(__file__), 'coverage_lang.kv')
+    try:
+        widget = Builder.load_file(fname)
+
+=====================================================================
+Found a 12 line (64 tokens) duplication in the following files: 
+Starting at line 284 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+Starting at line 366 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+
+        touch.touch_up()
+        self.advance_frames(10)
+
+        # close Inspector
+        ins.activated = False
+        self.render(self.root)
+        self.advance_frames(5)
+
+        # stop Inspector completely
+        inspector.stop(self._win, self.root)
+        self.assertLess(len(self._win.children), 2)
+        self.render(self.root)
+
+=====================================================================
+Found a 11 line (62 tokens) duplication in the following files: 
+Starting at line 232 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 386 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+
+        a = Animation(x=100, d=.5) + Animation(x=0, d=.5)
+        w = Widget()
+        ec = ec_cls(a)
+        ec1 = ec_cls(a.anim1)
+        ec2 = ec_cls(a.anim2)
+        a.start(w)
+
+        # right after the animation starts
+        ec.assert_(1, False, 0)
+        ec1.assert_(1, False, 0)
+        ec2.assert_(0, False, 0)
+
+=====================================================================
+Found a 13 line (62 tokens) duplication in the following files: 
+Starting at line 26 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_issues/test_6315.py
+Starting at line 40 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_issues/test_6315.py
+
+        self.assertEqual(a.state, 'down')
+
+        self.assertFalse(b.active)
+        self.assertEqual(b.state, 'normal')
+
+        b.state = 'down'
+        self.assertTrue(b.active)
+        self.assertEqual(b.state, 'down')
+
+        self.assertFalse(a.active)
+        self.assertEqual(a.state, 'normal')
+
+        b.state = 'normal'
+
+=====================================================================
+Found a 12 line (61 tokens) duplication in the following files: 
+Starting at line 80 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 110 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+        adjusted_size = (
+            max(
+                0,
+                raw_size[0] + bs.blur_radius * 3 + bs.spread_radius[0] * 2,
+            ),
+            max(
+                0,
+                raw_size[1] + bs.blur_radius * 3 + bs.spread_radius[1] * 2,
+            ),
+        )
+
+        assert bs.size == adjusted_size
+
+=====================================================================
+Found a 13 line (61 tokens) duplication in the following files: 
+Starting at line 208 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+Starting at line 279 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+
+    def test_del(self):
+        text = 'some_random_text'
+        ti = TextInput(multiline=False, text=text)
+        ti.focus = True
+
+        self.render(ti)
+        self.assertTrue(ti.focus)
+
+        # assert cursor is here:
+        self.assertEqual(ti.cursor, (len(text), 0))
+
+        steps_skip = 2
+        steps_select = 4
+
+=====================================================================
+Found a 17 line (60 tokens) duplication in the following files: 
+Starting at line 200 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_logger.py
+Starting at line 235 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_logger.py
+
+    shimmedlogrecord = ColonSplittingLogRecord(originallogrecord)
+    # No colons means no change.
+    assert str(originallogrecord) == str(shimmedlogrecord)
+
+    # Try a non-string (Issue #7984)
+    originallogrecord = logging.LogRecord(
+        name="kivy.test",
+        level=logging.DEBUG,
+        pathname="test.py",
+        lineno=1,
+        msg=1,
+        args=None,
+        exc_info=None,
+        func="test_colon_splitting",
+        sinfo=None,
+    )
+    shimmedlogrecord = ColonSplittingLogRecord(originallogrecord)
+
+=====================================================================
+Found a 11 line (60 tokens) duplication in the following files: 
+Starting at line 104 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+Starting at line 145 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+Starting at line 205 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+
+        ins.inspect_enabled = False
+        ins.activated = False
+        self.render(self.root)
+        self.advance_frames(1)
+
+        # stop Inspector completely
+        inspector.stop(self._win, self.root)
+        self.assertLess(len(self._win.children), 2)
+        self.render(self.root)
+
+    def test_activate_deactivate_top(self, *args):
+
+=====================================================================
+Found a 17 line (60 tokens) duplication in the following files: 
+Starting at line 303 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+Starting at line 461 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+
+        win.dispatch(
+            'on_mouse_move',
+            11, self.correct_y(win, 11),
+            {}
+        )
+        self.assertEqual(
+            ellipse.pos,
+            (1, 1)
+        )  # bounding box from Rectangle, R=10 -> 20 width
+
+        # right button up
+        win.dispatch(
+            'on_mouse_up',
+            10, self.correct_y(win, 10),
+            'right', {}
+        )
+        self.assertEqual(mouse.counter, 1)
+
+=====================================================================
+Found a 12 line (59 tokens) duplication in the following files: 
+Starting at line 148 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 179 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+        adjusted_pos = (
+            raw_pos[0]
+            - bs.blur_radius * 1.5
+            - bs.spread_radius[0]
+            + bs.offset[0],
+            raw_pos[0]
+            - bs.blur_radius * 1.5
+            - bs.spread_radius[1]
+            + bs.offset[1],
+        )
+
+        assert bs.pos == adjusted_pos
+
+=====================================================================
+Found a 8 line (59 tokens) duplication in the following files: 
+Starting at line 194 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_hover_event.py
+Starting at line 209 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_hover_event.py
+
+        self.advance_frames(1)
+        self.assert_event('begin', win.to_normalized_pos(x, y))
+        # Test update event
+        x, y = win.mouse_pos = (10.0, 10.0)
+        self.advance_frames(1)
+        self.assert_event('update', win.to_normalized_pos(x, y))
+        # Test end event
+        win.dispatch('on_cursor_leave')
+
+=====================================================================
+Found a 16 line (59 tokens) duplication in the following files: 
+Starting at line 126 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+Starting at line 322 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+
+            self.assertIn(event_id, mouse.touches)
+            self.assertIsNotNone(
+                mouse.touches[event_id].ud.get('_drawelement')
+            )  # the red dot is present
+
+        # button is down on the previous dot's position
+        win.dispatch(
+            'on_mouse_down',
+            10, self.correct_y(win, 10),
+            button, {}
+        )
+        # if the multitouch is disabled, the touch event
+        # increments the counter
+        self.assertEqual(
+            mouse.counter,
+            1 + int('disabled' in kwargs)
+
+=====================================================================
+Found a 9 line (59 tokens) duplication in the following files: 
+Starting at line 95 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+Starting at line 107 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+
+        tpls = len(self.Ninvar.templates)
+
+        best_score = 0
+        gdb.db.append(self.Ninvar)
+        r = gdb.recognize([Ncandidate], max_gpf=1)
+        r.bind(on_complete=best_score_cb)
+        self.assertEqual(r.progress, 0)
+        Clock.tick()
+        self.assertEqual(r.progress, 0.5)
+
+=====================================================================
+Found a 9 line (59 tokens) duplication in the following files: 
+Starting at line 120 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 407 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 438 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+    a = NumericProperty()
+    if set_name:
+        a.set_name(wid, 'a')
+        a.link_eagerly(wid)
+    else:
+        a.link(wid, 'a')
+        a.link_deps(wid, 'a')
+    self.assertEqual(a.get(wid), 0)
+    a.set(wid, 99)
+
+=====================================================================
+Found a 10 line (57 tokens) duplication in the following files: 
+Starting at line 304 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 387 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+
+        w = Widget()
+        ec = ec_cls(a)
+        ec1 = ec_cls(a.anim1)
+        ec2 = ec_cls(a.anim2)
+        a.start(w)
+
+        # right after the animation starts
+        ec.assert_(1, False, 0)
+        ec1.assert_(1, False, 0)
+        ec2.assert_(0, False, 0)
+
+=====================================================================
+Found a 10 line (57 tokens) duplication in the following files: 
+Starting at line 192 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+Starting at line 267 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+
+        self.assertEqual(ins.widget.text, highlight_exp)
+        # data in properties
+        for node in ins.treeview.iterate_all_nodes():
+            lkey = getattr(node.ids, 'lkey', None)
+            if not lkey:
+                continue
+            if lkey.text == 'text':
+                ltext = node.ids.ltext
+                # slice because the string is displayed with quotes
+                self.assertEqual(ltext.text[1:-1], highlight_exp)
+
+=====================================================================
+Found a 9 line (56 tokens) duplication in the following files: 
+Starting at line 27 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/async_common.py
+Starting at line 446 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/common.py
+
+        self.eventloop._dispatch_input("begin", self)
+
+    def touch_move(self, x, y):
+        win = self.eventloop.window
+        self.move({
+            "x": x / (win.width - 1.0),
+            "y": y / (win.height - 1.0)
+        })
+        self.eventloop._dispatch_input("update", self)
+
+=====================================================================
+Found a 14 line (56 tokens) duplication in the following files: 
+Starting at line 885 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 903 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+                    150, 200,
+                    500, 500, 400, 400  # Irrelevant, just for testing purposes
+                ]
+            )
+        r(wid)
+        filtered_points = self._filtered_points(triangle.points[:6])
+        assert (
+            triangle.antialiasing_line_points
+            == filtered_points + filtered_points[:2]
+        )
+
+        wid = Widget()
+        with wid.canvas:
+            Color(0, 0, 1, 0.5)
+
+=====================================================================
+Found a 13 line (56 tokens) duplication in the following files: 
+Starting at line 49 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+Starting at line 20 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_slider.py
+
+class InspectorTestCase(GraphicUnitTest):
+    framecount = 0
+
+    def setUp(self):
+        # kill KV lang logging (too long test)
+        import kivy.lang.builder as builder
+
+        if not hasattr(self, '_trace'):
+            self._trace = builder.trace
+
+        self.builder = builder
+        builder.trace = lambda *_, **__: None
+        super(InspectorTestCase, self).setUp()
+
+=====================================================================
+Found a 14 line (56 tokens) duplication in the following files: 
+Starting at line 188 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+Starting at line 481 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+
+            self.assertEqual(mouse.counter, 1)
+            self.assertIn(event_id, mouse.touches)
+            self.assertIsNotNone(
+                mouse.touches[event_id].ud.get('_drawelement')
+            )  # the red dot is present
+
+        self.render(wid)
+
+        # cleanup!
+        # remove mouse provider
+        mouse.stop()
+        eventloop.remove_input_provider(mouse)
+
+    def multitouch_dot_move(self, button, **kwargs):
+
+=====================================================================
+Found a 4 line (56 tokens) duplication in the following files: 
+Starting at line 26 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+Starting at line 39 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+Starting at line 53 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+
+        self.assertEqual(wgts[0].pos, [0, sl.height / 2.])
+        self.assertEqual(wgts[1].pos, [sl.width / 2., sl.height / 2.])
+        self.assertEqual(wgts[2].pos, [0, 0])
+        self.assertEqual(wgts[3].pos, [sl.width / 2., 0])
+
+=====================================================================
+Found a 9 line (55 tokens) duplication in the following files: 
+Starting at line 1112 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 1141 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+        except BaseException as e:
+            exception = e, sys.exc_info()[2]
+            raise
+
+    thread = Thread(target=callback)
+    thread.start()
+    thread.join()
+    if exception is not None:
+        raise exception[0].with_traceback(exception[1])
+
+=====================================================================
+Found a 12 line (55 tokens) duplication in the following files: 
+Starting at line 38 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics_svg.py
+Starting at line 54 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics_svg.py
+Starting at line 70 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics_svg.py
+
+    def test_simple(self):
+        import xml.etree.ElementTree as ET
+        from kivy.uix.widget import Widget
+        from kivy.graphics.svg import Svg
+
+        # create a root widget
+        wid = Widget()
+
+        # put some graphics instruction on it
+        with wid.canvas:
+            svg = Svg()
+            svg.set_tree(ET.ElementTree(ET.fromstring(SIMPLE_SVG)))
+
+=====================================================================
+Found a 6 line (55 tokens) duplication in the following files: 
+Starting at line 507 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 547 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+    Clock.tick()
+    self.assertEqual(obj.text, 'Unset')
+    self.assertEqual(obj_false.text, 'Unset')
+    self.assertEqual(dict_rebind.text, 'Unset')
+    self.assertEqual(dict_false.text, 'Unset')
+    self.assertEqual(alias_rebind.text, 'Unset')
+
+=====================================================================
+Found a 6 line (55 tokens) duplication in the following files: 
+Starting at line 519 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 535 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+    Clock.tick()
+    self.assertEqual(obj.text, 'normal')
+    self.assertEqual(obj_false.text, 'normal')
+    self.assertEqual(dict_rebind.text, 'normal')
+    self.assertEqual(dict_false.text, 'Unset')
+    self.assertEqual(alias_rebind.text, 'normal')
+
+=====================================================================
+Found a 15 line (55 tokens) duplication in the following files: 
+Starting at line 120 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_actionbar.py
+Starting at line 175 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_actionbar.py
+Starting at line 244 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_actionbar.py
+Starting at line 308 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_actionbar.py
+
+    def test_1_openclose(self, *args):
+        # click on Group 2 to open its DropDown
+        # - DropDown shows up
+        # then click away
+        # - Group 2 DropDown disappears
+        # click on Group 1 to open its DropDown
+        # - DropDown shows up
+        # then click away
+        # - Group 1 DropDown disappears
+        self._win = EventLoop.window
+        self.clean_garbage()
+        root = Builder.load_string(KV)
+        self.render(root)
+        self.assertLess(len(self._win.children), 2)
+        group2 = root.ids.group2
+
+=====================================================================
+Found a 10 line (55 tokens) duplication in the following files: 
+Starting at line 147 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_actionbar.py
+Starting at line 277 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_actionbar.py
+Starting at line 335 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_actionbar.py
+
+            TouchPoint(*active.center)
+
+            # active Group DropDown shows up
+            self.check_dropdown(present=True)
+            gdd = WeakProxy(self._win.children[0])
+
+            # active Group DropDown == value in WeakProxy
+            self.assertIn(gdd, self._win.children)
+            self.assertEqual(gdd, self._win.children[0])
+            self.assertTrue(active.is_open)
+
+=====================================================================
+Found a 8 line (55 tokens) duplication in the following files: 
+Starting at line 41 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 51 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+                n_data=1, orientation=orientation, n_cols=n_cols,
+                n_rows=n_rows, clock=kivy_clock)
+
+    # |---|---|---|
+    # | 0 | 1 | 2 |
+    # |---|---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(3, None), (None, 1), (3, 1)])
+    @pytest.mark.parametrize("orientation", "lr-tb lr-bt tb-lr bt-lr".split())
+
+=====================================================================
+Found a 13 line (53 tokens) duplication in the following files: 
+Starting at line 330 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/common.py
+Starting at line 361 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/common.py
+
+        from tkinter import Tk, Label, LEFT, RIGHT, BOTTOM, Button
+        from PIL import Image, ImageTk
+
+        self.retval = False
+
+        root = Tk()
+
+        def do_close():
+            root.destroy()
+
+        def do_yes():
+            self.retval = True
+            do_close()
+
+=====================================================================
+Found a 11 line (53 tokens) duplication in the following files: 
+Starting at line 127 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 212 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+
+        a = Animation(x=100, d=1)
+        w = Widget()
+        a.start(w)
+        sleep(.5)
+        Animation.stop_all(w)
+        assert no_animations_being_played()
+
+    def test_stop_all_2(self):
+        from kivy.animation import Animation
+        from kivy.uix.widget import Widget
+        a = Animation(x=100, d=1)
+
+=====================================================================
+Found a 8 line (53 tokens) duplication in the following files: 
+Starting at line 189 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 199 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+
+    def test_cancel_all(self):
+        from kivy.animation import Animation
+        from kivy.uix.widget import Widget
+        a = Animation(x=100) + Animation(x=0)
+        w = Widget()
+        a.start(w)
+        sleep(.5)
+        Animation.cancel_all(w)
+
+=====================================================================
+Found a 8 line (53 tokens) duplication in the following files: 
+Starting at line 209 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 219 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+
+    def test_stop_all(self):
+        from kivy.animation import Animation
+        from kivy.uix.widget import Widget
+        a = Animation(x=100) + Animation(x=0)
+        w = Widget()
+        a.start(w)
+        sleep(.5)
+        Animation.stop_all(w)
+
+=====================================================================
+Found a 11 line (53 tokens) duplication in the following files: 
+Starting at line 212 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 234 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+        assert bs.size == (0, 0)
+        assert bs.blur_radius == 0
+
+        # There is a bug in RoundedRectangle that distorts the texture if the
+        # radius value is less than 1. Otherwise, it could be 0.
+        assert bs.border_radius == tuple(
+            map(
+                lambda value: max(1.0, min(value, min(bs.size) / 2)),
+                bs.border_radius,
+            )
+        )
+
+=====================================================================
+Found a 10 line (53 tokens) duplication in the following files: 
+Starting at line 186 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+Starting at line 233 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+
+            for _ in range(steps):
+                ti._key_down(
+                    (None, None, 'cursor_left', 1),
+                    repeat=False
+                )
+
+            # pop selection
+            ti._key_up((None, None, 'shift', 1), repeat=False)
+            self.assertEqual(
+                ti.cursor, (len(text[:-steps]), 0)
+
+=====================================================================
+Found a 13 line (53 tokens) duplication in the following files: 
+Starting at line 249 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 276 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+
+    def test_on_progress(self, kivy_clock):
+        _queue = UrlRequestQueue([])
+        responses.get(
+            self.url,
+            body="x" * 100,
+            status=200,
+            content_type="text/plain",
+            auto_calculate_content_length=True
+        )
+
+        req = UrlRequest(
+            self.url,
+            on_progress=_queue._on_progress,
+
+=====================================================================
+Found a 11 line (52 tokens) duplication in the following files: 
+Starting at line 86 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/perf_test_textinput.py
+Starting at line 123 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/perf_test_textinput.py
+
+                print('deleted 210 characters 9 times')
+                import resource
+                print('mem usage after test')
+                print(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss /
+                    1024, 'MB')
+                print('total lines in text input:', m_len)
+                print('--------------------------------------')
+                print('total time elapsed:', self.tot_time)
+                print('--------------------------------------')
+                self.test_done = True
+                return
+
+=====================================================================
+Found a 11 line (52 tokens) duplication in the following files: 
+Starting at line 744 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 757 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+        r(wid)
+        assert (
+            rounded_rect.antialiasing_line_points
+            == filtered_points + filtered_points[:2]
+        )
+
+        wid = Widget()
+        with wid.canvas:
+            Color(1, 1, 1, 0.5)
+            rounded_rect = SmoothRoundedRectangle(
+                pos=(100, 100), size=(150, 150), segments=0
+
+=====================================================================
+Found a 11 line (52 tokens) duplication in the following files: 
+Starting at line 831 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 850 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+        r(wid)
+        assert (
+            ellipse.antialiasing_line_points
+            == filtered_points + filtered_points[:2]
+        )
+
+        wid = Widget()
+        with wid.canvas:
+            Color(1, 1, 1, 0.5)
+            ellipse = SmoothEllipse(
+                pos=(100, 100), size=(150, 150), angle_start=90, angle_end=-120
+
+=====================================================================
+Found a 8 line (52 tokens) duplication in the following files: 
+Starting at line 33 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+Starting at line 41 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+
+        layout = BoxLayout()
+        def extracted_function_4():
+                layout.add_widget(b(1, 0, 0))
+                layout.add_widget(b(0, 1, 0))
+                layout.add_widget(b(0, 0, 1))
+                r(layout)
+        
+        extracted_function_4()
+
+=====================================================================
+Found a 7 line (52 tokens) duplication in the following files: 
+Starting at line 110 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+Starting at line 122 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+
+                EventLoop.post_dispatch_input("begin", touch)
+                touch.move({
+                    "x": nx / float(win.width),
+                    "y": ny / float(win.height)
+                })
+                EventLoop.post_dispatch_input("update", touch)
+                EventLoop.post_dispatch_input("end", touch)
+
+=====================================================================
+Found a 9 line (52 tokens) duplication in the following files: 
+Starting at line 156 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+Starting at line 194 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+
+                scroll.add_widget(grid)
+                win.add_widget(scroll)
+        
+                EventLoop.idle()
+        
+                left, right = scroll.to_window(scroll.x, scroll.right)
+                bottom, top = scroll.to_window(scroll.y, scroll.top)
+        
+                points = [
+
+=====================================================================
+Found a 7 line (52 tokens) duplication in the following files: 
+Starting at line 317 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+Starting at line 338 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+
+        touch = UTMotionEvent("unittest", next(touch_id), {
+            "x": scroll.center_x / float(win.width),
+            "y": scroll.center_y / float(win.height),
+        })
+
+        touch.profile.append('button')
+        touch.button = 'scrollup'
+
+=====================================================================
+Found a 6 line (52 tokens) duplication in the following files: 
+Starting at line 430 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+Starting at line 466 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+Starting at line 488 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+
+        touch = UTMotionEvent("unittest", next(touch_id), {
+            "x": ti.center_x / float(win.width),
+            "y": ti.center_y / float(win.height),
+        })
+        touch.profile.append('button')
+        touch.button = 'scrolldown'
+
+=====================================================================
+Found a 6 line (52 tokens) duplication in the following files: 
+Starting at line 133 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_utils.py
+Starting at line 146 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_utils.py
+
+    def test_intersection(self):
+        abcd = ['a', 'b', 'c', 'd']
+        efgh = ['e', 'f', 'g', 'h']
+        fedc = ['c', 'd', 'e', 'f']  # cdef is cython keyword O_o)
+        feed = ['f', 'e', 'e', 'd']
+        self.assertEqual(intersection(abcd, efgh), [])
+
+=====================================================================
+Found a 7 line (51 tokens) duplication in the following files: 
+Starting at line 315 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+Starting at line 326 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+Starting at line 345 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+
+        gdb1.transfer_gesture(gdb2, name='N')
+
+        r = gdb2.recognize([Ncandidate], max_gpf=0)
+        self.assertEqual(r.best['name'], 'N')
+        self.assertTrue(r.best['score'] > 0.94 and r.best['score'] < 0.95)
+
+    def test_export_import_case_1(self):
+
+=====================================================================
+Found a 7 line (51 tokens) duplication in the following files: 
+Starting at line 60 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+Starting at line 77 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+
+        layout = BoxLayout(spacing=20, orientation='vertical')
+        layout.add_widget(b(1, 0, 0))
+        layout.add_widget(b(0, 1, 0))
+        layout.add_widget(b(0, 0, 1))
+        r(layout)
+
+    def test_boxlayout_padding(self):
+
+=====================================================================
+Found a 5 line (51 tokens) duplication in the following files: 
+Starting at line 77 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+Starting at line 94 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+
+        layout = BoxLayout(padding=20, orientation='vertical')
+        layout.add_widget(b(1, 0, 0))
+        layout.add_widget(b(0, 1, 0))
+        layout.add_widget(b(0, 0, 1))
+        r(layout)
+
+=====================================================================
+Found a 7 line (51 tokens) duplication in the following files: 
+Starting at line 108 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 117 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+
+                n_children=1, ori=ori, n_cols=n_cols, n_rows=n_rows)
+
+    # |---|---|---|
+    # | 0 | 1 | 2 |
+    # |---|---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(3, None), (None, 1), (3, 1)])
+    @pytest.mark.parametrize("ori", "lr-tb lr-bt tb-lr bt-lr".split())
+
+=====================================================================
+Found a 12 line (51 tokens) duplication in the following files: 
+Starting at line 284 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 340 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+                n_data=8, orientation='lr-tb', n_cols=n_cols, n_rows=n_rows,
+                scroll_to=(150, 50), clock=kivy_clock)
+
+    # |---|---|
+    # |   | 7 |
+    # |---|---|---|
+    # |   | 4 | 5 |
+    # |---|---|---|
+    # |   |   |   |
+    # |---|---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(3, None), (None, 3), (3, 3)])
+    def test_3x3_lr_bt(self, kivy_clock, n_cols, n_rows):
+
+=====================================================================
+Found a 12 line (51 tokens) duplication in the following files: 
+Starting at line 298 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 368 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+                n_data=8, orientation='lr-bt', n_cols=n_cols, n_rows=n_rows,
+                scroll_to=(150, 150), clock=kivy_clock)
+
+    # |---|---|---|
+    # |   |   |   |
+    # |---|---|---|
+    # | 5 | 4 |   |
+    # |---|---|---|
+    #     | 7 |   |
+    #     |---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(3, None), (None, 3), (3, 3)])
+    def test_3x3_rl_tb(self, kivy_clock, n_cols, n_rows):
+
+=====================================================================
+Found a 12 line (51 tokens) duplication in the following files: 
+Starting at line 312 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 354 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+                n_data=8, orientation='rl-tb', n_cols=n_cols, n_rows=n_rows,
+                scroll_to=(50, 50), clock=kivy_clock)
+
+    #     |---|---|
+    #     | 7 |   |
+    # |---|---|---|
+    # | 5 | 4 |   |
+    # |---|---|---|
+    # |   |   |   |
+    # |---|---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(3, None), (None, 3), (3, 3)])
+    def test_3x3_rl_bt(self, kivy_clock, n_cols, n_rows):
+
+=====================================================================
+Found a 12 line (51 tokens) duplication in the following files: 
+Starting at line 157 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 179 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+
+    def test_on_error(self, kivy_clock):
+        _queue = UrlRequestQueue([])
+        responses.get(
+            self.url,
+            body=Exception("..."),
+            status=400,
+            content_type="application/json",
+        )
+
+        req = UrlRequest(
+            self.url,
+            on_error=_queue._on_error,
+
+=====================================================================
+Found a 8 line (50 tokens) duplication in the following files: 
+Starting at line 124 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 134 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+
+    def test_stop_all(self):
+        from kivy.animation import Animation
+        from kivy.uix.widget import Widget
+        a = Animation(x=100, d=1)
+        w = Widget()
+        a.start(w)
+        sleep(.5)
+        Animation.stop_all(w)
+
+=====================================================================
+Found a 8 line (50 tokens) duplication in the following files: 
+Starting at line 189 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 199 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 209 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 219 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+
+    def test_cancel_all(self):
+        from kivy.animation import Animation
+        from kivy.uix.widget import Widget
+        a = Animation(x=100) + Animation(x=0)
+        w = Widget()
+        a.start(w)
+        sleep(.5)
+        Animation.cancel_all(w)
+
+=====================================================================
+Found a 7 line (50 tokens) duplication in the following files: 
+Starting at line 226 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 296 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+
+        Animation.stop_all(w, 'x')
+        assert no_animations_being_played()
+
+    def test_count_events(self, ec_cls):
+        from kivy.animation import Animation
+        from kivy.uix.widget import Widget
+        a = Animation(x=100, d=.5) + Animation(x=0, d=.5)
+
+=====================================================================
+Found a 8 line (50 tokens) duplication in the following files: 
+Starting at line 37 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_coverage.py
+Starting at line 76 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_coverage.py
+
+        widget.children[0].y = 65
+    finally:
+        cov.stop()
+
+    Builder.unload_file(fname)
+    _, statements, missing, _ = cov.analysis(fname)
+    assert set(statements) == kv_statement_lines
+    assert set(missing) == {4, }
+
+=====================================================================
+Found a 12 line (50 tokens) duplication in the following files: 
+Starting at line 224 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_logger.py
+Starting at line 280 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_logger.py
+
+    originallogrecord = logging.LogRecord(
+        name="kivy.test",
+        level=logging.DEBUG,
+        pathname="test.py",
+        lineno=1,
+        msg="Part1: Part2 Part 3",
+        args=("args",),
+        exc_info=None,
+        func="test_colon_splitting",
+        sinfo=None,
+    )
+    shimmedlogrecord = UncoloredLogRecord(originallogrecord)
+
+=====================================================================
+Found a 14 line (50 tokens) duplication in the following files: 
+Starting at line 52 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+Starting at line 204 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+Starting at line 380 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+
+        eventloop, win, mouse, wid = self.mouse_init(**kwargs)
+
+        # register mouse provider
+        mouse.start()
+        eventloop.add_input_provider(mouse)
+
+        # no mouse touch anywhere
+        self.assertEqual(mouse.counter, 0)
+        self.assertEqual(mouse.touches, {})
+
+        # right button down, red dot should appear
+        win.dispatch(
+            'on_mouse_down',
+            10, self.correct_y(win, 10),
+
+=====================================================================
+Found a 13 line (50 tokens) duplication in the following files: 
+Starting at line 641 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 795 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+def test_alias_property(self, watch_before_use):
+    from kivy.properties import AliasProperty
+
+    class CustomAlias(EventDispatcher):
+
+        def _get_prop(self):
+            self.getter_called += 1
+
+        def _set_prop(self, value):
+            self.setter_called += 1
+
+        prop = AliasProperty(
+            _get_prop, _set_prop, watch_before_use=watch_before_use)
+
+=====================================================================
+Found a 7 line (50 tokens) duplication in the following files: 
+Starting at line 54 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+Starting at line 71 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+
+        layout = BoxLayout(spacing=20)
+        layout.add_widget(b(1, 0, 0))
+        layout.add_widget(b(0, 1, 0))
+        layout.add_widget(b(0, 0, 1))
+        r(layout)
+
+        layout = BoxLayout(spacing=20, orientation='vertical')
+
+=====================================================================
+Found a 5 line (50 tokens) duplication in the following files: 
+Starting at line 60 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+Starting at line 94 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+
+        layout = BoxLayout(spacing=20, orientation='vertical')
+        layout.add_widget(b(1, 0, 0))
+        layout.add_widget(b(0, 1, 0))
+        layout.add_widget(b(0, 0, 1))
+        r(layout)
+
+=====================================================================
+Found a 5 line (50 tokens) duplication in the following files: 
+Starting at line 269 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 297 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+
+        self._ensure_called_from_thread(processed_queue)
+        self._check_queue_values(processed_queue[0], "progress")
+        self._check_queue_values(processed_queue[1], "progress")
+        self._check_queue_values(processed_queue[2], "progress")
+        self._check_queue_values(processed_queue[3], "progress")
+
+=====================================================================
+Found a 8 line (49 tokens) duplication in the following files: 
+Starting at line 120 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 174 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 407 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 438 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+    a = NumericProperty()
+    if set_name:
+        a.set_name(wid, 'a')
+        a.link_eagerly(wid)
+    else:
+        a.link(wid, 'a')
+        a.link_deps(wid, 'a')
+    self.assertEqual(a.get(wid), 0)
+
+=====================================================================
+Found a 7 line (49 tokens) duplication in the following files: 
+Starting at line 156 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+Starting at line 194 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+Starting at line 219 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+Starting at line 245 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+Starting at line 271 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+
+                scroll.add_widget(grid)
+                win.add_widget(scroll)
+        
+                EventLoop.idle()
+        
+                left, right = scroll.to_window(scroll.x, scroll.right)
+                bottom, top = scroll.to_window(scroll.y, scroll.top)
+
+=====================================================================
+Found a 8 line (49 tokens) duplication in the following files: 
+Starting at line 258 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+Starting at line 288 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+
+            [left + m, top, left + m, bottom, 'bottom', 'left', False],
+            [right, top, right, bottom, 'bottom', 'right', True],
+            [left, top, left, bottom, 'bottom', 'left', True]
+        ]
+        self.process_points(scroll, points)
+        self.render(scroll)
+
+    def test_scrollbar_both_margin(self):
+
+=====================================================================
+Found a 9 line (48 tokens) duplication in the following files: 
+Starting at line 610 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 621 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+        points_4 = [100, 100, 200, 100]
+
+        # line closed (default)
+        for points in (points_1, points_2, points_3, points_4):
+            wid = Widget()
+            with wid.canvas:
+                Color(1, 1, 1, 0.5)
+                inst = Instruction()
+                aa_line = AntiAliasingLine(inst, points=points)
+
+=====================================================================
+Found a 9 line (48 tokens) duplication in the following files: 
+Starting at line 135 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_hover_event.py
+Starting at line 145 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_hover_event.py
+
+        win.dispatch('on_cursor_enter')
+        x, y = win.mouse_pos = (50.0, 50.0)
+        self.advance_frames(1)
+        self.assert_event('update', win.to_normalized_pos(x, y))
+        win.dispatch('on_cursor_leave')
+        self.advance_frames(1)
+
+
+    def test_update_event_with_mouse_pos(self):
+
+=====================================================================
+Found a 8 line (48 tokens) duplication in the following files: 
+Starting at line 98 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 120 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 142 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 158 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 407 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 438 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+    a = StringProperty()
+    if set_name:
+        a.set_name(wid, 'a')
+        a.link_eagerly(wid)
+    else:
+        a.link(wid, 'a')
+        a.link_deps(wid, 'a')
+    self.assertEqual(a.get(wid), '')
+
+=====================================================================
+Found a 8 line (48 tokens) duplication in the following files: 
+Starting at line 227 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 237 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+        assert {1: (100, 0), 2: (200, 0)} == self.compute_layout(
+            n_data=4, orientation=orientation, n_cols=n_cols, n_rows=n_rows,
+            scroll_to=(150, 0), clock=kivy_clock)
+
+    # |---|---|---|---|
+    # |   | 2 | 1 |   |
+    # |---|---|---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(4, None), (None, 1), (4, 1)])
+
+=====================================================================
+Found a 9 line (48 tokens) duplication in the following files: 
+Starting at line 163 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+Starting at line 210 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+Starting at line 281 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+
+        ti = TextInput(multiline=False, text=text)
+        ti.focus = True
+
+        self.render(ti)
+        self.assertTrue(ti.focus)
+
+        # assert cursor is here:
+        # singleline$
+        self.assertEqual(ti.cursor, (len(text), 0))
+
+=====================================================================
+Found a 12 line (48 tokens) duplication in the following files: 
+Starting at line 65 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 87 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+
+    def test_on_success(self, kivy_clock):
+        _queue = UrlRequestQueue([])
+        responses.get(
+            self.url,
+            body="{}",
+            status=200,
+            content_type="application/json",
+        )
+
+        req = UrlRequest(
+            self.url,
+            on_success=_queue._on_success,
+
+=====================================================================
+Found a 12 line (48 tokens) duplication in the following files: 
+Starting at line 111 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 133 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+
+    def test_on_redirect(self, kivy_clock):
+        _queue = UrlRequestQueue([])
+        responses.get(
+            self.url,
+            body="{}",
+            status=301,
+            content_type="application/json",
+        )
+
+        req = UrlRequest(
+            self.url,
+            on_redirect=_queue._on_redirect,
+
+=====================================================================
+Found a 12 line (48 tokens) duplication in the following files: 
+Starting at line 203 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 225 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+
+    def test_on_failure(self, kivy_clock):
+        _queue = UrlRequestQueue([])
+        responses.get(
+            self.url,
+            body="{}",
+            status=400,
+            content_type="application/json",
+        )
+
+        req = UrlRequest(
+            self.url,
+            on_failure=_queue._on_failure,
+
+=====================================================================
+Found a 10 line (47 tokens) duplication in the following files: 
+Starting at line 205 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_lang.py
+Starting at line 222 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_lang.py
+Starting at line 239 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_lang.py
+Starting at line 256 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_lang.py
+
+        '''))
+        wid = TLangClass()
+        Builder.apply(wid)
+        wid.a = 0
+
+        self.assertTrue('on_press' in wid.binded_func)
+        wid.binded_func['on_press']()
+        self.assertEqual(wid.a, 1)
+
+    def test_with_eight_spaces(self):
+
+=====================================================================
+Found a 12 line (47 tokens) duplication in the following files: 
+Starting at line 205 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_logger.py
+Starting at line 240 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_logger.py
+Starting at line 299 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_logger.py
+
+    originallogrecord = logging.LogRecord(
+        name="kivy.test",
+        level=logging.DEBUG,
+        pathname="test.py",
+        lineno=1,
+        msg=1,
+        args=None,
+        exc_info=None,
+        func="test_colon_splitting",
+        sinfo=None,
+    )
+    shimmedlogrecord = ColonSplittingLogRecord(originallogrecord)
+
+=====================================================================
+Found a 8 line (47 tokens) duplication in the following files: 
+Starting at line 32 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 50 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 82 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 98 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 120 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 142 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 158 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 174 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 407 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 438 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+    a = Property(-1)
+    if set_name:
+        a.set_name(wid, 'a')
+        a.link_eagerly(wid)
+    else:
+        a.link(wid, 'a')
+        a.link_deps(wid, 'a')
+    self.assertEqual(a.get(wid), -1)
+
+=====================================================================
+Found a 11 line (47 tokens) duplication in the following files: 
+Starting at line 657 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 812 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 908 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+            self.getter_called = 0
+            self.setter_called = 0
+            self.callback_called = 0
+
+    def callback(widget, value):
+        widget.callback_called += 1
+
+    # Initial checks
+    wid = CustomAlias()
+    wid.bind(prop=callback)
+    self.assertEqual(wid.getter_called, 0)
+
+=====================================================================
+Found a 8 line (47 tokens) duplication in the following files: 
+Starting at line 182 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+Starting at line 206 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+
+            [right, top, right, bottom, 'bottom', 'right', False],
+            [left, top, left, bottom, 'bottom', 'left', False]
+        ]
+        self.process_points(scroll, points)
+        self.render(scroll)
+
+
+    def test_scrollbar_both(self):
+
+=====================================================================
+Found a 10 line (47 tokens) duplication in the following files: 
+Starting at line 98 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 144 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 190 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 236 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+
+            on_success=_queue._on_success,
+            on_finish=_queue._on_finish,
+            debug=True,
+        )
+        self.wait_request_is_finished(kivy_clock, req)
+
+        processed_queue = _queue.queue
+        assert len(processed_queue) == 2
+        self._ensure_called_from_thread(processed_queue)
+        self._check_queue_values(processed_queue[0], "success")
+
+=====================================================================
+Found a 10 line (46 tokens) duplication in the following files: 
+Starting at line 266 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 352 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+
+        a = Animation(x=100) + Animation(x=0)
+        w = Widget()
+        assert not a.have_properties_to_animate(w)
+        a.start(w)
+        assert a.have_properties_to_animate(w)
+        a.stop(w)
+        assert not a.have_properties_to_animate(w)
+        assert no_animations_being_played()
+
+    def test_animated_properties(self):
+
+=====================================================================
+Found a 13 line (46 tokens) duplication in the following files: 
+Starting at line 189 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+Starting at line 366 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+Starting at line 483 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+
+            self.assertIn(event_id, mouse.touches)
+            self.assertIsNotNone(
+                mouse.touches[event_id].ud.get('_drawelement')
+            )  # the red dot is present
+
+        self.render(wid)
+
+        # cleanup!
+        # remove mouse provider
+        mouse.stop()
+        eventloop.remove_input_provider(mouse)
+
+    def multitouch_dot_move(self, button, **kwargs):
+
+=====================================================================
+Found a 9 line (46 tokens) duplication in the following files: 
+Starting at line 621 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 858 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+        prop = AliasProperty(_get_prop, None, watch_before_use=watch_before_use)
+
+        def __init__(self, **kwargs):
+            super(CustomAlias, self).__init__(**kwargs)
+            self.getter_called = 0
+
+    # Initial checks
+    wid = CustomAlias()
+    self.assertEqual(wid.getter_called, 0)
+
+=====================================================================
+Found a 14 line (46 tokens) duplication in the following files: 
+Starting at line 253 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 269 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+        assert {1: (0, 200), 2: (0, 100)} == self.compute_layout(
+            n_data=4, orientation=orientation, n_cols=n_cols, n_rows=n_rows,
+            scroll_to=(0, 150), clock=kivy_clock)
+
+    # |---|
+    # |   |
+    # |---|
+    # | 2 |
+    # |---|
+    # | 1 |
+    # |---|
+    # |   |
+    # |---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(1, None), (None, 4), (1, 4)])
+
+=====================================================================
+Found a 7 line (45 tokens) duplication in the following files: 
+Starting at line 112 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 124 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 134 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+
+    def test_stop_animation(self):
+        from kivy.animation import Animation
+        from kivy.uix.widget import Widget
+        a = Animation(x=100, d=1)
+        w = Widget()
+        a.start(w)
+        sleep(.5)
+
+=====================================================================
+Found a 15 line (45 tokens) duplication in the following files: 
+Starting at line 1114 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 1145 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+    event = Event()
+    counter = 0
+    counter2 = 0
+
+    def callback(*args):
+        nonlocal counter
+        counter += 1
+
+    def callback2(*args):
+        nonlocal counter2
+        counter2 += 1
+
+    event.fbind('a', callback)
+
+    event.create_property('a', None)
+
+=====================================================================
+Found a 11 line (45 tokens) duplication in the following files: 
+Starting at line 160 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_actionbar.py
+Starting at line 293 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_actionbar.py
+
+            TouchPoint(0, 0)
+
+            # wait for closed Group DropDown to disappear
+            # go to the next frame after the DropDown disappeared
+            sleep(gdd.min_state_time)
+            self.move_frames(1)
+
+            # no DropDown is open
+            self.assertNotEqual(gdd, self._win.children[0])
+            self.assertLess(len(self._win.children), 2)
+            self.check_dropdown(present=False)
+
+=====================================================================
+Found a 3 line (45 tokens) duplication in the following files: 
+Starting at line 26 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+Starting at line 39 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+Starting at line 80 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+
+        self.assertEqual(wgts[0].pos, [0, sl.height / 2.])
+        self.assertEqual(wgts[1].pos, [sl.width / 2., sl.height / 2.])
+        self.assertEqual(wgts[2].pos, [0, 0])
+
+=====================================================================
+Found a 7 line (45 tokens) duplication in the following files: 
+Starting at line 44 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+Starting at line 58 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+
+    def test_stacklayout_orientation_btrl(self):
+        # Default orientation is lr-tb.
+        sl = StackLayout()
+        wgts = [Widget(size_hint=(.5, .5)) for i in range(4)]
+        for wgt in wgts:
+            sl.add_widget(wgt)
+        sl.orientation = 'bt-rl'
+
+=====================================================================
+Found a 5 line (45 tokens) duplication in the following files: 
+Starting at line 27 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_translate_coordinates.py
+Starting at line 36 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_translate_coordinates.py
+
+def test_to_local_and_to_parent__relative(widget_cls_name, kivy_clock):
+    from kivy.factory import Factory
+    widget = Factory.get(widget_cls_name)(pos=(100, 100))
+    kivy_clock.tick()
+    assert widget.to_local(0, 0) == (-100, -100)
+
+=====================================================================
+Found a 11 line (44 tokens) duplication in the following files: 
+Starting at line 954 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 965 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+            quad = SmoothQuad(points=[100, 100, 100, 200, 200, 200, 200, 100])
+        r(wid)
+        filtered_points = self._filtered_points(quad.points)
+        assert (
+            quad.antialiasing_line_points
+            == filtered_points + filtered_points[:2]
+        )
+
+        wid = Widget()
+        with wid.canvas:
+            Color(1, 0, 0, 0.5)
+
+=====================================================================
+Found a 11 line (44 tokens) duplication in the following files: 
+Starting at line 98 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+Starting at line 272 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+
+            self.assertTrue(mouse.touches[event_id].multitouch_sim)
+
+        elif 'disabled' in kwargs:
+            self.assertIsNone(
+                mouse.touches[event_id].ud.get('_drawelement')
+            )  # the red dot isn't present
+
+        else:
+            self.assertIsNotNone(
+                mouse.touches[event_id].ud.get('_drawelement')
+            )  # the red dot is present
+
+=====================================================================
+Found a 10 line (44 tokens) duplication in the following files: 
+Starting at line 326 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 347 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 377 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+    bnp = BoundedNumericProperty(0.0, min=0.0, max=3.5)
+
+    if set_name:
+        bnp.set_name(wid, 'bnp')
+        bnp.link_eagerly(wid)
+    else:
+        bnp.link(wid, 'bnp')
+        bnp.link_deps(wid, 'bnp')
+
+    bnp.set(wid, 1)
+
+=====================================================================
+Found a 5 line (44 tokens) duplication in the following files: 
+Starting at line 54 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+Starting at line 60 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+Starting at line 71 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+Starting at line 77 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+Starting at line 94 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+
+        layout = BoxLayout(spacing=20)
+        layout.add_widget(b(1, 0, 0))
+        layout.add_widget(b(0, 1, 0))
+        layout.add_widget(b(0, 0, 1))
+        r(layout)
+
+=====================================================================
+Found a 13 line (44 tokens) duplication in the following files: 
+Starting at line 239 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 255 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+            scroll_to=(150, 0), clock=kivy_clock)
+
+    # |---|
+    # |   |
+    # |---|
+    # | 1 |
+    # |---|
+    # | 2 |
+    # |---|
+    # |   |
+    # |---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(1, None), (None, 4), (1, 4)])
+    @pytest.mark.parametrize("orientation", "tb-lr tb-rl lr-tb rl-tb".split())
+
+=====================================================================
+Found a 9 line (43 tokens) duplication in the following files: 
+Starting at line 437 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/async_common.py
+Starting at line 490 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/async_common.py
+
+        touch = AsyncUnitTestTouch(x, y)
+
+        touch.touch_down()
+        await self.wait_clock_frames(1)
+        if long_press:
+            await self.async_sleep(long_press)
+        yield 'down', touch.pos
+
+        ts0 = time.perf_counter()
+
+=====================================================================
+Found a 7 line (43 tokens) duplication in the following files: 
+Starting at line 61 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 112 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 124 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 134 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+
+    def test_start_animation(self):
+        from kivy.animation import Animation
+        from kivy.uix.widget import Widget
+        a = Animation(x=100, d=1)
+        w = Widget()
+        a.start(w)
+        sleep(1.5)
+
+=====================================================================
+Found a 7 line (43 tokens) duplication in the following files: 
+Starting at line 20 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_coverage.py
+Starting at line 38 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_coverage.py
+
+    finally:
+        cov.stop()
+
+    Builder.unload_file(fname)
+    _, statements, missing, _ = cov.analysis(fname)
+    assert set(statements) == kv_statement_lines
+    assert set(missing) == {4, 8, 9}
+
+=====================================================================
+Found a 10 line (43 tokens) duplication in the following files: 
+Starting at line 273 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 301 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+    def test_circle(self):
+        from kivy.uix.widget import Widget
+        from kivy.graphics import Ellipse, Color
+
+        r = self.render
+
+        # basic circle
+        wid = Widget()
+        with wid.canvas:
+            Color(1, 1, 1)
+
+=====================================================================
+Found a 10 line (43 tokens) duplication in the following files: 
+Starting at line 314 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 334 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+    def test_point(self):
+        from kivy.uix.widget import Widget
+        from kivy.graphics import Point, Color
+
+        r = self.render
+
+        # 1 point
+        wid = Widget()
+        with wid.canvas:
+            Color(1, 1, 1)
+
+=====================================================================
+Found a 8 line (43 tokens) duplication in the following files: 
+Starting at line 54 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+Starting at line 78 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_actionbar.py
+Starting at line 25 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_slider.py
+
+        import kivy.lang.builder as builder
+
+        if not hasattr(self, '_trace'):
+            self._trace = builder.trace
+
+        self.builder = builder
+        builder.trace = lambda *_, **__: None
+        super(InspectorTestCase, self).setUp()
+
+=====================================================================
+Found a 8 line (43 tokens) duplication in the following files: 
+Starting at line 88 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+Starting at line 172 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+
+        inspector.start(self._win, self.root)
+        self.advance_frames(2)
+
+        # pull the Inspector drawer from bottom
+        ins = self.root.inspector
+        ins.activated = True
+        ins.inspect_enabled = True
+        self.assertTrue(ins.at_bottom)
+
+=====================================================================
+Found a 6 line (43 tokens) duplication in the following files: 
+Starting at line 360 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+Starting at line 377 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+
+        r = gdb.recognize([NGesture], orientation_sensitive=True,
+            max_gpf=0)
+        self.assertEqual(r.best['name'], None)
+        self.assertEqual(r.best['score'], 0)
+
+        r = gdb.recognize([Ncandidate], orientation_sensitive=False,
+
+=====================================================================
+Found a 4 line (43 tokens) duplication in the following files: 
+Starting at line 35 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+Starting at line 43 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+Starting at line 55 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+Starting at line 61 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+Starting at line 72 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+Starting at line 78 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+Starting at line 95 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+
+                layout.add_widget(b(1, 0, 0))
+                layout.add_widget(b(0, 1, 0))
+                layout.add_widget(b(0, 0, 1))
+                r(layout)
+
+=====================================================================
+Found a 10 line (43 tokens) duplication in the following files: 
+Starting at line 89 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 100 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 111 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 123 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 134 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 145 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 157 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 168 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+            n_data=3, orientation=orientation, n_cols=n_cols, n_rows=n_rows,
+            clock=kivy_clock)
+
+    # |---|---|
+    # | 0 | 1 |
+    # |---|---|
+    # | 2 |
+    # |---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(2, None), (None, 2), (2, 2)])
+    def test_2x2_lr_tb(self, kivy_clock, n_cols, n_rows):
+
+=====================================================================
+Found a 7 line (43 tokens) duplication in the following files: 
+Starting at line 18 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+Starting at line 44 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+Starting at line 58 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+Starting at line 72 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+Starting at line 85 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+
+    def test_stacklayout_default(self):
+        # Default orientation is lr-tb.
+        sl = StackLayout()
+        wgts = [Widget(size_hint=(.5, .5)) for i in range(4)]
+        for wgt in wgts:
+            sl.add_widget(wgt)
+        sl.do_layout()
+
+=====================================================================
+Found a 4 line (43 tokens) duplication in the following files: 
+Starting at line 24 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+Starting at line 37 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+Starting at line 91 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+
+        sl.do_layout()
+
+        self.assertEqual(wgts[0].pos, [0, sl.height / 2.])
+        self.assertEqual(wgts[1].pos, [sl.width / 2., sl.height / 2.])
+
+=====================================================================
+Found a 9 line (43 tokens) duplication in the following files: 
+Starting at line 316 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 370 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+
+            on_finish=_queue._on_finish,
+            debug=True,
+        )
+        self.wait_request_is_finished(kivy_clock, req)
+
+        processed_queue = _queue.queue
+        assert len(processed_queue) == 1
+        self._ensure_called_from_thread(processed_queue)
+        self._check_queue_values(processed_queue[0], "finish")
+
+=====================================================================
+Found a 11 line (42 tokens) duplication in the following files: 
+Starting at line 203 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 225 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 305 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+
+    def test_on_failure(self, kivy_clock):
+        _queue = UrlRequestQueue([])
+        responses.get(
+            self.url,
+            body="{}",
+            status=400,
+            content_type="application/json",
+        )
+
+        req = UrlRequest(
+            self.url,
+
+=====================================================================
+Found a 10 line (42 tokens) duplication in the following files: 
+Starting at line 99 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_urllib.py
+Starting at line 121 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_urllib.py
+Starting at line 147 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_urllib.py
+
+        req_headers=head,
+        debug=True
+    )
+    wait_request_is_finished(kivy_clock, req, timeout=60)
+
+    if req.error and req.error.errno == 11001:
+        pytest.skip('Cannot connect to get address')
+
+    ensure_called_from_thread(queue)
+    check_queue_values(queue)
+
+=====================================================================
+Found a 5 line (41 tokens) duplication in the following files: 
+Starting at line 328 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/async_common.py
+Starting at line 417 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/async_common.py
+
+        else:
+            if pos is None:
+                w_x = getattr(widget, widget_loc[0])
+                w_y = getattr(widget, widget_loc[1])
+                x, y = widget.to_window(w_x, w_y)
+
+=====================================================================
+Found a 7 line (41 tokens) duplication in the following files: 
+Starting at line 20 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_coverage.py
+Starting at line 38 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_coverage.py
+Starting at line 57 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_coverage.py
+
+    finally:
+        cov.stop()
+
+    Builder.unload_file(fname)
+    _, statements, missing, _ = cov.analysis(fname)
+    assert set(statements) == kv_statement_lines
+    assert set(missing) == {4, 8, 9}
+
+=====================================================================
+Found a 10 line (41 tokens) duplication in the following files: 
+Starting at line 17 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 243 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+    def test_create(self):
+        from kivy.graphics.boxshadow import BoxShadow
+        from kivy.uix.widget import Widget
+        from kivy.graphics import Color
+
+        r = self.render
+
+        # with initial arguments
+        wid = Widget()
+        with wid.canvas:
+
+=====================================================================
+Found a 5 line (41 tokens) duplication in the following files: 
+Starting at line 176 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_hover_event.py
+Starting at line 242 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_hover_event.py
+
+        win, mouse = self.get_providers()
+        x, y = win.mouse_pos = (10.0, 10.0)
+        win.dispatch('on_cursor_leave')
+        self.advance_frames(1)
+        self.assert_event('end', win.to_normalized_pos(x, y))
+
+=====================================================================
+Found a 5 line (41 tokens) duplication in the following files: 
+Starting at line 276 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+Starting at line 284 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+
+        gdb = Recognizer(db=[self.Ninvar, self.Nbound])
+        n = gdb.filter(orientation_sensitive=True)
+        self.assertEqual(len(n), 1)
+        n = gdb.filter(orientation_sensitive=False)
+        self.assertEqual(len(n), 1)
+
+=====================================================================
+Found a 5 line (41 tokens) duplication in the following files: 
+Starting at line 317 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+Starting at line 328 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+Starting at line 346 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+Starting at line 365 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+
+        r = gdb2.recognize([Ncandidate], max_gpf=0)
+        self.assertEqual(r.best['name'], 'N')
+        self.assertTrue(r.best['score'] > 0.94 and r.best['score'] < 0.95)
+
+    def test_export_import_case_1(self):
+
+=====================================================================
+Found a 11 line (41 tokens) duplication in the following files: 
+Starting at line 1047 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 1078 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+        a = VariableListProperty(['10dp', (20, 'dp'), 3, 4.0])
+
+    number = Number()
+    counter = 0
+
+    def callback(name, *args):
+        nonlocal counter
+        counter += 1
+
+    number.fbind('a', callback)
+    assert list(number.a) == [10, 20, 3, 4]
+
+=====================================================================
+Found a 3 line (41 tokens) duplication in the following files: 
+Starting at line 257 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+Starting at line 285 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+
+            [right - m, top, right - m, bottom, 'bottom', 'right', False],
+            [left + m, top, left + m, bottom, 'bottom', 'left', False],
+            [right, top, right, bottom, 'bottom', 'right', True],
+
+=====================================================================
+Found a 9 line (41 tokens) duplication in the following files: 
+Starting at line 76 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 122 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 168 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 214 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 316 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 370 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+
+            on_success=_queue._on_success,
+            debug=True,
+        )
+        self.wait_request_is_finished(kivy_clock, req)
+
+        processed_queue = _queue.queue
+        assert len(processed_queue) == 1
+        self._ensure_called_from_thread(processed_queue)
+        self._check_queue_values(processed_queue[0], "success")
+
+=====================================================================
+Found a 6 line (41 tokens) duplication in the following files: 
+Starting at line 235 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_vector.py
+Starting at line 240 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_vector.py
+Starting at line 245 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_vector.py
+
+            st = "6.4" + "9" * i
+            v = (float(st), 300.0)
+            almost(result, Vector.segment_intersection(v1, v2, v3, v))
+
+        for i in range(1, 100):
+            st = "6.1" + "1" * i
+
+=====================================================================
+Found a 12 line (40 tokens) duplication in the following files: 
+Starting at line 147 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_clock.py
+Starting at line 184 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_clock.py
+
+    def raise_exception(*args):
+        raise ValueError('Stooooop')
+
+    kivy_clock.schedule_once(raise_exception)
+    kivy_clock.schedule_once(clock_counter)
+    kivy_clock.tick()
+
+    assert clock_counter.counter == 1
+    assert exception == 'Stooooop'
+
+
+def test_exception_ignored(kivy_clock, clock_counter):
+
+=====================================================================
+Found a 7 line (40 tokens) duplication in the following files: 
+Starting at line 20 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_coverage.py
+Starting at line 57 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_coverage.py
+Starting at line 77 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_coverage.py
+
+    finally:
+        cov.stop()
+
+    Builder.unload_file(fname)
+    _, statements, missing, _ = cov.analysis(fname)
+    assert set(statements) == kv_statement_lines
+    assert set(missing) == {4, 8, 9}
+
+=====================================================================
+Found a 11 line (40 tokens) duplication in the following files: 
+Starting at line 398 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 413 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+            100, 100, 100, 100, 50, 25, 50, 50, 100
+        )
+
+        # A circle should be generated if width and height are equal, and all
+        # angles passed are greater than or equal to the smallest dimension.
+        wid = Widget()
+        with wid.canvas:
+            Color(1, 1, 1)
+            line = Line(
+                rounded_rectangle=(
+                    100, 100, 100, 100, 150, 50, 50.001, 51, 100
+
+=====================================================================
+Found a 6 line (40 tokens) duplication in the following files: 
+Starting at line 703 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 750 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+        wid = Widget()
+        with wid.canvas:
+            Color(1, 1, 1, 0.5)
+            rounded_rect = SmoothRoundedRectangle(
+                pos=(100, 100),
+                size=(150, 150),
+
+=====================================================================
+Found a 3 line (40 tokens) duplication in the following files: 
+Starting at line 317 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+Starting at line 328 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+Starting at line 346 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+Starting at line 365 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+Starting at line 382 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+
+        r = gdb2.recognize([Ncandidate], max_gpf=0)
+        self.assertEqual(r.best['name'], 'N')
+        self.assertTrue(r.best['score'] > 0.94 and r.best['score'] < 0.95)
+
+=====================================================================
+Found a 10 line (40 tokens) duplication in the following files: 
+Starting at line 64 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_asyncimage.py
+Starting at line 80 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_asyncimage.py
+
+        remove(tempf)
+        image = self.load_zipimage(zip_cube, zip_pngs)
+        # pure delay * fps isn't enough and
+        # just +1 isn't either (index collisions)
+        self.assertTrue(self.check_sequence_frames(
+            image._coreimage,
+            int(image._coreimage.anim_delay * self.maxfps + 3)
+        ))
+
+    def test_local_zipsequence(self):
+
+=====================================================================
+Found a 8 line (40 tokens) duplication in the following files: 
+Starting at line 50 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 60 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 74 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+        assert {0: (0, 0), 1: (100, 0), 2: (200, 0)} == self.compute_layout(
+            n_data=3, orientation=orientation, n_cols=n_cols, n_rows=n_rows,
+            clock=kivy_clock)
+
+    # |---|---|---|
+    # | 2 | 1 | 0 |
+    # |---|---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(3, None), (None, 1), (3, 1)])
+
+=====================================================================
+Found a 6 line (40 tokens) duplication in the following files: 
+Starting at line 18 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 47 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_urllib.py
+
+class UrlRequestQueue:
+    def __init__(self, queue):
+        self.queue = queue
+
+    def _on_success(self, req, *args):
+        self.queue.append((threading.get_ident(), "success", args))
+
+=====================================================================
+Found a 4 line (39 tokens) duplication in the following files: 
+Starting at line 789 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 837 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+        wid = Widget()
+        with wid.canvas:
+            Color(1, 1, 1, 0.5)
+            ellipse = SmoothEllipse(pos=(100, 100), size=(150, 150))
+
+=====================================================================
+Found a 8 line (39 tokens) duplication in the following files: 
+Starting at line 52 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_knspace.py
+Starting at line 62 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_knspace.py
+
+    def test_constructor(self):
+        from kivy.uix.behaviors.knspace import knspace, KNSpaceBehavior
+        from kivy.uix.widget import Widget
+
+        class MyWidget(KNSpaceBehavior, Widget):
+            pass
+
+        w = MyWidget(knsname='construct_name')
+
+=====================================================================
+Found a 8 line (39 tokens) duplication in the following files: 
+Starting at line 134 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_lang.py
+Starting at line 152 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_lang.py
+Starting at line 170 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_lang.py
+Starting at line 190 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_lang.py
+
+        '''))
+        wid = TLangClass()
+        Builder.apply(wid)
+
+        self.assertTrue(hasattr(wid, 'textinput'))
+        self.assertTrue(getattr(wid, 'textinput') is not None)
+
+    def test_references_with_template(self):
+
+=====================================================================
+Found a 8 line (39 tokens) duplication in the following files: 
+Starting at line 318 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+Starting at line 480 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+
+        )
+        self.assertEqual(mouse.counter, 1)
+
+        # because the red dot is removed by the left button
+        self.assertIn(event_id, mouse.touches)
+        self.assertIsNotNone(
+            mouse.touches[event_id].ud.get('_drawelement')
+        )  # the red dot is present
+
+=====================================================================
+Found a 9 line (39 tokens) duplication in the following files: 
+Starting at line 152 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 163 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 174 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 185 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 196 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 207 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 218 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 229 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+
+            n_children=3, ori=ori, n_cols=n_cols, n_rows=n_rows)
+
+    # |---|---|
+    # | 0 | 1 |
+    # |---|---|
+    # | 2 | 3 |
+    # |---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(2, None), (None, 2), (2, 2)])
+    def test_2x2_lr_tb(self, n_cols, n_rows):
+
+=====================================================================
+Found a 3 line (39 tokens) duplication in the following files: 
+Starting at line 53 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+Starting at line 80 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+
+        self.assertEqual(wgts[0].pos, [sl.width / 2., 0])
+        self.assertEqual(wgts[1].pos, [sl.width / 2., sl.height / 2.])
+        self.assertEqual(wgts[2].pos, [0, 0])
+
+=====================================================================
+Found a 12 line (39 tokens) duplication in the following files: 
+Starting at line 20 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_videoplayer.py
+Starting at line 52 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_videoplayer.py
+
+async def test_default_thumbnail(
+    kivy_app,
+):
+    with patch(
+        "kivy.uix.videoplayer.VideoPlayer._load_thumbnail"
+    ) as mock__load_thumbnail, patch(
+        "kivy.uix.videoplayer.VideoPlayer._load_annotations"
+    ) as mock__load_annotations, patch(
+        "kivy.uix.videoplayer.exists"
+    ) as mock_exists:
+        mock_exists.return_value = True
+        kivy_app.root.source = "data/video.mp4"
+
+=====================================================================
+Found a 9 line (39 tokens) duplication in the following files: 
+Starting at line 318 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 348 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+
+        )
+        self.wait_request_is_finished(kivy_clock, req)
+
+        processed_queue = _queue.queue
+        assert len(processed_queue) == 1
+        self._ensure_called_from_thread(processed_queue)
+        self._check_queue_values(processed_queue[0], "finish")
+
+    @responses.activate
+
+=====================================================================
+Found a 5 line (38 tokens) duplication in the following files: 
+Starting at line 189 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 199 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 209 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 219 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 263 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+
+    def test_cancel_all(self):
+        from kivy.animation import Animation
+        from kivy.uix.widget import Widget
+        a = Animation(x=100) + Animation(x=0)
+        w = Widget()
+
+=====================================================================
+Found a 5 line (38 tokens) duplication in the following files: 
+Starting at line 349 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+Starting at line 361 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_animations.py
+
+    def test_have_properties_to_animate(self):
+        from kivy.animation import Animation
+        from kivy.uix.widget import Widget
+        a = Animation(x=100) & Animation(y=100)
+        w = Widget()
+
+=====================================================================
+Found a 12 line (38 tokens) duplication in the following files: 
+Starting at line 368 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 384 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 427 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+            100, 100, 100, 100, 10, 20, 30, 40, 100
+        )
+
+        # The largest angle allowed is equal to the smallest dimension (width
+        # or height) minus the largest angle value between the anterior angle
+        # and the posterior angle.
+        wid = Widget()
+        with wid.canvas:
+            Color(1, 1, 1)
+            line = Line(
+                rounded_rectangle=(
+                    100, 100, 100, 100, 100, 20, 10, 30, 100
+
+=====================================================================
+Found a 7 line (38 tokens) duplication in the following files: 
+Starting at line 11 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_issues/test_6315.py
+Starting at line 25 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_issues/test_6315.py
+
+        self.assertTrue(a.active)
+        self.assertEqual(a.state, 'down')
+
+        self.assertFalse(b.active)
+        self.assertEqual(b.state, 'normal')
+
+        b.active = True
+
+=====================================================================
+Found a 5 line (38 tokens) duplication in the following files: 
+Starting at line 188 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+Starting at line 319 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_multitouchsim.py
+
+            self.assertEqual(mouse.counter, 1)
+            self.assertIn(event_id, mouse.touches)
+            self.assertIsNotNone(
+                mouse.touches[event_id].ud.get('_drawelement')
+            )  # the red dot is present
+
+=====================================================================
+Found a 6 line (38 tokens) duplication in the following files: 
+Starting at line 709 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 807 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+            _get_prop, _set_prop, cache=True, watch_before_use=watch_before_use)
+
+        def __init__(self, **kwargs):
+            super(CustomAlias, self).__init__(**kwargs)
+            self.getter_called = 0
+            self.setter_called = 0
+
+=====================================================================
+Found a 8 line (38 tokens) duplication in the following files: 
+Starting at line 50 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 60 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 74 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 88 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+        assert {0: (0, 0), 1: (100, 0), 2: (200, 0)} == self.compute_layout(
+            n_data=3, orientation=orientation, n_cols=n_cols, n_rows=n_rows,
+            clock=kivy_clock)
+
+    # |---|---|---|
+    # | 2 | 1 | 0 |
+    # |---|---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(3, None), (None, 1), (3, 1)])
+
+=====================================================================
+Found a 2 line (38 tokens) duplication in the following files: 
+Starting at line 224 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 234 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+    @pytest.mark.parametrize("n_cols, n_rows", [(4, None), (None, 1), (4, 1)])
+    @pytest.mark.parametrize("orientation", "lr-tb lr-bt tb-lr bt-lr".split())
+
+=====================================================================
+Found a 11 line (38 tokens) duplication in the following files: 
+Starting at line 271 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 299 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 327 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 369 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+            scroll_to=(0, 150), clock=kivy_clock)
+
+    # |---|---|---|
+    # |   |   |   |
+    # |---|---|---|
+    # |   | 4 | 5 |
+    # |---|---|---|
+    # |   | 7 |
+    # |---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(3, None), (None, 3), (3, 3)])
+    def test_3x3_lr_tb(self, kivy_clock, n_cols, n_rows):
+
+=====================================================================
+Found a 11 line (38 tokens) duplication in the following files: 
+Starting at line 285 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 313 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 341 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 355 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+                scroll_to=(150, 50), clock=kivy_clock)
+
+    # |---|---|
+    # |   | 7 |
+    # |---|---|---|
+    # |   | 4 | 5 |
+    # |---|---|---|
+    # |   |   |   |
+    # |---|---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(3, None), (None, 3), (3, 3)])
+    def test_3x3_lr_bt(self, kivy_clock, n_cols, n_rows):
+
+=====================================================================
+Found a 4 line (38 tokens) duplication in the following files: 
+Starting at line 51 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+Starting at line 65 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_stacklayout.py
+
+        sl.do_layout()
+
+        self.assertEqual(wgts[0].pos, [sl.width / 2., 0])
+        self.assertEqual(wgts[1].pos, [sl.width / 2., sl.height / 2.])
+
+=====================================================================
+Found a 11 line (38 tokens) duplication in the following files: 
+Starting at line 138 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+Starting at line 188 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+Starting at line 235 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+
+            (None, None, 'cursor_up', 1),
+            repeat=False
+        )
+        # pop selection
+        ti._key_up(
+            (None, None, 'shift', 1),
+            repeat=False
+        )
+        self.assertEqual(
+            ti.cursor, (
+                len(text.split('\n')[-1]),
+
+=====================================================================
+Found a 8 line (38 tokens) duplication in the following files: 
+Starting at line 186 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+Starting at line 303 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+
+            for _ in range(steps):
+                ti._key_down(
+                    (None, None, 'cursor_left', 1),
+                    repeat=False
+                )
+
+            # pop selection
+            ti._key_up((None, None, 'shift', 1), repeat=False)
+
+=====================================================================
+Found a 7 line (38 tokens) duplication in the following files: 
+Starting at line 348 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 372 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+
+        )
+        self.wait_request_is_finished(kivy_clock, req)
+
+        processed_queue = _queue.queue
+        assert len(processed_queue) == 1
+        self._ensure_called_from_thread(processed_queue)
+        self._check_queue_values(processed_queue[0], "finish")
+
+=====================================================================
+Found a 4 line (37 tokens) duplication in the following files: 
+Starting at line 639 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 683 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+        wid = Widget()
+        with wid.canvas:
+            Color(1, 1, 1, 0.5)
+            rect = SmoothRectangle(pos=(100, 100), size=(150, 150))
+
+=====================================================================
+Found a 6 line (37 tokens) duplication in the following files: 
+Starting at line 703 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 765 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+        wid = Widget()
+        with wid.canvas:
+            Color(1, 1, 1, 0.5)
+            rounded_rect = SmoothRoundedRectangle(
+                pos=(100, 100),
+                size=(150, 150),
+
+=====================================================================
+Found a 4 line (37 tokens) duplication in the following files: 
+Starting at line 789 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 858 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+        wid = Widget()
+        with wid.canvas:
+            Color(1, 1, 1, 0.5)
+            ellipse = SmoothEllipse(pos=(100, 100), size=(150, 150))
+
+=====================================================================
+Found a 7 line (37 tokens) duplication in the following files: 
+Starting at line 32 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_knspace.py
+Starting at line 52 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_knspace.py
+Starting at line 62 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_knspace.py
+
+    def test_name(self):
+        from kivy.uix.behaviors.knspace import knspace, KNSpaceBehavior
+        from kivy.uix.widget import Widget
+
+        class MyWidget(KNSpaceBehavior, Widget):
+            pass
+        w = MyWidget()
+
+=====================================================================
+Found a 6 line (37 tokens) duplication in the following files: 
+Starting at line 42 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 187 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+    a.set(wid, 1)
+    self.assertEqual(a.get(wid), 1)
+
+
+@pytest.mark.parametrize('set_name', [True, False])
+def test_observer(self, set_name):
+
+=====================================================================
+Found a 4 line (37 tokens) duplication in the following files: 
+Starting at line 84 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_storage.py
+Starting at line 112 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_storage.py
+
+        self.assertTrue(store.put('plop', name='Hello', age=30))
+        self.assertTrue(store.exists('plop'))
+        self.assertTrue(store.get('plop').get('name') == 'Hello')
+        self.assertTrue(store.get('plop').get('age') == 30)
+
+=====================================================================
+Found a 8 line (37 tokens) duplication in the following files: 
+Starting at line 136 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_actionbar.py
+Starting at line 262 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_actionbar.py
+
+        self.move_frames(5)
+
+        # no DropDown present yet
+        self.check_dropdown(present=False)
+        self.assertFalse(group2.is_open)
+        self.assertFalse(group1.is_open)
+
+        items = ((group2, group1), (group1, group2))
+
+=====================================================================
+Found a 7 line (37 tokens) duplication in the following files: 
+Starting at line 60 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_dropdown.py
+Starting at line 82 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_dropdown.py
+
+    dropdown.open(kivy_app.attach_widget)
+    dropdown.pos = 0, 0
+    await kivy_app.wait_clock_frames(2)
+    assert dropdown.attach_to is not None
+
+    # press within dropdown area - should stay open
+    async for _ in kivy_app.do_touch_down_up(widget=button):
+
+=====================================================================
+Found a 7 line (37 tokens) duplication in the following files: 
+Starting at line 108 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 117 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 42 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 52 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+                n_children=1, ori=ori, n_cols=n_cols, n_rows=n_rows)
+
+    # |---|---|---|
+    # | 0 | 1 | 2 |
+    # |---|---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(3, None), (None, 1), (3, 1)])
+    @pytest.mark.parametrize("ori", "lr-tb lr-bt tb-lr bt-lr".split())
+
+=====================================================================
+Found a 11 line (37 tokens) duplication in the following files: 
+Starting at line 126 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 139 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 62 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 76 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+            n_children=3, ori=ori, n_cols=n_cols, n_rows=n_rows)
+
+    # |---|
+    # | 0 |
+    # |---|
+    # | 1 |
+    # |---|
+    # | 2 |
+    # |---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(1, None), (None, 3), (1, 3)])
+    @pytest.mark.parametrize("ori", "tb-lr tb-rl lr-tb rl-tb".split())
+
+=====================================================================
+Found a 6 line (37 tokens) duplication in the following files: 
+Starting at line 110 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+Starting at line 122 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+Starting at line 112 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_slider.py
+
+                EventLoop.post_dispatch_input("begin", touch)
+                touch.move({
+                    "x": nx / float(win.width),
+                    "y": ny / float(win.height)
+                })
+                EventLoop.post_dispatch_input("update", touch)
+
+=====================================================================
+Found a 4 line (36 tokens) duplication in the following files: 
+Starting at line 288 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/async_common.py
+Starting at line 384 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/async_common.py
+
+            widget_loc=('center_x', 'center_y'), dx=0, dy=0,
+            target_pos=None, target_widget=None, target_widget_offset=(0, 0),
+            target_widget_loc=('center_x', 'center_y'), long_press=0,
+            duration=.2, drag_n=5):
+
+=====================================================================
+Found a 7 line (36 tokens) duplication in the following files: 
+Starting at line 353 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/async_common.py
+Starting at line 437 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/async_common.py
+Starting at line 490 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/async_common.py
+
+        touch = AsyncUnitTestTouch(x, y)
+
+        touch.touch_down()
+        await self.wait_clock_frames(1)
+        if long_press:
+            await self.async_sleep(long_press)
+        yield 'down', touch.pos
+
+=====================================================================
+Found a 12 line (36 tokens) duplication in the following files: 
+Starting at line 368 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 384 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 398 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 413 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 427 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+            100, 100, 100, 100, 10, 20, 30, 40, 100
+        )
+
+        # The largest angle allowed is equal to the smallest dimension (width
+        # or height) minus the largest angle value between the anterior angle
+        # and the posterior angle.
+        wid = Widget()
+        with wid.canvas:
+            Color(1, 1, 1)
+            line = Line(
+                rounded_rectangle=(
+                    100, 100, 100, 100, 100, 20, 10, 30, 100
+
+=====================================================================
+Found a 5 line (36 tokens) duplication in the following files: 
+Starting at line 18 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_issues/test_6315.py
+Starting at line 32 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_issues/test_6315.py
+Starting at line 45 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_issues/test_6315.py
+
+        self.assertTrue(b.active)
+        self.assertEqual(b.state, 'down')
+
+        self.assertFalse(a.active)
+        self.assertEqual(a.state, 'normal')
+
+=====================================================================
+Found a 4 line (36 tokens) duplication in the following files: 
+Starting at line 39 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_issues/test_6315.py
+Starting at line 52 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_issues/test_6315.py
+
+        self.assertFalse(a.active)
+        self.assertEqual(a.state, 'normal')
+        self.assertFalse(b.active)
+        self.assertEqual(b.state, 'normal')
+
+=====================================================================
+Found a 6 line (36 tokens) duplication in the following files: 
+Starting at line 107 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+Starting at line 148 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+Starting at line 208 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+Starting at line 290 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+Starting at line 372 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_module_inspector.py
+
+        self.advance_frames(1)
+
+        # stop Inspector completely
+        inspector.stop(self._win, self.root)
+        self.assertLess(len(self._win.children), 2)
+        self.render(self.root)
+
+=====================================================================
+Found a 5 line (36 tokens) duplication in the following files: 
+Starting at line 103 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+Starting at line 118 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_multistroke.py
+
+        self.assertEqual(r.progress, 0.5)
+        self.assertEqual(best_score, 0)
+        Clock.tick()
+        self.assertEqual(r.progress, 1)
+        self.assertTrue(best_score > 0.94 and best_score < 0.95)
+
+=====================================================================
+Found a 7 line (36 tokens) duplication in the following files: 
+Starting at line 195 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 250 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 283 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+    x = NumericProperty(0)
+    if set_name:
+        x.set_name(wid, 'x')
+        x.link_eagerly(wid)
+    else:
+        x.link(wid, 'x')
+        x.link_deps(wid, 'x')
+
+=====================================================================
+Found a 6 line (36 tokens) duplication in the following files: 
+Starting at line 653 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 709 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+            _get_prop, _set_prop, watch_before_use=watch_before_use)
+
+        def __init__(self, **kwargs):
+            super(CustomAlias, self).__init__(**kwargs)
+            self.getter_called = 0
+            self.setter_called = 0
+
+=====================================================================
+Found a 7 line (36 tokens) duplication in the following files: 
+Starting at line 85 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_actionbar.py
+Starting at line 32 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_slider.py
+
+        super(ActionBarTestCase, self).setUp()
+
+    def tearDown(self, *args, **kwargs):
+        # add the logging back
+        import kivy.lang.builder as builder
+        builder.trace = self._trace
+        super(ActionBarTestCase, self).tearDown(*args, **kwargs)
+
+=====================================================================
+Found a 6 line (36 tokens) duplication in the following files: 
+Starting at line 9 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_anchorlayout.py
+Starting at line 12 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_boxlayout.py
+
+class UIXAnchorLayoutTestcase(GraphicUnitTest):
+
+    def box(self, r, g, b):
+        from kivy.uix.widget import Widget
+        from kivy.graphics import Color, Rectangle
+        wid = Widget(size_hint=(None, None), size=(100, 100))
+
+=====================================================================
+Found a 7 line (36 tokens) duplication in the following files: 
+Starting at line 116 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 125 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 138 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+
+        assert [(0, 0), (100, 0), (200, 0)] == self.compute_layout(
+            n_children=3, ori=ori, n_cols=n_cols, n_rows=n_rows)
+
+    # |---|---|---|
+    # | 2 | 1 | 0 |
+    # |---|---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(3, None), (None, 1), (3, 1)])
+
+=====================================================================
+Found a 11 line (36 tokens) duplication in the following files: 
+Starting at line 271 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 285 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 299 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 313 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 327 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 341 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 355 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 369 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+            scroll_to=(0, 150), clock=kivy_clock)
+
+    # |---|---|---|
+    # |   |   |   |
+    # |---|---|---|
+    # |   | 4 | 5 |
+    # |---|---|---|
+    # |   | 7 |
+    # |---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(3, None), (None, 3), (3, 3)])
+    def test_3x3_lr_tb(self, kivy_clock, n_cols, n_rows):
+
+=====================================================================
+Found a 12 line (36 tokens) duplication in the following files: 
+Starting at line 109 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+Starting at line 163 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+Starting at line 210 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+Starting at line 281 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+Starting at line 323 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_textinput.py
+
+        ti = TextInput(multiline=True, text=text)
+        ti.focus = True
+
+        self.render(ti)
+        self.assertTrue(ti.focus)
+
+        # assert cursor is here:
+        # multiline
+        # text$
+        self.assertEqual(
+            ti.cursor, (
+                len(text.split('\n')[-1]),
+
+=====================================================================
+Found a 7 line (36 tokens) duplication in the following files: 
+Starting at line 78 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 124 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 170 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 216 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 348 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+
+        )
+        self.wait_request_is_finished(kivy_clock, req)
+
+        processed_queue = _queue.queue
+        assert len(processed_queue) == 1
+        self._ensure_called_from_thread(processed_queue)
+        self._check_queue_values(processed_queue[0], "success")
+
+=====================================================================
+Found a 4 line (35 tokens) duplication in the following files: 
+Starting at line 280 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 287 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+        wid = Widget()
+        with wid.canvas:
+            Color(1, 1, 1)
+            Ellipse(pos=(100, 100), size=(100, 100))
+
+=====================================================================
+Found a 4 line (35 tokens) duplication in the following files: 
+Starting at line 294 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 308 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+        wid = Widget()
+        with wid.canvas:
+            Color(1, 1, 1)
+            self.e = Ellipse(pos=(100, 100), size=(100, 100))
+
+=====================================================================
+Found a 4 line (35 tokens) duplication in the following files: 
+Starting at line 639 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 683 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 690 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+        wid = Widget()
+        with wid.canvas:
+            Color(1, 1, 1, 0.5)
+            rect = SmoothRectangle(pos=(100, 100), size=(150, 150))
+
+=====================================================================
+Found a 6 line (35 tokens) duplication in the following files: 
+Starting at line 703 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 750 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 765 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 774 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+        wid = Widget()
+        with wid.canvas:
+            Color(1, 1, 1, 0.5)
+            rounded_rect = SmoothRoundedRectangle(
+                pos=(100, 100),
+                size=(150, 150),
+
+=====================================================================
+Found a 4 line (35 tokens) duplication in the following files: 
+Starting at line 789 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 837 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 858 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+Starting at line 865 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_graphics.py
+
+        wid = Widget()
+        with wid.canvas:
+            Color(1, 1, 1, 0.5)
+            ellipse = SmoothEllipse(pos=(100, 100), size=(150, 150))
+
+=====================================================================
+Found a 3 line (35 tokens) duplication in the following files: 
+Starting at line 218 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_knspace.py
+Starting at line 224 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_knspace.py
+Starting at line 232 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_knspace.py
+Starting at line 238 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_knspace.py
+Starting at line 244 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_knspace.py
+
+        self.assertEqual(w.ids.first.ids.child.text, 'Hello')
+        self.assertEqual(w.ids.second.ids.child.text, 'Hello')
+        self.assertEqual(w.ids.first.knspace.child_label.text, 'Hello')
+
+=====================================================================
+Found a 9 line (35 tokens) duplication in the following files: 
+Starting at line 160 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_logger.py
+Starting at line 186 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_logger.py
+
+def test_colonsplittinglogrecord_with_colon():
+    from kivy.logger import ColonSplittingLogRecord
+
+    originallogrecord = logging.LogRecord(
+        name="kivy.test",
+        level=logging.DEBUG,
+        pathname="test.py",
+        lineno=1,
+        msg="Part1: Part2: Part 3",
+
+=====================================================================
+Found a 9 line (35 tokens) duplication in the following files: 
+Starting at line 221 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_logger.py
+Starting at line 255 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_logger.py
+
+def test_uncoloredlogrecord_without_markup():
+    from kivy.logger import UncoloredLogRecord
+
+    originallogrecord = logging.LogRecord(
+        name="kivy.test",
+        level=logging.DEBUG,
+        pathname="test.py",
+        lineno=1,
+        msg="Part1: Part2 Part 3",
+
+=====================================================================
+Found a 10 line (35 tokens) duplication in the following files: 
+Starting at line 260 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_logger.py
+Starting at line 319 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_logger.py
+
+        level=logging.DEBUG,
+        pathname="test.py",
+        lineno=1,
+        msg="Part1: $BOLDPart2$RESET Part 3",
+        args=("args",),
+        exc_info=None,
+        func="test_colon_splitting",
+        sinfo=None,
+    )
+    shimmedlogrecord = UncoloredLogRecord(originallogrecord)
+
+=====================================================================
+Found a 5 line (35 tokens) duplication in the following files: 
+Starting at line 116 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_hover_event.py
+Starting at line 221 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_hover_event.py
+
+        win, mouse = self.get_providers()
+        x, y = win.mouse_pos
+        win.dispatch('on_cursor_enter')
+        self.advance_frames(1)
+        self.assert_event('begin', win.to_normalized_pos(x, y))
+
+=====================================================================
+Found a 7 line (35 tokens) duplication in the following files: 
+Starting at line 118 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_hover_event.py
+Starting at line 126 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_hover_event.py
+
+        win.dispatch('on_cursor_enter')
+        self.advance_frames(1)
+        self.assert_event('begin', win.to_normalized_pos(x, y))
+        win.dispatch('on_cursor_leave')
+        self.advance_frames(1)
+
+    def test_begin_event_on_mouse_pos(self):
+
+=====================================================================
+Found a 8 line (35 tokens) duplication in the following files: 
+Starting at line 136 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_hover_event.py
+Starting at line 146 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_hover_event.py
+Starting at line 168 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_hover_event.py
+
+        x, y = win.mouse_pos = (50.0, 50.0)
+        self.advance_frames(1)
+        self.assert_event('update', win.to_normalized_pos(x, y))
+        win.dispatch('on_cursor_leave')
+        self.advance_frames(1)
+
+
+    def test_update_event_with_mouse_pos(self):
+
+=====================================================================
+Found a 5 line (35 tokens) duplication in the following files: 
+Starting at line 195 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_hover_event.py
+Starting at line 210 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_hover_event.py
+Starting at line 231 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_hover_event.py
+
+        self.assert_event('begin', win.to_normalized_pos(x, y))
+        # Test update event
+        x, y = win.mouse_pos = (10.0, 10.0)
+        self.advance_frames(1)
+        self.assert_event('update', win.to_normalized_pos(x, y))
+
+=====================================================================
+Found a 4 line (35 tokens) duplication in the following files: 
+Starting at line 229 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_hover_event.py
+Starting at line 240 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_mouse_hover_event.py
+
+    def test_update_event_no_dispatch_through_on_touch_events(self):
+        win, mouse = self.get_providers(with_window_children=True)
+        win.dispatch('on_cursor_enter')
+        x, y = win.mouse_pos = (10.0, 10.0)
+
+=====================================================================
+Found a 9 line (35 tokens) duplication in the following files: 
+Starting at line 666 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 821 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 919 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+    wid.bind(prop=callback)
+    self.assertEqual(wid.getter_called, 0)
+    self.assertEqual(wid.setter_called, 0)
+    self.assertEqual(wid.callback_called, 0)
+
+    # Set property, should call setter to set the value
+    # Getter and callback should not be called because `_set_prop` doesn't
+    # returns True
+    wid.prop = 1
+
+=====================================================================
+Found a 5 line (35 tokens) duplication in the following files: 
+Starting at line 709 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+Starting at line 857 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_properties.py
+
+            _get_prop, _set_prop, cache=True, watch_before_use=watch_before_use)
+
+        def __init__(self, **kwargs):
+            super(CustomAlias, self).__init__(**kwargs)
+            self.getter_called = 0
+
+=====================================================================
+Found a 9 line (35 tokens) duplication in the following files: 
+Starting at line 152 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 90 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+            n_children=3, ori=ori, n_cols=n_cols, n_rows=n_rows)
+
+    # |---|---|
+    # | 0 | 1 |
+    # |---|---|
+    # | 2 | 3 |
+    # |---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(2, None), (None, 2), (2, 2)])
+    def test_2x2_lr_tb(self, n_cols, n_rows):
+
+=====================================================================
+Found a 9 line (35 tokens) duplication in the following files: 
+Starting at line 163 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 101 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+                n_children=4, ori='lr-tb', n_cols=n_cols, n_rows=n_rows)
+
+    # |---|---|
+    # | 2 | 3 |
+    # |---|---|
+    # | 0 | 1 |
+    # |---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(2, None), (None, 2), (2, 2)])
+    def test_2x2_lr_bt(self, n_cols, n_rows):
+
+=====================================================================
+Found a 9 line (35 tokens) duplication in the following files: 
+Starting at line 174 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 112 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+                n_children=4, ori='lr-bt', n_cols=n_cols, n_rows=n_rows)
+
+    # |---|---|
+    # | 1 | 0 |
+    # |---|---|
+    # | 3 | 2 |
+    # |---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(2, None), (None, 2), (2, 2)])
+    def test_2x2_rl_tb(self, n_cols, n_rows):
+
+=====================================================================
+Found a 9 line (35 tokens) duplication in the following files: 
+Starting at line 185 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 124 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+                n_children=4, ori='rl-tb', n_cols=n_cols, n_rows=n_rows)
+
+    # |---|---|
+    # | 3 | 2 |
+    # |---|---|
+    # | 1 | 0 |
+    # |---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(2, None), (None, 2), (2, 2)])
+    def test_2x2_rl_bt(self, n_cols, n_rows):
+
+=====================================================================
+Found a 9 line (35 tokens) duplication in the following files: 
+Starting at line 196 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 135 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+                n_children=4, ori='rl-bt', n_cols=n_cols, n_rows=n_rows)
+
+    # |---|---|
+    # | 0 | 2 |
+    # |---|---|
+    # | 1 | 3 |
+    # |---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(2, None), (None, 2), (2, 2)])
+    def test_2x2_tb_lr(self, n_cols, n_rows):
+
+=====================================================================
+Found a 9 line (35 tokens) duplication in the following files: 
+Starting at line 207 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 146 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+                n_children=4, ori='tb-lr', n_cols=n_cols, n_rows=n_rows)
+
+    # |---|---|
+    # | 2 | 0 |
+    # |---|---|
+    # | 3 | 1 |
+    # |---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(2, None), (None, 2), (2, 2)])
+    def test_2x2_tb_rl(self, n_cols, n_rows):
+
+=====================================================================
+Found a 9 line (35 tokens) duplication in the following files: 
+Starting at line 218 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 158 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+                n_children=4, ori='tb-rl', n_cols=n_cols, n_rows=n_rows)
+
+    # |---|---|
+    # | 1 | 3 |
+    # |---|---|
+    # | 0 | 2 |
+    # |---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(2, None), (None, 2), (2, 2)])
+    def test_2x2_bt_lr(self, n_cols, n_rows):
+
+=====================================================================
+Found a 9 line (35 tokens) duplication in the following files: 
+Starting at line 229 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_gridlayout.py
+Starting at line 169 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+                n_children=4, ori='bt-lr', n_cols=n_cols, n_rows=n_rows)
+
+    # |---|---|
+    # | 3 | 1 |
+    # |---|---|
+    # | 2 | 0 |
+    # |---|---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(2, None), (None, 2), (2, 2)])
+    def test_2x2_bt_rl(self, n_cols, n_rows):
+
+=====================================================================
+Found a 9 line (35 tokens) duplication in the following files: 
+Starting at line 28 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+Starting at line 216 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_recyclegridlayout.py
+
+        return {
+            layout.get_view_index_at(c.center): tuple(c.pos)
+            for c in layout.children
+        }
+
+    # |---|
+    # | 0 |
+    # |---|
+    @pytest.mark.parametrize("n_cols, n_rows", [(1, None), (None, 1), (1, 1)])
+
+=====================================================================
+Found a 6 line (35 tokens) duplication in the following files: 
+Starting at line 57 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+Starting at line 66 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+
+class _TestScrollbarHorizontalMargin(ScrollView):
+    def __init__(self, **kwargs):
+        kwargs['scroll_type'] = ["bars"]
+        kwargs['bar_margin'] = 40
+        kwargs['bar_width'] = 20
+        kwargs['do_scroll_y'] = False
+
+=====================================================================
+Found a 3 line (35 tokens) duplication in the following files: 
+Starting at line 232 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+Starting at line 286 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_uix_scrollview.py
+
+            [left, top - m, right, top - m, 'top', 'right', False],
+            [left, bottom, right, bottom, 'bottom', 'right', True],
+            [left, top, right, top, 'top', 'right', True]
+
+=====================================================================
+Found a 7 line (35 tokens) duplication in the following files: 
+Starting at line 53 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_requests.py
+Starting at line 15 of /home/vestel/pmd-bin-7.0.0/Kivy/tests/test_urlrequest/test_urlrequest_urllib.py
+
+    def wait_request_is_finished(self, kivy_clock, request, timeout=10):
+        start_time = datetime.now()
+        timed_out = False
+
+        while not request.is_finished and not timed_out:
+            kivy_clock.tick()
+            sleep(0.1)
+
