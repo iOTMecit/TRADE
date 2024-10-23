@@ -13,11 +13,15 @@ function_counter = 1
 old_line_count_80 = 0
 new_line_count_80 = 0
 signal_eighty = 0
+exact_count = 0
+near_count = 0
+similar_count = 0
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Process and refactor files based on XML clone data.")
     parser.add_argument('--xml_path', type=str, required=True, help="Path to the XML file to process")
     return parser.parse_args()
+
 
 def read_non_comment_lines(filepath, start_line=None, end_line=None):
     with open(filepath, 'r') as file:
@@ -183,7 +187,7 @@ def sync_compare_files_ignore_comments(file1_lines, file2_lines):
     return differences
 
 
-def refactor_and_generate_function(differences, function_name, function_2_name, line_count_primer, line_count_seconder, store_first=False):
+def refactor_and_generate_function(differences, function_name, function_2_name, line_count_primer, line_count_seconder, import_function = None, store_first=False):
     param_function_code = []
     param_definitions = []
     param_assignments = {}
@@ -346,6 +350,9 @@ def refactor_and_generate_function(differences, function_name, function_2_name, 
     indented_code_with_blanks = indented_code + added_empty_rows_str
 
     refactored_code = f"def {function_name}, {param_definitions_str}):\n    {indented_code_with_blanks}"
+    # Eğer function_new_name varsa replacement_code başına ekle
+    if import_function:
+        function_name = f"{import_function}.{function_name}"
 
     param_assignments_str = ', '.join([f"{k}='{v}'" for k, v in param_assignments.items()])
     function_call = f"def {function_2_name}\n\t{function_name}, {param_assignments_str})"
@@ -356,7 +363,9 @@ def refactor_and_generate_function(differences, function_name, function_2_name, 
 
     return refactored_code, function_call, param_function_code
 
+
 def replace_lines_in_file(file_path, start_line, end_line, replacement_code):
+
     with open(file_path, 'r') as file:
         lines = file.readlines()
 
@@ -369,23 +378,33 @@ def replace_lines_in_file(file_path, start_line, end_line, replacement_code):
 
 
 def add_import_to_file(import_statement, target_file):
-    """Belirtilen import cümlesini hedef dosyanın başına ekler."""
+
     with open(target_file, 'r') as file:
         content = file.read()
 
-    # Import cümlesini dosyanın başına ekle
-    new_content = import_statement + '\n' + content
+    # Check if the import statement is already present
+    if import_statement not in content:
 
-    # Dosyayı güncelle
-    with open(target_file, 'w') as file:
-        file.write(new_content)
+        new_content = import_statement + '\n' + content
+
+        with open(target_file, 'w') as file:
+            file.write(new_content)
+
 
 def convert_path_to_module(file_path, base_directory):
-    """Dosya yolunu Python modül adlandırmasına çevirir."""
+    """Converts a file path to a Python module naming convention and separates the last part as import name."""
+    # Get the relative path
     relative_path = os.path.relpath(file_path, base_directory)
+    # Replace path separators with dots for module naming
     module_path = relative_path.replace(os.path.sep, '.')
-    module_name = os.path.splitext(module_path)[0]  # .py uzantısını kaldır
-    return module_name
+    # Remove the .py extension
+    full_module_name = os.path.splitext(module_path)[0]
+
+    # Split to get the module name and import name
+    *module_parts, import_name = full_module_name.rsplit('.', 1)
+    module_name = '.'.join(module_parts)  # Up to 'hardware'
+
+    return module_name, import_name
 
 def code_length_difference(code_line, start_point , end_point):
     """Kaydırma yapmmak için."""
@@ -396,13 +415,16 @@ def code_length_difference(code_line, start_point , end_point):
     return code_length, refactored_code_length, difference
 
 def extract_variables(lines):
-
     variables = set()
-    variable_pattern = re.compile(r'(\b\w+\b)\s*=')
+    # Updated pattern to capture variables in a comma-separated list on the left side of an assignment
+    variable_pattern = re.compile(r'\b(\w+)\b(?:\s*,\s*\b(\w+)\b)*\s*=')
 
     for line in lines:
+        # Find all matches for the pattern, which should return tuples of strings
         matches = variable_pattern.findall(line)
-        variables.update(matches)
+        # Flatten tuples and add each variable to the set
+        for match in matches:
+            variables.update(var for var in match if var)
 
     return variables
 
@@ -424,22 +446,27 @@ def has_unmatched_closing_bracket(lines):
             print(f"Return statement found in line {i + 1} (not the last line): {stripped_line}")
             return True
 
-    # Check the last line normally (which could contain 'return')
-
-    for char in lines:
-        if char in opening_brackets:
-            stack.append(char)
-        elif char in closing_brackets:
-            if stack and stack[-1] == closing_brackets[char]:
-                stack.pop()
-            else:
-                print(f"Unmatched closing bracket found in line: {lines[-1].strip()}")
-                return True
+    # Iterate over each character in all lines
+    for line in lines:
+        for char in line:
+            if char in opening_brackets:
+                stack.append(char)
+            elif char in closing_brackets:
+                if stack and stack[-1] == closing_brackets[char]:
+                    stack.pop()
+                else:
+                    print(f"Unmatched closing bracket found in line: {line.strip()}")
+                    return True
 
     if stack:
         print("Unmatched opening brackets remain in stack.")
     return bool(stack)
 
+
+def clone_results():
+    print("100% refactored clone count:", exact_count)
+    print("Between 90% - 100% refactored clone count:", near_count)
+    print("Between 80% - 90% refactored clone count:", similar_count)
 
 
 def find_common_lines_80(func1_lines, func2_lines, type , min_length=5):
@@ -467,17 +494,29 @@ def find_common_lines_80(func1_lines, func2_lines, type , min_length=5):
 
                 if len(temp_common) >= min_length:
 
-                    if has_unmatched_closing_bracket(temp_common):
-                        print("Aborting refactor due to unmatched closing brackets.")
-                        i = start_i
-                        break
-                    else:
+                    while has_unmatched_closing_bracket(temp_common):
+                        # Eğer temp_common uzunluğu min_length'ten küçükse döngüden çık
+                        if len(temp_common) < min_length:
+                            print(
+                                f"Aborting refactor, temp_common length ({len(temp_common)}) is below min_length ({min_length}).")
+                            i = start_i
+                            break
+
+                        # Son satırı kaldır
+                        temp_common = temp_common[:-1]
+
+                    # Kapanış parantez sorunu yoksa refactoring işlemi devam eder
+                    if not has_unmatched_closing_bracket(temp_common):
                         function_name = f"extracted_function_{function_counter}"
                         function_counter += 1
                         common_blocks.append((function_name, temp_common))
+
+                        # temp_common'un uzunluğu kadar i ve j güncellenir
                         j = start_j + len(temp_common)
                         i = start_i + len(temp_common)
                         start_i = i
+                    else:
+                        print("Aborting refactor due to unmatched closing brackets.")
 
                 else:
                     j += 1
@@ -538,7 +577,7 @@ def add_with_relative_indent(line, base_indent):
     return ' ' * adjusted_indent + line.lstrip()
 
 
-def refactor_functions_80(func1, func2, path1, path2, type):
+def refactor_functions_80(func1, func2, path1, path2, import_name, type):
     func1_lines = func1
     func2_lines = func2
     global old_line_count_80, new_line_count_80, signal_eighty
@@ -575,8 +614,12 @@ def refactor_functions_80(func1, func2, path1, path2, type):
                 # Save refactored code as a new function in the list
                 refactored_functions.append(refactored_code)
 
+                if path1 != path2:
+                    function_name = f"{import_name}.{function_name}"
+
                 # Refactored function call for func2 with the same base indentation as the common block
                 refactored_function_call = add_with_relative_indent(f"{function_name}()", base_indent)
+
 
                 # Calculate the difference in line count between the original and refactored code
                 original_line_count = len(lines)
@@ -611,9 +654,9 @@ def refactor_functions_80(func1, func2, path1, path2, type):
 
                 func2_refactored = func2_refactored.replace(common_block_text, refactored_function_call)
 
-            return refactored_functions, func1_refactored, func2_refactored, function_name
+            return refactored_functions, func1_refactored, func2_refactored
         else:
-            return None, '\n'.join(func1), '\n'.join(func2), None
+            return None, '\n'.join(func1), '\n'.join(func2)
     else:
 
         if common_blocks:
@@ -625,8 +668,12 @@ def refactor_functions_80(func1, func2, path1, path2, type):
                 first_common_line = lines[0]
                 base_indent = len(first_common_line) - len(first_common_line.lstrip())
 
+                if path1 != path2:
+                    function_name = f"{import_name}.{function_name}"
+
                 # Refactored function call for func2 with the same base indentation as the common block
                 refactored_function_call = add_with_relative_indent(f"{function_name}()", base_indent)
+
 
                 # Calculate the difference in line count between the original and refactored code
                 original_line_count = len(lines)
@@ -652,9 +699,10 @@ def refactor_functions_80(func1, func2, path1, path2, type):
                 # Perform replacement on string version of func2
                 multi_refactored = multi_refactored.replace(common_block_text, refactored_function_call)
 
-            return func1, func1, multi_refactored, function_name
+            return func1, func1, multi_refactored
         else:
-            return None, '\n'.join(func1), '\n'.join(func2), None
+            return None, '\n'.join(func1), '\n'.join(func2)
+
 
 
 def parse_xml_and_compare(xml_file_path):
@@ -691,7 +739,8 @@ def parse_xml_and_compare(xml_file_path):
         time.sleep(2)
         similarity = float(clone.get('similarity'))
         ismultipair = int(clone.get('nclones'))
-        global global_param_deff
+        global global_param_deff, exact_count, near_count, similar_count
+        import_name = None
         global_param_deff = []
         global param_index
 
@@ -745,28 +794,29 @@ def parse_xml_and_compare(xml_file_path):
                         function_2_name = stripped_line.split(":")[0].strip().replace("def ", "") + ":"
 
                         break
+                    # Farklı dosyadaysa import ifadesini ekle
+                if file1_path != file2_path:
+                    module_name, import_name = convert_path_to_module(file1_path, base_path)
+                    import_statement = f'from {module_name} import {import_name}'
+                    add_import_to_file(import_statement, file2_path)
+                    print(f'Import statement "{import_statement}" added to {file2_path}')
 
                 differences = sync_compare_files_ignore_comments(file1_lines, file2_lines)
-                refactored_code, function_call_code, first_clone = refactor_and_generate_function(differences, function_name, function_2_name, line_count, line_count_2, store_first=True)
+                refactored_code, function_call_code, first_clone = refactor_and_generate_function(differences, function_name, function_2_name, line_count, line_count_2, import_name, store_first=True)
 
 
                 replace_lines_in_file(file1_path, file1_start_line, file1_end_line, refactored_code)
                 print(f"Refactored code written to {file1_path}")
 
-                    # Farklı dosyadaysa import ifadesini ekle
-                if file1_path != file2_path:
-                    stripped_line = function_name.strip()
-                    function_new_name = stripped_line.replace("def ", "").split("(")[0].strip()
-                    module_name = convert_path_to_module(file1_path, base_path)
-                    import_statement = f'from {module_name} import {function_new_name}'
-                    add_import_to_file(import_statement, file2_path)
-                    print(f'Import statement "{import_statement}" added to {file2_path}')
 
 
                 replace_lines_in_file(file2_path, file2_start_line, file2_end_line, function_call_code)
                 print(f"Function call written to {file2_path}")
 
-
+                if similarity == 100 :
+                    exact_count += 1
+                else :
+                    near_count += 1
 
 
                 if ismultipair > 2: #Multikontrol
@@ -807,22 +857,20 @@ def parse_xml_and_compare(xml_file_path):
                                 if stripped_line.startswith("def "):
                                     multifunction_name = stripped_line.split(":")[0].strip().replace("def ", "") + ":"
                                     break
-                            new_differences = sync_compare_files_ignore_comments(filen_lines, multifile_lines)
-                            new_refactored_code, new_function_call_code , new_first_clone = refactor_and_generate_function(new_differences,
-                                                                                                 function_name, multifunction_name, line_count, line_count_multi, store_first=False)
-
-                            replace_lines_in_file(file1_path, file1_start_line, file1_end_line, new_refactored_code)
-                            print(f"Refactored code written to {file1_path}")
 
                             # Farklı dosyadaysa import ifadesini ekle
                             if file1_path != multifile_path:
-                                stripped_line =  function_name.strip()
-                                function_new_name = stripped_line.replace("def ", "").split("(")[0].strip()
-                                module_name = convert_path_to_module(file1_path, base_path)
-                                import_statement = f'from {module_name} import {function_new_name}'
+                                module_name, import_name = convert_path_to_module(file1_path, base_path)
+                                import_statement = f'from {module_name} import {import_name}'
                                 add_import_to_file(import_statement, multifile_path)
                                 print(f'Import statement "{import_statement}" added to {multifile_path}')
 
+                            new_differences = sync_compare_files_ignore_comments(filen_lines, multifile_lines)
+                            new_refactored_code, new_function_call_code , new_first_clone = refactor_and_generate_function(new_differences,
+                                                                                                 function_name, multifunction_name, line_count, line_count_multi, import_name, store_first=False)
+
+                            replace_lines_in_file(file1_path, file1_start_line, file1_end_line, new_refactored_code)
+                            print(f"Refactored code written to {file1_path}")
 
                             replace_lines_in_file(multifile_path, multifile_start_line, multifile_end_line,
                                                       new_function_call_code)
@@ -837,8 +885,9 @@ def parse_xml_and_compare(xml_file_path):
             function2_code = read_non_comment_lines(file2_path, file2_start_line, file2_end_line)
 
             functions.append((function1_code, function2_code))
-            refactored_funcs, refactored_func1, refactored_func2, ext_function_name = refactor_functions_80(
-                function1_code, function2_code, file1_path, file2_path, single)
+            module_name, import_name = convert_path_to_module(file1_path, base_path)
+            refactored_funcs, refactored_func1, refactored_func2 = refactor_functions_80(
+                function1_code, function2_code, file1_path, file2_path, import_name, single)
 
             if refactored_funcs != None:
 
@@ -848,15 +897,13 @@ def parse_xml_and_compare(xml_file_path):
                     replace_lines_in_file(file1_path, file1_start_line, file1_end_line, refactored_func1)
                     print(f"Refactored code written to {file1_path}")
                     lines = refactored_func1.strip().split('\n')
-                    num_lines_eighty = len(lines) - 1
+                    num_lines_eighty = len(lines)
 
                     function_length = num_lines_eighty - (file1_end_line - file1_start_line)
 
                     if file1_path != file2_path:
-                        stripped_line = ext_function_name.strip()
-                        function_new_name = stripped_line.replace("def ", "").split("(")[0].strip()
-                        module_name = convert_path_to_module(file1_path, base_path)
-                        import_statement = f'from {module_name} import {function_new_name}'
+
+                        import_statement = f'from {module_name} import {import_name}'
                         add_import_to_file(import_statement, file2_path)
                         print(f'Import statement "{import_statement}" added to {file2_path}')
                         replace_lines_in_file(file2_path, file2_start_line, file2_end_line, refactored_func2)
@@ -865,6 +912,8 @@ def parse_xml_and_compare(xml_file_path):
                         replace_lines_in_file(file2_path, (file2_start_line + function_length),
                                               (file2_end_line + function_length), refactored_func2)
                         print(f"Function call written to {file2_path}")
+                    similar_count += 1
+
 
                     if ismultipair > 2:  # Multikontrol
                         while multi_clone < ismultipair:
@@ -885,14 +934,13 @@ def parse_xml_and_compare(xml_file_path):
                                                                               (multifile_start_line + function_length),
                                                                               (multifile_end_line + function_length))
 
-                            multi_refactored_funcs, multi_refactored_func1, multi_refactored_func2, ext_function_name = refactor_functions_80(
-                                refactored_func1, functions_multi_code, file1_path, multifile_path, multi)
+                            module_name, import_name = convert_path_to_module(file1_path, base_path)
+                            multi_refactored_funcs, multi_refactored_func1, multi_refactored_func2 = refactor_functions_80(
+                                refactored_func1, functions_multi_code, file1_path, multifile_path, import_name, multi)
+
                             if file1_path != multifile_path:
 
-                                stripped_line = ext_function_name.strip()
-                                function_new_name = stripped_line.replace("def ", "").split("(")[0].strip()
-                                module_name = convert_path_to_module(file1_path, base_path)
-                                import_statement = f'from {module_name} import {function_new_name}'
+                                import_statement = f'from {module_name} import {import_name}'
                                 add_import_to_file(import_statement, multifile_path)
                                 print(f'Import statement "{import_statement}" added to {multifile_path}')
                                 replace_lines_in_file(multifile_path, multifile_start_line, multifile_end_line,
@@ -910,7 +958,7 @@ def parse_xml_and_compare(xml_file_path):
                             multi_clone += 1
 
             else:
-                print(f'# of equal lines are less then 8')
+                print(f'# of equal lines are less then 5')
 
 
 def main():
