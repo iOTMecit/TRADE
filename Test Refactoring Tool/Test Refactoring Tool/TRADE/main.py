@@ -988,7 +988,7 @@ def parse_xml_and_compare(xml_file_path):
 
                 modified_block = has_class_dependency_80(refactored_funcs)
                 if not modified_block:
-                    break
+                    continue
                 else:
                     replace_lines_in_file(file1_path, file1_start_line, file1_end_line, refactored_func1)
                     print(f"Refactored code written to {file1_path}")
