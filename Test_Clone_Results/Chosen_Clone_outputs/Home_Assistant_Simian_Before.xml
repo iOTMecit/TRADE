@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="simian.xsl" type="text/xsl"?>
+<!--
+Simian Similarity Analyzer 4.0.0 - https://simian.quandarypeak.com
+Copyright (c) 2023 Quandary Peak Research. All rights reserved.
+Subject to the Quandary Peak Academic Software License.
+-->
+<simian version="4.0.0">
+    <check failOnDuplication="true" ignoreCharacterCase="true" ignoreCurlyBraces="true" ignoreIdentifierCase="true" ignoreModifiers="true" ignoreStringCase="true" threshold="5">
+        <set lineCount="5" fingerprint="5817bb8e338b34bdea4d9e0117a162a4">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/flo/conftest.py" startLineNumber="117" endLineNumber="122"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/flo/conftest.py" startLineNumber="94" endLineNumber="99"/>
+        </set>
+        <set lineCount="5" fingerprint="138e41cb6a555d054d7512a34647a9f0">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/hassio/test_system_health.py" startLineNumber="114" endLineNumber="119"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/hassio/test_system_health.py" startLineNumber="60" endLineNumber="65"/>
+        </set>
+        <set lineCount="5" fingerprint="fd638843027cf6d143a8d856da2c2436">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/template/test_binary_sensor.py" startLineNumber="1114" endLineNumber="1118"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/template/test_sensor.py" startLineNumber="1165" endLineNumber="1169"/>
+        </set>
+        <set lineCount="5" fingerprint="eb3f1988c15cb82ad71d6edfb4605be0">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/fully_kiosk/test_media_player.py" startLineNumber="144" endLineNumber="148"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/fully_kiosk/test_media_player.py" startLineNumber="111" endLineNumber="115"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/fully_kiosk/test_media_player.py" startLineNumber="36" endLineNumber="40"/>
+        </set>
+                <set lineCount="5" fingerprint="8793f9532519d69863f688697387e39c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/smartthings/test_fan.py" startLineNumber="22" endLineNumber="27"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/smartthings/test_light.py" startLineNumber="26" endLineNumber="31"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/smartthings/test_sensor.py" startLineNumber="24" endLineNumber="29"/>
+        </set>
+        <set lineCount="5" fingerprint="69c75abd48a420c401b8afbe3349bfad">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/tilt_ble/test_config_flow.py" startLineNumber="136" endLineNumber="140"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/tilt_ble/test_config_flow.py" startLineNumber="116" endLineNumber="120"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/tilt_ble/test_config_flow.py" startLineNumber="95" endLineNumber="99"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/tilt_ble/test_sensor.py" startLineNumber="18" endLineNumber="22"/>
+        </set>
+        <set lineCount="5" fingerprint="93e014cbf404dd71fd925e9ecc9d52a2">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/apple_tv/test_config_flow.py" startLineNumber="277" endLineNumber="282"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/apple_tv/test_config_flow.py" startLineNumber="216" endLineNumber="221"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/apple_tv/test_config_flow.py" startLineNumber="160" endLineNumber="165"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/devolo_home_network/test_config_flow.py" startLineNumber="151" endLineNumber="155"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/adax/test_config_flow.py" startLineNumber="73" endLineNumber="78"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/holiday/test_config_flow.py" startLineNumber="78" endLineNumber="83"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/ccm15/test_config_flow.py" startLineNumber="159" endLineNumber="164"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/tesla_wall_connector/test_config_flow.py" startLineNumber="91" endLineNumber="96"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/kostal_plenticore/test_config_flow.py" startLineNumber="280" endLineNumber="285"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/wiffi/test_config_flow.py" startLineNumber="109" endLineNumber="114"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/wiffi/test_config_flow.py" startLineNumber="93" endLineNumber="98"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/todoist/test_config_flow.py" startLineNumber="78" endLineNumber="83"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/todoist/test_config_flow.py" startLineNumber="60" endLineNumber="65"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/metoffice/test_config_flow.py" startLineNumber="127" endLineNumber="132"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/metoffice/test_config_flow.py" startLineNumber="107" endLineNumber="112"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/isy994/test_config_flow.py" startLineNumber="116" endLineNumber="121"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/nws/test_config_flow.py" startLineNumber="67" endLineNumber="72"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/nws/test_config_flow.py" startLineNumber="49" endLineNumber="54"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/flume/test_config_flow.py" startLineNumber="95" endLineNumber="100"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/yamaha_musiccast/test_config_flow.py" startLineNumber="179" endLineNumber="184"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/nobo_hub/test_config_flow.py" startLineNumber="235" endLineNumber="240"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/nobo_hub/test_config_flow.py" startLineNumber="172" endLineNumber="177"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/nobo_hub/test_config_flow.py" startLineNumber="119" endLineNumber="124"/>
+        </set>
+        <set lineCount="5" fingerprint="528cf52742d89b41405bcb2058f4369d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/cloud/test_http_api.py" startLineNumber="1485" endLineNumber="1489"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/cloud/test_http_api.py" startLineNumber="1411" endLineNumber="1415"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/cloud/test_http_api.py" startLineNumber="1352" endLineNumber="1356"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/cloud/test_http_api.py" startLineNumber="1221" endLineNumber="1225"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/cloud/test_http_api.py" startLineNumber="1156" endLineNumber="1160"/>
+        </set>
+        <set lineCount="5" fingerprint="da7358de098b80115c9f0994fbe8604b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/hue/test_config_flow.py" startLineNumber="336" endLineNumber="342"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/deconz/test_config_flow.py" startLineNumber="421" endLineNumber="427"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/deconz/test_config_flow.py" startLineNumber="304" endLineNumber="310"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/deconz/test_config_flow.py" startLineNumber="257" endLineNumber="263"/>
+        </set>
+                <set lineCount="5" fingerprint="b771ea8f01b5652548996a14765b9699">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/filter/test_sensor.py" startLineNumber="226" endLineNumber="231"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/filter/test_sensor.py" startLineNumber="113" endLineNumber="118"/>
+        </set>
+        <set lineCount="5" fingerprint="433fc0ecd135b1504f839cd14631117a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/met/test_weather.py" startLineNumber="7" endLineNumber="11"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/weatherkit/test_weather.py" startLineNumber="9" endLineNumber="13"/>
+        </set>
+        <set lineCount="5" fingerprint="7623e789ba75975753c6f5ec549e2c91">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/blue_current/test_init.py" startLineNumber="44" endLineNumber="51"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/pyload/test_init.py" startLineNumber="25" endLineNumber="33"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/rainbird/test_init.py" startLineNumber="40" endLineNumber="47"/>
+        </set>
+        <set lineCount="5" fingerprint="a127b9ccc2ca3db5b39400488e4ac18b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/prusalink/test_sensor.py" startLineNumber="13" endLineNumber="17"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/number/test_significant_change.py" startLineNumber="8" endLineNumber="12"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/goalzero/test_sensor.py" startLineNumber="10" endLineNumber="14"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/dremel_3d_printer/test_sensor.py" startLineNumber="13" endLineNumber="17"/>
+        </set>
+        <set lineCount="5" fingerprint="155547f06886c4f1e6f7178c0f64ccc2">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/notion/test_diagnostics.py" startLineNumber="60" endLineNumber="64"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/notion/test_diagnostics.py" startLineNumber="50" endLineNumber="54"/>
+        </set>
+        <set lineCount="5" fingerprint="0c211a5263f783655363d29bcdab690f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/mqtt/test_light_json.py" startLineNumber="2009" endLineNumber="2014"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/mqtt/test_light_json.py" startLineNumber="1946" endLineNumber="1951"/>
+        </set>
+        <set lineCount="5" fingerprint="3982624cfe86de7ad852556a99214f49">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/climate/test_device_condition.py" startLineNumber="312" endLineNumber="317"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/climate/test_device_condition.py" startLineNumber="221" endLineNumber="226"/>
+        </set>
+        <set lineCount="5" fingerprint="a91e4b38ccaa16f69804804a28bafbad">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/hive/test_config_flow.py" startLineNumber="442" endLineNumber="446"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/hive/test_config_flow.py" startLineNumber="165" endLineNumber="169"/>
+        </set>
+        <set lineCount="5" fingerprint="391368467eb68ba29c6687ba45496854">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/yale/test_event.py" startLineNumber="14" endLineNumber="21"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/august/test_event.py" startLineNumber="17" endLineNumber="24"/>
+        </set>
+        <set lineCount="5" fingerprint="b1ac8f42f0ef574e808f8ae4585ce2cc">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/withings/test_binary_sensor.py" startLineNumber="21" endLineNumber="25"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/withings/test_init.py" startLineNumber="484" endLineNumber="488"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/withings/test_init.py" startLineNumber="432" endLineNumber="436"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/withings/test_init.py" startLineNumber="380" endLineNumber="384"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/withings/test_init.py" startLineNumber="114" endLineNumber="118"/>
+        </set>
+                <set lineCount="6" fingerprint="7ddce5800bfe339892607fa53b751621">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/recorder/test_pool.py" startLineNumber="15" endLineNumber="20"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/recorder/test_pool.py" startLineNumber="27" endLineNumber="32"/>
+        </set>
+        <set lineCount="6" fingerprint="292fe086095dbb91fbcd98651ae6ed43">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/filter/test_sensor.py" startLineNumber="271" endLineNumber="277"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/filter/test_sensor.py" startLineNumber="311" endLineNumber="317"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/filter/test_sensor.py" startLineNumber="79" endLineNumber="85"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/filter/test_sensor.py" startLineNumber="347" endLineNumber="353"/>
+        </set>
+        <set lineCount="6" fingerprint="dcbdfc7200c196f3f03878b0b47ee11d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/gree/test_switch.py" startLineNumber="16" endLineNumber="21"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/rituals_perfume_genie/test_switch.py" startLineNumber="12" endLineNumber="17"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/flux_led/test_switch.py" startLineNumber="17" endLineNumber="22"/>
+        </set>
+        <set lineCount="6" fingerprint="3b1b9e4afb8348a8de82d9678043d4a7">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/group/test_switch.py" startLineNumber="10" endLineNumber="15"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/pyload/test_switch.py" startLineNumber="11" endLineNumber="16"/>
+        </set>
+        <set lineCount="6" fingerprint="2e0eaf8b18cfeababb5966eac2568730">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/surepetcare/test_config_flow.py" startLineNumber="103" endLineNumber="108"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/surepetcare/test_config_flow.py" startLineNumber="264" endLineNumber="269"/>
+        </set>
+                <set lineCount="7" fingerprint="abe3859defaab1960b356f3c12475c13">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/lacrosse_view/test_init.py" startLineNumber="126" endLineNumber="132"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/lacrosse_view/test_init.py" startLineNumber="89" endLineNumber="95"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/lacrosse_view/test_init.py" startLineNumber="25" endLineNumber="31"/>
+        </set>
+        <set lineCount="7" fingerprint="70383f83908bb06b549462e64a5809e7">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/unifiprotect/test_migrate.py" startLineNumber="180" endLineNumber="186"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/unifiprotect/test_migrate.py" startLineNumber="112" endLineNumber="118"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/unifiprotect/test_migrate.py" startLineNumber="48" endLineNumber="54"/>
+        </set>
+        <set lineCount="7" fingerprint="9b011f847d804f257a6e38f7cff54064">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/tesla_fleet/test_button.py" startLineNumber="3" endLineNumber="11"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/deconz/test_button.py" startLineNumber="5" endLineNumber="13"/>
+        </set>
+        <set lineCount="7" fingerprint="3e29850eb5fec3ad6b3de1fac9f5fa1b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/august/test_config_flow.py" startLineNumber="317" endLineNumber="325"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/august/test_config_flow.py" startLineNumber="163" endLineNumber="171"/>
+        </set>
+        <set lineCount="7" fingerprint="d851380647422a9658595f2884fba106">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/integration/test_sensor.py" startLineNumber="483" endLineNumber="492"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/integration/test_sensor.py" startLineNumber="135" endLineNumber="145"/>
+        </set>
+        <set lineCount="7" fingerprint="f476e794b572da7e16e11d0b29c319ee">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/input_number/test_init.py" startLineNumber="15" endLineNumber="21"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/input_text/test_init.py" startLineNumber="18" endLineNumber="24"/>
+        </set>
+                <set lineCount="8" fingerprint="7a47e49ea671a5f531082b295c596dbb">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/tailwind/test_binary_sensor.py" startLineNumber="3" endLineNumber="14"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/twentemilieu/test_sensor.py" startLineNumber="3" endLineNumber="14"/>
+        </set>
+        <set lineCount="8" fingerprint="230175b0220a3a7ce2ef735609d46edc">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/alexa/test_smart_home.py" startLineNumber="5204" endLineNumber="5211"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/alexa/test_smart_home.py" startLineNumber="5329" endLineNumber="5336"/>
+        </set>
+        <set lineCount="8" fingerprint="b82c283b93ee38d71f67a92e246a9d2b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/nam/test_init.py" startLineNumber="31" endLineNumber="39"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/nam/test_init.py" startLineNumber="70" endLineNumber="78"/>
+        </set>
+        <set lineCount="8" fingerprint="c817808e4e2415bcbcec19f681dd5d2d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/otbr/test_config_flow.py" startLineNumber="639" endLineNumber="647"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/otbr/test_config_flow.py" startLineNumber="697" endLineNumber="705"/>
+        </set>
+        <set lineCount="8" fingerprint="6eebc43088390ddaf0f9e0448936f90a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/file/test_config_flow.py" startLineNumber="28" endLineNumber="35"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/file/test_config_flow.py" startLineNumber="70" endLineNumber="77"/>
+        </set>
+        <set lineCount="8" fingerprint="b86fd4cab538eb419071c8c789ca0505">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/device_automation/test_init.py" startLineNumber="1123" endLineNumber="1131"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/device_automation/test_init.py" startLineNumber="1239" endLineNumber="1247"/>
+        </set>
+                <set lineCount="10" fingerprint="0215cfcb46619d3ff9961199183945b0">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/honeywell/test_climate.py" startLineNumber="837" endLineNumber="848"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/honeywell/test_climate.py" startLineNumber="398" endLineNumber="409"/>
+        </set>
+        <set lineCount="10" fingerprint="42039185bf9c41f1ceeec3736516d163">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/tasmota/test_discovery.py" startLineNumber="591" endLineNumber="602"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/tasmota/test_discovery.py" startLineNumber="704" endLineNumber="715"/>
+        </set>
+        <set lineCount="10" fingerprint="a6d804476defbc440bf3e56087417534">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/incomfort/test_sensor.py" startLineNumber="16" endLineNumber="25"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/incomfort/test_water_heater.py" startLineNumber="16" endLineNumber="25"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/incomfort/test_binary_sensor.py" startLineNumber="20" endLineNumber="29"/>
+        </set>
+        <set lineCount="10" fingerprint="4f840e659edf082ef4495a30d0b46c4c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/led_ble/test_config_flow.py" startLineNumber="166" endLineNumber="176"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/led_ble/test_config_flow.py" startLineNumber="111" endLineNumber="121"/>
+        </set>
+        <set lineCount="10" fingerprint="0c5b941e3194dc4b247980c23dcf743a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/helpers/test_script.py" startLineNumber="1063" endLineNumber="1072"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/helpers/test_script.py" startLineNumber="1656" endLineNumber="1665"/>
+        </set>
+                <set lineCount="12" fingerprint="fc2fbb3d98713917a999a649a3e9a35c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/esphome/test_media_player.py" startLineNumber="301" endLineNumber="312"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/esphome/test_assist_satellite.py" startLineNumber="1000" endLineNumber="1011"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/esphome/test_assist_satellite.py" startLineNumber="1070" endLineNumber="1081"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/esphome/test_assist_satellite.py" startLineNumber="1230" endLineNumber="1241"/>
+        </set>
+        <set lineCount="12" fingerprint="aa1db4dacc8dc26651fb7ff41e2f0609">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/utility_meter/test_sensor.py" startLineNumber="902" endLineNumber="913"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/utility_meter/test_sensor.py" startLineNumber="1127" endLineNumber="1138"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/utility_meter/test_sensor.py" startLineNumber="1199" endLineNumber="1210"/>
+        </set>
+        <set lineCount="12" fingerprint="b318ff60568976b2288b19b3f1f7fe58">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/ring/test_siren.py" startLineNumber="67" endLineNumber="82"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/ring/test_siren.py" startLineNumber="89" endLineNumber="104"/>
+        </set>
+        <set lineCount="12" fingerprint="8f5eec5d2ee7f522ee6699144bf83ca4">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/modbus/test_fan.py" startLineNumber="58" endLineNumber="69"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/modbus/test_fan.py" startLineNumber="92" endLineNumber="103"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/modbus/test_fan.py" startLineNumber="109" endLineNumber="120"/>
+        </set>
+        <set lineCount="12" fingerprint="1c361cfb4b48d8cda304bd723b1b8b8b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant_hardware/test_silabs_multiprotocol_addon.py" startLineNumber="982" endLineNumber="995"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant_hardware/test_silabs_multiprotocol_addon.py" startLineNumber="1060" endLineNumber="1073"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant_hardware/test_silabs_multiprotocol_addon.py" startLineNumber="1121" endLineNumber="1134"/>
+        </set>
+        <set lineCount="12" fingerprint="542cafaa09b3e721e171c7023b76809c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/kraken/const.py" startLineNumber="113" endLineNumber="124"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/kraken/const.py" startLineNumber="45" endLineNumber="56"/>
+        </set>
+                <set lineCount="15" fingerprint="a88978cb4f20369fded7d645427a6a04">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/zwave_js/test_humidifier.py" startLineNumber="558" endLineNumber="575"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/zwave_js/test_humidifier.py" startLineNumber="68" endLineNumber="85"/>
+        </set>
+        <set lineCount="15" fingerprint="ef82620b053b5ad741c879959825fdcb">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/unifiprotect/test_sensor.py" startLineNumber="609" endLineNumber="624"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/unifiprotect/test_sensor.py" startLineNumber="584" endLineNumber="599"/>
+        </set>
+        <set lineCount="15" fingerprint="ffae6979a4c5f51959af6e9016a129d9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/ista_ecotrend/test_config_flow.py" startLineNumber="74" endLineNumber="89"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/ista_ecotrend/test_config_flow.py" startLineNumber="24" endLineNumber="39"/>
+        </set>
+        <set lineCount="15" fingerprint="09992b9677d8f8317fae97e0df5be08d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/oncue/test_config_flow.py" startLineNumber="30" endLineNumber="45"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/ourgroceries/test_config_flow.py" startLineNumber="28" endLineNumber="43"/>
+        </set>
+        <set lineCount="15" fingerprint="97539f83628bf813aa7534639ae42ae5">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/logbook/test_websocket_api.py" startLineNumber="386" endLineNumber="401"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/logbook/test_init.py" startLineNumber="2554" endLineNumber="2569"/>
+        </set>
+        <set lineCount="15" fingerprint="628ba15b390a4d3c4e65ca758cddc9d3">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/alexa/test_state_report.py" startLineNumber="678" endLineNumber="701"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/alexa/test_state_report.py" startLineNumber="639" endLineNumber="662"/>
+        </set>
+        <set lineCount="15" fingerprint="66f1376d789ae512cbad0b2cecadd7f2">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/sql/test_sensor.py" startLineNumber="352" endLineNumber="366"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/sql/test_sensor.py" startLineNumber="172" endLineNumber="186"/>
+        </set>
+        <set lineCount="15" fingerprint="90cbf0c1e5f58d657d510dabff734d79">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/omnilogic/const.py" startLineNumber="120" endLineNumber="134"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/omnilogic/const.py" startLineNumber="21" endLineNumber="35"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/omnilogic/const.py" startLineNumber="251" endLineNumber="265"/>
+        </set>
+                <set lineCount="22" fingerprint="3411b4ad9e93febacc9e01cc1fe8ce16">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="1326" endLineNumber="1348"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="1357" endLineNumber="1379"/>
+        </set>
+        <set lineCount="22" fingerprint="0ee8c09121007deff885bc4dec131205">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/github/test_config_flow.py" startLineNumber="33" endLineNumber="57"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/github/test_config_flow.py" startLineNumber="113" endLineNumber="135"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/github/test_config_flow.py" startLineNumber="156" endLineNumber="177"/>
+        </set>
+        <set lineCount="22" fingerprint="2ed0f6e5dce5322dafd55049f897e146">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/derivative/test_sensor.py" startLineNumber="412" endLineNumber="437"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/derivative/test_init.py" startLineNumber="90" endLineNumber="115"/>
+        </set>
+        <set lineCount="22" fingerprint="255ea4ef50979aabda323e3984f0a3d7">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/deconz/test_deconz_event.py" startLineNumber="326" endLineNumber="347"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/deconz/test_select.py" startLineNumber="31" endLineNumber="52"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/deconz/test_select.py" startLineNumber="62" endLineNumber="83"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/deconz/test_select.py" startLineNumber="93" endLineNumber="114"/>
+        </set>
+        <set lineCount="22" fingerprint="b9cd734e26b029c27139a49e7463238a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/lifx/test_light.py" startLineNumber="152" endLineNumber="175"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/lifx/test_light.py" startLineNumber="1059" endLineNumber="1082"/>
+        </set>
+        <set lineCount="22" fingerprint="c09445aa2d41d44bea75a92ec15b17af">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/tts/test_init.py" startLineNumber="488" endLineNumber="511"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/tts/test_init.py" startLineNumber="640" endLineNumber="663"/>
+        </set>
+                </set>
+        <set lineCount="267" fingerprint="1d12aec81776a9ec5ddd003cfffd0e34">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/recorder/db_schema_23.py" startLineNumber="232" endLineNumber="578"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/recorder/db_schema_23_with_newer_columns.py" startLineNumber="356" endLineNumber="702"/>
+        </set>
+        <set lineCount="524" fingerprint="803c3c0e91c4e22130a13a8e973f5373">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/recorder/test_history_db_schema_42.py" startLineNumber="368" endLineNumber="1021"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/recorder/test_history.py" startLineNumber="363" endLineNumber="1016"/>
+        </set>
+                <set lineCount="5" fingerprint="368a7373fd094b58c3a4d8ae8e1c9b1e">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/mqtt/test_device_trigger.py" startLineNumber="986" endLineNumber="992"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/tasmota/test_device_trigger.py" startLineNumber="875" endLineNumber="881"/>
+        </set>
+        <set lineCount="5" fingerprint="dc634791cc463c8f1a49b2caa02b598a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/conversation/test_default_agent.py" startLineNumber="42" endLineNumber="46"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/search/test_init.py" startLineNumber="8" endLineNumber="12"/>
+        </set>
+        <set lineCount="5" fingerprint="3e2a91813eff4b627d509cef7e491e1a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/unifiprotect/test_binary_sensor.py" startLineNumber="75" endLineNumber="80"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/unifiprotect/test_switch.py" startLineNumber="71" endLineNumber="76"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/unifiprotect/test_select.py" startLineNumber="59" endLineNumber="64"/>
+        </set>
+        <set lineCount="5" fingerprint="25ba20c87e708ac2eaf187824af928eb">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/aussie_broadband/test_config_flow.py" startLineNumber="114" endLineNumber="118"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/aussie_broadband/test_config_flow.py" startLineNumber="36" endLineNumber="40"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/advantage_air/test_config_flow.py" startLineNumber="32" endLineNumber="36"/>
+        </set>
+        <set lineCount="5" fingerprint="4ac44ca816be3e2c4f156f04c4c87d31">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/tilt_ble/test_config_flow.py" startLineNumber="198" endLineNumber="202"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/tilt_ble/test_config_flow.py" startLineNumber="75" endLineNumber="79"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/tilt_ble/test_config_flow.py" startLineNumber="29" endLineNumber="33"/>
+        </set>
+        <set lineCount="5" fingerprint="79e2a546e64ee8b28df8d1399301fa07">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/cert_expiry/test_sensors.py" startLineNumber="32" endLineNumber="37"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/cert_expiry/test_init.py" startLineNumber="141" endLineNumber="145"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/cert_expiry/test_init.py" startLineNumber="98" endLineNumber="102"/>
+        </set>
+        <set lineCount="5" fingerprint="1e215ffa041981eae0cd43e222440ab9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/recorder/test_migration_from_schema_32.py" startLineNumber="789" endLineNumber="795"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/recorder/test_migration_from_schema_32.py" startLineNumber="218" endLineNumber="224"/>
+        </set>
+        <set lineCount="5" fingerprint="f28d8bf741ff01968659404309373c40">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/oralb/test_config_flow.py" startLineNumber="151" endLineNumber="155"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/oralb/test_config_flow.py" startLineNumber="131" endLineNumber="135"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/oralb/test_config_flow.py" startLineNumber="112" endLineNumber="116"/>
+        </set>
+        <set lineCount="5" fingerprint="4c57599d16ed4008e9ff5ab8505158fe">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/bond/test_button.py" startLineNumber="14" endLineNumber="18"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/bond/common.py" startLineNumber="250" endLineNumber="254"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/bond/test_entity.py" startLineNumber="20" endLineNumber="24"/>
+        </set>
+        <set lineCount="5" fingerprint="c636a34617a853b4c06d768b6e0704d8">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py" startLineNumber="3187" endLineNumber="3191"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py" startLineNumber="3104" endLineNumber="3108"/>
+        </set>
+        <set lineCount="5" fingerprint="9ddcf51c69209f68a708fc3ec6deac39">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py" startLineNumber="1018" endLineNumber="1022"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py" startLineNumber="927" endLineNumber="931"/>
+        </set>
+                <set lineCount="6" fingerprint="a22a88327ad48af9b5859f7c8c114f07">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/oncue/test_config_flow.py" startLineNumber="106" endLineNumber="112"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/lacrosse_view/test_config_flow.py" startLineNumber="169" endLineNumber="175"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/kmtronic/test_config_flow.py" startLineNumber="153" endLineNumber="159"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/schlage/test_config_flow.py" startLineNumber="77" endLineNumber="83"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/surepetcare/test_config_flow.py" startLineNumber="110" endLineNumber="116"/>
+        </set>
+        <set lineCount="6" fingerprint="2b507b17b199e04d358141329f7f2a5b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/test_init.py" startLineNumber="406" endLineNumber="411"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/test_init.py" startLineNumber="424" endLineNumber="429"/>
+        </set>
+        <set lineCount="6" fingerprint="defa3eec30f568a7f755c348246d77f9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/srp_energy/test_config_flow.py" startLineNumber="72" endLineNumber="78"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/srp_energy/test_config_flow.py" startLineNumber="91" endLineNumber="97"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/srp_energy/test_config_flow.py" startLineNumber="110" endLineNumber="116"/>
+        </set>
+        <set lineCount="6" fingerprint="197d28d6c24e3cdae940b8f494d272d8">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/oncue/__init__.py" startLineNumber="195" endLineNumber="200"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/oncue/__init__.py" startLineNumber="724" endLineNumber="729"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/oncue/__init__.py" startLineNumber="460" endLineNumber="465"/>
+        </set>
+        <set lineCount="6" fingerprint="75e8d39cc2eb52228e89e6fabd4aa222">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/recorder/test_purge_v32_schema.py" startLineNumber="23" endLineNumber="28"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/recorder/test_purge.py" startLineNumber="30" endLineNumber="35"/>
+        </set>
+        <set lineCount="6" fingerprint="81d75c33dfc2652cb25d552e3ce53ff4">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/gogogate2/__init__.py" startLineNumber="131" endLineNumber="136"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/gogogate2/__init__.py" startLineNumber="97" endLineNumber="102"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/gogogate2/__init__.py" startLineNumber="114" endLineNumber="119"/>
+        </set>
+        <set lineCount="6" fingerprint="49fbd3a72b07eafb54360d961c3199de">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/mqtt/test_sensor.py" startLineNumber="809" endLineNumber="816"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/mqtt/test_event.py" startLineNumber="272" endLineNumber="279"/>
+        </set>
+        <set lineCount="6" fingerprint="7f73f2afd39e0afe20c364dcc23922bd">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/blueprint/test_websocket_api.py" startLineNumber="254" endLineNumber="261"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/blueprint/test_websocket_api.py" startLineNumber="310" endLineNumber="317"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/blueprint/test_websocket_api.py" startLineNumber="332" endLineNumber="339"/>
+        </set>
+                <set lineCount="7" fingerprint="e0443536f2071f32e27e9c347b19d68f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/demo/test_fan.py" startLineNumber="427" endLineNumber="433"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/demo/test_fan.py" startLineNumber="418" endLineNumber="424"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/demo/test_fan.py" startLineNumber="409" endLineNumber="415"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/demo/test_fan.py" startLineNumber="400" endLineNumber="406"/>
+        </set>
+        <set lineCount="7" fingerprint="c0b9cbcb006fc0629d6ffcdd8f1c1135">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/bthome/test_sensor.py" startLineNumber="242" endLineNumber="248"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/bthome/test_sensor.py" startLineNumber="175" endLineNumber="181"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/bthome/test_sensor.py" startLineNumber="302" endLineNumber="308"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/bthome/test_sensor.py" startLineNumber="90" endLineNumber="96"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/bthome/test_sensor.py" startLineNumber="59" endLineNumber="65"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/bthome/test_sensor.py" startLineNumber="208" endLineNumber="214"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/bthome/test_binary_sensor.py" startLineNumber="64" endLineNumber="70"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/bthome/test_sensor.py" startLineNumber="191" endLineNumber="197"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/bthome/test_sensor.py" startLineNumber="266" endLineNumber="272"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/bthome/test_sensor.py" startLineNumber="124" endLineNumber="130"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/bthome/test_sensor.py" startLineNumber="158" endLineNumber="164"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/bthome/test_sensor.py" startLineNumber="141" endLineNumber="147"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/bthome/test_sensor.py" startLineNumber="225" endLineNumber="231"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/bthome/test_sensor.py" startLineNumber="283" endLineNumber="289"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/bthome/test_binary_sensor.py" startLineNumber="49" endLineNumber="55"/>
+        </set>
+        <set lineCount="7" fingerprint="2bf5a33984dfb7a052e9a5b791f3b630">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/caldav/test_calendar.py" startLineNumber="103" endLineNumber="109"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/caldav/test_calendar.py" startLineNumber="89" endLineNumber="95"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/caldav/test_calendar.py" startLineNumber="274" endLineNumber="280"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/caldav/test_calendar.py" startLineNumber="261" endLineNumber="267"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/caldav/test_calendar.py" startLineNumber="205" endLineNumber="211"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/caldav/test_calendar.py" startLineNumber="190" endLineNumber="196"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/caldav/test_calendar.py" startLineNumber="175" endLineNumber="181"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/caldav/test_calendar.py" startLineNumber="117" endLineNumber="123"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/caldav/test_calendar.py" startLineNumber="75" endLineNumber="81"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/caldav/test_calendar.py" startLineNumber="62" endLineNumber="68"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/caldav/test_calendar.py" startLineNumber="48" endLineNumber="54"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/caldav/test_calendar.py" startLineNumber="34" endLineNumber="40"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/caldav/test_calendar.py" startLineNumber="160" endLineNumber="166"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/caldav/test_calendar.py" startLineNumber="145" endLineNumber="151"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/caldav/test_calendar.py" startLineNumber="220" endLineNumber="226"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/caldav/test_calendar.py" startLineNumber="130" endLineNumber="136"/>
+        </set>
+                <set lineCount="8" fingerprint="e39673ff10a38ab34316f38b7baead60">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/nice_go/test_config_flow.py" startLineNumber="83" endLineNumber="91"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/nice_go/test_config_flow.py" startLineNumber="37" endLineNumber="45"/>
+        </set>
+        <set lineCount="8" fingerprint="ea5b4e06d83288a7b60271a0385bf9bd">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/recorder/test_entity_registry.py" startLineNumber="135" endLineNumber="143"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/recorder/test_entity_registry.py" startLineNumber="155" endLineNumber="163"/>
+        </set>
+        <set lineCount="8" fingerprint="c0548215e1efbff099ae818fecd7660f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/conversation/test_default_agent.py" startLineNumber="1200" endLineNumber="1210"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/conversation/test_default_agent.py" startLineNumber="1297" endLineNumber="1307"/>
+        </set>
+        <set lineCount="8" fingerprint="c4ca8707d45b4de7af55a1fc07faa4dc">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/honeywell/test_climate.py" startLineNumber="1127" endLineNumber="1135"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/honeywell/test_climate.py" startLineNumber="1138" endLineNumber="1146"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/honeywell/test_climate.py" startLineNumber="1149" endLineNumber="1157"/>
+        </set>
+        <set lineCount="8" fingerprint="b83e48c6f4920f195f0c351045946a91">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/mqtt/test_common.py" startLineNumber="1284" endLineNumber="1292"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/mqtt/test_common.py" startLineNumber="1491" endLineNumber="1499"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/mqtt/test_common.py" startLineNumber="1541" endLineNumber="1549"/>
+        </set>
+        <set lineCount="8" fingerprint="cbfb0340fedc644b90ee2e5f2ebab3fc">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/bosch_shc/test_config_flow.py" startLineNumber="603" endLineNumber="610"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/shelly/test_config_flow.py" startLineNumber="745" endLineNumber="752"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/shelly/test_config_flow.py" startLineNumber="656" endLineNumber="663"/>
+        </set>
+        <set lineCount="8" fingerprint="0a45a450adf3a0c0bbe0029677ad44c8">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="564" endLineNumber="571"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="584" endLineNumber="591"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="604" endLineNumber="611"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="1216" endLineNumber="1223"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="1244" endLineNumber="1251"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="1272" endLineNumber="1279"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="1478" endLineNumber="1485"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="1635" endLineNumber="1642"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="626" endLineNumber="633"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="150" endLineNumber="157"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="260" endLineNumber="267"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="850" endLineNumber="857"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="781" endLineNumber="788"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="809" endLineNumber="816"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="1507" endLineNumber="1514"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="1590" endLineNumber="1597"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="205" endLineNumber="212"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="230" endLineNumber="237"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="286" endLineNumber="293"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="175" endLineNumber="182"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="312" endLineNumber="319"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="338" endLineNumber="345"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="458" endLineNumber="465"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="486" endLineNumber="493"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="708" endLineNumber="715"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="1078" endLineNumber="1085"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="1389" endLineNumber="1396"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="1545" endLineNumber="1552"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="1691" endLineNumber="1698"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="364" endLineNumber="371"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/homeassistant/triggers/test_state.py" startLineNumber="411" endLineNumber="418"/>
+        </set>
+        <set lineCount="8" fingerprint="c73ed5b7f887838c753decf5d2421717">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/light/test_init.py" startLineNumber="1690" endLineNumber="1697"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/light/test_init.py" startLineNumber="1837" endLineNumber="1844"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/light/test_init.py" startLineNumber="1763" endLineNumber="1770"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/light/test_init.py" startLineNumber="1544" endLineNumber="1551"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/light/test_init.py" startLineNumber="1580" endLineNumber="1587"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/light/test_init.py" startLineNumber="1617" endLineNumber="1624"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/light/test_init.py" startLineNumber="1653" endLineNumber="1660"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/light/test_init.py" startLineNumber="1726" endLineNumber="1733"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/light/test_init.py" startLineNumber="1800" endLineNumber="1807"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/light/test_init.py" startLineNumber="1873" endLineNumber="1880"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/light/test_init.py" startLineNumber="1957" endLineNumber="1964"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/light/test_init.py" startLineNumber="2027" endLineNumber="2034"/>
+        </set>
+                <set lineCount="8" fingerprint="52304de40fffa4e7e04ac4d323690c6a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/modbus/test_init.py" startLineNumber="1123" endLineNumber="1130"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/modbus/test_init.py" startLineNumber="754" endLineNumber="762"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/modbus/test_init.py" startLineNumber="740" endLineNumber="748"/>
+        </set>
+        <set lineCount="8" fingerprint="8cad01f3fd83116f9d8c23d95429954a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/octoprint/test_button.py" startLineNumber="68" endLineNumber="75"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/octoprint/test_button.py" startLineNumber="48" endLineNumber="55"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/octoprint/test_button.py" startLineNumber="32" endLineNumber="39"/>
+        </set>
+        <set lineCount="8" fingerprint="0ee23de5c372d4d86ff09e02ba07a76f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/axis/test_config_flow.py" startLineNumber="514" endLineNumber="521"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/axis/test_config_flow.py" startLineNumber="275" endLineNumber="282"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/axis/test_config_flow.py" startLineNumber="383" endLineNumber="390"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/axis/test_config_flow.py" startLineNumber="563" endLineNumber="570"/>
+        </set>
+        <set lineCount="8" fingerprint="cfc6b27eb5a5be3f6f84e9caf2f6dc7f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/tts/test_init.py" startLineNumber="1385" endLineNumber="1392"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/tts/test_init.py" startLineNumber="1407" endLineNumber="1414"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/HomeAssistant/home/tests/components/tts/test_init.py" startLineNumber="1759" endLineNumber="1766"/>
+        </set>
+        <summary duplicateFileCount="4051" duplicateLineCount="573761" duplicateBlockCount="62201" totalFileCount="5524" totalRawLineCount="1199319" totalSignificantLineCount="995362" processingTime="2955"/>
+    </check>
+</simian>

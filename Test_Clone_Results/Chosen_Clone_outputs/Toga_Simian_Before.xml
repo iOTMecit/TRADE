@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="simian.xsl" type="text/xsl"?>
+<!--
+Simian Similarity Analyzer 4.0.0 - https://simian.quandarypeak.com
+Copyright (c) 2023 Quandary Peak Research. All rights reserved.
+Subject to the Quandary Peak Academic Software License.
+-->
+<simian version="4.0.0">
+    <check failOnDuplication="true" ignoreCharacterCase="true" ignoreCurlyBraces="true" ignoreIdentifierCase="true" ignoreModifiers="true" ignoreStringCase="true" threshold="5">
+        <set lineCount="5" fingerprint="e43bbd1c5d0244874447cf3e9267bc84">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/sources/test_tree_source.py" startLineNumber="541" endLineNumber="545"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/sources/test_tree_source.py" startLineNumber="509" endLineNumber="513"/>
+        </set>
+        <set lineCount="5" fingerprint="bd2a16d8b34a77bda7a5fa8e562cbf4c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_slider.py" startLineNumber="235" endLineNumber="239"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_slider.py" startLineNumber="172" endLineNumber="176"/>
+        </set>
+        <set lineCount="5" fingerprint="3b38a713d0d572cf8e99f34c6e4fdcde">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/app/test_document_app.py" startLineNumber="10" endLineNumber="14"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_activityindicator.py" startLineNumber="4" endLineNumber="8"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_divider.py" startLineNumber="4" endLineNumber="8"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/hardware/test_location.py" startLineNumber="8" endLineNumber="12"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/statusicons/test_statusiconset.py" startLineNumber="7" endLineNumber="11"/>
+        </set>
+        <set lineCount="5" fingerprint="eb3126515fc6eca27b5a458e54a76a25">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_table.py" startLineNumber="410" endLineNumber="414"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_table.py" startLineNumber="341" endLineNumber="345"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_table.py" startLineNumber="318" endLineNumber="322"/>
+        </set>
+        <set lineCount="5" fingerprint="163eab04b7d60a877113d17da07e4732">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_slider.py" startLineNumber="514" endLineNumber="518"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_slider.py" startLineNumber="459" endLineNumber="463"/>
+        </set>
+        <set lineCount="5" fingerprint="e3640c88fd3b629fe64ac8f37fe5b459">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_textinput.py" startLineNumber="212" endLineNumber="216"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/properties.py" startLineNumber="124" endLineNumber="128"/>
+        </set>
+        <set lineCount="5" fingerprint="8f17e7394f69eebed13493d5dc6d15b9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/command/test_command.py" startLineNumber="269" endLineNumber="273"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/command/test_commandset.py" startLineNumber="453" endLineNumber="457"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/command/test_commandset.py" startLineNumber="427" endLineNumber="431"/>
+        </set>
+        <set lineCount="5" fingerprint="04519edab10e43384561722c98fe0db7">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/command/test_commandset.py" startLineNumber="116" endLineNumber="124"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/command/test_commandset.py" startLineNumber="57" endLineNumber="65"/>
+        </set>
+        <set lineCount="5" fingerprint="7449baa0188186a7e63eaf0910a8d211">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_button.py" startLineNumber="185" endLineNumber="193"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_button.py" startLineNumber="172" endLineNumber="178"/>
+        </set>
+        <set lineCount="5" fingerprint="766c2f69cafa03c32f08c5083135f69f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="557" endLineNumber="563"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="233" endLineNumber="239"/>
+        </set>
+                <set lineCount="5" fingerprint="8fe2b81ac6a92e5957c45c4b68549f7f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_table.py" startLineNumber="581" endLineNumber="585"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_table.py" startLineNumber="455" endLineNumber="459"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_table.py" startLineNumber="358" endLineNumber="362"/>
+        </set>
+        <set lineCount="5" fingerprint="3e3d1fd0d10666ace669a2ecfee4bb5b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/sources/test_node.py" startLineNumber="457" endLineNumber="461"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/sources/test_node.py" startLineNumber="428" endLineNumber="432"/>
+        </set>
+        <set lineCount="5" fingerprint="0b6ea286adf03ef573db01bfaf9da6bb">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py" startLineNumber="353" endLineNumber="357"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py" startLineNumber="279" endLineNumber="283"/>
+        </set>
+        <set lineCount="5" fingerprint="1b1ad3448e088a2a6bb30c68462942b5">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="1012" endLineNumber="1016"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="962" endLineNumber="966"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="913" endLineNumber="917"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="862" endLineNumber="866"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="813" endLineNumber="817"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="765" endLineNumber="769"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="716" endLineNumber="720"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="675" endLineNumber="679"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="634" endLineNumber="638"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="593" endLineNumber="597"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="552" endLineNumber="556"/>
+        </set>
+        <set lineCount="5" fingerprint="db0065b4dd7d12ac1d9304b300435747">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/properties.py" startLineNumber="315" endLineNumber="321"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/properties.py" startLineNumber="299" endLineNumber="305"/>
+        </set>
+        <set lineCount="5" fingerprint="b58bd0850387415cd75aca8bb7de503e">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/app/test_document_app.py" startLineNumber="1040" endLineNumber="1048"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/app/test_document_app.py" startLineNumber="1018" endLineNumber="1026"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/app/test_document_app.py" startLineNumber="903" endLineNumber="911"/>
+        </set>
+        <set lineCount="5" fingerprint="7489196b8dde85cffd761ceef95bfff4">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/hardware/test_location.py" startLineNumber="238" endLineNumber="243"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/hardware/test_location.py" startLineNumber="178" endLineNumber="183"/>
+        </set>
+        <set lineCount="5" fingerprint="5d2456109c50b2885c4b2824fa100f83">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_row_alignment.py" startLineNumber="201" endLineNumber="205"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_fixed.py" startLineNumber="223" endLineNumber="227"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_fixed.py" startLineNumber="166" endLineNumber="170"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_fixed.py" startLineNumber="104" endLineNumber="108"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_fixed.py" startLineNumber="44" endLineNumber="48"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_rtl.py" startLineNumber="163" endLineNumber="167"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_rtl.py" startLineNumber="137" endLineNumber="141"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_rtl.py" startLineNumber="111" endLineNumber="115"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_rtl.py" startLineNumber="85" endLineNumber="89"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_rtl.py" startLineNumber="59" endLineNumber="63"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_rtl.py" startLineNumber="26" endLineNumber="30"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_tutorial3.py" startLineNumber="37" endLineNumber="41"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_column_alignment.py" startLineNumber="201" endLineNumber="205"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="634" endLineNumber="638"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="580" endLineNumber="584"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="514" endLineNumber="518"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="433" endLineNumber="437"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="358" endLineNumber="362"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="309" endLineNumber="313"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="256" endLineNumber="260"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="191" endLineNumber="195"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="111" endLineNumber="115"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="36" endLineNumber="40"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_beeliza.py" startLineNumber="39" endLineNumber="43"/>
+        </set>
+        <set lineCount="5" fingerprint="295b04d7d7fe08a84970a6320e214edb">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_icons.py" startLineNumber="85" endLineNumber="89"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_icons.py" startLineNumber="77" endLineNumber="81"/>
+        </set>
+        <set lineCount="5" fingerprint="afdff79c068cb540ba84d7b67411c89c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="414" endLineNumber="420"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_document_window.py" startLineNumber="233" endLineNumber="239"/>
+        </set>
+                <set lineCount="5" fingerprint="b84086929464e207e0a811cae6c0453c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_dateinput.py" startLineNumber="192" endLineNumber="196"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_dateinput.py" startLineNumber="127" endLineNumber="131"/>
+        </set>
+        <set lineCount="5" fingerprint="24cfd864c8bc5e3b8ff2487d73852bc8">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_scrollcontainer.py" startLineNumber="456" endLineNumber="460"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_scrollcontainer.py" startLineNumber="444" endLineNumber="448"/>
+        </set>
+        <set lineCount="5" fingerprint="49c9638d982522b9ea414636229e5c8e">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="907" endLineNumber="911"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_dialogs.py" startLineNumber="195" endLineNumber="199"/>
+        </set>
+        <set lineCount="5" fingerprint="14d23222a27eff2c319374741e731809">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_handlers.py" startLineNumber="383" endLineNumber="389"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_handlers.py" startLineNumber="238" endLineNumber="244"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_handlers.py" startLineNumber="106" endLineNumber="112"/>
+        </set>
+        <set lineCount="5" fingerprint="0c0b47063a4bbae59a7aa6a5aa517277">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_context_objects.py" startLineNumber="276" endLineNumber="280"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_context_objects.py" startLineNumber="135" endLineNumber="139"/>
+        </set>
+        <set lineCount="5" fingerprint="5e63f051576bec66fb66fb66bb6faa62">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/app/test_document_app.py" startLineNumber="452" endLineNumber="456"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/app/test_document_app.py" startLineNumber="412" endLineNumber="416"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/app/test_document_app.py" startLineNumber="116" endLineNumber="120"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/app/test_document_app.py" startLineNumber="87" endLineNumber="91"/>
+        </set>
+        <set lineCount="5" fingerprint="0bfb49f49b8418f89a7cac098a09fc49">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_fixed.py" startLineNumber="191" endLineNumber="195"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_fixed.py" startLineNumber="132" endLineNumber="136"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_tutorial3.py" startLineNumber="9" endLineNumber="13"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_tutorial0.py" startLineNumber="33" endLineNumber="38"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="545" endLineNumber="549"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="463" endLineNumber="467"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="382" endLineNumber="386"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="333" endLineNumber="337"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_beeliza.py" startLineNumber="9" endLineNumber="13"/>
+        </set>
+        <set lineCount="5" fingerprint="aa0740131c2d757d9c82553f8eed817b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_platform.py" startLineNumber="178" endLineNumber="183"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_platform.py" startLineNumber="156" endLineNumber="161"/>
+        </set>
+        <set lineCount="5" fingerprint="fabac8ce028a90d3934411c1de201fd7">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_handlers.py" startLineNumber="217" endLineNumber="222"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_handlers.py" startLineNumber="184" endLineNumber="189"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_handlers.py" startLineNumber="90" endLineNumber="95"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_handlers.py" startLineNumber="65" endLineNumber="70"/>
+        </set>
+        <set lineCount="5" fingerprint="1e020d5a19e83d4ee43c6003a623292a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_numberinput.py" startLineNumber="55" endLineNumber="63"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_multilinetextinput.py" startLineNumber="40" endLineNumber="48"/>
+        </set>
+              <set lineCount="5" fingerprint="bc853edef434efb01034b26e26c30cc7">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_table.py" startLineNumber="425" endLineNumber="431"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_table.py" startLineNumber="338" endLineNumber="344"/>
+        </set>
+        <set lineCount="5" fingerprint="a3e020fb27e5f10e52eb4f2158710c16">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="394" endLineNumber="400"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="375" endLineNumber="381"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_document_window.py" startLineNumber="208" endLineNumber="214"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_document_window.py" startLineNumber="182" endLineNumber="188"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_document_window.py" startLineNumber="157" endLineNumber="163"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_document_window.py" startLineNumber="132" endLineNumber="138"/>
+        </set>
+        <set lineCount="5" fingerprint="0259ee75611652b4e4e7e369caf94543">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/app/test_desktop.py" startLineNumber="475" endLineNumber="482"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/app/test_desktop.py" startLineNumber="404" endLineNumber="411"/>
+        </set>
+        <set lineCount="5" fingerprint="3490b369e5879f0a47d4eecf616ff2a0">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_button.py" startLineNumber="25" endLineNumber="31"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_switch.py" startLineNumber="21" endLineNumber="27"/>
+        </set>
+        <set lineCount="5" fingerprint="cb5a455d9457e0d5a087d61fc3e476f8">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_webview.py" startLineNumber="173" endLineNumber="179"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_webview.py" startLineNumber="155" endLineNumber="161"/>
+        </set>
+        <set lineCount="5" fingerprint="17a9625ae7aef1281a430c1e048af3f6">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_textinput.py" startLineNumber="39" endLineNumber="46"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_numberinput.py" startLineNumber="34" endLineNumber="41"/>
+        </set>
+        <set lineCount="6" fingerprint="83d33a411cf66b96918fab09511bf6e9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/properties.py" startLineNumber="220" endLineNumber="225"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/properties.py" startLineNumber="235" endLineNumber="240"/>
+        </set>
+        <set lineCount="6" fingerprint="94012815cb6ae4f0139f99c3552b047f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_base.py" startLineNumber="67" endLineNumber="80"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_base.py" startLineNumber="355" endLineNumber="368"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_base.py" startLineNumber="649" endLineNumber="662"/>
+        </set>
+        <set lineCount="6" fingerprint="8e094fb9c4885053e5e50409e3f2a1ac">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_multilinetextinput.py" startLineNumber="107" endLineNumber="112"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_textinput.py" startLineNumber="175" endLineNumber="180"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_multilinetextinput.py" startLineNumber="46" endLineNumber="51"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_textinput.py" startLineNumber="81" endLineNumber="86"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_switch.py" startLineNumber="48" endLineNumber="53"/>
+        </set>
+        <set lineCount="6" fingerprint="5c9a5dfbd3cf63fd75da5cc1fbb04875">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/sources/test_node.py" startLineNumber="261" endLineNumber="268"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/sources/test_node.py" startLineNumber="343" endLineNumber="350"/>
+        </set>
+                <set lineCount="6" fingerprint="ae8a13c568b217c9107b8942d0c012b2">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_tree.py" startLineNumber="226" endLineNumber="231"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_tree.py" startLineNumber="307" endLineNumber="312"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_tree.py" startLineNumber="297" endLineNumber="302"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_tree.py" startLineNumber="447" endLineNumber="452"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_tree.py" startLineNumber="437" endLineNumber="442"/>
+        </set>
+        <set lineCount="6" fingerprint="68ec39a2e49ea5c7bde0590971ab10df">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_optioncontainer.py" startLineNumber="570" endLineNumber="575"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_optioncontainer.py" startLineNumber="632" endLineNumber="637"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_optioncontainer.py" startLineNumber="671" endLineNumber="676"/>
+        </set>
+        <set lineCount="6" fingerprint="b8217dcc72cca004e5f8ef16535cc99f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_handlers.py" startLineNumber="633" endLineNumber="639"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_handlers.py" startLineNumber="653" endLineNumber="659"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_handlers.py" startLineNumber="676" endLineNumber="682"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_handlers.py" startLineNumber="698" endLineNumber="704"/>
+        </set>
+        <set lineCount="6" fingerprint="c8d015134c8787e5a18de028e3487bbf">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py" startLineNumber="397" endLineNumber="403"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py" startLineNumber="469" endLineNumber="475"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py" startLineNumber="415" endLineNumber="421"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py" startLineNumber="270" endLineNumber="276"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py" startLineNumber="319" endLineNumber="325"/>
+        </set>
+        <set lineCount="6" fingerprint="8114523b79a85bf6f62518c2a5232fd1">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_selection.py" startLineNumber="23" endLineNumber="28"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_selection.py" startLineNumber="169" endLineNumber="174"/>
+        </set>
+        <set lineCount="6" fingerprint="45153ff9ecc9da5492d09d662e9b45cc">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_imageview.py" startLineNumber="40" endLineNumber="49"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_imageview.py" startLineNumber="89" endLineNumber="97"/>
+        </set>
+        <set lineCount="6" fingerprint="132525a61ab52dd37047a5cdd71bf6e1">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_optioncontainer.py" startLineNumber="11" endLineNumber="18"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_splitcontainer.py" startLineNumber="12" endLineNumber="19"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_detailedlist.py" startLineNumber="10" endLineNumber="17"/>
+        </set>
+        <set lineCount="6" fingerprint="33960ce05937f268471d5815fb353fea">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_multilinetextinput.py" startLineNumber="24" endLineNumber="29"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_passwordinput.py" startLineNumber="22" endLineNumber="27"/>
+        </set>
+        <set lineCount="6" fingerprint="84ed87f45a176e4cb41517b8a7ab692e">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/app/test_document_app.py" startLineNumber="35" endLineNumber="44"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/app/test_document_app.py" startLineNumber="109" endLineNumber="118"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/app/test_document_app.py" startLineNumber="162" endLineNumber="171"/>
+        </set>
+        <set lineCount="6" fingerprint="0f9271b5427054d6a5eb7494fb2050f5">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_mapview.py" startLineNumber="6" endLineNumber="13"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_webview.py" startLineNumber="7" endLineNumber="14"/>
+        </set>
+                <set lineCount="6" fingerprint="66bffe85643aff360a58ee59bd6c0a63">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_selection.py" startLineNumber="81" endLineNumber="86"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_selection.py" startLineNumber="93" endLineNumber="98"/>
+        </set>
+        <set lineCount="7" fingerprint="f60a406dfd3413186db564c52f70f7a7">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/app/test_app.py" startLineNumber="50" endLineNumber="58"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/app/test_app.py" startLineNumber="91" endLineNumber="98"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/app/test_app.py" startLineNumber="171" endLineNumber="178"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/app/test_app.py" startLineNumber="131" endLineNumber="139"/>
+        </set>
+        <set lineCount="7" fingerprint="b0d697c9d545c27086ad30811a5fe17c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py" startLineNumber="374" endLineNumber="385"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py" startLineNumber="100" endLineNumber="111"/>
+        </set>
+        <set lineCount="7" fingerprint="6b6b88aa291750091d3c1456d1b200fb">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/hardware/test_location.py" startLineNumber="206" endLineNumber="216"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/hardware/test_location.py" startLineNumber="186" endLineNumber="196"/>
+        </set>
+        <set lineCount="7" fingerprint="cfc7bb4d19400ece943a6e0620c96442">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_context_objects.py" startLineNumber="561" endLineNumber="569"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_context_objects.py" startLineNumber="488" endLineNumber="496"/>
+        </set>
+        <set lineCount="7" fingerprint="4021cb419c8063b49742426f2bfd1959">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_activityindicator.py" startLineNumber="6" endLineNumber="14"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_divider.py" startLineNumber="7" endLineNumber="15"/>
+        </set>
+        <set lineCount="7" fingerprint="4e30c7fdd2802115772d9358461659f4">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_tree.py" startLineNumber="656" endLineNumber="666"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_tree.py" startLineNumber="579" endLineNumber="589"/>
+        </set>
+        <set lineCount="7" fingerprint="bb93a7d3f882900e80554ae3b19c306b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="14" endLineNumber="20"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="336" endLineNumber="342"/>
+        </set>
+        <set lineCount="7" fingerprint="6f9030fec63584d00605f1765b41836a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py" startLineNumber="507" endLineNumber="513"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py" startLineNumber="408" endLineNumber="414"/>
+        </set>
+        <set lineCount="7" fingerprint="f404174781e92344de8756f96043eb42">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="1084" endLineNumber="1090"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="945" endLineNumber="951"/>
+        </set>
+               <set lineCount="7" fingerprint="f055539661a4d9b7f6cad64179db8968">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_filtered_widget_registry.py" startLineNumber="64" endLineNumber="70"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_filtered_widget_registry.py" startLineNumber="56" endLineNumber="62"/>
+        </set>
+        <set lineCount="7" fingerprint="11bd65bcaae1d213af93b6f7bf74b4fa">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_selection.py" startLineNumber="7" endLineNumber="15"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_scrollcontainer.py" startLineNumber="7" endLineNumber="15"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_optioncontainer.py" startLineNumber="7" endLineNumber="15"/>
+        </set>
+        <set lineCount="7" fingerprint="5f377c0947199351120971be8e26d959">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_base.py" startLineNumber="535" endLineNumber="548"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_base.py" startLineNumber="405" endLineNumber="418"/>
+        </set>
+        <set lineCount="7" fingerprint="95057459426b8ea33d060948ac805c84">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_dateinput.py" startLineNumber="111" endLineNumber="125"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_timeinput.py" startLineNumber="105" endLineNumber="119"/>
+        </set>
+        <set lineCount="7" fingerprint="939232fd45204ea0ff13fc42c3d6b0a9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_detailedlist.py" startLineNumber="48" endLineNumber="54"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_detailedlist.py" startLineNumber="58" endLineNumber="64"/>
+        </set>
+        <set lineCount="7" fingerprint="e517453d81c975a13924abdcd950434d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_context_objects.py" startLineNumber="213" endLineNumber="222"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_context_objects.py" startLineNumber="91" endLineNumber="100"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_context_objects.py" startLineNumber="32" endLineNumber="41"/>
+        </set>
+        <set lineCount="7" fingerprint="a49e5836aab83182279a967d94302e56">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_icons.py" startLineNumber="154" endLineNumber="163"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_icons.py" startLineNumber="125" endLineNumber="134"/>
+        </set>
+        <set lineCount="7" fingerprint="322d8ab9f8a793e01a57589bf51aceb3">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/app/test_dialogs.py" startLineNumber="81" endLineNumber="87"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_dialogs.py" startLineNumber="81" endLineNumber="87"/>
+        </set>
+        <set lineCount="7" fingerprint="d3dda1518afa2491ef7a881c102c05e9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_handlers.py" startLineNumber="433" endLineNumber="440"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_handlers.py" startLineNumber="399" endLineNumber="406"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_handlers.py" startLineNumber="333" endLineNumber="340"/>
+        </set>
+        <set lineCount="7" fingerprint="f01e71edc0f8adea333bb14b50e90124">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_tutorial3.py" startLineNumber="16" endLineNumber="22"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_beeliza.py" startLineNumber="21" endLineNumber="27"/>
+        </set>
+               <set lineCount="8" fingerprint="0fefd370a2ce330696772bc3b9947478">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_optioncontainer.py" startLineNumber="491" endLineNumber="506"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_optioncontainer.py" startLineNumber="530" endLineNumber="545"/>
+        </set>
+        <set lineCount="8" fingerprint="e101f3cdcf4eb4e06a66f2f7a39bb05f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py" startLineNumber="285" endLineNumber="293"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py" startLineNumber="321" endLineNumber="329"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py" startLineNumber="303" endLineNumber="311"/>
+        </set>
+        <set lineCount="8" fingerprint="913f910c8ad4c462865572c3ebfbe481">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_switch.py" startLineNumber="10" endLineNumber="17"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_button.py" startLineNumber="14" endLineNumber="21"/>
+        </set>
+        <set lineCount="8" fingerprint="4f49a9c548d68b3fbcbd35aefc9290db">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_table.py" startLineNumber="65" endLineNumber="72"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_tree.py" startLineNumber="97" endLineNumber="104"/>
+        </set>
+        <set lineCount="8" fingerprint="4d63ee48ea79108b492caf2cfce064d1">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="698" endLineNumber="705"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_dialogs.py" startLineNumber="83" endLineNumber="90"/>
+        </set>
+        <set lineCount="8" fingerprint="895e3a66772f39070e7b39d0413ffab8">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_canvas.py" startLineNumber="328" endLineNumber="336"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_canvas.py" startLineNumber="351" endLineNumber="359"/>
+        </set>
+        <set lineCount="8" fingerprint="a3a035faab8d9a65c4d20f9efc1aad80">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_table.py" startLineNumber="484" endLineNumber="493"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_tree.py" startLineNumber="839" endLineNumber="848"/>
+        </set>
+        <set lineCount="8" fingerprint="d06180935cd2cb826e07452d5978dd22">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="616" endLineNumber="623"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_dialogs.py" startLineNumber="41" endLineNumber="48"/>
+        </set>
+        <set lineCount="8" fingerprint="dab9da567472b5322fd9754a3f29c4a9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_column_alignment.py" startLineNumber="45" endLineNumber="54"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_row_alignment.py" startLineNumber="45" endLineNumber="54"/>
+        </set>
+        <set lineCount="8" fingerprint="b31bf2e38d60331b6c454dfb1778d070">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_context_objects.py" startLineNumber="745" endLineNumber="752"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_context_objects.py" startLineNumber="779" endLineNumber="786"/>
+        </set>
+               <set lineCount="9" fingerprint="117dac1b223ed30581fafc847e7237c8">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/sources/test_node.py" startLineNumber="395" endLineNumber="407"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/sources/test_node.py" startLineNumber="319" endLineNumber="331"/>
+        </set>
+        <set lineCount="9" fingerprint="a3cf1dbf13bf747d4e91e3a452c97d12">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_dialogs.py" startLineNumber="235" endLineNumber="243"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="989" endLineNumber="997"/>
+        </set>
+        <set lineCount="9" fingerprint="a7bbfec78fa9e6784bacb0b69bfab5cc">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py" startLineNumber="480" endLineNumber="488"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py" startLineNumber="462" endLineNumber="470"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py" startLineNumber="390" endLineNumber="398"/>
+        </set>
+        <set lineCount="10" fingerprint="da54533acff49cf6aec9fad8d781acee">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="923" endLineNumber="935"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="1021" endLineNumber="1033"/>
+        </set>
+        <set lineCount="10" fingerprint="8494aabf727c3ac4e2894a68c54d0690">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_multilinetextinput.py" startLineNumber="46" endLineNumber="55"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_multilinetextinput.py" startLineNumber="107" endLineNumber="116"/>
+        </set>
+        <set lineCount="10" fingerprint="83efcbf1c9b4ea4eda6270626ede9a40">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_window.py" startLineNumber="841" endLineNumber="850"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/window/test_dialogs.py" startLineNumber="156" endLineNumber="165"/>
+        </set>
+        <set lineCount="10" fingerprint="f855a912751708ec9e22ccc5749bd997">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="289" endLineNumber="298"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_flex.py" startLineNumber="614" endLineNumber="623"/>
+        </set>
+        <set lineCount="10" fingerprint="ae2c1edc349d14ba070bb13fe647eee1">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/sources/test_tree_source.py" startLineNumber="152" endLineNumber="161"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/sources/test_tree_source.py" startLineNumber="218" endLineNumber="227"/>
+        </set>
+        <set lineCount="10" fingerprint="ea226d4a935ffab5d7b6478f34039aff">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/sources/test_list_source.py" startLineNumber="72" endLineNumber="85"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/sources/test_list_source.py" startLineNumber="105" endLineNumber="118"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/sources/test_list_source.py" startLineNumber="138" endLineNumber="151"/>
+        </set>
+        <set lineCount="10" fingerprint="2f383339e0c5628058cddfe8ee969e7e">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_optioncontainer.py" startLineNumber="7" endLineNumber="20"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_scrollcontainer.py" startLineNumber="7" endLineNumber="20"/>
+        </set>
+               <set lineCount="13" fingerprint="ad974cf76ab379bf25db73de05ce235f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_passwordinput.py" startLineNumber="5" endLineNumber="17"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_textinput.py" startLineNumber="9" endLineNumber="21"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_numberinput.py" startLineNumber="9" endLineNumber="21"/>
+        </set>
+        <set lineCount="13" fingerprint="f3dc25a4eca449766dc0a1f187149c48">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/app/test_dialogs.py" startLineNumber="198" endLineNumber="218"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/window/test_dialogs.py" startLineNumber="239" endLineNumber="259"/>
+        </set>
+        <set lineCount="13" fingerprint="7f909b2ac648701c3797dc1f089e0b43">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_tree.py" startLineNumber="7" endLineNumber="25"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_table.py" startLineNumber="7" endLineNumber="25"/>
+        </set>
+        <set lineCount="13" fingerprint="703e399212f2091a157af30226872280">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_scrollcontainer.py" startLineNumber="247" endLineNumber="259"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_scrollcontainer.py" startLineNumber="220" endLineNumber="232"/>
+        </set>
+        <set lineCount="13" fingerprint="a19e6f4794ddbf71f3f19d41699bb60f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_handlers.py" startLineNumber="122" endLineNumber="144"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/test_handlers.py" startLineNumber="151" endLineNumber="173"/>
+        </set>
+        <set lineCount="13" fingerprint="2d50eb8b5a4ec849c7875f9f425d0421">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_table.py" startLineNumber="1" endLineNumber="19"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_detailedlist.py" startLineNumber="1" endLineNumber="19"/>
+        </set>
+        <set lineCount="13" fingerprint="b2714efc783a47481ea9cb4f95a27a49">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_scrollcontainer.py" startLineNumber="203" endLineNumber="217"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_scrollcontainer.py" startLineNumber="135" endLineNumber="149"/>
+        </set>
+        <set lineCount="14" fingerprint="bad23feea8f4d25adc09633a18b9fca5">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_rtl.py" startLineNumber="75" endLineNumber="89"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/style/pack/layout/test_rtl.py" startLineNumber="101" endLineNumber="115"/>
+        </set>
+        <set lineCount="14" fingerprint="e3efc481bf8fbe395492f631dc059502">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_tree.py" startLineNumber="417" endLineNumber="432"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/testbed/tests/widgets/test_tree.py" startLineNumber="407" endLineNumber="422"/>
+        </set>
+        <set lineCount="14" fingerprint="c01d9cf432a0e4cee94c7b3bd61647f0">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_base.py" startLineNumber="274" endLineNumber="293"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Toga/toga/tests/widgets/test_base.py" startLineNumber="510" endLineNumber="529"/>
+        </set>

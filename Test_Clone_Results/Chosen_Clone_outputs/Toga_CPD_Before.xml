@@ -1,0 +1,2230 @@
+Found a 50 line (211 tokens) duplication in the following files: 
+Starting at line 9 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_optioncontainer.py
+Starting at line 10 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_splitcontainer.py
+
+from .conftest import build_cleanup_test
+from .probe import get_probe
+from .properties import (  # noqa: F401
+    test_enable_noop,
+    test_flex_widget_size,
+    test_focus_noop,
+)
+
+
+@pytest.fixture
+async def content1():
+    return toga.Box(
+        children=[toga.Label("Box 1 content", style=Pack(flex=1))],
+        style=Pack(background_color=REBECCAPURPLE),
+    )
+
+
+@pytest.fixture
+async def content2():
+    return toga.Box(
+        children=[toga.Label("Box 2 content", style=Pack(flex=1))],
+        style=Pack(background_color=CORNFLOWERBLUE),
+    )
+
+
+@pytest.fixture
+async def content3():
+    return toga.Box(
+        children=[toga.Label("Box 3 content", style=Pack(flex=1))],
+        style=Pack(background_color=GOLDENROD),
+    )
+
+
+@pytest.fixture
+async def content1_probe(content1):
+    return get_probe(content1)
+
+
+@pytest.fixture
+async def content2_probe(content2):
+    return get_probe(content2)
+
+
+@pytest.fixture
+async def content3_probe(content3):
+    return get_probe(content3)
+
+
+@pytest.fixture
+async def on_select_handler():
+
+=====================================================================
+Found a 21 line (186 tokens) duplication in the following files: 
+Starting at line 292 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+Starting at line 432 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+
+    assert not probe.is_expanded(source[2][2])
+
+    # Fully collapse the tree
+    widget.collapse()
+    await probe.redraw("All nodes have been collapsed")
+    assert not probe.is_expanded(source[0])
+    assert not probe.is_expanded(source[0][2])
+    assert not probe.is_expanded(source[1])
+    assert not probe.is_expanded(source[1][2])
+    assert not probe.is_expanded(source[2])
+    assert not probe.is_expanded(source[2][2])
+
+    # Fully collapse when already fully collapsed
+    widget.collapse()
+    await probe.redraw("All nodes are still collapsed")
+    assert not probe.is_expanded(source[0])
+    assert not probe.is_expanded(source[0][2])
+    assert not probe.is_expanded(source[1])
+    assert not probe.is_expanded(source[1][2])
+    assert not probe.is_expanded(source[2])
+    assert not probe.is_expanded(source[2][2])
+
+=====================================================================
+Found a 32 line (179 tokens) duplication in the following files: 
+Starting at line 9 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_row_alignment.py
+Starting at line 55 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_row_alignment.py
+Starting at line 101 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_row_alignment.py
+
+        style=Pack(direction=ROW, alignment=TOP, width=300),
+        children=[
+            ExampleNode("space_filler", style=Pack(width=100, height=540)),
+            ExampleNode(
+                "container",
+                style=Pack(direction=COLUMN, padding_top=110, padding_bottom=120),
+                children=[
+                    ExampleNode(
+                        "widget_a",
+                        style=Pack(height=30, padding_top=32, padding_bottom=34),
+                    ),
+                    ExampleNode(
+                        "widget_b",
+                        style=Pack(height=36, padding_top=38, padding_bottom=40),
+                    ),
+                ],
+            ),
+        ],
+    )
+
+    root.style.layout(root, ExampleViewport(640, 480))
+    assert_layout(
+        root,
+        (300, 540),
+        (300, 540),
+        {
+            "origin": (0, 0),
+            "content": (300, 540),
+            "children": [
+                {"origin": (0, 0), "content": (100, 540)},
+                {
+                    "origin": (100, 110),
+
+=====================================================================
+Found a 40 line (176 tokens) duplication in the following files: 
+Starting at line 151 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_flex.py
+Starting at line 474 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_flex.py
+
+                style=Pack(direction=ROW, flex=1),
+                size=(100, 100),
+                children=[
+                    ExampleNode(  # Explicit size
+                        "child 1",
+                        style=Pack(width=20, height=20),
+                    ),
+                    ExampleNode(  # No size, Explicit intrinsic
+                        "child 2",
+                        style=Pack(),
+                        size=(20, 20),
+                    ),
+                    ExampleNode(  # No size, explicit expanding intrinsic
+                        "child 3",
+                        style=Pack(),
+                        size=(at_least(20), at_least(20)),
+                    ),
+                    ExampleNode(  # Flexible size, no intrinsic
+                        "child 4",
+                        style=Pack(flex=1),
+                    ),
+                    ExampleNode(  # Flexible size with explicit intrinsic
+                        "child 5",
+                        style=Pack(flex=1),
+                        size=(20, 20),
+                    ),
+                    ExampleNode(  # Flexible size with explicit expanding intrinsic
+                        "child 6",
+                        style=Pack(flex=1),
+                        size=(at_least(20), at_least(20)),
+                    ),
+                ],
+            ),
+        ],
+    )
+
+    root.style.layout(root, ExampleViewport(640, 480))
+    assert_layout(
+        root,
+        (200, 100),
+
+=====================================================================
+Found a 44 line (173 tokens) duplication in the following files: 
+Starting at line 126 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/app/test_dialogs.py
+Starting at line 166 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/window/test_dialogs.py
+
+    actual = await app.dialog(dialog)
+
+    # The directory where the file dialog is opened can't be 100% predicted
+    # so we need to modify the check to only inspect the filename.
+    if result is None:
+        assert actual is None
+    else:
+        assert actual.name == result.name
+
+
+@pytest.mark.parametrize(
+    "initial_directory, file_types, multiple_select, result",
+    [
+        # Successful single select
+        (TESTS_DIR, None, False, TESTS_DIR / "data.py"),
+        # Cancelled single select
+        (TESTS_DIR, None, False, None),
+        # Successful single select with no initial directory
+        (None, None, False, TESTS_DIR / "data.py"),
+        # Successful single select with file types
+        (TESTS_DIR, ["txt"], False, TESTS_DIR / "data.py"),
+        # Successful multiple selection
+        (
+            TESTS_DIR,
+            None,
+            True,
+            [TESTS_DIR / "conftest.py", TESTS_DIR / "data.py"],
+        ),
+        # Successful multiple selection of one item
+        (TESTS_DIR, None, True, [TESTS_DIR / "data.py"]),
+        # Cancelled multiple selection
+        (TESTS_DIR, None, True, None),
+        # Successful multiple selection with no initial directory
+        (None, None, True, [TESTS_DIR / "conftest.py", TESTS_DIR / "data.py"]),
+        # Successful multiple selection with file types
+        (
+            TESTS_DIR,
+            ["txt", "doc"],
+            True,
+            [TESTS_DIR / "conftest.py", TESTS_DIR / "data.py"],
+        ),
+    ],
+)
+async def test_open_file_dialog(
+
+=====================================================================
+Found a 39 line (166 tokens) duplication in the following files: 
+Starting at line 72 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_flex.py
+Starting at line 152 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_flex.py
+Starting at line 475 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_flex.py
+
+                size=(200, 100),
+                children=[
+                    ExampleNode(  # Explicit size
+                        "child 1",
+                        style=Pack(width=20, height=20),
+                    ),
+                    ExampleNode(  # No size, Explicit intrinsic
+                        "child 2",
+                        style=Pack(),
+                        size=(20, 20),
+                    ),
+                    ExampleNode(  # No size, explicit expanding intrinsic
+                        "child 3",
+                        style=Pack(),
+                        size=(at_least(20), at_least(20)),
+                    ),
+                    ExampleNode(  # Flexible size, no intrinsic
+                        "child 4",
+                        style=Pack(flex=1),
+                    ),
+                    ExampleNode(  # Flexible size with explicit intrinsic
+                        "child 5",
+                        style=Pack(flex=1),
+                        size=(20, 20),
+                    ),
+                    ExampleNode(  # Flexible size with explicit expanding intrinsic
+                        "child 6",
+                        style=Pack(flex=1),
+                        size=(at_least(20), at_least(20)),
+                    ),
+                ],
+            ),
+        ],
+    )
+
+    root.style.layout(root, ExampleViewport(640, 480))
+    assert_layout(
+        root,
+        (300, 100),
+
+=====================================================================
+Found a 39 line (166 tokens) duplication in the following files: 
+Starting at line 394 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_flex.py
+Starting at line 475 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_flex.py
+
+                size=(100, 200),
+                children=[
+                    ExampleNode(  # Explicit size
+                        "child 1",
+                        style=Pack(width=20, height=20),
+                    ),
+                    ExampleNode(  # No size, Explicit intrinsic
+                        "child 2",
+                        style=Pack(),
+                        size=(20, 20),
+                    ),
+                    ExampleNode(  # No size, explicit expanding intrinsic
+                        "child 3",
+                        style=Pack(),
+                        size=(at_least(20), at_least(20)),
+                    ),
+                    ExampleNode(  # Flexible size, no intrinsic
+                        "child 4",
+                        style=Pack(flex=1),
+                    ),
+                    ExampleNode(  # Flexible size with explicit intrinsic
+                        "child 5",
+                        style=Pack(flex=1),
+                        size=(20, 20),
+                    ),
+                    ExampleNode(  # Flexible size with explicit expanding intrinsic
+                        "child 6",
+                        style=Pack(flex=1),
+                        size=(at_least(20), at_least(20)),
+                    ),
+                ],
+            ),
+        ],
+    )
+
+    root.style.layout(root, ExampleViewport(640, 480))
+    assert_layout(
+        root,
+        (100, 300),
+
+=====================================================================
+Found a 21 line (164 tokens) duplication in the following files: 
+Starting at line 602 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+Starting at line 679 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+
+    await probe.redraw("Non-visible row has been removed")
+    assert probe.child_count((0,)) == 6
+    probe.assert_cell_content((0, 2), 0, "ANEW")
+    probe.assert_cell_content((0, 4), 0, "A4")
+    probe.assert_cell_content((0, 5), 0, "AX")
+
+    # Insert a new root
+    widget.data.insert(0, {"a": "A!", "b": "B!", "c": "C!"})
+    await probe.redraw("New root row has been appended")
+
+    assert probe.child_count() == 2
+    assert probe.child_count((0,)) == 0
+    probe.assert_cell_content((0,), 0, "A!")
+
+    # Delete a root
+    del widget.data[1]
+    await probe.redraw("Old root row has been removed")
+
+    assert probe.child_count() == 1
+    assert probe.child_count((0,)) == 0
+    probe.assert_cell_content((0,), 0, "A!")
+
+=====================================================================
+Found a 39 line (164 tokens) duplication in the following files: 
+Starting at line 72 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_flex.py
+Starting at line 152 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_flex.py
+Starting at line 394 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_flex.py
+
+                size=(200, 100),
+                children=[
+                    ExampleNode(  # Explicit size
+                        "child 1",
+                        style=Pack(width=20, height=20),
+                    ),
+                    ExampleNode(  # No size, Explicit intrinsic
+                        "child 2",
+                        style=Pack(),
+                        size=(20, 20),
+                    ),
+                    ExampleNode(  # No size, explicit expanding intrinsic
+                        "child 3",
+                        style=Pack(),
+                        size=(at_least(20), at_least(20)),
+                    ),
+                    ExampleNode(  # Flexible size, no intrinsic
+                        "child 4",
+                        style=Pack(flex=1),
+                    ),
+                    ExampleNode(  # Flexible size with explicit intrinsic
+                        "child 5",
+                        style=Pack(flex=1),
+                        size=(20, 20),
+                    ),
+                    ExampleNode(  # Flexible size with explicit expanding intrinsic
+                        "child 6",
+                        style=Pack(flex=1),
+                        size=(at_least(20), at_least(20)),
+                    ),
+                ],
+            ),
+        ],
+    )
+
+    root.style.layout(root, ExampleViewport(640, 480))
+    assert_layout(
+        root,
+        (300, 100),
+
+=====================================================================
+Found a 30 line (159 tokens) duplication in the following files: 
+Starting at line 9 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_column_alignment.py
+Starting at line 55 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_column_alignment.py
+Starting at line 101 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_column_alignment.py
+
+        style=Pack(direction=COLUMN, alignment=LEFT, height=300),
+        children=[
+            ExampleNode("space_filler", style=Pack(width=540, height=100)),
+            ExampleNode(
+                "container",
+                style=Pack(direction=ROW, padding_left=110, padding_right=120),
+                children=[
+                    ExampleNode(
+                        "widget_a",
+                        style=Pack(width=30, padding_left=32, padding_right=34),
+                    ),
+                    ExampleNode(
+                        "widget_b",
+                        style=Pack(width=36, padding_left=38, padding_right=40),
+                    ),
+                ],
+            ),
+        ],
+    )
+
+    root.style.layout(root, ExampleViewport(640, 480))
+    assert_layout(
+        root,
+        (540, 300),
+        (640, 300),
+        {
+            "origin": (0, 0),
+            "content": (640, 300),
+            "children": [
+                {"origin": (0, 0), "content": (540, 100)},
+
+=====================================================================
+
+=====================================================================
+Found a 29 line (124 tokens) duplication in the following files: 
+Starting at line 398 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_handlers.py
+Starting at line 432 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_handlers.py
+
+    cleanup = Mock()
+    handler_call = {}
+
+    async def handler(*args, **kwargs):
+        handler_call["args"] = args
+        handler_call["kwargs"] = kwargs
+        await asyncio.sleep(0.01)  # A short sleep
+        handler_call["done"] = True
+        return 42
+
+    wrapped = wrapped_handler(obj, handler, cleanup=cleanup)
+
+    # Raw handler is the original coroutine
+    assert wrapped._raw == handler
+
+    # Invoke the handler
+    assert (
+        event_loop.run_until_complete(wrapped("arg1", "arg2", kwarg1=3, kwarg2=4)) == 42
+    )
+
+    # Handler arguments are as expected.
+    assert handler_call == {
+        "args": (obj, "arg1", "arg2"),
+        "kwargs": {"kwarg1": 3, "kwarg2": 4},
+        "done": True,
+    }
+
+    # Cleanup method was invoked
+    cleanup.assert_called_once_with(obj, 42)
+
+=====================================================================
+Found a 7 line (123 tokens) duplication in the following files: 
+Starting at line 106 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/app/test_desktop.py
+Starting at line 365 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/app/test_desktop.py
+
+    window1 = toga.Window("Test Window 1", position=(150, 150), size=(200, 200))
+    window2 = toga.Window("Test Window 2", position=(400, 150), size=(200, 200))
+    window3 = toga.Window("Test Window 3", position=(300, 400), size=(200, 200))
+
+    window1.content = toga.Box(style=Pack(background_color=REBECCAPURPLE))
+    window2.content = toga.Box(style=Pack(background_color=CORNFLOWERBLUE))
+    window3.content = toga.Box(style=Pack(background_color=FIREBRICK))
+
+=====================================================================
+Found a 28 line (121 tokens) duplication in the following files: 
+Starting at line 97 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/window/test_document_window.py
+Starting at line 61 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/window/test_main_window.py
+
+    window_content.window == window
+    window_content.app == app
+
+    assert window._impl.interface == window
+    assert_action_performed(window, "create MainWindow")
+
+    # This is a secondary main window; app menus have not been created, but
+    # window menus and toolbars have been.
+    assert_action_not_performed(window, "create App menus")
+    assert_action_performed(window, "create Window menus")
+    assert_action_performed(window, "create toolbar")
+
+    assert window.id == "my-window"
+    assert window.title == "My Window"
+    assert window.position == toga.Position(10, 20)
+    assert window.size == toga.Size(200, 300)
+    assert not window.resizable
+    assert window.closable
+    assert not window.minimizable
+    assert window.on_close._raw == on_close_handler
+
+    # The window has an empty toolbar; but it's also a secondary MainWindow created
+    # *after* the app has finished initializing; check it has a change handler
+    assert len(window.toolbar) == 0
+    assert window.toolbar.on_change is not None
+
+
+def test_close_unmodified(app):
+
+=====================================================================
+Found a 22 line (120 tokens) duplication in the following files: 
+Starting at line 22 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_fixed.py
+Starting at line 143 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_fixed.py
+
+                style=Pack(direction=ROW, width=100, height=100),
+                size=(at_least(50), at_least(50)),
+                children=[
+                    ExampleNode(
+                        "child",
+                        style=Pack(width=50, height=50),
+                        size=(at_least(0), at_least(0)),
+                    ),
+                ],
+            ),
+            ExampleNode(
+                "third",
+                style=Pack(width=0, height=0),  # Explicitly 0 sized
+                size=(at_least(0), at_least(0)),
+            ),
+        ],
+    )
+
+    root.style.layout(root, ExampleViewport(640, 480))
+    assert_layout(
+        root,
+        (200, 100),
+
+=====================================================================
+Found a 28 line (119 tokens) duplication in the following files: 
+Starting at line 104 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/sources/test_list_source.py
+Starting at line 137 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/sources/test_list_source.py
+
+            ["third", 333],
+        ],
+        accessors=["val1", "val2"],
+    )
+
+    assert len(source) == 3
+
+    assert source[0].val1 == "first"
+    assert source[0].val2 == 111
+
+    assert source[1].val1 == "second"
+    assert source[1].val2 == 222
+
+    listener = Mock()
+    source.add_listener(listener)
+
+    # Set element 1
+    source[1] = ["new element", 999]
+
+    # source is the same size, but has different data
+    assert len(source) == 3
+    assert source[1].val1 == "new element"
+    assert source[1].val2 == 999
+
+    listener.insert.assert_called_once_with(index=1, item=source[1])
+
+
+def test_dict():
+
+=====================================================================
+Found a 28 line (117 tokens) duplication in the following files: 
+Starting at line 229 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/app/test_desktop.py
+Starting at line 275 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/app/test_desktop.py
+
+        and window2_widget_probe.height > initial_window2_widget_size[1]
+    )
+
+    # Make window 1 full screen via the app, window 2 no longer full screen
+    app.set_full_screen(window1)
+    await window1_probe.wait_for_window(
+        "First extra window is full screen",
+        full_screen=True,
+    )
+    assert app.is_full_screen
+
+    assert app_probe.is_full_screen(window1)
+    assert app_probe.content_size(window1)[0] > 1000
+    assert app_probe.content_size(window1)[1] > 700
+    assert (
+        window1_widget_probe.width > initial_window1_widget_size[0]
+        and window1_widget_probe.height > initial_window1_widget_size[1]
+    )
+
+    assert not app_probe.is_full_screen(window2)
+    assert app_probe.content_size(window2) == initial_content2_size
+    assert (
+        window2_widget_probe.width == initial_window2_widget_size[0]
+        and window2_widget_probe.height == initial_window2_widget_size[1]
+    )
+
+    # Exit full screen
+    app.exit_full_screen()
+
+=====================================================================
+Found a 20 line (112 tokens) duplication in the following files: 
+Starting at line 744 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_base.py
+Starting at line 803 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_base.py
+
+    child1 = ExampleLeafWidget(id="child1_id")
+    child2 = ExampleLeafWidget(id="child2_id")
+    child3 = ExampleLeafWidget(id="child3_id")
+    widget.add(child1, child2, child3)
+
+    window = toga.Window()
+    window.content = widget
+    # Clear the event log
+    EventLog.reset()
+
+    assert widget.children == [child1, child2, child3]
+    for child in widget.children:
+        assert child.parent == widget
+        assert child.app == app
+        assert child.window == window
+        assert app.widgets[child.id] == child
+        assert window.widgets[child.id] == child
+
+    # Remove 2 children
+    widget.remove(child1, child3)
+
+=====================================================================
+Found a 25 line (110 tokens) duplication in the following files: 
+Starting at line 195 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_numberinput.py
+Starting at line 264 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_numberinput.py
+
+@pytest.mark.parametrize(
+    "value, expected",
+    [
+        # float; approximate because of float conversion
+        (1.23, Decimal("1.23")),
+        (1.23e4, Decimal("12300")),
+        # Integer
+        (123, Decimal("123")),
+        # Integer (but a value that evaluates as false)
+        (0, Decimal("0")),
+        # Float and integer specified as string
+        ("1.23", Decimal("1.23")),
+        ("123", Decimal("123")),
+        ("1.23e+4", Decimal("1.23e+4")),
+        # Excessive precision is truncated to step value
+        ("1.23456", Decimal("1.23")),
+        # Decimal
+        (Decimal("1.23"), Decimal("1.23")),
+        # Empty string
+        ("", None),
+        # None
+        (None, None),
+    ],
+)
+def test_min(widget, value, expected):
+
+=====================================================================
+Found a 26 line (109 tokens) duplication in the following files: 
+Starting at line 125 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_detailedlist.py
+Starting at line 159 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_table.py
+
+    assert probe.scroll_position <= 0
+
+
+async def test_select(widget, probe, source, on_select_handler):
+    """Rows can be selected"""
+    # Initial selection is empty
+    assert widget.selection is None
+    await probe.redraw("No row is selected")
+    on_select_handler.assert_not_called()
+
+    # A single row can be selected
+    await probe.select_row(1)
+    await probe.redraw("Second row is selected")
+    assert widget.selection == source[1]
+
+    # Winforms generates two events, first removing the old selection and then adding
+    # the new one.
+    on_select_handler.assert_called_with(widget)
+    on_select_handler.reset_mock()
+
+    # Trying to multi-select only does a single select
+    await probe.select_row(2, add=True)
+    await probe.redraw("Third row is selected")
+    assert widget.selection == source[2]
+    on_select_handler.assert_called_with(widget)
+    on_select_handler.reset_mock()
+
+=====================================================================
+Found a 41 line (108 tokens) duplication in the following files: 
+Starting at line 35 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_canvas.py
+Starting at line 8 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/canvas/conftest.py
+
+@pytest.fixture
+def on_resize_handler():
+    return Mock()
+
+
+@pytest.fixture
+def on_press_handler():
+    return Mock()
+
+
+@pytest.fixture
+def on_drag_handler():
+    return Mock()
+
+
+@pytest.fixture
+def on_release_handler():
+    return Mock()
+
+
+@pytest.fixture
+def on_activate_handler():
+    return Mock()
+
+
+@pytest.fixture
+def on_alt_press_handler():
+    return Mock()
+
+
+@pytest.fixture
+def on_alt_drag_handler():
+    return Mock()
+
+
+@pytest.fixture
+def on_alt_release_handler():
+    return Mock()
+
+
+@pytest.fixture
+
+=====================================================================
+
+=====================================================================
+Found a 16 line (87 tokens) duplication in the following files: 
+Starting at line 192 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/canvas/test_context_objects.py
+Starting at line 356 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/canvas/test_context_objects.py
+
+        assert getattr(fill, attr) == value
+
+    # x and y aren't part of the fill instruction
+    x = properties.pop("x")
+    y = properties.pop("y")
+
+    # The first and last instructions can be ignored; they're the root canvas context
+    assert widget._impl.draw_instructions[1:-1] == [
+        ("push context", {}),
+        ("begin path", {}),
+    ] + ([("move to", {"x": x, "y": y})] if has_move else []) + [
+        (
+            "line to",
+            {
+                "x": 30,
+                "y": 40,
+
+=====================================================================
+Found a 10 line (87 tokens) duplication in the following files: 
+Starting at line 333 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_numberinput.py
+Starting at line 354 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_numberinput.py
+
+@pytest.mark.parametrize(
+    "min, max, provided, clipped",
+    [
+        (10, 20, 15, Decimal(15)),
+        (10, 20, 25, Decimal(20)),
+        (10, 20, 5, Decimal(10)),
+        (10, 20, None, None),
+        # Check min/max values of 0
+        (0, 20, -15, Decimal(0)),
+        (-10, 0, 25, Decimal(0)),
+
+=====================================================================
+Found a 9 line (86 tokens) duplication in the following files: 
+Starting at line 123 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+Starting at line 271 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+Starting at line 297 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+Starting at line 326 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+
+    assert len(app.documents) == 1
+    assert isinstance(app.documents[0], ExampleDocument)
+    assert app.documents[0].title == "Example Document: Untitled"
+
+    # Document window has been created and shown
+    assert len(app.windows) == 1
+    assert list(app.windows)[0] == app.documents[0].main_window
+    assert_action_performed(app.documents[0].main_window, "create MainWindow")
+    assert_action_performed(app.documents[0].main_window, "show")
+
+=====================================================================
+Found a 17 line (86 tokens) duplication in the following files: 
+Starting at line 496 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/canvas/test_context_objects.py
+Starting at line 532 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/canvas/test_context_objects.py
+Starting at line 587 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/canvas/test_context_objects.py
+
+        ("line to", {"x": 10, "y": 20}),
+        # Begin fill
+        ("push context", {}),
+        ("begin path", {}),
+        (
+            "line to",
+            {
+                "x": 25,
+                "y": 25,
+                "fill_color": rgb(0, 0, 0),
+                "fill_rule": FillRule.NONZERO,
+            },
+        ),
+        ("fill", {"color": rgb(0, 0, 0), "fill_rule": FillRule.NONZERO}),
+        ("pop context", {}),
+        # End fill
+        ("line to", {"x": 30, "y": 40}),
+
+=====================================================================
+Found a 10 line (85 tokens) duplication in the following files: 
+Starting at line 246 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+Starting at line 256 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+Starting at line 276 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+
+    await probe.redraw("Root Node 1 is still expanded")
+    assert not probe.is_expanded(source[0])
+    assert not probe.is_expanded(source[0][2])
+    assert probe.is_expanded(source[1])
+    assert probe.is_expanded(source[1][2])
+    assert not probe.is_expanded(source[2])
+    assert not probe.is_expanded(source[2][2])
+
+    # Expand a single child node
+    widget.expand(source[1][2])
+
+=====================================================================
+Found a 13 line (84 tokens) duplication in the following files: 
+Starting at line 590 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+Starting at line 667 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+
+    await probe.redraw("Partial non-visible row has been updated")
+
+    assert probe.child_count((0,)) == 7
+    probe.assert_cell_content((0, 2), 0, "ANEW")
+    probe.assert_cell_content((0, 5), 0, "A4")
+    probe.assert_cell_content((0, 6), 0, "AX")
+
+    # Missing value has the default empty string
+    probe.assert_cell_content((0, 2), 1, "BNEW")
+
+    # Delete a row
+    del widget.data[0][3]
+    await probe.redraw("Non-visible row has been removed")
+
+=====================================================================
+Found a 20 line (82 tokens) duplication in the following files: 
+Starting at line 174 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_optioncontainer.py
+Starting at line 229 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_optioncontainer.py
+
+            await probe.wait_for_tab("More option should be displayed")
+            # When the "more" menu is visible, the current tab is None.
+            assert widget.current_tab.index is None
+        except AttributeError:
+            pass
+
+        # on_select has been not been invoked
+        on_select_handler.assert_not_called()
+
+        # Select the second last tab in the GUI
+        probe.select_tab(6)
+        await probe.wait_for_tab("Tab 7 should be selected")
+
+        assert widget.current_tab.index == 6
+        assert extra_probes[3].width > probe.width * 0.8
+        assert extra_probes[3].height > probe.height * 0.8
+
+        # on_select has been invoked
+        on_select_handler.assert_called_once_with(widget)
+        on_select_handler.reset_mock()
+
+=====================================================================
+Found a 10 line (82 tokens) duplication in the following files: 
+Starting at line 236 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+Starting at line 246 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+Starting at line 256 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+Starting at line 276 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+
+    await probe.redraw("Root Node 1 has been expanded")
+    assert not probe.is_expanded(source[0])
+    assert not probe.is_expanded(source[0][2])
+    assert probe.is_expanded(source[1])
+    assert probe.is_expanded(source[1][2])
+    assert not probe.is_expanded(source[2])
+    assert not probe.is_expanded(source[2][2])
+
+    # Expand a single root node again
+    widget.expand(source[1])
+
+=====================================================================
+Found a 20 line (80 tokens) duplication in the following files: 
+Starting at line 20 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+Starting at line 11 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/window/test_document_window.py
+
+    read_error = None
+
+    def create(self):
+        self.main_window = toga.DocumentWindow(self)
+        self._mock_read = Mock()
+        self._mock_write = Mock()
+
+    def read(self):
+        if self.read_error:
+            # If the object has a "read_error" attribute, raise that exception
+            raise self.read_error
+        else:
+            # We don't actually care about the file or it's contents, but it needs to exist;
+            # so we open it to verify that behavior.
+            with self.path.open():
+                self._mock_read(self.path)
+
+    def write(self):
+        # We don't actually care about the file or it's contents.
+        self._mock_write(self.path)
+
+=====================================================================
+Found a 16 line (80 tokens) duplication in the following files: 
+Starting at line 25 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_row_alignment.py
+Starting at line 71 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_row_alignment.py
+Starting at line 117 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_row_alignment.py
+Starting at line 150 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_row_alignment.py
+
+            ),
+        ],
+    )
+
+    root.style.layout(root, ExampleViewport(640, 480))
+    assert_layout(
+        root,
+        (300, 540),
+        (300, 540),
+        {
+            "origin": (0, 0),
+            "content": (300, 540),
+            "children": [
+                {"origin": (0, 0), "content": (100, 540)},
+                {
+                    "origin": (100, 110),
+
+=====================================================================
+
+=====================================================================
+Found a 17 line (76 tokens) duplication in the following files: 
+Starting at line 43 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_passwordinput.py
+Starting at line 62 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_textinput.py
+
+    assert_action_performed(widget, "create PasswordInput")
+
+    assert widget.readonly
+    assert widget.placeholder == "A placeholder"
+    assert widget.value == "Some text"
+    assert widget._on_change._raw == on_change
+    assert widget._on_confirm._raw == on_confirm
+    assert widget._on_gain_focus._raw == on_gain_focus
+    assert widget._on_lose_focus._raw == on_lose_focus
+    assert widget.validators == [validator1, validator2]
+
+    # Validators have been invoked with the initial text
+    validator1.assert_called_once_with("Some text")
+    validator2.assert_called_once_with("Some text")
+
+    # Change handler hasn't been invoked
+    on_change.assert_not_called()
+
+=====================================================================
+Found a 6 line (75 tokens) duplication in the following files: 
+Starting at line 226 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+Starting at line 447 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+
+    assert not probe.is_expanded(source[0])
+    assert not probe.is_expanded(source[0][2])
+    assert not probe.is_expanded(source[1])
+    assert not probe.is_expanded(source[1][2])
+    assert not probe.is_expanded(source[2])
+    assert not probe.is_expanded(source[2][2])
+
+=====================================================================
+Found a 9 line (75 tokens) duplication in the following files: 
+Starting at line 388 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+Starting at line 398 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+
+    assert not probe.is_expanded(source[0][2])
+    assert probe.is_expanded(source[1])
+    assert probe.is_expanded(source[1][2])
+    assert probe.is_expanded(source[2])
+    assert probe.is_expanded(source[2][2])
+
+    # Expand a single child node
+    widget.expand(source[0][2])
+    await probe.redraw("Child Node 0:2 has been expanded")
+
+=====================================================================
+Found a 14 line (75 tokens) duplication in the following files: 
+Starting at line 442 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/canvas/test_context_objects.py
+Starting at line 520 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/canvas/test_context_objects.py
+
+    widget.context.line_to(99, 99)
+
+    # Counts are as expected
+    assert len(widget.context) == 3
+    assert len(context) == 5
+    assert len(fill) == 1
+
+    # Initial draw instructions are as expected
+    assert widget._impl.draw_instructions == [
+        ("push context", {}),
+        ("line to", {"x": 0, "y": 0}),
+        ("push context", {}),
+        ("line to", {"x": 10, "y": 20}),
+        ("line to", {"x": 20, "y": 30}),
+
+=====================================================================
+Found a 17 line (75 tokens) duplication in the following files: 
+Starting at line 491 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_optioncontainer.py
+Starting at line 530 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_optioncontainer.py
+
+    assert len(optioncontainer.content) == 3
+    assert_action_performed_with(optioncontainer, "remove option", index=1)
+
+    # There's no item with the deleted label
+    with pytest.raises(ValueError, match=r"No tab named 'Item 2'"):
+        optioncontainer.content.index("Item 2")
+
+    # The index of item 3 has been reduced; item 1 is untouched
+    assert item1.index == 0
+    assert item3.index == 1
+
+    # Widget has been refreshed
+    assert_action_performed(optioncontainer, "refresh")
+
+
+@pytest.mark.parametrize("index", [0, "Item 1", None])
+def test_delitem_current(optioncontainer, index):
+
+=====================================================================
+Found a 10 line (74 tokens) duplication in the following files: 
+Starting at line 316 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+Starting at line 396 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+
+    await probe.redraw("All nodes have been expanded")
+    assert probe.is_expanded(source[0])
+    assert probe.is_expanded(source[0][2])
+    assert probe.is_expanded(source[1])
+    assert probe.is_expanded(source[1][2])
+    assert probe.is_expanded(source[2])
+    assert probe.is_expanded(source[2][2])
+
+    # Fully expand when already fully expanded
+    widget.expand()
+
+=====================================================================
+Found a 10 line (74 tokens) duplication in the following files: 
+Starting at line 326 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+Starting at line 406 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+Starting at line 426 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+
+    await probe.redraw("All nodes are still expanded")
+    assert probe.is_expanded(source[0])
+    assert probe.is_expanded(source[0][2])
+    assert probe.is_expanded(source[1])
+    assert probe.is_expanded(source[1][2])
+    assert probe.is_expanded(source[2])
+    assert probe.is_expanded(source[2][2])
+
+    # Collapse a single root node
+    widget.collapse(source[1])
+
+=====================================================================
+Found a 12 line (74 tokens) duplication in the following files: 
+Starting at line 168 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/canvas/test_helpers.py
+Starting at line 202 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/canvas/test_helpers.py
+
+        -1.5 * pi,
+        [
+            (1.0, 0.0),
+            (1.0, -0.5522847),
+            (0.5522847, -1.0),
+            (0.0, -1.0),
+            (-0.5522847, -1.0),
+            (-1.0, -0.5522847),
+            (-1.0, 0.0),
+            (-1.0, 0.5522847),
+            (-0.5522847, 1.0),
+            (0.0, 1.0),
+
+=====================================================================
+Found a 27 line (74 tokens) duplication in the following files: 
+Starting at line 270 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_base.py
+Starting at line 507 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_base.py
+
+    assert_action_performed_with(widget, "add child", child=child3._impl)
+
+    # The widget's layout has been refreshed
+    # There will be multiple refresh calls
+    assert_action_performed_with(widget, "refresh")
+
+    # The window's content gets a refresh notification
+    assert_action_performed_with(window.content, "refresh")
+
+    # App's widget index has been updated
+    assert dict(app.widgets) == {
+        "widget_id": widget,
+        "child1_id": child1,
+        "child2_id": child2,
+        "child3_id": child3,
+    }
+
+    # Window's widget index has been updated
+    assert dict(window.widgets) == {
+        "widget_id": widget,
+        "child1_id": child1,
+        "child2_id": child2,
+        "child3_id": child3,
+    }
+
+
+def test_reparent_child(widget):
+
+=====================================================================
+Found a 16 line (73 tokens) duplication in the following files: 
+Starting at line 156 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_fixed.py
+Starting at line 505 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_flex.py
+
+                size=(at_least(0), at_least(0)),
+            ),
+        ],
+    )
+
+    # Normal size
+    root.style.layout(root, ExampleViewport(640, 480))
+    assert_layout(
+        root,
+        (100, 200),
+        (640, 480),
+        {
+            "origin": (0, 0),
+            "content": (640, 480),
+            "children": [
+                {"origin": (0, 0), "content": (100, 100)},
+
+=====================================================================
+=====================================================================
+Found a 11 line (62 tokens) duplication in the following files: 
+Starting at line 89 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_imageview.py
+Starting at line 175 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_imageview.py
+
+    assert probe.height == pytest.approx(0, abs=2)
+    assert not probe.preserve_aspect_ratio
+
+    # Restore the image; Make the parent a flex row
+    widget.image = "resources/sample.png"
+    widget.style.flex = 1
+    widget.parent.style.direction = ROW
+
+    await probe.redraw("Image is in a row box")
+    assert probe.width == pytest.approx(200, abs=2)
+    assert probe.height == pytest.approx(container_probe.height, abs=2)
+
+=====================================================================
+Found a 8 line (62 tokens) duplication in the following files: 
+Starting at line 318 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+Starting at line 378 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+Starting at line 388 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+
+    assert probe.is_expanded(source[0][2])
+    assert probe.is_expanded(source[1])
+    assert probe.is_expanded(source[1][2])
+    assert probe.is_expanded(source[2])
+    assert probe.is_expanded(source[2][2])
+
+    # Fully expand when already fully expanded
+    widget.expand()
+
+=====================================================================
+Found a 14 line (62 tokens) duplication in the following files: 
+Starting at line 854 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+Starting at line 970 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+
+    current_window = doc_app.current_window
+    first_doc = current_window.doc
+    assert first_doc.path == example_file
+
+    # Open a second new document, set to be current
+    second_doc = doc_app.documents.new(ExampleDocument)
+    doc_app.current_window = second_doc.main_window
+
+    # Prime the save dialog on the second window
+    path = tmp_path / "path/to/filename2.foobar"
+    second_doc.main_window._impl.dialog_responses["SaveFileDialog"] = [path]
+
+    # Activate the save menu
+    future = doc_app.commands[toga.Command.SAVE].action()
+
+=====================================================================
+Found a 16 line (62 tokens) duplication in the following files: 
+Starting at line 178 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_column_alignment.py
+Starting at line 41 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_rtl.py
+
+                style=Pack(direction=COLUMN, padding_left=110, padding_right=120),
+                children=[
+                    ExampleNode(
+                        "widget_a",
+                        style=Pack(
+                            width=100, height=30, padding_top=32, padding_bottom=34
+                        ),
+                    ),
+                    ExampleNode(
+                        "widget_b",
+                        style=Pack(
+                            width=100, height=36, padding_top=38, padding_bottom=40
+                        ),
+                    ),
+                ],
+            ),
+
+=====================================================================
+Found a 16 line (62 tokens) duplication in the following files: 
+Starting at line 178 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_row_alignment.py
+Starting at line 9 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_rtl.py
+
+                style=Pack(direction=ROW, padding_top=110, padding_bottom=120),
+                children=[
+                    ExampleNode(
+                        "widget_a",
+                        style=Pack(
+                            width=30, height=100, padding_left=32, padding_right=34
+                        ),
+                    ),
+                    ExampleNode(
+                        "widget_b",
+                        style=Pack(
+                            width=36, height=100, padding_left=38, padding_right=40
+                        ),
+                    ),
+                ],
+            ),
+
+=====================================================================
+Found a 16 line (62 tokens) duplication in the following files: 
+Starting at line 342 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_handlers.py
+Starting at line 408 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_handlers.py
+Starting at line 442 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_handlers.py
+
+    wrapped = wrapped_handler(obj, handler)
+
+    # Raw handler is the original coroutine
+    assert wrapped._raw == handler
+
+    # Invoke the handler
+    assert (
+        event_loop.run_until_complete(wrapped("arg1", "arg2", kwarg1=3, kwarg2=4)) == 42
+    )
+
+    # Handler arguments are as expected.
+    assert handler_call == {
+        "args": (obj, "arg1", "arg2"),
+        "kwargs": {"kwarg1": 3, "kwarg2": 4},
+        "done": True,
+    }
+
+=====================================================================
+Found a 19 line (62 tokens) duplication in the following files: 
+Starting at line 270 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_detailedlist.py
+Starting at line 272 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_table.py
+
+    assert_action_performed_with(detailedlist, "scroll to row", row=0)
+
+
+@pytest.mark.parametrize(
+    "row, effective",
+    [
+        # Positive index
+        (0, 0),
+        (2, 2),
+        # Greater index than available rows
+        (10, 3),
+        # Negative index
+        (-1, 2),
+        (-3, 0),
+        # Greater negative index than available rows
+        (-10, 0),
+    ],
+)
+def test_scroll_to_row(detailedlist, row, effective):
+
+=====================================================================
+Found a 4 line (61 tokens) duplication in the following files: 
+Starting at line 122 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_base.py
+Starting at line 129 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_base.py
+
+    await probe.redraw("Child should be added to layout")
+    probe.assert_layout(position=(0, 0), size=(100, 200))
+    other_probe.assert_layout(position=(100, 0), size=(100, 200))
+    child_probe.assert_layout(position=(0, 0), size=(50, 75))
+
+=====================================================================
+Found a 10 line (61 tokens) duplication in the following files: 
+Starting at line 356 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+Starting at line 366 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_tree.py
+
+    await probe.redraw("Child Node 0:2 has been collapsed")
+    assert probe.is_expanded(source[0])
+    assert not probe.is_expanded(source[0][2])
+    assert not probe.is_expanded(source[1])
+    # State of source[1][2] is ambiguous
+    assert probe.is_expanded(source[2])
+    assert probe.is_expanded(source[2][2])
+
+    # Collapse the same child node
+    widget.collapse(source[0][2])
+
+=====================================================================
+Found a 9 line (61 tokens) duplication in the following files: 
+Starting at line 591 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+Starting at line 625 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+
+    assert len(doc_app.documents) == 1
+    assert len(doc_app.windows) == 1
+    example_doc = doc_app.documents[0]
+    assert example_doc.path == example_file
+    orig_position = doc_app.documents[0].main_window.position
+
+    # Mark document 1 as modified; approve the save, and open other_file
+    example_doc.touch()
+    example_doc.main_window._impl.dialog_responses["QuestionDialog"] = [True]
+
+=====================================================================
+
+=====================================================================
+Found a 13 line (51 tokens) duplication in the following files: 
+Starting at line 184 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_handlers.py
+Starting at line 290 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_handlers.py
+
+    obj = Mock()
+    handler_call = {}
+
+    def handler(*args, **kwargs):
+        handler_call["args"] = args
+        handler_call["kwargs"] = kwargs
+        yield 0.01  # A short sleep
+        handler_call["slept"] = True
+        yield  # A yield without a sleep
+        handler_call["done"] = True
+        return 42
+
+    wrapped = wrapped_handler(obj, handler)
+
+=====================================================================
+Found a 7 line (51 tokens) duplication in the following files: 
+Starting at line 492 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/canvas/test_context_objects.py
+Starting at line 528 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/canvas/test_context_objects.py
+Starting at line 581 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/canvas/test_context_objects.py
+
+    assert widget._impl.draw_instructions == [
+        ("push context", {}),
+        ("line to", {"x": 0, "y": 0}),
+        ("push context", {}),
+        ("line to", {"x": 10, "y": 20}),
+        # Begin fill
+        ("push context", {}),
+
+=====================================================================
+Found a 15 line (51 tokens) duplication in the following files: 
+Starting at line 75 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_multilinetextinput.py
+Starting at line 256 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_optioncontainer.py
+
+    handler.assert_called_once_with(widget)
+
+
+@pytest.mark.parametrize(
+    "value, expected",
+    [
+        (None, False),
+        ("", False),
+        ("true", True),
+        ("false", True),  # Evaluated as a string, this value is true.
+        (0, False),
+        (1234, True),
+    ],
+)
+def test_readonly(widget, value, expected):
+
+=====================================================================
+Found a 15 line (51 tokens) duplication in the following files: 
+Starting at line 315 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_table.py
+Starting at line 338 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_table.py
+
+    table.insert_column("value", "New Column", accessor="extra")
+
+    # The column was added
+    assert_action_performed_with(
+        table,
+        "insert column",
+        index=1,
+        heading="New Column",
+        accessor="extra",
+    )
+    assert table.headings == ["Title", "New Column", "Value"]
+    assert table.accessors == ["key", "extra", "value"]
+
+
+def test_insert_column_unknown_accessor(table):
+
+=====================================================================
+Found a 15 line (51 tokens) duplication in the following files: 
+Starting at line 372 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_table.py
+Starting at line 390 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_table.py
+
+    table.insert_column(-2, "New Column", accessor="extra")
+
+    # The column was added
+    assert_action_performed_with(
+        table,
+        "insert column",
+        index=0,
+        heading="New Column",
+        accessor="extra",
+    )
+    assert table.headings == ["New Column", "Title", "Value"]
+    assert table.accessors == ["extra", "key", "value"]
+
+
+def test_insert_column_big_negative_index(table):
+
+=====================================================================
+Found a 15 line (51 tokens) duplication in the following files: 
+Starting at line 345 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_tree.py
+Starting at line 368 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_tree.py
+
+    tree.insert_column("value", "New Column", accessor="extra")
+
+    # The column was added
+    assert_action_performed_with(
+        tree,
+        "insert column",
+        index=1,
+        heading="New Column",
+        accessor="extra",
+    )
+    assert tree.headings == ["Title", "New Column", "Value"]
+    assert tree.accessors == ["key", "extra", "value"]
+
+
+def test_insert_column_unknown_accessor(tree):
+
+=====================================================================
+Found a 15 line (51 tokens) duplication in the following files: 
+Starting at line 402 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_tree.py
+Starting at line 420 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_tree.py
+
+    tree.insert_column(-2, "New Column", accessor="extra")
+
+    # The column was added
+    assert_action_performed_with(
+        tree,
+        "insert column",
+        index=0,
+        heading="New Column",
+        accessor="extra",
+    )
+    assert tree.headings == ["New Column", "Title", "Value"]
+    assert tree.accessors == ["extra", "key", "value"]
+
+
+def test_insert_column_big_negative_index(tree):
+
+=====================================================================
+Found a 12 line (50 tokens) duplication in the following files: 
+Starting at line 110 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/app/test_document_app.py
+Starting at line 139 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/app/test_document_app.py
+Starting at line 163 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/app/test_document_app.py
+
+    app.documents.open(document_path)
+
+    await app_probe.redraw("Document has been opened", delay=0.1)
+
+    assert len(app.documents) == 1
+    assert len(app.windows) == 2
+
+    # Document has been read.
+    app.documents[0]._content.read.assert_called_with(document_path)
+
+    # Save the document
+    await app.documents.save()
+
+=====================================================================
+Found a 16 line (50 tokens) duplication in the following files: 
+Starting at line 161 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+Starting at line 219 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+
+    monkeypatch.setattr(DummyApp, "HANDLES_COMMAND_LINE", True)
+
+    app = ExampleDocumentApp(
+        "Test App",
+        "org.beeware.document-app",
+        document_types=[ExampleDocument],
+    )
+
+    assert app._impl.interface == app
+    assert_action_performed(app, "create App")
+
+    assert app.documents.types == [ExampleDocument]
+
+    # A default document has been created
+    assert len(app.documents) == 1
+    assert len(app.windows) == 1
+
+=====================================================================
+Found a 11 line (50 tokens) duplication in the following files: 
+Starting at line 332 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_handlers.py
+Starting at line 432 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_handlers.py
+
+    obj = Mock()
+    handler_call = {}
+
+    async def handler(*args, **kwargs):
+        handler_call["args"] = args
+        handler_call["kwargs"] = kwargs
+        await asyncio.sleep(0.01)  # A short sleep
+        handler_call["done"] = True
+        return 42
+
+    wrapped = wrapped_handler(obj, handler)
+
+=====================================================================
+
+=====================================================================
+Found a 20 line (47 tokens) duplication in the following files: 
+Starting at line 1 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_detailedlist.py
+Starting at line 1 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_table.py
+
+from unittest.mock import Mock
+
+import pytest
+
+import toga
+from toga.sources import ListSource
+from toga_dummy.utils import (
+    assert_action_not_performed,
+    assert_action_performed,
+    assert_action_performed_with,
+)
+
+
+@pytest.fixture
+def on_select_handler():
+    return Mock()
+
+
+@pytest.fixture
+def on_refresh_handler():
+
+=====================================================================
+Found a 20 line (47 tokens) duplication in the following files: 
+Starting at line 148 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_multilinetextinput.py
+Starting at line 196 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_textinput.py
+
+    assert_action_performed(widget, "scroll to bottom")
+
+
+def test_on_change(widget):
+    """The on_change handler can be invoked."""
+    # No handler initially
+    assert widget._on_change._raw is None
+
+    # Define and set a new callback
+    handler = Mock()
+
+    widget.on_change = handler
+
+    assert widget.on_change._raw == handler
+
+    # Invoke the callback
+    widget._impl.simulate_change()
+
+    # Callback was invoked
+    handler.assert_called_once_with(widget)
+
+=====================================================================
+Found a 17 line (47 tokens) duplication in the following files: 
+Starting at line 63 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_splitcontainer.py
+Starting at line 219 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_splitcontainer.py
+Starting at line 255 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_splitcontainer.py
+
+        flex=[1, 1],
+    )
+
+    # The split container has been refreshed
+    assert_action_performed(splitcontainer, "refresh")
+
+
+@pytest.mark.parametrize(
+    "include_left, include_right",
+    [
+        (False, False),
+        (False, True),
+        (True, False),
+        (True, True),
+    ],
+)
+def test_assign_to_app(app, content1, content2, include_left, include_right):
+
+=====================================================================
+Found a 12 line (47 tokens) duplication in the following files: 
+Starting at line 370 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/window/test_window.py
+Starting at line 389 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/window/test_window.py
+
+    window.show()
+    assert window.app == app
+    assert window in app.windows
+
+    # Close the window
+    window._impl.simulate_close()
+
+    # Window has been closed, and is no longer in the app's list of windows.
+    assert window.closed
+    assert window.app == app
+    assert window not in app.windows
+    assert_action_performed(window, "close")
+
+=====================================================================
+Found a 15 line (47 tokens) duplication in the following files: 
+Starting at line 774 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/window/test_window.py
+Starting at line 971 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/window/test_window.py
+
+            Path("/path/to/initial_file.txt"),
+            on_result=on_result_handler,
+        )
+
+    assert dialog.window == window
+    assert dialog.app == app
+
+    with pytest.raises(
+        RuntimeError,
+        match=r"Can't check dialog result directly; use await or an on_result handler",
+    ):
+        # Perform a synchronous comparison; this will raise a runtime error
+        dialog == 1
+
+    assert app._impl.loop.run_until_complete(dialog) is saved_file
+
+=====================================================================
+Found a 12 line (46 tokens) duplication in the following files: 
+Starting at line 268 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/app/test_desktop.py
+Starting at line 292 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/app/test_desktop.py
+
+        and window1_widget_probe.height == initial_window1_widget_size[1]
+    )
+
+    assert not app_probe.is_full_screen(window2)
+    assert app_probe.content_size(window2) == initial_content2_size
+    assert (
+        window2_widget_probe.width == initial_window2_widget_size[0]
+        and window2_widget_probe.height == initial_window2_widget_size[1]
+    )
+
+    # Go full screen again on window 1
+    app.set_full_screen(window1)
+
+=====================================================================
+Found a 4 line (46 tokens) duplication in the following files: 
+Starting at line 115 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_base.py
+Starting at line 145 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_base.py
+
+    await probe.redraw("Child should not in layout yet")
+    probe.assert_layout(position=(0, 0), size=(100, 200))
+    other_probe.assert_layout(position=(100, 0), size=(100, 200))
+    child_probe.assert_not_contained()
+
+=====================================================================
+Found a 9 line (46 tokens) duplication in the following files: 
+Starting at line 163 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_imageview.py
+Starting at line 183 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/widgets/test_imageview.py
+
+    await probe.redraw("Image has explicit sizing")
+    assert probe.width == pytest.approx(200, abs=2)
+    assert probe.height == pytest.approx(300, abs=2)
+    assert not probe.preserve_aspect_ratio
+    # Image is the size specified.
+    probe.assert_image_size(200, 300)
+
+    # Clear the image; it's now an explicit sized empty image.
+    widget.image = None
+
+=====================================================================
+Found a 9 line (46 tokens) duplication in the following files: 
+Starting at line 50 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/command/test_command.py
+Starting at line 107 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/command/test_command.py
+
+    cmd = toga.Command(None, "Test command")
+
+    assert cmd.text == "Test command"
+    assert cmd.shortcut is None
+    assert cmd.tooltip is None
+    assert cmd.group == toga.Group.COMMANDS
+    assert cmd.section == 0
+    assert cmd.order == 0
+    assert cmd.action._raw is None
+
+=====================================================================
+Found a 8 line (46 tokens) duplication in the following files: 
+Starting at line 10 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/sources/test_list_source.py
+Starting at line 133 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/sources/test_list_source.py
+
+    return ListSource(
+        data=[
+            {"val1": "first", "val2": 111},
+            {"val1": "second", "val2": 222},
+            {"val1": "third", "val2": 333},
+        ],
+        accessors=["val1", "val2"],
+    )
+
+=====================================================================
+=====================================================================
+Found a 4 line (43 tokens) duplication in the following files: 
+Starting at line 96 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/window/test_window.py
+Starting at line 482 of /home/vestel/pmd-bin-7.0.0/Toga/toga/testbed/tests/window/test_window.py
+
+            box1 = toga.Box(
+                style=Pack(background_color=REBECCAPURPLE, width=10, height=10)
+            )
+            box2 = toga.Box(style=Pack(background_color=GOLDENROD, width=10, height=20))
+
+=====================================================================
+Found a 13 line (43 tokens) duplication in the following files: 
+Starting at line 767 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_app.py
+Starting at line 787 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_app.py
+
+        def on_running(self):
+            running["called"] = True
+
+    app = SubclassedApp(formal_name="Test App", app_id="org.example.test")
+
+    # Run a fake main loop.
+    app.loop.run_until_complete(asyncio.sleep(0.5))
+
+    # The running method was invoked
+    assert running["called"]
+
+
+def test_async_running_method(event_loop):
+
+=====================================================================
+Found a 8 line (43 tokens) duplication in the following files: 
+Starting at line 569 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+Starting at line 600 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+Starting at line 634 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+Starting at line 669 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+Starting at line 721 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+Starting at line 739 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+
+    doc_app._impl.dialog_responses["OpenFileDialog"] = [other_file]
+
+    future = doc_app.commands[toga.Command.OPEN].action()
+    doc_app.loop.run_until_complete(future)
+
+    # There is still only 1 document, and 1 window
+    assert len(doc_app.documents) == 1
+    assert len(doc_app.windows) == 1
+
+=====================================================================
+Found a 10 line (43 tokens) duplication in the following files: 
+Starting at line 835 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+Starting at line 951 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+
+    current_window = doc_app.current_window
+    first_doc = current_window.doc
+    assert first_doc.path == example_file
+
+    # Open a readonly document, set to be current
+    second_doc = doc_app.documents.open(other_file)
+    doc_app.current_window = second_doc.main_window
+
+    # Activate the save menu
+    future = doc_app.commands[toga.Command.SAVE].action()
+
+=====================================================================
+Found a 6 line (43 tokens) duplication in the following files: 
+Starting at line 31 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/command/test_commandset.py
+Starting at line 75 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/command/test_commandset.py
+Starting at line 133 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/command/test_commandset.py
+
+    app.commands.clear()
+
+    # Put some commands into the app
+    cmd_a = toga.Command(None, text="App command a")
+    cmd_b = toga.Command(None, text="App command b", order=10)
+    app.commands.add(cmd_a, cmd_b)
+
+=====================================================================
+Found a 12 line (43 tokens) duplication in the following files: 
+Starting at line 273 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/command/test_commandset.py
+Starting at line 319 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/command/test_commandset.py
+
+    cs.discard(cmd_a)
+
+    # The discarded command is no longer in the command set.
+    assert "custom-command-a" not in cs
+    assert cmd_a not in cs
+    # Change handler was invoked
+    if change_handler:
+        change_handler.assert_called_once_with()
+
+
+@pytest.mark.parametrize("change_handler", [(None), (Mock())])
+def test_discard_missing(change_handler):
+
+=====================================================================
+Found a 8 line (43 tokens) duplication in the following files: 
+Starting at line 91 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/sources/test_list_source.py
+Starting at line 124 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/sources/test_list_source.py
+Starting at line 157 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/sources/test_list_source.py
+
+    assert len(source) == 3
+    assert source[1].val1 == "new element"
+    assert source[1].val2 == 999
+
+    listener.insert.assert_called_once_with(index=1, item=source[1])
+
+
+def test_list():
+
+=====================================================================
+Found a 9 line (43 tokens) duplication in the following files: 
+Starting at line 20 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_beeliza.py
+Starting at line 15 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/style/pack/layout/test_tutorial3.py
+
+                style=Pack(direction=ROW),
+                children=[
+                    ExampleNode(
+                        "input",
+                        style=Pack(flex=1, padding=5),
+                        size=(at_least(100), 15),
+                    ),
+                    ExampleNode(
+                        "button", style=Pack(padding=5), size=(at_least(40), 10)
+
+=====================================================================
+Found a 10 line (43 tokens) duplication in the following files: 
+Starting at line 584 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_handlers.py
+Starting at line 607 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_handlers.py
+
+    def handler(*args, **kwargs):
+        handler_call["args"] = args
+        handler_call["kwargs"] = kwargs
+        return 42
+
+    wrapped = simple_handler(handler, "arg1", "arg2", kwarg1=3, kwarg2=4)
+
+    # Invoke the handler as if it were a method handler (i.e., with the extra "widget"
+    # argument)
+    assert wrapped("obj") == 42
+
+=====================================================================
+Found a 9 line (43 tokens) duplication in the following files: 
+Starting at line 204 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_icons.py
+Starting at line 228 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_icons.py
+
+    monkeypatch.setattr(sys, "executable", "/path/to/App")
+
+    # Load the app default icon
+    icon = toga.Icon(_APP_ICON)
+
+    assert isinstance(icon, toga.Icon)
+    # App icon path reports as `resources/<app_name>`; impl is the app icon
+    assert icon.path == Path("resources/icons")
+    assert icon._impl.path == "<APP ICON>"
+
+=====================================================================
+ound a 9 line (36 tokens) duplication in the following files: 
+Starting at line 864 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+Starting at line 890 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+
+    second_doc.main_window._impl.dialog_responses["SaveFileDialog"] = [path]
+
+    # Activate the save menu
+    future = doc_app.commands[toga.Command.SAVE].action()
+    doc_app.loop.run_until_complete(future)
+
+    # The second document is the one we saved
+    first_doc._mock_write.assert_not_called()
+    second_doc._mock_write.assert_called_once_with(path)
+
+=====================================================================
+Found a 9 line (36 tokens) duplication in the following files: 
+Starting at line 903 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+Starting at line 1018 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+Starting at line 1040 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+
+    current_window = doc_app.current_window
+    first_doc = current_window.doc
+    assert first_doc.path == example_file
+
+    # Open a second new document
+    second_doc = doc_app.documents.new(ExampleDocument)
+
+    # Open a non-document window, and make it current
+    third_window = toga.Window(title="Not a document")
+
+=====================================================================
+Found a 9 line (36 tokens) duplication in the following files: 
+Starting at line 980 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+Starting at line 1005 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/app/test_document_app.py
+
+    second_doc.main_window._impl.dialog_responses["SaveFileDialog"] = [path]
+
+    # Activate the Save As menu
+    future = doc_app.commands[toga.Command.SAVE_AS].action()
+    doc_app.loop.run_until_complete(future)
+
+    # The second document is the one we saved
+    first_doc._mock_write.assert_not_called()
+    second_doc._mock_write.assert_called_once_with(path)
+
+=====================================================================
+Found a 10 line (36 tokens) duplication in the following files: 
+Starting at line 24 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/statusicons/test_menustatusicon.py
+Starting at line 20 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/statusicons/test_simplestatusicon.py
+
+    assert repr(status_icon).startswith("<MenuStatusIcon 'Test App': menustatusitem-")
+
+    # Status icon wasn't created as a result of being instantiated
+    assert_action_not_performed(status_icon, "create")
+    # ... but an icon was set.
+    assert_action_performed(status_icon, "set icon")
+
+
+@pytest.mark.parametrize("construct_icon", [True, False])
+def test_create_with_params(app, construct_icon):
+
+=====================================================================
+Found a 9 line (36 tokens) duplication in the following files: 
+Starting at line 65 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_handlers.py
+Starting at line 150 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_handlers.py
+
+    obj = Mock()
+    handler_call = {}
+
+    def handler(*args, **kwargs):
+        handler_call["args"] = args
+        handler_call["kwargs"] = kwargs
+        return 42
+
+    wrapped = wrapped_handler(obj, handler)
+
+=====================================================================
+Found a 7 line (36 tokens) duplication in the following files: 
+Starting at line 120 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_handlers.py
+Starting at line 252 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_handlers.py
+
+    obj = Mock()
+    cleanup = Mock()
+    handler_call = {}
+
+    def handler(*args, **kwargs):
+        handler_call["args"] = args
+        handler_call["kwargs"] = kwargs
+
+=====================================================================
+Found a 10 line (36 tokens) duplication in the following files: 
+Starting at line 327 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/canvas/test_canvas.py
+Starting at line 350 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/canvas/test_canvas.py
+
+        ("close path", {}),
+        ("pop context", {}),
+        # Fill
+        ("push context", {}),
+        ("begin path", {}),
+        (
+            "line to",
+            {
+                "x": 20,
+                "y": 30,
+
+=====================================================================
+Found a 8 line (36 tokens) duplication in the following files: 
+Starting at line 397 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py
+Starting at line 415 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py
+Starting at line 433 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py
+Starting at line 469 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/canvas/test_draw_operations.py
+
+                "startangle": 0.0,
+                "endangle": pytest.approx(6.283185),
+                "anticlockwise": False,
+            },
+        ),
+        # Rotation
+        (
+            {"x": 10, "y": 20, "radiusx": 30, "radiusy": 40, "rotation": 1.234},
+
+=====================================================================
+Found a 11 line (36 tokens) duplication in the following files: 
+Starting at line 228 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_base.py
+Starting at line 405 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_base.py
+Starting at line 460 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_base.py
+Starting at line 535 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_base.py
+
+    window = toga.Window()
+    window.content = widget
+    # Clear the event log
+    EventLog.reset()
+
+    # Widget has an app and window
+    assert widget.app == app
+    assert widget.window == window
+
+    # Child list is empty
+    assert widget.children == []
+
+=====================================================================
+Found a 7 line (36 tokens) duplication in the following files: 
+Starting at line 1119 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_base.py
+Starting at line 1144 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_base.py
+
+    window = toga.Window()
+    assert len(window.widgets) == 0
+    assert widget.window is None
+
+    # Assign the widget to a window
+    widget.window = window
+    assert len(window.widgets) == 1
+
+=====================================================================
+Found a 17 line (36 tokens) duplication in the following files: 
+Starting at line 110 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_dateinput.py
+Starting at line 104 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_timeinput.py
+
+    widget.max = date(2020, 1, 1)
+    on_change_handler.reset_mock()
+
+    # Set the new value
+    widget.value = value
+
+    # Value has been clipped
+    assert widget.value == clipped
+
+    # on_change handler called once.
+    on_change_handler.assert_called_once_with(widget)
+
+
+@pytest.mark.parametrize(
+    "value, expected",
+    [
+        (None, date(1800, 1, 1)),
+
+=====================================================================
+=====================================================================
+Found a 10 line (35 tokens) duplication in the following files: 
+Starting at line 568 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_handlers.py
+Starting at line 704 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_handlers.py
+
+    result = ExampleAsyncResult()
+
+    # Cancel the future
+    result.future.cancel()
+
+    result.set_exception(ValueError("Bad stuff"))
+
+    # Evaluate the future. This will raise an error
+    with pytest.raises(asyncio.CancelledError):
+        event_loop.run_until_complete(result.future)
+
+=====================================================================
+Found a 11 line (35 tokens) duplication in the following files: 
+Starting at line 593 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_handlers.py
+Starting at line 616 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_handlers.py
+
+    assert wrapped("obj") == 42
+    assert wrapped._raw == handler
+
+    # The "widget" bound argument has been dropped
+    assert handler_call == {
+        "args": ("arg1", "arg2"),
+        "kwargs": {"kwarg1": 3, "kwarg2": 4},
+    }
+
+
+def test_simple_handler_coroutine(event_loop):
+
+=====================================================================
+Found a 12 line (35 tokens) duplication in the following files: 
+Starting at line 153 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_validators.py
+Starting at line 245 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/test_validators.py
+
+            "Input should start with 'hello'",
+        ),
+        # Custom error message
+        (
+            "bad string",
+            dict(substring="hello", error_message="Badness"),
+            "Badness",
+        ),
+        # Don't allow empty strings
+        (
+            "",
+            dict(substring="hello", allow_empty=False),
+
+=====================================================================
+Found a 11 line (35 tokens) duplication in the following files: 
+Starting at line 329 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_base.py
+Starting at line 623 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_base.py
+
+    child = ExampleLeafWidget(id="child_id")
+    widget.add(child)
+
+    assert widget.children == [child]
+    assert child.parent == widget
+
+    # Reset the event log so all previous add events are lost
+    EventLog.reset()
+
+    # Add the child to the widget again
+    widget.add(child)
+
+=====================================================================
+Found a 9 line (35 tokens) duplication in the following files: 
+Starting at line 132 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_mapview.py
+Starting at line 171 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_mapview.py
+Starting at line 214 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_mapview.py
+
+    assert_action_performed_with(widget, "update pin", pin=pin)
+
+    # Remove the pin from the map
+    EventLog.reset()
+    widget.pins.remove(pin)
+    assert_action_performed_with(widget, "remove pin", pin=pin)
+
+    # Updating the location doesn't modify the map
+    pin.location = toga.LatLng(12.34, 56.78)
+
+=====================================================================
+Found a 15 line (35 tokens) duplication in the following files: 
+Starting at line 7 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_optioncontainer.py
+Starting at line 7 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/widgets/test_scrollcontainer.py
+
+from toga_dummy.utils import (
+    EventLog,
+    assert_action_not_performed,
+    assert_action_performed,
+    assert_action_performed_with,
+)
+
+
+@pytest.fixture
+def window():
+    return toga.Window()
+
+
+@pytest.fixture
+def content1():
+
+=====================================================================
+Found a 10 line (35 tokens) duplication in the following files: 
+Starting at line 122 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/window/test_dialogs.py
+Starting at line 150 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/window/test_dialogs.py
+
+    dialog = toga.SaveFileDialog("Title", Path("/path/to/initial_file.txt"))
+
+    assert app._impl.loop.run_until_complete(window.dialog(dialog)) is saved_file
+
+    assert_action_performed_with(
+        dialog,
+        "create SaveFileDialog",
+        title="Title",
+        filename="initial_file.txt",
+        initial_directory=Path("/path/to"),
+
+=====================================================================
+Found a 13 line (35 tokens) duplication in the following files: 
+Starting at line 154 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/window/test_document_window.py
+Starting at line 179 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/window/test_document_window.py
+Starting at line 205 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/window/test_document_window.py
+
+    window._impl.dialog_responses["QuestionDialog"] = [True]
+
+    # Trigger a window close
+    window._impl.simulate_close()
+
+    # Window has been closed, and is no longer in the app's list of windows.
+    assert window.closed
+    assert window.app == app
+    assert window not in app.windows
+    assert_action_performed(window, "close")
+
+    # A save attempt was made.
+    doc._mock_write.assert_called_once_with(mock_path)
+
+=====================================================================
+Found a 6 line (35 tokens) duplication in the following files: 
+Starting at line 186 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/window/test_filtered_widget_registry.py
+Starting at line 215 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/window/test_filtered_widget_registry.py
+
+        win_1.content.add(second)
+
+    assert "magic" in app.widgets
+    assert "magic" in win_1.widgets
+    assert "magic" not in win_2.widgets
+    assert app.widgets["magic"] == first
+
+=====================================================================
+Found a 6 line (35 tokens) duplication in the following files: 
+Starting at line 186 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/window/test_filtered_widget_registry.py
+Starting at line 198 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/window/test_filtered_widget_registry.py
+
+        win_1.content.add(second)
+
+    assert "magic" in app.widgets
+    assert "magic" in win_1.widgets
+    assert "magic" not in win_2.widgets
+    assert app.widgets["magic"] == first
+
+=====================================================================
+Found a 6 line (35 tokens) duplication in the following files: 
+Starting at line 47 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/window/test_main_window.py
+Starting at line 42 of /home/vestel/pmd-bin-7.0.0/Toga/toga/tests/window/test_window.py
+
+    window = toga.MainWindow(
+        id="my-window",
+        title="My Window",
+        position=toga.Position(10, 20),
+        size=toga.Position(200, 300),
+        resizable=False,
+

@@ -1,0 +1,2140 @@
+=====================================================================
+Found a 81 line (311 tokens) duplication in the following files: 
+Starting at line 402 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/recorder/db_schema_22.py
+Starting at line 392 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/recorder/db_schema_23.py
+Starting at line 516 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/recorder/db_schema_23_with_newer_columns.py
+Starting at line 452 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/recorder/db_schema_25.py
+
+    def to_native(self, validate_entity_id=True):
+        """Return self, native format is this model."""
+        return self
+
+
+class SchemaChanges(Base):  # type: ignore[valid-type,misc]
+    """Representation of schema version changes."""
+
+    __tablename__ = TABLE_SCHEMA_CHANGES
+    change_id = Column(Integer, Identity(), primary_key=True)
+    schema_version = Column(Integer)
+    changed = Column(DateTime(timezone=True), default=dt_util.utcnow)
+
+    def __repr__(self) -> str:
+        """Return string representation of instance for debugging."""
+        return (
+            f"<recorder.SchemaChanges("
+            f"id={self.change_id}, schema_version={self.schema_version}, "
+            f"changed='{self.changed.isoformat(sep=' ', timespec='seconds')}'"
+            f")>"
+        )
+
+
+class StatisticsRuns(Base):  # type: ignore[valid-type,misc]
+    """Representation of statistics run."""
+
+    __tablename__ = TABLE_STATISTICS_RUNS
+    run_id = Column(Integer, Identity(), primary_key=True)
+    start = Column(DateTime(timezone=True))
+
+    def __repr__(self) -> str:
+        """Return string representation of instance for debugging."""
+        return (
+            f"<recorder.StatisticsRuns("
+            f"id={self.run_id}, start='{self.start.isoformat(sep=' ', timespec='seconds')}', "
+            f")>"
+        )
+
+
+@overload
+def process_timestamp(ts: None) -> None: ...
+
+
+@overload
+def process_timestamp(ts: datetime) -> datetime: ...
+
+
+def process_timestamp(ts: datetime | None) -> datetime | None:
+    """Process a timestamp into datetime object."""
+    if ts is None:
+        return None
+    if ts.tzinfo is None:
+        return ts.replace(tzinfo=dt_util.UTC)
+
+    return dt_util.as_utc(ts)
+
+
+@overload
+def process_timestamp_to_utc_isoformat(ts: None) -> None: ...
+
+
+@overload
+def process_timestamp_to_utc_isoformat(ts: datetime) -> str: ...
+
+
+def process_timestamp_to_utc_isoformat(ts: datetime | None) -> str | None:
+    """Process a timestamp into UTC isotime."""
+    if ts is None:
+        return None
+    if ts.tzinfo == dt_util.UTC:
+        return ts.isoformat()
+    if ts.tzinfo is None:
+        return f"{ts.isoformat()}{DB_TIMEZONE}"
+    return ts.astimezone(dt_util.UTC).isoformat()
+
+
+class LazyState(State):
+    """A lazy version of core State."""
+
+    __slots__ = [
+        "_row",
+
+=====================================================================
+Found a 69 line (311 tokens) duplication in the following files: 
+Starting at line 262 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/remote/test_device_trigger.py
+Starting at line 263 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/switch/test_device_trigger.py
+
+    )
+    assert len(service_calls) == 0
+
+    hass.states.async_set(entry.entity_id, STATE_OFF)
+    await hass.async_block_till_done()
+    assert len(service_calls) == 2
+    assert {service_calls[0].data["some"], service_calls[1].data["some"]} == {
+        f"turn_off device - {entry.entity_id} - on - off - None",
+        f"turn_on_or_off device - {entry.entity_id} - on - off - None",
+    }
+
+    hass.states.async_set(entry.entity_id, STATE_ON)
+    await hass.async_block_till_done()
+    assert len(service_calls) == 4
+    assert {service_calls[2].data["some"], service_calls[3].data["some"]} == {
+        f"turn_on device - {entry.entity_id} - off - on - None",
+        f"turn_on_or_off device - {entry.entity_id} - off - on - None",
+    }
+
+
+@pytest.mark.usefixtures("enable_custom_integrations")
+async def test_if_fires_on_state_change_legacy(
+    hass: HomeAssistant,
+    device_registry: dr.DeviceRegistry,
+    entity_registry: er.EntityRegistry,
+    service_calls: list[ServiceCall],
+) -> None:
+    """Test for turn_on and turn_off triggers firing."""
+    config_entry = MockConfigEntry(domain="test", data={})
+    config_entry.add_to_hass(hass)
+    device_entry = device_registry.async_get_or_create(
+        config_entry_id=config_entry.entry_id,
+        connections={(dr.CONNECTION_NETWORK_MAC, "12:34:56:AB:CD:EF")},
+    )
+    entry = entity_registry.async_get_or_create(
+        DOMAIN, "test", "5678", device_id=device_entry.id
+    )
+
+    hass.states.async_set(entry.entity_id, STATE_ON)
+
+    assert await async_setup_component(
+        hass,
+        automation.DOMAIN,
+        {
+            automation.DOMAIN: [
+                {
+                    "trigger": {
+                        "platform": "device",
+                        "domain": DOMAIN,
+                        "device_id": device_entry.id,
+                        "entity_id": entry.entity_id,
+                        "type": "turned_off",
+                    },
+                    "action": {
+                        "service": "test.automation",
+                        "data_template": {
+                            "some": (
+                                "turn_off {{ trigger.platform }}"
+                                " - {{ trigger.entity_id }}"
+                                " - {{ trigger.from_state.state }}"
+                                " - {{ trigger.to_state.state }}"
+                                " - {{ trigger.for }}"
+                            )
+                        },
+                    },
+                },
+            ]
+        },
+    )
+
+=====================================================================
+Found a 45 line (311 tokens) duplication in the following files: 
+Starting at line 67 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/smartthings/test_config_flow.py
+Starting at line 210 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/smartthings/test_config_flow.py
+Starting at line 390 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/smartthings/test_config_flow.py
+
+    result = await hass.config_entries.flow.async_configure(result["flow_id"], {})
+    assert result["type"] is FlowResultType.FORM
+    assert result["step_id"] == "pat"
+    assert "token_url" in result["description_placeholders"]
+    assert "component_url" in result["description_placeholders"]
+
+    # Enter token and advance to location screen
+    result = await hass.config_entries.flow.async_configure(
+        result["flow_id"], {CONF_ACCESS_TOKEN: token}
+    )
+    assert result["type"] is FlowResultType.FORM
+    assert result["step_id"] == "select_location"
+
+    # Select location and advance to external auth
+    result = await hass.config_entries.flow.async_configure(
+        result["flow_id"], {CONF_LOCATION_ID: location.location_id}
+    )
+    assert result["type"] is FlowResultType.EXTERNAL_STEP
+    assert result["step_id"] == "authorize"
+    assert result["url"] == format_install_url(app.app_id, location.location_id)
+
+    # Complete external auth and advance to install
+    await smartapp.smartapp_install(hass, request, None, app)
+
+    # Finish
+    result = await hass.config_entries.flow.async_configure(result["flow_id"])
+    assert result["type"] is FlowResultType.CREATE_ENTRY
+    assert result["data"]["app_id"] == app.app_id
+    assert result["data"]["installed_app_id"] == installed_app_id
+    assert result["data"]["location_id"] == location.location_id
+    assert result["data"]["access_token"] == token
+    assert result["data"]["refresh_token"] == request.refresh_token
+    assert result["data"][CONF_CLIENT_SECRET] == app_oauth_client.client_secret
+    assert result["data"][CONF_CLIENT_ID] == app_oauth_client.client_id
+    assert result["title"] == location.name
+    entry = next(
+        (entry for entry in hass.config_entries.async_entries(DOMAIN)),
+        None,
+    )
+    assert entry.unique_id == smartapp.format_unique_id(
+        app.app_id, location.location_id
+    )
+
+
+async def test_entry_created_from_update_event(
+
+=====================================================================
+Found a 66 line (311 tokens) duplication in the following files: 
+Starting at line 297 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/helpers/test_selector.py
+Starting at line 1195 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/helpers/test_selector.py
+
+        selector.validate_selector({"entity": schema})
+
+
+@pytest.mark.parametrize(
+    ("schema", "valid_selections", "invalid_selections"),
+    [
+        ({}, ("abc123",), (None,)),
+        ({"entity": {}}, ("abc123",), (None,)),
+        ({"entity": {"domain": "light"}}, ("abc123",), (None,)),
+        (
+            {"entity": {"domain": "binary_sensor", "device_class": "motion"}},
+            ("abc123",),
+            (None,),
+        ),
+        (
+            {
+                "entity": {
+                    "domain": "binary_sensor",
+                    "device_class": "motion",
+                    "integration": "demo",
+                }
+            },
+            ("abc123",),
+            (None,),
+        ),
+        (
+            {
+                "entity": [
+                    {"domain": "light"},
+                    {"domain": "binary_sensor", "device_class": "motion"},
+                ]
+            },
+            ("abc123",),
+            (None,),
+        ),
+        (
+            {"device": {"integration": "demo", "model": "mock-model"}},
+            ("abc123",),
+            (None,),
+        ),
+        (
+            {
+                "device": [
+                    {"integration": "demo", "model": "mock-model"},
+                    {"integration": "other-demo", "model": "other-mock-model"},
+                ]
+            },
+            ("abc123",),
+            (None,),
+        ),
+        (
+            {
+                "entity": {"domain": "binary_sensor", "device_class": "motion"},
+                "device": {"integration": "demo", "model": "mock-model"},
+            },
+            ("abc123",),
+            (None,),
+        ),
+        (
+            {"multiple": True},
+            ((["abc123", "def456"],)),
+            (None, "abc123", ["abc123", None]),
+        ),
+    ],
+)
+def test_area_selector_schema(schema, valid_selections, invalid_selections) -> None:
+
+=====================================================================
+=====================================================================
+Found a 32 line (150 tokens) duplication in the following files: 
+Starting at line 4923 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/sensor/test_recorder.py
+Starting at line 4987 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/sensor/test_recorder.py
+
+    now = get_start_time(dt_util.utcnow())
+
+    await async_setup_component(hass, "sensor", {})
+    await async_recorder_block_till_done(hass)
+    client = await hass_ws_client()
+
+    # No statistics, no state - empty response
+    await assert_validation_result(hass, client, {}, {})
+
+    # No statistics, original unit - empty response
+    hass.states.async_set(
+        "sensor.test",
+        10,
+        attributes={**attributes, "unit_of_measurement": unit1},
+        timestamp=now.timestamp(),
+    )
+    await assert_validation_result(hass, client, {}, {})
+
+    # Run statistics
+    await async_recorder_block_till_done(hass)
+    do_adhoc_statistics(hass, start=now)
+    await async_recorder_block_till_done(hass)
+    await assert_statistic_ids(
+        hass, [{"statistic_id": "sensor.test", "unit_of_measurement": unit1}]
+    )
+
+    # Units changed to an equivalent unit - empty response
+    hass.states.async_set(
+        "sensor.test",
+        12,
+        attributes={**attributes, "unit_of_measurement": unit2},
+        timestamp=now.timestamp() + 1,
+
+=====================================================================
+Found a 23 line (150 tokens) duplication in the following files: 
+Starting at line 522 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/shopping_list/test_init.py
+Starting at line 607 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/shopping_list/test_init.py
+
+async def test_ws_reorder_items(
+    hass: HomeAssistant, hass_ws_client: WebSocketGenerator, sl_setup
+) -> None:
+    """Test reordering shopping_list items websocket command."""
+    await intent.async_handle(
+        hass, "test", "HassShoppingListAddItem", {"item": {"value": "beer"}}
+    )
+    await intent.async_handle(
+        hass, "test", "HassShoppingListAddItem", {"item": {"value": "wine"}}
+    )
+    await intent.async_handle(
+        hass, "test", "HassShoppingListAddItem", {"item": {"value": "apple"}}
+    )
+
+    beer_id = hass.data["shopping_list"].items[0]["id"]
+    wine_id = hass.data["shopping_list"].items[1]["id"]
+    apple_id = hass.data["shopping_list"].items[2]["id"]
+
+    client = await hass_ws_client(hass)
+    events = async_capture_events(hass, EVENT_SHOPPING_LIST_UPDATED)
+    await client.send_json(
+        {
+            "id": 6,
+
+=====================================================================
+Found a 30 line (150 tokens) duplication in the following files: 
+Starting at line 45 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tesla_fleet/__init__.py
+Starting at line 35 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/teslemetry/__init__.py
+
+def assert_entities(
+    hass: HomeAssistant,
+    entry_id: str,
+    entity_registry: er.EntityRegistry,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test that all entities match their snapshot."""
+
+    entity_entries = er.async_entries_for_config_entry(entity_registry, entry_id)
+
+    assert entity_entries
+    for entity_entry in entity_entries:
+        assert entity_entry == snapshot(name=f"{entity_entry.entity_id}-entry")
+        assert (state := hass.states.get(entity_entry.entity_id))
+        assert state == snapshot(name=f"{entity_entry.entity_id}-state")
+
+
+def assert_entities_alt(
+    hass: HomeAssistant,
+    entry_id: str,
+    entity_registry: er.EntityRegistry,
+    snapshot: SnapshotAssertion,
+) -> None:
+    """Test that all entities match their alt snapshot."""
+    entity_entries = er.async_entries_for_config_entry(entity_registry, entry_id)
+
+    assert entity_entries
+    for entity_entry in entity_entries:
+        assert (state := hass.states.get(entity_entry.entity_id))
+        assert state == snapshot(name=f"{entity_entry.entity_id}-statealt")
+
+=====================================================================
+Found a 22 line (150 tokens) duplication in the following files: 
+Starting at line 256 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/usb/test_init.py
+Starting at line 420 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/usb/test_init.py
+
+            description=slae_sh_device.description,
+        )
+    ]
+
+    with (
+        patch("pyudev.Context", side_effect=ImportError),
+        patch("homeassistant.components.usb.async_get_usb", return_value=new_usb),
+        patch("homeassistant.components.usb.comports", return_value=mock_comports),
+        patch.object(hass.config_entries.flow, "async_init") as mock_config_flow,
+    ):
+        assert await async_setup_component(hass, "usb", {"usb": {}})
+        await hass.async_block_till_done()
+        hass.bus.async_fire(EVENT_HOMEASSISTANT_STARTED)
+        await hass.async_block_till_done()
+        ws_client = await hass_ws_client(hass)
+        await ws_client.send_json({"id": 1, "type": "usb/scan"})
+        response = await ws_client.receive_json()
+        assert response["success"]
+        await hass.async_block_till_done()
+
+    assert len(mock_config_flow.mock_calls) == 1
+    assert mock_config_flow.mock_calls[0][1][0] == "more"
+
+=====================================================================
+Found a 26 line (150 tokens) duplication in the following files: 
+Starting at line 435 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/vulcan/test_config_flow.py
+Starting at line 489 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/vulcan/test_config_flow.py
+Starting at line 547 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/vulcan/test_config_flow.py
+Starting at line 595 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/vulcan/test_config_flow.py
+Starting at line 643 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/vulcan/test_config_flow.py
+
+    MockConfigEntry(
+        entry_id="456",
+        domain=const.DOMAIN,
+        unique_id="234567",
+        data=json.loads(load_fixture("fake_config_entry_data.json", "vulcan"))
+        | {"student_id": "456"},
+    ).add_to_hass(hass)
+    MockConfigEntry(
+        entry_id="123",
+        domain=const.DOMAIN,
+        unique_id="123456",
+        data=json.loads(load_fixture("fake_config_entry_data.json", "vulcan")),
+    ).add_to_hass(hass)
+
+    result = await hass.config_entries.flow.async_init(
+        const.DOMAIN, context={"source": config_entries.SOURCE_USER}
+    )
+
+    assert result["type"] is FlowResultType.FORM
+    assert result["step_id"] == "add_next_config_entry"
+    assert result["errors"] == {}
+
+    result = await hass.config_entries.flow.async_configure(
+        result["flow_id"],
+        {"use_saved_credentials": True},
+    )
+
+=====================================================================
+Found a 33 line (149 tokens) duplication in the following files: 
+Starting at line 467 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_config_flow.py
+Starting at line 507 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_config_flow.py
+
+    entry = MockConfigEntry(
+        domain=DOMAIN,
+        unique_id="54:48:E6:8F:80:A5",
+    )
+    entry.add_to_hass(hass)
+    saved_callback = None
+
+    def _async_register_callback(_hass, _callback, _matcher, _mode):
+        nonlocal saved_callback
+        saved_callback = _callback
+        return lambda: None
+
+    with patch(
+        "homeassistant.components.bluetooth.update_coordinator.async_register_callback",
+        _async_register_callback,
+    ):
+        assert await hass.config_entries.async_setup(entry.entry_id)
+        await hass.async_block_till_done()
+
+    assert len(hass.states.async_all()) == 0
+
+    saved_callback(TEMP_HUMI_ENCRYPTED_SERVICE_INFO, BluetoothChange.ADVERTISEMENT)
+    await hass.async_block_till_done()
+
+    results = hass.config_entries.flow.async_progress()
+    assert len(results) == 1
+    result = results[0]
+
+    assert result["step_id"] == "get_encryption_key"
+
+    result2 = await hass.config_entries.flow.async_configure(
+        result["flow_id"],
+        user_input={"bindkey": "231d39c1d7cc1ab1aee224cd096db932"},
+
+=====================================================================
+Found a 30 line (149 tokens) duplication in the following files: 
+Starting at line 120 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/cover/test_device_condition.py
+Starting at line 66 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/light/test_device_condition.py
+Starting at line 126 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/sensor/test_device_condition.py
+
+@pytest.mark.parametrize(
+    ("hidden_by", "entity_category"),
+    [
+        (RegistryEntryHider.INTEGRATION, None),
+        (RegistryEntryHider.USER, None),
+        (None, EntityCategory.CONFIG),
+        (None, EntityCategory.DIAGNOSTIC),
+    ],
+)
+async def test_get_conditions_hidden_auxiliary(
+    hass: HomeAssistant,
+    device_registry: dr.DeviceRegistry,
+    entity_registry: er.EntityRegistry,
+    hidden_by,
+    entity_category,
+) -> None:
+    """Test we get the expected conditions from a hidden or auxiliary entity."""
+    config_entry = MockConfigEntry(domain="test", data={})
+    config_entry.add_to_hass(hass)
+    device_entry = device_registry.async_get_or_create(
+        config_entry_id=config_entry.entry_id,
+        connections={(dr.CONNECTION_NETWORK_MAC, "12:34:56:AB:CD:EF")},
+    )
+    entity_entry = entity_registry.async_get_or_create(
+        DOMAIN,
+        "test",
+        "5678",
+        device_id=device_entry.id,
+        entity_category=entity_category,
+        hidden_by=hidden_by,
+
+=====================================================================
+
+=====================================================================
+Found a 26 line (93 tokens) duplication in the following files: 
+Starting at line 461 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homekit_controller/test_config_flow.py
+Starting at line 500 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homekit_controller/test_config_flow.py
+
+        unique_id="00:00:00:00:00:00",
+    ).add_to_hass(hass)
+
+    # We just added a mock config entry so it must be visible in hass
+    assert len(hass.config_entries.async_entries()) == 1
+
+    device = setup_mock_accessory(controller)
+    discovery_info = get_device_discovery_info(device)
+
+    # Device is discovered
+    with patch.object(
+        pairing,
+        "list_accessories_and_characteristics",
+        side_effect=AuthenticationError("Invalid pairing keys"),
+    ):
+        result = await hass.config_entries.flow.async_init(
+            "homekit_controller",
+            context={"source": config_entries.SOURCE_ZEROCONF},
+            data=discovery_info,
+        )
+
+    # Discovery of a HKID that is in a pairable state but for which there is
+    # already a config entry - in that case the stale config entry is
+    # automatically removed.
+    config_entry_count = len(hass.config_entries.async_entries())
+    assert config_entry_count == 0
+
+=====================================================================
+Found a 13 line (93 tokens) duplication in the following files: 
+Starting at line 106 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homematicip_cloud/test_cover.py
+Starting at line 186 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homematicip_cloud/test_cover.py
+
+    )
+
+    assert ha_state.state == STATE_CLOSED
+    assert ha_state.attributes[ATTR_CURRENT_POSITION] == 0
+    assert ha_state.attributes[ATTR_CURRENT_TILT_POSITION] == 0
+    service_call_counter = len(hmip_device.mock_calls)
+
+    await hass.services.async_call(
+        "cover", "open_cover_tilt", {"entity_id": entity_id}, blocking=True
+    )
+    assert len(hmip_device.mock_calls) == service_call_counter + 1
+    assert hmip_device.mock_calls[-1][0] == "set_slats_level"
+    assert hmip_device.mock_calls[-1][2] == {"channelIndex": 1, "slatsLevel": 0}
+
+=====================================================================
+Found a 12 line (93 tokens) duplication in the following files: 
+Starting at line 147 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homematicip_cloud/test_cover.py
+Starting at line 227 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homematicip_cloud/test_cover.py
+
+    await async_manipulate_test_data(hass, hmip_device, "slatsLevel", 1)
+    ha_state = hass.states.get(entity_id)
+    assert ha_state.state == STATE_OPEN
+    assert ha_state.attributes[ATTR_CURRENT_POSITION] == 100
+    assert ha_state.attributes[ATTR_CURRENT_TILT_POSITION] == 0
+
+    await hass.services.async_call(
+        "cover", "stop_cover_tilt", {"entity_id": entity_id}, blocking=True
+    )
+    assert len(hmip_device.mock_calls) == service_call_counter + 8
+    assert hmip_device.mock_calls[-1][0] == "set_shutter_stop"
+    assert hmip_device.mock_calls[-1][1] == (1,)
+
+=====================================================================
+Found a 48 line (93 tokens) duplication in the following files: 
+Starting at line 639 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homewizard/test_sensor.py
+Starting at line 724 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homewizard/test_sensor.py
+
+            "SDM230",
+            [
+                "sensor.device_apparent_power_phase_1",
+                "sensor.device_apparent_power_phase_2",
+                "sensor.device_apparent_power_phase_3",
+                "sensor.device_average_demand",
+                "sensor.device_average_demand",
+                "sensor.device_current_phase_1",
+                "sensor.device_current_phase_2",
+                "sensor.device_current_phase_3",
+                "sensor.device_dsmr_version",
+                "sensor.device_energy_export_tariff_1",
+                "sensor.device_energy_export_tariff_2",
+                "sensor.device_energy_export_tariff_3",
+                "sensor.device_energy_export_tariff_4",
+                "sensor.device_energy_import_tariff_1",
+                "sensor.device_energy_import_tariff_2",
+                "sensor.device_energy_import_tariff_3",
+                "sensor.device_energy_import_tariff_4",
+                "sensor.device_frequency",
+                "sensor.device_long_power_failures_detected",
+                "sensor.device_peak_demand_current_month",
+                "sensor.device_power_factor_phase_1",
+                "sensor.device_power_factor_phase_2",
+                "sensor.device_power_factor_phase_3",
+                "sensor.device_power_failures_detected",
+                "sensor.device_power_phase_2",
+                "sensor.device_power_phase_3",
+                "sensor.device_reactive_power_phase_1",
+                "sensor.device_reactive_power_phase_2",
+                "sensor.device_reactive_power_phase_3",
+                "sensor.device_smart_meter_identifier",
+                "sensor.device_smart_meter_model",
+                "sensor.device_tariff",
+                "sensor.device_total_water_usage",
+                "sensor.device_voltage_phase_1",
+                "sensor.device_voltage_phase_2",
+                "sensor.device_voltage_phase_3",
+                "sensor.device_voltage_sags_detected_phase_1",
+                "sensor.device_voltage_sags_detected_phase_2",
+                "sensor.device_voltage_sags_detected_phase_3",
+                "sensor.device_voltage_swells_detected_phase_1",
+                "sensor.device_voltage_swells_detected_phase_2",
+                "sensor.device_voltage_swells_detected_phase_3",
+                "sensor.device_water_usage",
+            ],
+        ),
+        (
+
+=====================================================================
+Found a 25 line (93 tokens) duplication in the following files: 
+Starting at line 490 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homeworks/test_config_flow.py
+Starting at line 542 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homeworks/test_config_flow.py
+Starting at line 762 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homeworks/test_config_flow.py
+
+        ],
+        "host": "192.168.0.1",
+        "keypads": [
+            {
+                "addr": "[02:08:02:01]",
+                "buttons": [
+                    {
+                        "led": True,
+                        "name": "Morning",
+                        "number": 1,
+                        "release_delay": None,
+                    },
+                    {"led": True, "name": "Relax", "number": 2, "release_delay": None},
+                    {"led": False, "name": "Dim up", "number": 3, "release_delay": 0.2},
+                ],
+                "name": "Foyer Keypad",
+            }
+        ],
+        "port": 1234,
+    }
+
+    await hass.async_block_till_done()
+
+    # Check the entry was updated with the new entity
+    assert hass.states.async_entity_ids("light") == unordered(
+
+=====================================================================
+
+=====================================================================
+Found a 19 line (69 tokens) duplication in the following files: 
+Starting at line 28 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/dnsip/test_init.py
+Starting at line 120 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/dnsip/test_sensor.py
+
+    entry = MockConfigEntry(
+        domain=DOMAIN,
+        source=SOURCE_USER,
+        data={
+            CONF_HOSTNAME: "home-assistant.io",
+            CONF_NAME: "home-assistant.io",
+            CONF_IPV4: True,
+            CONF_IPV6: False,
+        },
+        options={
+            CONF_RESOLVER: "208.67.222.222",
+            CONF_RESOLVER_IPV6: "2620:119:53::53",
+            CONF_PORT: 53,
+            CONF_PORT_IPV6: 53,
+        },
+        entry_id="1",
+        unique_id="home-assistant.io",
+    )
+    entry.add_to_hass(hass)
+
+=====================================================================
+Found a 15 line (69 tokens) duplication in the following files: 
+Starting at line 51 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/dormakaba_dkey/test_config_flow.py
+Starting at line 62 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/idasen_desk/test_config_flow.py
+Starting at line 61 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/ld2410_ble/test_config_flow.py
+Starting at line 65 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/led_ble/test_config_flow.py
+
+        return_value=[NOT_DKEY_DISCOVERY_INFO],
+    ):
+        result = await hass.config_entries.flow.async_init(
+            DOMAIN, context={"source": config_entries.SOURCE_USER}
+        )
+    assert result["type"] is FlowResultType.ABORT
+    assert result["reason"] == "no_devices_found"
+
+
+async def test_user_step_no_new_devices_found(hass: HomeAssistant) -> None:
+    """Test user step with only existing devices found."""
+    entry = MockConfigEntry(
+        domain=DOMAIN,
+        data={
+            CONF_ADDRESS: DKEY_DISCOVERY_INFO.address,
+
+=====================================================================
+Found a 17 line (69 tokens) duplication in the following files: 
+Starting at line 91 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/drop_connect/test_config_flow.py
+Starting at line 113 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/drop_connect/test_config_flow.py
+Starting at line 135 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/drop_connect/test_config_flow.py
+Starting at line 157 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/drop_connect/test_config_flow.py
+
+        payload='{"devDesc":"Hub"}',
+        qos=0,
+        retain=False,
+        subscribed_topic="drop_connect/discovery/#",
+        timestamp=None,
+    )
+    result = await hass.config_entries.flow.async_init(
+        "drop_connect",
+        context={"source": config_entries.SOURCE_MQTT},
+        data=discovery_info,
+    )
+    assert result is not None
+    assert result["type"] is FlowResultType.ABORT
+    assert result["reason"] == "invalid_discovery_info"
+
+
+async def test_mqtt_setup_bad_json(
+
+=====================================================================
+Found a 15 line (69 tokens) duplication in the following files: 
+Starting at line 77 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/dsmr/test_sensor.py
+Starting at line 140 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/dsmr/test_sensor.py
+
+            [{"value": Decimal("0.0"), "unit": UnitOfPower.WATT}],
+        ),
+        "CURRENT_ELECTRICITY_USAGE",
+    )
+    telegram.add(
+        ELECTRICITY_ACTIVE_TARIFF,
+        CosemObject((0, 0), [{"value": "0001", "unit": ""}]),
+        "ELECTRICITY_ACTIVE_TARIFF",
+    )
+    telegram.add(
+        GAS_METER_READING,
+        MBusObject(
+            (0, 0),
+            [
+                {"value": datetime.datetime.fromtimestamp(1551642213)},
+
+=====================================================================
+Found a 19 line (69 tokens) duplication in the following files: 
+Starting at line 95 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/dsmr/test_sensor.py
+Starting at line 231 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/dsmr/test_sensor.py
+Starting at line 290 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/dsmr/test_sensor.py
+Starting at line 378 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/dsmr/test_sensor.py
+Starting at line 462 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/dsmr/test_sensor.py
+Starting at line 650 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/dsmr/test_sensor.py
+Starting at line 860 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/dsmr/test_sensor.py
+Starting at line 1023 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/dsmr/test_sensor.py
+Starting at line 1107 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/dsmr/test_sensor.py
+Starting at line 1167 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/dsmr/test_sensor.py
+Starting at line 1495 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/dsmr/test_sensor.py
+
+        "GAS_METER_READING",
+    )
+
+    mock_entry = MockConfigEntry(
+        domain="dsmr", unique_id="/dev/ttyUSB0", data=entry_data, options=entry_options
+    )
+
+    mock_entry.add_to_hass(hass)
+
+    await hass.config_entries.async_setup(mock_entry.entry_id)
+    await hass.async_block_till_done()
+
+    telegram_callback = connection_factory.call_args_list[0][0][2]
+
+    # simulate a telegram pushed from the smartmeter and parsed by dsmr_parser
+    telegram_callback(telegram)
+
+    # after receiving telegram entities need to have the chance to be created
+    await hass.async_block_till_done()
+
+=====================================================================
+Found a 14 line (69 tokens) duplication in the following files: 
+Starting at line 18 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/easyenergy/test_init.py
+Starting at line 20 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/energyzero/test_init.py
+Starting at line 20 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/luftdaten/test_init.py
+Starting at line 22 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/open_meteo/test_init.py
+Starting at line 18 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/p1_monitor/test_init.py
+Starting at line 18 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/rdw/test_init.py
+
+    mock_config_entry.add_to_hass(hass)
+    await hass.config_entries.async_setup(mock_config_entry.entry_id)
+    await hass.async_block_till_done()
+
+    assert mock_config_entry.state is ConfigEntryState.LOADED
+
+    await hass.config_entries.async_unload(mock_config_entry.entry_id)
+    await hass.async_block_till_done()
+
+    assert not hass.data.get(DOMAIN)
+    assert mock_config_entry.state is ConfigEntryState.NOT_LOADED
+
+
+@patch(
+
+=====================================================================
+Found a 16 line (69 tokens) duplication in the following files: 
+Starting at line 45 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/elkm1/test_config_flow.py
+Starting at line 1262 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/elkm1/test_config_flow.py
+
+        source=config_entries.SOURCE_IGNORE,
+    )
+    config_entry.add_to_hass(hass)
+
+    with _patch_discovery(), _patch_elk():
+        result = await hass.config_entries.flow.async_init(
+            DOMAIN,
+            context={"source": config_entries.SOURCE_INTEGRATION_DISCOVERY},
+            data=ELK_DISCOVERY_INFO,
+        )
+        await hass.async_block_till_done()
+    assert result["type"] is FlowResultType.ABORT
+    assert result["reason"] == "already_configured"
+
+
+async def test_form_user_with_secure_elk_no_discovery(hass: HomeAssistant) -> None:
+
+=====================================================================
+=====================================================================
+Found a 10 line (60 tokens) duplication in the following files: 
+Starting at line 16 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/ista_ecotrend/test_config_flow.py
+Starting at line 22 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/pyload/test_config_flow.py
+
+async def test_form(hass: HomeAssistant, mock_setup_entry: AsyncMock) -> None:
+    """Test we get the form."""
+    result = await hass.config_entries.flow.async_init(
+        DOMAIN, context={"source": SOURCE_USER}
+    )
+    assert result["type"] is FlowResultType.FORM
+    assert result["errors"] == {}
+
+    result = await hass.config_entries.flow.async_configure(
+        result["flow_id"],
+
+=====================================================================
+Found a 13 line (60 tokens) duplication in the following files: 
+Starting at line 38 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/ista_ecotrend/test_init.py
+Starting at line 57 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/ista_ecotrend/test_init.py
+
+async def test_config_entry_not_ready(
+    hass: HomeAssistant,
+    ista_config_entry: MockConfigEntry,
+    mock_ista: MagicMock,
+    side_effect: Exception,
+) -> None:
+    """Test config entry not ready."""
+    mock_ista.login.side_effect = side_effect
+    ista_config_entry.add_to_hass(hass)
+    await hass.config_entries.async_setup(ista_config_entry.entry_id)
+    await hass.async_block_till_done()
+
+    assert ista_config_entry.state is ConfigEntryState.SETUP_RETRY
+
+=====================================================================
+Found a 9 line (60 tokens) duplication in the following files: 
+Starting at line 82 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/knx/test_config_store.py
+Starting at line 185 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/knx/test_config_store.py
+
+                "knx": {"ga_switch": {"write": "1/2/3"}},
+            },
+        }
+    )
+    res = await client.receive_json()
+    assert res["success"], res
+    assert not res["result"]["success"]
+    assert res["result"]["errors"][0]["path"] == ["platform"]
+    assert res["result"]["error_base"].startswith("expected Platform or one of")
+
+=====================================================================
+Found a 11 line (60 tokens) duplication in the following files: 
+Starting at line 99 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/knx/test_expose.py
+Starting at line 171 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/knx/test_expose.py
+
+    await knx.assert_telegram_count(0)
+
+    # Change attribute; keep state
+    hass.states.async_set(entity_id, "on", {attribute: 1})
+    await hass.async_block_till_done()
+    await knx.assert_write("1/1/8", (1,))
+
+    # Change state to "off"; null attribute
+    hass.states.async_set(entity_id, "off", {attribute: None})
+    await hass.async_block_till_done()
+    await knx.assert_telegram_count(0)
+
+=====================================================================
+Found a 14 line (60 tokens) duplication in the following files: 
+Starting at line 250 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/kodi/test_config_flow.py
+Starting at line 268 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/kodi/test_config_flow.py
+Starting at line 286 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/kodi/test_config_flow.py
+
+            side_effect=InvalidAuthError,
+        ),
+        patch(
+            "homeassistant.components.kodi.config_flow.get_kodi_connection",
+            return_value=MockConnection(),
+        ),
+    ):
+        result = await hass.config_entries.flow.async_configure(
+            result["flow_id"], TEST_CREDENTIALS
+        )
+
+    assert result["type"] is FlowResultType.FORM
+    assert result["step_id"] == "credentials"
+    assert result["errors"] == {"base": "invalid_auth"}
+
+=====================================================================
+Found a 15 line (60 tokens) duplication in the following files: 
+Starting at line 474 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/kodi/test_config_flow.py
+Starting at line 590 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/kodi/test_config_flow.py
+Starting at line 613 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/kodi/test_config_flow.py
+
+            return_value=True,
+        ),
+        patch(
+            "homeassistant.components.kodi.config_flow.get_kodi_connection",
+            return_value=MockConnection(),
+        ),
+    ):
+        result = await hass.config_entries.flow.async_init(
+            DOMAIN,
+            context={"source": config_entries.SOURCE_ZEROCONF},
+            data=TEST_DISCOVERY,
+        )
+
+    assert result["type"] is FlowResultType.FORM
+    assert result["step_id"] == "discovery_confirm"
+
+=====================================================================
+=====================================================================
+Found a 11 line (51 tokens) duplication in the following files: 
+Starting at line 196 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homekit/test_type_covers.py
+Starting at line 359 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homekit/test_type_covers.py
+
+        {ATTR_SUPPORTED_FEATURES: CoverEntityFeature.SET_POSITION},
+    )
+    await hass.async_block_till_done()
+    acc = WindowCovering(hass, hk_driver, "Cover", entity_id, 2, None)
+    acc.run()
+    await hass.async_block_till_done()
+
+    assert acc.aid == 2
+    assert acc.category == 14  # WindowCovering
+
+    assert acc.char_current_position.value == 0
+
+=====================================================================
+Found a 18 line (51 tokens) duplication in the following files: 
+Starting at line 67 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homekit/test_type_fans.py
+Starting at line 264 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homekit/test_type_humidifiers.py
+
+    call_turn_off = async_mock_service(hass, FAN_DOMAIN, "turn_off")
+
+    char_active_iid = acc.char_active.to_HAP()[HAP_REPR_IID]
+
+    hk_driver.set_characteristics(
+        {
+            HAP_REPR_CHARS: [
+                {
+                    HAP_REPR_AID: acc.aid,
+                    HAP_REPR_IID: char_active_iid,
+                    HAP_REPR_VALUE: 1,
+                },
+            ]
+        },
+        "mock_addr",
+    )
+    await hass.async_block_till_done()
+    assert call_turn_on
+
+=====================================================================
+Found a 11 line (51 tokens) duplication in the following files: 
+Starting at line 399 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homekit/test_type_lights.py
+Starting at line 1347 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homekit/test_type_lights.py
+Starting at line 1449 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homekit/test_type_lights.py
+
+                    HAP_REPR_VALUE: 50,
+                },
+            ]
+        },
+        "mock_addr",
+    )
+    await _wait_for_light_coalesce(hass)
+    assert call_turn_on[0]
+    assert call_turn_on[0].data[ATTR_ENTITY_ID] == entity_id
+    assert call_turn_on[0].data[ATTR_BRIGHTNESS_PCT] == 20
+    assert call_turn_on[0].data[ATTR_COLOR_TEMP_KELVIN] == 4000
+
+=====================================================================
+Found a 9 line (51 tokens) duplication in the following files: 
+Starting at line 632 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homekit/test_type_lights.py
+Starting at line 752 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homekit/test_type_lights.py
+
+            [ColorMode.COLOR_TEMP, ColorMode.RGBWW],
+            {
+                ATTR_RGBWW_COLOR: (128, 50, 0, 255, 255),
+                ATTR_RGB_COLOR: (128, 50, 0),
+                ATTR_HS_COLOR: (23.438, 100.0),
+                ATTR_BRIGHTNESS: 255,
+                ATTR_COLOR_MODE: ColorMode.RGBWW,
+            },
+            {ATTR_HS_COLOR: (145, 75), ATTR_BRIGHTNESS_PCT: 25},
+
+=====================================================================
+Found a 13 line (51 tokens) duplication in the following files: 
+Starting at line 196 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homekit/test_type_media_players.py
+Starting at line 382 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/homekit/test_type_media_players.py
+
+        ATTR_INPUT_SOURCE_LIST: ["HDMI 1", "HDMI 2", "HDMI 3", "HDMI 4"],
+    }
+    hass.states.async_set(
+        entity_id,
+        None,
+        base_attrs,
+    )
+    await hass.async_block_till_done()
+    acc = TelevisionMediaPlayer(hass, hk_driver, "MediaPlayer", entity_id, 2, None)
+    acc.run()
+    await hass.async_block_till_done()
+
+    assert acc.aid == 2
+
+=====================================================================
+=====================================================================
+Found a 11 line (44 tokens) duplication in the following files: 
+Starting at line 95 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_binary_sensor.py
+Starting at line 181 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_binary_sensor.py
+Starting at line 213 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_binary_sensor.py
+Starting at line 264 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_binary_sensor.py
+Starting at line 315 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_binary_sensor.py
+Starting at line 70 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_event.py
+Starting at line 359 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_sensor.py
+Starting at line 1106 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_sensor.py
+Starting at line 1144 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_sensor.py
+Starting at line 1197 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_sensor.py
+Starting at line 1250 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_sensor.py
+Starting at line 24 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/govee_ble/test_binary_sensor.py
+Starting at line 53 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/govee_ble/test_binary_sensor.py
+Starting at line 158 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/xiaomi_ble/test_event.py
+
+        data={"bindkey": bind_key},
+    )
+    entry.add_to_hass(hass)
+
+    assert await hass.config_entries.async_setup(entry.entry_id)
+    await hass.async_block_till_done()
+
+    assert len(hass.states.async_all()) == 0
+
+    inject_bluetooth_service_info(
+        hass,
+
+=====================================================================
+Found a 12 line (44 tokens) duplication in the following files: 
+Starting at line 115 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_binary_sensor.py
+Starting at line 383 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_sensor.py
+
+        assert binary_sensor_attr[ATTR_FRIENDLY_NAME] == meas["friendly_name"]
+    assert await hass.config_entries.async_unload(entry.entry_id)
+    await hass.async_block_till_done()
+
+
+@pytest.mark.parametrize(
+    ("mac_address", "advertisement", "bind_key", "result"),
+    [
+        (
+            "A4:C1:38:8D:18:B2",
+            make_bthome_v2_adv(
+                "A4:C1:38:8D:18:B2",
+
+=====================================================================
+Found a 7 line (44 tokens) duplication in the following files: 
+Starting at line 71 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_config_flow.py
+Starting at line 94 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_config_flow.py
+Starting at line 126 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_config_flow.py
+
+    result = await hass.config_entries.flow.async_init(
+        DOMAIN,
+        context={"source": config_entries.SOURCE_BLUETOOTH},
+        data=TEMP_HUMI_ENCRYPTED_SERVICE_INFO,
+    )
+    assert result["type"] is FlowResultType.FORM
+    assert result["step_id"] == "get_encryption_key"
+
+=====================================================================
+Found a 7 line (44 tokens) duplication in the following files: 
+Starting at line 412 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_config_flow.py
+Starting at line 433 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_config_flow.py
+
+    result = await hass.config_entries.flow.async_init(
+        DOMAIN,
+        context={"source": config_entries.SOURCE_BLUETOOTH},
+        data=PRST_SERVICE_INFO,
+    )
+    assert result["type"] is FlowResultType.FORM
+    assert result["step_id"] == "bluetooth_confirm"
+
+=====================================================================
+Found a 12 line (44 tokens) duplication in the following files: 
+Starting at line 96 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_device_trigger.py
+Starting at line 244 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/bthome/test_device_trigger.py
+
+async def test_get_triggers_button(
+    hass: HomeAssistant, device_registry: dr.DeviceRegistry
+) -> None:
+    """Test that we get the expected triggers from a BTHome BLE sensor."""
+    mac = "A4:C1:38:8D:18:B2"
+    entry = await _async_setup_bthome_device(hass, mac)
+    events = async_capture_events(hass, "bthome_ble_event")
+
+    # Emit long press event so it creates the device in the registry
+    inject_bluetooth_service_info_bleak(
+        hass,
+        make_bthome_v2_adv(mac, b"\x40\x3a\x04"),
+
+=====================================================================
+Found a 14 line (44 tokens) duplication in the following files: 
+Starting at line 12 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/button/test_device_action.py
+Starting at line 18 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/select/test_device_action.py
+
+from homeassistant.setup import async_setup_component
+
+from tests.common import (
+    MockConfigEntry,
+    async_get_device_automations,
+    async_mock_service,
+)
+
+
+async def test_get_actions(
+    hass: HomeAssistant,
+    device_registry: dr.DeviceRegistry,
+    entity_registry: er.EntityRegistry,
+) -> None:
+
+=====================================================================
+
+=====================================================================
+Found a 9 line (43 tokens) duplication in the following files: 
+Starting at line 66 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zha/test_device_trigger.py
+Starting at line 151 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zha/test_device_trigger.py
+Starting at line 376 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zha/test_device_trigger.py
+Starting at line 437 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zha/test_device_trigger.py
+Starting at line 505 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zha/test_device_trigger.py
+
+    await setup_zha()
+    gateway = get_zha_gateway(hass)
+
+    zigpy_device = ZigpyDevice(
+        application=gateway.application_controller,
+        ieee=zigpy.types.EUI64.convert("aa:bb:cc:dd:11:22:33:44"),
+        nwk=0x1234,
+    )
+    zigpy_device.device_automation_triggers = {
+
+=====================================================================
+Found a 6 line (43 tokens) duplication in the following files: 
+Starting at line 111 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zha/test_lock.py
+Starting at line 126 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zha/test_lock.py
+Starting at line 144 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zha/test_lock.py
+Starting at line 171 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zha/test_lock.py
+Starting at line 193 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zha/test_lock.py
+Starting at line 218 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zha/test_lock.py
+
+        )
+        assert cluster.request.call_count == 1
+        assert cluster.request.call_args[0][0] is False
+        assert (
+            cluster.request.call_args[0][1]
+            == closures.DoorLock.ServerCommandDefs.lock_door.id
+
+=====================================================================
+Found a 10 line (43 tokens) duplication in the following files: 
+Starting at line 126 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zone/test_trigger.py
+Starting at line 265 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zone/test_trigger.py
+Starting at line 329 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zone/test_trigger.py
+
+    hass.states.async_set(
+        "test.entity", "hello", {"latitude": 32.881011, "longitude": -117.234758}
+    )
+    await hass.async_block_till_done()
+
+    assert await async_setup_component(
+        hass,
+        automation.DOMAIN,
+        {
+            automation.DOMAIN: {
+
+=====================================================================
+Found a 10 line (43 tokens) duplication in the following files: 
+Starting at line 509 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 665 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 704 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 757 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 799 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 825 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 966 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 1012 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 1061 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 1097 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 1134 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 1244 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 1266 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 1728 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 1987 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 2027 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 2068 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+
+            INCLUSION_STRATEGY: InclusionStrategy.DEFAULT.value,
+        }
+    )
+
+    msg = await ws_client.receive_json()
+    assert msg["success"]
+
+    assert len(client.async_send_command.call_args_list) == 1
+    assert client.async_send_command.call_args[0][0] == {
+        "command": "controller.begin_inclusion",
+
+=====================================================================
+Found a 11 line (43 tokens) duplication in the following files: 
+Starting at line 693 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 744 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 1156 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 1430 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 2016 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+
+            QR_PROVISIONING_INFORMATION: {
+                VERSION: 0,
+                SECURITY_CLASSES: [0],
+                DSK: "test",
+                GENERIC_DEVICE_CLASS: 1,
+                SPECIFIC_DEVICE_CLASS: 1,
+                INSTALLER_ICON_TYPE: 1,
+                MANUFACTURER_ID: 1,
+                PRODUCT_TYPE: 1,
+                PRODUCT_ID: 1,
+                APPLICATION_VERSION: "test",
+
+=====================================================================
+Found a 9 line (43 tokens) duplication in the following files: 
+Starting at line 928 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 1371 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 1613 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 1631 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 1749 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 2257 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 2407 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 3377 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 3678 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 4286 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 4362 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 4429 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+Starting at line 4758 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_api.py
+
+                TYPE: "zwave_js/add_node",
+                ENTRY_ID: entry.entry_id,
+            }
+        )
+        msg = await ws_client.receive_json()
+
+        assert not msg["success"]
+        assert msg["error"]["code"] == "zwave_error"
+        assert msg["error"]["message"] == "zwave_error: Z-Wave error 1 - error message"
+
+=====================================================================
+Found a 7 line (43 tokens) duplication in the following files: 
+Starting at line 988 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_climate.py
+Starting at line 761 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_cover.py
+Starting at line 792 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_cover.py
+Starting at line 319 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_lock.py
+Starting at line 287 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_select.py
+Starting at line 212 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_switch.py
+
+        ],
+        None,
+    )
+    node = Node(client, node_state)
+    client.driver.controller.emit("node added", {"node": node})
+    await hass.async_block_till_done()
+    state = hass.states.get(CLIMATE_RADIO_THERMOSTAT_ENTITY)
+
+=====================================================================
+Found a 7 line (43 tokens) duplication in the following files: 
+Starting at line 993 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_config_flow.py
+Starting at line 1004 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_config_flow.py
+Starting at line 1017 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_config_flow.py
+
+    result = await hass.config_entries.flow.async_init(
+        DOMAIN,
+        context={"source": config_entries.SOURCE_USB},
+        data=USB_DISCOVERY_INFO,
+    )
+    assert result["type"] is FlowResultType.ABORT
+    assert result["reason"] == "already_configured"
+
+=====================================================================
+Found a 12 line (43 tokens) duplication in the following files: 
+Starting at line 1897 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_config_flow.py
+Starting at line 2200 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_config_flow.py
+Starting at line 2362 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_config_flow.py
+
+        (
+            {"config": ADDON_DISCOVERY_INFO},
+            {},
+            {
+                "device": "/test",
+                "network_key": "old123",
+                "s0_legacy_key": "old123",
+                "s2_access_control_key": "old456",
+                "s2_authenticated_key": "old789",
+                "s2_unauthenticated_key": "old987",
+                "lr_s2_access_control_key": "old654",
+                "lr_s2_authenticated_key": "old321",
+
+=====================================================================
+Found a 5 line (43 tokens) duplication in the following files: 
+Starting at line 2121 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_config_flow.py
+Starting at line 2718 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/zwave_js/test_config_flow.py
+
+    assert result["type"] is FlowResultType.CREATE_ENTRY
+    assert entry.data["url"] == "ws://host1:3001"
+    assert entry.data["usb_path"] == new_addon_options["device"]
+    assert entry.data["s0_legacy_key"] == new_addon_options["s0_legacy_key"]
+    assert (
+
+=====================================================================
+=====================================================================
+Found a 8 line (40 tokens) duplication in the following files: 
+Starting at line 3021 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/alexa/test_smart_home.py
+Starting at line 3381 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/alexa/test_smart_home.py
+
+        "climate.set_temperature",
+        hass,
+        payload={"targetSetpointDelta": {"value": 20.0, "scale": "CELSIUS"}},
+    )
+    assert msg["event"]["payload"]["type"] == "TEMPERATURE_VALUE_OUT_OF_RANGE"
+
+    # Setting mode, the payload can be an object with a value attribute...
+    call, msg = await assert_request_calls_service(
+
+=====================================================================
+Found a 9 line (40 tokens) duplication in the following files: 
+Starting at line 3620 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/alexa/test_smart_home.py
+Starting at line 3651 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/alexa/test_smart_home.py
+
+        exclude_entities=["cover.deny"],
+    )
+
+    msg = await smart_home.async_handle_message(hass, alexa_config, request)
+    await hass.async_block_till_done()
+
+    msg = msg["event"]
+
+    assert len(msg["payload"]["endpoints"]) == 1
+
+=====================================================================
+Found a 8 line (40 tokens) duplication in the following files: 
+Starting at line 3708 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/alexa/test_smart_home.py
+Starting at line 4014 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/alexa/test_smart_home.py
+Starting at line 4035 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/alexa/test_smart_home.py
+Starting at line 5019 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/alexa/test_smart_home.py
+Starting at line 5036 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/alexa/test_smart_home.py
+Starting at line 5053 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/alexa/test_smart_home.py
+
+    msg = await smart_home.async_handle_message(hass, get_default_config(hass), request)
+
+    assert "event" in msg
+    msg = msg["event"]
+
+    assert msg["header"]["name"] == "ErrorResponse"
+    assert msg["header"]["namespace"] == "Alexa"
+    assert msg["payload"]["type"] == "INTERNAL_ERROR"
+
+=====================================================================
+Found a 7 line (40 tokens) duplication in the following files: 
+Starting at line 5093 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/alexa/test_smart_home.py
+Starting at line 5110 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/alexa/test_smart_home.py
+Starting at line 5127 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/alexa/test_smart_home.py
+
+        "paused",
+        {"friendly_name": "Laundry", "duration": "00:01:00", "remaining": "00:50:00"},
+    )
+    await discovery_test(device, hass)
+
+    properties = await reported_properties(hass, "timer#laundry")
+    properties.assert_equal("Alexa.PowerController", "powerState", "ON")
+
+=====================================================================
+Found a 6 line (40 tokens) duplication in the following files: 
+Starting at line 113 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/amberelectric/test_binary_sensor.py
+Starting at line 124 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/amberelectric/test_binary_sensor.py
+Starting at line 135 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/amberelectric/test_binary_sensor.py
+
+def test_no_spike_sensor(hass: HomeAssistant) -> None:
+    """Testing the creation of the Amber renewables sensor."""
+    assert len(hass.states.async_all()) == 6
+    sensor = hass.states.get("binary_sensor.mock_title_price_spike")
+    assert sensor
+    assert sensor.state == "off"
+
+=====================================================================
+Found a 6 line (40 tokens) duplication in the following files: 
+Starting at line 204 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/amberelectric/test_binary_sensor.py
+Starting at line 213 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/amberelectric/test_binary_sensor.py
+
+def test_inactive_demand_window_sensor(hass: HomeAssistant) -> None:
+    """Testing the creation of the Amber demand_window sensor."""
+    assert len(hass.states.async_all()) == 6
+    sensor = hass.states.get("binary_sensor.mock_title_demand_window")
+    assert sensor
+    assert sensor.state == "off"
+
+=====================================================================
+Found a 10 line (40 tokens) duplication in the following files: 
+Starting at line 228 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/analytics/test_analytics.py
+Starting at line 412 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/analytics/test_analytics.py
+
+        await analytics.send_analytics()
+
+    logged_data = caplog.records[-1].args
+    submitted_data = _last_call_payload(aioclient_mock)
+
+    assert submitted_data == logged_data
+    assert snapshot == submitted_data
+
+
+@pytest.mark.usefixtures("installation_type_mock", "supervisor_client")
+
+=====================================================================
+Found a 8 line (40 tokens) duplication in the following files: 
+Starting at line 5 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/analytics_insights/__init__.py
+Starting at line 5 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/apsystems/__init__.py
+Starting at line 5 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/aurora/__init__.py
+Starting at line 5 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/knocki/__init__.py
+Starting at line 5 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/microbees/__init__.py
+Starting at line 5 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/monzo/__init__.py
+Starting at line 5 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/myuplink/__init__.py
+Starting at line 5 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/point/__init__.py
+Starting at line 5 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/poolsense/__init__.py
+Starting at line 11 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/spotify/test_media_browser.py
+
+from tests.common import MockConfigEntry
+
+
+async def setup_integration(hass: HomeAssistant, config_entry: MockConfigEntry) -> None:
+    """Fixture for setting up the component."""
+    config_entry.add_to_hass(hass)
+
+    await hass.config_entries.async_setup(config_entry.entry_id)
+
+=====================================================================
+Found a 8 line (40 tokens) duplication in the following files: 
+Starting at line 69 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/analytics_insights/test_config_flow.py
+Starting at line 64 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/vilfo/test_config_flow.py
+
+    result = await hass.config_entries.flow.async_configure(
+        result["flow_id"],
+        user_input,
+    )
+    await hass.async_block_till_done()
+
+    assert result["type"] is FlowResultType.CREATE_ENTRY
+    assert result["title"] == "Home Assistant Analytics Insights"
+
+=====================================================================
+Found a 8 line (40 tokens) duplication in the following files: 
+Starting at line 224 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/analytics_insights/test_config_flow.py
+Starting at line 490 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/upnp/test_config_flow.py
+
+    result = await hass.config_entries.options.async_configure(
+        result["flow_id"],
+        user_input,
+    )
+    await hass.async_block_till_done()
+
+    assert result["type"] is FlowResultType.CREATE_ENTRY
+    assert result["data"] == expected_options
+
+=====================================================================
+
+=====================================================================
+Found a 12 line (39 tokens) duplication in the following files: 
+Starting at line 1744 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/template/test_light.py
+Starting at line 1781 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/template/test_light.py
+
+    light_config = {
+        "test_template_light": {
+            **OPTIMISTIC_ON_OFF_LIGHT_CONFIG,
+            "value_template": "{{ 1 == 1 }}",
+            "set_temperature": {
+                "service": "light.turn_on",
+                "data_template": {
+                    "entity_id": "light.test_state",
+                    "color_temp": "{{color_temp}}",
+                },
+            },
+            "temperature_template": "{{200}}",
+
+=====================================================================
+Found a 13 line (39 tokens) duplication in the following files: 
+Starting at line 206 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/template/test_number.py
+Starting at line 408 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/template/test_number.py
+
+            },
+        )
+
+    with assert_setup_component(1, "template"):
+        assert await setup.async_setup_component(
+            hass,
+            "template",
+            {
+                "template": {
+                    "unique_id": "b",
+                    "number": {
+                        "state": f"{{{{ states('{_VALUE_INPUT_NUMBER}') }}}}",
+                        "step": f"{{{{ states('{_STEP_INPUT_NUMBER}') }}}}",
+
+=====================================================================
+Found a 13 line (39 tokens) duplication in the following files: 
+Starting at line 126 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/template/test_switch.py
+Starting at line 153 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/template/test_switch.py
+Starting at line 185 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/template/test_switch.py
+Starting at line 223 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/template/test_switch.py
+
+                            "value_template": "{{ 1 == 1 }}",
+                        }
+                    },
+                }
+            },
+        )
+
+    await hass.async_block_till_done()
+    await hass.async_start()
+    await hass.async_block_till_done()
+
+    state = hass.states.get("switch.test_template_switch")
+    assert state.state == STATE_ON
+
+=====================================================================
+Found a 5 line (39 tokens) duplication in the following files: 
+Starting at line 842 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/template/test_trigger.py
+Starting at line 964 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/helpers/test_event.py
+
+    first_time = start_time.replace(minute=2, second=0)
+    freezer.move_to(first_time)
+    async_fire_time_changed(hass, first_time)
+    await hass.async_block_till_done()
+    assert len(calls) == 1
+
+=====================================================================
+Found a 10 line (39 tokens) duplication in the following files: 
+Starting at line 49 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tesla_fleet/test_button.py
+Starting at line 44 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/teslemetry/test_button.py
+
+        f"homeassistant.components.tesla_fleet.VehicleSpecific.{func}",
+        return_value=COMMAND_OK,
+    ) as command:
+        await hass.services.async_call(
+            BUTTON_DOMAIN,
+            SERVICE_PRESS,
+            {ATTR_ENTITY_ID: [f"button.test_{name}"]},
+            blocking=True,
+        )
+        command.assert_called_once()
+
+=====================================================================
+Found a 7 line (39 tokens) duplication in the following files: 
+Starting at line 388 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/thread/test_dataset_store.py
+Starting at line 457 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/thread/test_dataset_store.py
+Starting at line 494 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/thread/test_dataset_store.py
+Starting at line 531 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/thread/test_dataset_store.py
+
+            "preferred_dataset": "id1",
+        },
+    }
+
+    store = await dataset_store.async_get_store(hass)
+    assert len(store.datasets) == 1
+    assert list(store.datasets.values())[0].tlv == DATASET_1
+
+=====================================================================
+Found a 5 line (39 tokens) duplication in the following files: 
+Starting at line 154 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/timer/test_init.py
+Starting at line 277 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/timer/test_init.py
+Starting at line 471 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/timer/test_init.py
+Starting at line 582 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/timer/test_init.py
+Starting at line 650 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/timer/test_init.py
+
+    await async_setup_component(hass, DOMAIN, {DOMAIN: {"test1": {CONF_DURATION: 10}}})
+
+    state = hass.states.get("timer.test1")
+    assert state
+    assert state.state == STATUS_IDLE
+
+=====================================================================
+Found a 5 line (39 tokens) duplication in the following files: 
+Starting at line 234 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tod/test_binary_sensor.py
+Starting at line 252 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tod/test_binary_sensor.py
+Starting at line 364 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tod/test_binary_sensor.py
+Starting at line 447 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tod/test_binary_sensor.py
+Starting at line 465 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tod/test_binary_sensor.py
+Starting at line 517 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tod/test_binary_sensor.py
+Starting at line 535 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tod/test_binary_sensor.py
+Starting at line 580 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tod/test_binary_sensor.py
+Starting at line 600 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tod/test_binary_sensor.py
+
+    freezer.move_to(sunrise + timedelta(seconds=1))
+    async_fire_time_changed(hass, dt_util.utcnow())
+    await hass.async_block_till_done()
+    state = hass.states.get(entity_id)
+    assert state.state == STATE_ON
+
+=====================================================================
+Found a 7 line (39 tokens) duplication in the following files: 
+Starting at line 234 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tod/test_binary_sensor.py
+Starting at line 296 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tod/test_binary_sensor.py
+Starting at line 352 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tod/test_binary_sensor.py
+Starting at line 447 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tod/test_binary_sensor.py
+Starting at line 517 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tod/test_binary_sensor.py
+Starting at line 580 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tod/test_binary_sensor.py
+
+    freezer.move_to(sunrise + timedelta(seconds=1))
+    async_fire_time_changed(hass, dt_util.utcnow())
+    await hass.async_block_till_done()
+    state = hass.states.get(entity_id)
+    assert state.state == STATE_ON
+
+    freezer.move_to(sunset + timedelta(seconds=-1))
+
+=====================================================================
+Found a 7 line (39 tokens) duplication in the following files: 
+Starting at line 240 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tod/test_binary_sensor.py
+Starting at line 290 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tod/test_binary_sensor.py
+Starting at line 453 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tod/test_binary_sensor.py
+Starting at line 523 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/tod/test_binary_sensor.py
+
+    freezer.move_to(sunset + timedelta(seconds=-1))
+    async_fire_time_changed(hass, dt_util.utcnow())
+    await hass.async_block_till_done()
+    state = hass.states.get(entity_id)
+    assert state.state == STATE_ON
+
+    freezer.move_to(sunset)
+
+=====================================================================
+
+=====================================================================
+Found a 5 line (37 tokens) duplication in the following files: 
+Starting at line 276 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/modbus/test_fan.py
+Starting at line 303 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/modbus/test_fan.py
+
+    await hass.services.async_call(
+        "fan", "turn_off", service_data={"entity_id": ENTITY_ID}
+    )
+    await hass.async_block_till_done()
+    assert hass.states.get(ENTITY_ID).state == STATE_OFF
+
+=====================================================================
+Found a 5 line (37 tokens) duplication in the following files: 
+Starting at line 284 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/modbus/test_fan.py
+Starting at line 297 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/modbus/test_fan.py
+
+    await hass.services.async_call(
+        "fan", "turn_on", service_data={"entity_id": ENTITY_ID2}
+    )
+    await hass.async_block_till_done()
+    assert hass.states.get(ENTITY_ID2).state == STATE_ON
+
+=====================================================================
+Found a 13 line (37 tokens) duplication in the following files: 
+Starting at line 352 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/modbus/test_init.py
+Starting at line 392 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/modbus/test_init.py
+
+                CONF_TYPE: TCP,
+                CONF_HOST: TEST_MODBUS_HOST,
+                CONF_PORT: TEST_PORT_TCP,
+                CONF_TIMEOUT: 3,
+                CONF_SENSORS: [
+                    {
+                        CONF_NAME: "dummy",
+                        CONF_ADDRESS: 9999,
+                    }
+                ],
+            },
+            {
+                CONF_NAME: TEST_MODBUS_NAME,
+
+=====================================================================
+Found a 5 line (37 tokens) duplication in the following files: 
+Starting at line 284 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/modbus/test_light.py
+Starting at line 297 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/modbus/test_light.py
+
+    await hass.services.async_call(
+        "light", "turn_on", service_data={"entity_id": ENTITY_ID2}
+    )
+    await hass.async_block_till_done()
+    assert hass.states.get(ENTITY_ID2).state == STATE_ON
+
+=====================================================================
+Found a 11 line (37 tokens) duplication in the following files: 
+Starting at line 444 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/modbus/test_sensor.py
+Starting at line 489 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/modbus/test_sensor.py
+Starting at line 501 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/modbus/test_sensor.py
+
+                CONF_DATA_TYPE: DataType.UINT32,
+                CONF_SCALE: 1,
+                CONF_OFFSET: 0,
+                CONF_PRECISION: 0,
+            },
+            [0x89AB, 0xCDEF],
+            False,
+            str(0x89ABCDEF),
+        ),
+        (
+            {
+
+=====================================================================
+Found a 5 line (37 tokens) duplication in the following files: 
+Starting at line 285 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/modbus/test_switch.py
+Starting at line 374 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/modbus/test_switch.py
+
+    await hass.services.async_call(
+        "switch", "turn_on", service_data={"entity_id": ENTITY_ID}
+    )
+    await hass.async_block_till_done()
+    assert hass.states.get(ENTITY_ID).state == STATE_ON
+
+=====================================================================
+Found a 5 line (37 tokens) duplication in the following files: 
+Starting at line 290 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/modbus/test_switch.py
+Starting at line 317 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/modbus/test_switch.py
+
+    await hass.services.async_call(
+        "switch", "turn_off", service_data={"entity_id": ENTITY_ID}
+    )
+    await hass.async_block_till_done()
+    assert hass.states.get(ENTITY_ID).state == STATE_OFF
+
+=====================================================================
+Found a 5 line (37 tokens) duplication in the following files: 
+Starting at line 298 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/modbus/test_switch.py
+Starting at line 311 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/modbus/test_switch.py
+
+    await hass.services.async_call(
+        "switch", "turn_on", service_data={"entity_id": ENTITY_ID2}
+    )
+    await hass.async_block_till_done()
+    assert hass.states.get(ENTITY_ID2).state == STATE_ON
+
+=====================================================================
+Found a 9 line (37 tokens) duplication in the following files: 
+Starting at line 117 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/modern_forms/test_config_flow.py
+Starting at line 106 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/twentemilieu/test_config_flow.py
+
+        data={CONF_HOST: "example.com"},
+    )
+
+    assert result.get("type") is FlowResultType.FORM
+    assert result.get("step_id") == "user"
+    assert result.get("errors") == {"base": "cannot_connect"}
+
+
+@patch(
+
+=====================================================================
+Found a 10 line (37 tokens) duplication in the following files: 
+Starting at line 377 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/mold_indicator/test_config_flow.py
+Starting at line 471 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/statistics/test_config_flow.py
+
+                CONF_CALIBRATION_FACTOR: 2.0,
+            },
+        }
+    )
+    msg = await client.receive_json()
+    assert not msg["success"]
+    assert msg["error"] == {
+        "code": "home_assistant_error",
+        "message": "Config entry not found",
+    }
+
+=====================================================================
+=====================================================================
+Found a 9 line (36 tokens) duplication in the following files: 
+Starting at line 231 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_auth.py
+Starting at line 250 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_auth.py
+Starting at line 269 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_auth.py
+Starting at line 288 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_auth.py
+Starting at line 754 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+
+    await hass.async_block_till_done()
+
+    client = await hass_client_no_auth()
+
+    async with client.ws_connect(URL) as ws:
+        auth_msg = await ws.receive_json()
+        assert auth_msg["type"] == TYPE_AUTH_REQUIRED
+
+        await ws.send_str("[--INVALID--JSON--]")
+
+=====================================================================
+Found a 10 line (36 tokens) duplication in the following files: 
+Starting at line 114 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+Starting at line 359 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+
+            "event_data": {"hello": "world"},
+        }
+    )
+
+    msg = await websocket_client.receive_json()
+    assert msg["id"] == 5
+    assert msg["type"] == const.TYPE_RESULT
+    assert msg["success"]
+
+    assert len(runs) == 1
+
+=====================================================================
+Found a 5 line (36 tokens) duplication in the following files: 
+Starting at line 835 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+Starting at line 356 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_http.py
+
+    msg = await websocket_client.receive_json()
+    assert msg["id"] == 5
+    assert msg["type"] == const.TYPE_RESULT
+    assert msg["success"]
+    assert msg["result"] == [
+
+=====================================================================
+Found a 8 line (36 tokens) duplication in the following files: 
+Starting at line 1084 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+Starting at line 1149 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+Starting at line 1248 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+Starting at line 2702 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+Starting at line 2709 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+Starting at line 2716 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+Starting at line 2764 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+Starting at line 2821 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+Starting at line 2828 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+Starting at line 2835 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+
+    msg = await websocket_client.receive_json()
+    assert msg["id"] == 7
+    assert msg["type"] == "event"
+    assert msg["event"] == {
+        "c": {
+            "light.permitted": {
+                "+": {
+                    "a": {"color": "blue"},
+
+=====================================================================
+Found a 8 line (36 tokens) duplication in the following files: 
+Starting at line 1112 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+Starting at line 1177 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+
+        "last_updated": additions["lc"],
+        "state": "on",
+    }
+
+    msg = await websocket_client.receive_json()
+    assert msg["id"] == 7
+    assert msg["type"] == "event"
+    assert msg["event"] == {
+
+=====================================================================
+Found a 7 line (36 tokens) duplication in the following files: 
+Starting at line 1516 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+Starting at line 1589 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+
+async def test_render_template_with_error(
+    hass: HomeAssistant,
+    websocket_client: MockHAClientWebSocket,
+    caplog: pytest.LogCaptureFixture,
+    template: str,
+    expected_events: list[dict[str, str]],
+) -> None:
+
+=====================================================================
+Found a 8 line (36 tokens) duplication in the following files: 
+Starting at line 2125 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+Starting at line 2159 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+Starting at line 2278 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+
+        {"id": 6, "type": "manifest/get", "integration": "hue"}
+    )
+
+    msg = await websocket_client.receive_json()
+    assert msg["id"] == 6
+    assert msg["type"] == const.TYPE_RESULT
+    assert msg["success"]
+    assert msg["result"] == hue.manifest
+
+=====================================================================
+Found a 8 line (36 tokens) duplication in the following files: 
+Starting at line 2260 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+Starting at line 354 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_http.py
+
+        }
+    )
+
+    msg = await websocket_client.receive_json()
+    assert msg["id"] == 5
+    assert msg["type"] == const.TYPE_RESULT
+    assert msg["success"]
+    assert msg["result"]["result"] is True
+
+=====================================================================
+Found a 8 line (36 tokens) duplication in the following files: 
+Starting at line 2296 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+Starting at line 2554 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+
+        }
+    )
+
+    msg = await websocket_client.receive_json()
+    assert msg["id"] == 7
+    assert msg["type"] == const.TYPE_RESULT
+    assert msg["success"]
+    assert msg["result"]["result"] is False
+
+=====================================================================
+Found a 9 line (36 tokens) duplication in the following files: 
+Starting at line 2448 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+Starting at line 2503 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/components/websocket_api/test_commands.py
+
+                {"stop": "done", "response_variable": "service_result"},
+            ],
+        }
+    )
+
+    msg_no_var = await ws_client.receive_json()
+    assert msg_no_var["type"] == const.TYPE_RESULT
+    assert msg_no_var["success"]
+    assert msg_no_var["result"]["response"] == {
+
+=====================================================================
+
+=====================================================================
+Found a 6 line (35 tokens) duplication in the following files: 
+Starting at line 4710 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/test_config_entries.py
+Starting at line 4802 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/test_config_entries.py
+
+    entry.async_start_reauth(hass, {"extra_context": "some_extra_context"})
+    await hass.async_block_till_done()
+    assert len(hass.config_entries.flow.async_progress()) == 1
+
+
+async def test_reconfigure(
+
+=====================================================================
+Found a 6 line (35 tokens) duplication in the following files: 
+Starting at line 4752 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/test_config_entries.py
+Starting at line 4799 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/test_config_entries.py
+
+    entry.async_start_reconfigure(hass, {"extra_context": "some_extra_context"})
+    await hass.async_block_till_done()
+    assert len(hass.config_entries.flow.async_progress()) == 1
+
+    # Check that we can't start duplicate reconfigure flows when the context is different
+    entry.async_start_reconfigure(hass, {"diff": "diff"})
+
+=====================================================================
+Found a 18 line (35 tokens) duplication in the following files: 
+Starting at line 2586 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/test_core.py
+Starting at line 2678 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/test_core.py
+Starting at line 2794 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/test_core.py
+
+            0xFF,
+            0xFF,
+            0xFF,
+            0xFF,
+            0xFF,
+            0xFF,
+            0xFF,
+            0xFF,
+            0xFF,
+            0xFF,
+            0xFF,
+            0xFF,
+            0xFF,
+            0xFF,
+            0xFF,
+            0xFF,
+            0xFF,
+            0xFF,
+
+=====================================================================
+Found a 7 line (35 tokens) duplication in the following files: 
+Starting at line 41 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/test_loader.py
+Starting at line 47 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/test_loader.py
+
+    mock_integration(hass, MockModule("mod1", dependencies=["mod3"]))
+    with pytest.raises(loader.CircularDependency):
+        await loader._async_component_dependencies(hass, mod_4)
+
+    # Create a circular after_dependency
+    mock_integration(
+        hass, MockModule("mod1", partial_manifest={"after_dependencies": ["mod4"]})
+
+=====================================================================
+Found a 9 line (35 tokens) duplication in the following files: 
+Starting at line 181 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/test_loader.py
+Starting at line 208 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/test_loader.py
+
+async def test_custom_integration_version_blocked(
+    hass: HomeAssistant,
+    caplog: pytest.LogCaptureFixture,
+    blocked_versions,
+) -> None:
+    """Test that we log a warning when custom integrations have a blocked version."""
+    with patch.dict(
+        loader.BLOCKED_CUSTOM_INTEGRATIONS, {"test_blocked_version": blocked_versions}
+    ):
+
+=====================================================================
+Found a 10 line (35 tokens) duplication in the following files: 
+Starting at line 642 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/test_loader.py
+Starting at line 687 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/test_loader.py
+Starting at line 708 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/test_loader.py
+Starting at line 737 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/test_loader.py
+Starting at line 784 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/test_loader.py
+
+    return loader.Integration(
+        hass,
+        f"homeassistant.components.{name}",
+        None,
+        {
+            "name": name,
+            "domain": name,
+            "config_flow": config_flow,
+            "dependencies": [],
+            "requirements": [],
+
+=====================================================================
+Found a 11 line (35 tokens) duplication in the following files: 
+Starting at line 1532 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/test_loader.py
+Starting at line 1656 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/test_loader.py
+
+                name="homeassistant.components.executor_import",
+            )
+
+        return module_mock
+
+    assert "homeassistant.components.executor_import" not in sys.modules
+    assert "custom_components.executor_import" not in sys.modules
+    with (
+        patch("homeassistant.loader.importlib.import_module", mock_import),
+        pytest.raises(
+            ModuleNotFoundError, match="homeassistant.components.executor_import"
+
+=====================================================================
+Found a 15 line (35 tokens) duplication in the following files: 
+Starting at line 180 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/util/test_async.py
+Starting at line 27 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/util/test_loop.py
+
+            return_value="self.light.is_on",
+        ),
+        patch(
+            "homeassistant.util.loop._get_line_from_cache",
+            return_value="mock_line",
+        ),
+        patch(
+            "homeassistant.util.loop.get_current_frame",
+            return_value=frames,
+        ),
+        patch(
+            "homeassistant.helpers.frame.get_current_frame",
+            return_value=frames,
+        ),
+    ):
+
+=====================================================================
+Found a 6 line (35 tokens) duplication in the following files: 
+Starting at line 432 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/util/test_dt.py
+Starting at line 437 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/util/test_dt.py
+Starting at line 442 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/util/test_dt.py
+Starting at line 447 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/util/test_dt.py
+
+            datetime(2021, 10, 31, 0, 0, 0),
+            datetime(2021, 10, 31, 2, 30, 0, fold=0),
+        ),
+        # 02:00(0) -> 2:30(0)
+        (
+            datetime(2021, 10, 31, 2, 0, 0, fold=0),
+
+=====================================================================
+Found a 3 line (35 tokens) duplication in the following files: 
+Starting at line 30 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/util/test_json.py
+Starting at line 38 of /home/vestel/pmd-bin-7.0.0/HomeAssistant/home/tests/util/test_json.py
+
+    with pytest.raises(HomeAssistantError, match=re.escape(str(fname))) as err:
+        load_json(fname)
+    assert isinstance(err.value.__cause__, ValueError)
+
