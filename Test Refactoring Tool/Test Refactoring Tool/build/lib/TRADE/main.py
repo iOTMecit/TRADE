@@ -3,13 +3,12 @@ import time
 import xml.etree.ElementTree as ET
 import re
 import ast
-import argparse
+
 
 CONTEXT_SIZE = 2  # Number of lines before/after to check
 stored_differences = {}
 global_param_deff= []
 param_index = 1
-common_blocks = []
 function_counter = 1
 old_line_count_80 = 0
 new_line_count_80 = 0
@@ -17,10 +16,6 @@ exact_count = 0
 near_count = 0
 similar_count = 0
 
-def parse_args():
-    parser = argparse.ArgumentParser(description="Process and refactor files based on XML clone data.")
-    parser.add_argument('--xml_path', type=str, required=True, help="Path to the XML file to process")
-    return parser.parse_args()
 
 def read_non_comment_lines(filepath, start_line=None, end_line=None):
     with open(filepath, 'r') as file:
@@ -516,6 +511,7 @@ def find_common_lines_80(func1_lines, func2_lines, type , min_length=5):
     equal_counter = 0
     i = 0
     if type == 0:
+        common_blocks = []
         i = 1
         while i < length1:
             j = 1
@@ -653,10 +649,13 @@ def refactor_functions_80(func1, func2, path1, path2, import_name, type):
         if common_blocks:
             refactored_functions = []
             func1_refactored, func2_refactored = '\n'.join(func1), '\n'.join(func2)  # List to string conversion
-
+            all_refactored = []
             for i, (function_name, lines) in enumerate(common_blocks):
 
-                first_common_line = lines[0]
+                if lines[0].strip():  # Check if the first line is non-empty
+                    first_common_line = lines[0]
+                elif len(lines) > 1 and lines[1].strip():  # Check if the second line is non-empty
+                    first_common_line = lines[1]
                 base_indent = len(first_common_line) - len(first_common_line.lstrip())
 
                 # Find the next non-empty line for indentation validation
@@ -738,7 +737,7 @@ def refactor_functions_80(func1, func2, path1, path2, import_name, type):
 
                 # Convert back to strings before performing replacements
                 common_block_text = "\n".join(lines)
-                refactored_code_text = '\n'.join(refactored_code)
+                all_refactored += refactored_code
 
                 old_line_count_80 = len(func1)
 
@@ -747,6 +746,7 @@ def refactor_functions_80(func1, func2, path1, path2, import_name, type):
 
                 func2_refactored = func2_refactored.replace(common_block_text, refactored_function_call)
 
+            refactored_code_text = '\n'.join(all_refactored)
             return refactored_functions, func1_refactored, func2_refactored, refactored_code_text
         else:
             return None, '\n'.join(func1), '\n'.join(func2),None
@@ -803,7 +803,7 @@ def refactor_functions_80(func1, func2, path1, path2, import_name, type):
 def parse_xml_and_compare(xml_file_path):
     tree = ET.parse(xml_file_path)
     base_path = os.getenv('BASE_PATH', os.path.dirname(os.path.abspath(__file__)))
-    root = tree.getroot()
+ root = tree.getroot()
     multi_clone = 2
     multi_clone_ary = []
     multi_array_path = []
@@ -984,11 +984,11 @@ def parse_xml_and_compare(xml_file_path):
             refactored_funcs, refactored_func1, refactored_func2, extracted_func = refactor_functions_80(
                 function1_code, function2_code, file1_path, file2_path, import_name, single)
 
-            if refactored_funcs != None:
+            if refactored_funcs:
 
                 modified_block = has_class_dependency_80(refactored_funcs)
                 if not modified_block:
-                    break
+                    continue
                 else:
                     replace_lines_in_file(file1_path, file1_start_line, file1_end_line, refactored_func1)
                     print(f"Refactored code written to {file1_path}")
