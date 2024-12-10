@@ -1,7 +1,0 @@
-<clones>
-<systeminfo processor="nicad6" system="Kivy" granularity="files-blind" threshold="20%" minlines="5" maxlines="2500"/>
-<cloneinfo npcs="73" npairs="0"/>
-<runinfo ncompares="252" cputime="18062"/>
-<classinfo nclasses="0"/>
-
-</clones>
