@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="simian.xsl" type="text/xsl"?>
+<!--
+Simian Similarity Analyzer 4.0.0 - https://simian.quandarypeak.com
+Copyright (c) 2023 Quandary Peak Research. All rights reserved.
+Subject to the Quandary Peak Academic Software License.
+-->
+<simian version="4.0.0">
+    <check failOnDuplication="true" ignoreCharacterCase="true" ignoreCurlyBraces="true" ignoreIdentifierCase="true" ignoreModifiers="true" ignoreStringCase="true" threshold="5">
+        <set lineCount="5" fingerprint="fc6e01c674dedebbdae6bdf8b2dd139c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1792" endLineNumber="1796"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="851" endLineNumber="855"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="785" endLineNumber="789"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="750" endLineNumber="754"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="651" endLineNumber="655"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="616" endLineNumber="620"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="585" endLineNumber="589"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="550" endLineNumber="554"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="519" endLineNumber="523"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="453" endLineNumber="457"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="387" endLineNumber="391"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="321" endLineNumber="325"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="236" endLineNumber="240"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="168" endLineNumber="172"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="132" endLineNumber="136"/>
+        </set>
+        <set lineCount="5" fingerprint="8be35be7204ed329aca80be1a85d5f2e">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1480" endLineNumber="1484"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1529" endLineNumber="1533"/>
+        </set>
+        <set lineCount="5" fingerprint="e9e618cfde2016c6cec22a2d48458e13">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1198" endLineNumber="1202"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1060" endLineNumber="1064"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1036" endLineNumber="1040"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1012" endLineNumber="1016"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="988" endLineNumber="992"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="964" endLineNumber="968"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="917" endLineNumber="921"/>
+        </set>
+        <set lineCount="5" fingerprint="b86054a50c9bc0cca30a9f3fbca232e4">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1206" endLineNumber="1210"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1166" endLineNumber="1170"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1126" endLineNumber="1130"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1086" endLineNumber="1090"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1047" endLineNumber="1051"/>
+        </set>
+        <set lineCount="5" fingerprint="c4ad1ae7917a42b65eadb003a79f4f59">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__1_init.py" startLineNumber="1" endLineNumber="20"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__1_init.py" startLineNumber="1" endLineNumber="20"/>
+        </set>
+        <set lineCount="5" fingerprint="fbc02a583e5ddf60b437499b4389e960">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="431" endLineNumber="436"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="129" endLineNumber="134"/>
+        </set>
+        <set lineCount="5" fingerprint="4959c797388280cd1888d6b7afbe049b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1381" endLineNumber="1385"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1300" endLineNumber="1304"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="839" endLineNumber="843"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="761" endLineNumber="765"/>
+        </set>
+        <set lineCount="5" fingerprint="253214ef989f8d3f8e2bae25000660a0">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="972" endLineNumber="976"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="435" endLineNumber="439"/>
+        </set>
+        <set lineCount="5" fingerprint="b9baa17581506b28d0bc0cb8d6c285b8">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="1243" endLineNumber="1247"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="1204" endLineNumber="1208"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="1167" endLineNumber="1171"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="1140" endLineNumber="1144"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="1113" endLineNumber="1117"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="1086" endLineNumber="1090"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="1059" endLineNumber="1063"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="1022" endLineNumber="1026"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="535" endLineNumber="540"/>
+        </set>
+        <set lineCount="5" fingerprint="794de0a1f924606b7010f9bafaf980fa">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="2028" endLineNumber="2032"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1728" endLineNumber="1732"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="953" endLineNumber="957"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="782" endLineNumber="786"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="736" endLineNumber="740"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="196" endLineNumber="200"/>
+        </set>
+        <set lineCount="5" fingerprint="026ff81dd1a4f191649e50c72debb470">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__1_init.py" startLineNumber="193" endLineNumber="197"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__1_init.py" startLineNumber="201" endLineNumber="205"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="192" endLineNumber="196"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__1_init.py" startLineNumber="194" endLineNumber="198"/>
+        </set>
+        <set lineCount="5" fingerprint="fec89249fff83320b51954008c778ee2">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1368" endLineNumber="1372"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1330" endLineNumber="1334"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1292" endLineNumber="1296"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1254" endLineNumber="1258"/>
+        </set>
+        <set lineCount="5" fingerprint="f63bca4533e4da36601fa4163733d068">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="2015" endLineNumber="2020"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1998" endLineNumber="2003"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1976" endLineNumber="1981"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1959" endLineNumber="1964"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1937" endLineNumber="1942"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1916" endLineNumber="1921"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1897" endLineNumber="1902"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1878" endLineNumber="1883"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1859" endLineNumber="1864"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1840" endLineNumber="1845"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1819" endLineNumber="1824"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1798" endLineNumber="1803"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1777" endLineNumber="1782"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1755" endLineNumber="1760"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1736" endLineNumber="1741"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1714" endLineNumber="1719"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1694" endLineNumber="1699"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1674" endLineNumber="1679"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1652" endLineNumber="1657"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1631" endLineNumber="1636"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1611" endLineNumber="1616"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1591" endLineNumber="1596"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1571" endLineNumber="1576"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1551" endLineNumber="1556"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1532" endLineNumber="1537"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1512" endLineNumber="1517"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1492" endLineNumber="1497"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1473" endLineNumber="1478"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1453" endLineNumber="1458"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1433" endLineNumber="1438"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1413" endLineNumber="1418"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1389" endLineNumber="1394"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1370" endLineNumber="1375"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1348" endLineNumber="1353"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1325" endLineNumber="1330"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1308" endLineNumber="1313"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1283" endLineNumber="1288"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1266" endLineNumber="1271"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1245" endLineNumber="1250"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1224" endLineNumber="1229"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1207" endLineNumber="1212"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1189" endLineNumber="1194"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1170" endLineNumber="1175"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1151" endLineNumber="1156"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1132" endLineNumber="1137"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1113" endLineNumber="1118"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1094" endLineNumber="1099"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1075" endLineNumber="1080"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1056" endLineNumber="1061"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1037" endLineNumber="1042"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1018" endLineNumber="1023"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="999" endLineNumber="1004"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="980" endLineNumber="985"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="961" endLineNumber="966"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="940" endLineNumber="945"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="910" endLineNumber="915"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="890" endLineNumber="895"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="869" endLineNumber="874"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="847" endLineNumber="852"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="829" endLineNumber="834"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="812" endLineNumber="817"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="794" endLineNumber="799"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="769" endLineNumber="774"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="744" endLineNumber="749"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="722" endLineNumber="727"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="701" endLineNumber="706"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="671" endLineNumber="676"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="652" endLineNumber="657"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="633" endLineNumber="638"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="614" endLineNumber="619"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="595" endLineNumber="600"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="576" endLineNumber="581"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="557" endLineNumber="562"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="538" endLineNumber="543"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="519" endLineNumber="524"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="500" endLineNumber="505"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="481" endLineNumber="486"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="462" endLineNumber="467"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="443" endLineNumber="448"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="424" endLineNumber="429"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="406" endLineNumber="411"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="387" endLineNumber="392"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="367" endLineNumber="372"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="347" endLineNumber="352"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="325" endLineNumber="330"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="302" endLineNumber="307"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="129" endLineNumber="134"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="108" endLineNumber="113"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="59" endLineNumber="64"/>
+        </set>
+        <set lineCount="5" fingerprint="c203b8af00c6c5c030aabaa4e3f9c2d0">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__4_method.py" startLineNumber="12" endLineNumber="17"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__4_method.py" startLineNumber="63" endLineNumber="68"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__4_method.py" startLineNumber="13" endLineNumber="18"/>
+        </set>
+        <set lineCount="5" fingerprint="374b88230a67825a17908dcd624a7306">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1686" endLineNumber="1690"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="902" endLineNumber="906"/>
+        </set>
+        <set lineCount="5" fingerprint="8deba03b30d612ed94c9676fd7f5eb3f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="1005" endLineNumber="1010"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="872" endLineNumber="876"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="807" endLineNumber="812"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="677" endLineNumber="681"/>
+        </set>
+        <set lineCount="5" fingerprint="16c3dec816afc8aa5156cf225001c528">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1492" endLineNumber="1496"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1455" endLineNumber="1459"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1418" endLineNumber="1422"/>
+        </set>
+        <set lineCount="5" fingerprint="7a0f5d327b349d16422409e60aec96c4">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1502" endLineNumber="1508"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1465" endLineNumber="1471"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1378" endLineNumber="1384"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1340" endLineNumber="1346"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1302" endLineNumber="1308"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1264" endLineNumber="1270"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="70" endLineNumber="76"/>
+        </set>
+        <set lineCount="5" fingerprint="40f57d676b362283ce4ad81aa1fd6cd3">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="1069" endLineNumber="1073"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="1013" endLineNumber="1017"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="946" endLineNumber="950"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="879" endLineNumber="883"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="815" endLineNumber="819"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="757" endLineNumber="761"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="687" endLineNumber="691"/>
+        </set>
+        <set lineCount="5" fingerprint="9653f5e7d2a5788a379c91582720eabb">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="930" endLineNumber="934"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="892" endLineNumber="896"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="854" endLineNumber="858"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="816" endLineNumber="820"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="778" endLineNumber="782"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="740" endLineNumber="744"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="701" endLineNumber="706"/>
+        </set>
+        <set lineCount="5" fingerprint="976f9a9c6ab609fe663ce0f92d5097cf">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__1_init.py" startLineNumber="161" endLineNumber="165"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__1_init.py" startLineNumber="164" endLineNumber="169"/>
+        </set>
+        <set lineCount="5" fingerprint="fc9acb1b54b6290b376cfd13eb77c6b9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1584" endLineNumber="1588"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1567" endLineNumber="1572"/>
+        </set>
+        <set lineCount="5" fingerprint="788f86b40566b36fb273b18e87a82c08">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1419" endLineNumber="1423"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1316" endLineNumber="1320"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1268" endLineNumber="1272"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1234" endLineNumber="1238"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1047" endLineNumber="1051"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1023" endLineNumber="1027"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="999" endLineNumber="1003"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="975" endLineNumber="979"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="951" endLineNumber="955"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="928" endLineNumber="932"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="441" endLineNumber="445"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="375" endLineNumber="379"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="308" endLineNumber="312"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="289" endLineNumber="293"/>
+        </set>
+        <set lineCount="5" fingerprint="c91002aa86ace56d33322ea8cded3050">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__4_method.py" startLineNumber="16" endLineNumber="20"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__4_method.py" startLineNumber="97" endLineNumber="101"/>
+        </set>
+        <set lineCount="5" fingerprint="9dbb7e74982c4f1f060ad7079b6b1a03">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1422" endLineNumber="1426"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1188" endLineNumber="1192"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1128" endLineNumber="1132"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1096" endLineNumber="1100"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1074" endLineNumber="1078"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="907" endLineNumber="911"/>
+        </set>
+        <set lineCount="5" fingerprint="abe869cffdfb9df27cdf35108cd78be8">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1706" endLineNumber="1710"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="714" endLineNumber="718"/>
+        </set>
+        <set lineCount="5" fingerprint="d0c181ac5932f595a23e3a6b9f6fed06">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="569" endLineNumber="573"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="497" endLineNumber="501"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="436" endLineNumber="440"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="409" endLineNumber="413"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="382" endLineNumber="386"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="340" endLineNumber="344"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="305" endLineNumber="309"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="276" endLineNumber="280"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="190" endLineNumber="194"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="164" endLineNumber="168"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="138" endLineNumber="142"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="112" endLineNumber="116"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="86" endLineNumber="90"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="60" endLineNumber="64"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="39" endLineNumber="43"/>
+        </set>
+        <set lineCount="5" fingerprint="a30616067502559c1d8811371b49b090">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="999" endLineNumber="1003"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="962" endLineNumber="966"/>
+        </set>
+        <set lineCount="5" fingerprint="a24e68b868d71b11125ebf897a537a5d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1744" endLineNumber="1748"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1209" endLineNumber="1213"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1185" endLineNumber="1189"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="224" endLineNumber="228"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="156" endLineNumber="160"/>
+        </set>
+        <set lineCount="5" fingerprint="2bcf400c2c63320c4af5e1f0d0510dd8">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1086" endLineNumber="1090"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1029" endLineNumber="1033"/>
+        </set>
+        <set lineCount="5" fingerprint="ec0c09125e7285ab1f6a3cece47c167b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1783" endLineNumber="1787"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="842" endLineNumber="846"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="776" endLineNumber="780"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="642" endLineNumber="646"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="576" endLineNumber="580"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="510" endLineNumber="514"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="444" endLineNumber="448"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="378" endLineNumber="382"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="292" endLineNumber="296"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="227" endLineNumber="231"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="159" endLineNumber="163"/>
+        </set>
+        <set lineCount="5" fingerprint="5411846efb75219a54146ef118192e7e">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="904" endLineNumber="908"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="839" endLineNumber="843"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="773" endLineNumber="777"/>
+        </set>
+        <set lineCount="6" fingerprint="a5ee81598fb2a618ff2d362bfcd2d297">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="735" endLineNumber="740"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1727" endLineNumber="1732"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="195" endLineNumber="200"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="952" endLineNumber="957"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="2027" endLineNumber="2032"/>
+        </set>
+        <set lineCount="6" fingerprint="cf3bb56f8031ff635568530ffd28014d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1265" endLineNumber="1271"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1307" endLineNumber="1313"/>
+        </set>
+        <set lineCount="6" fingerprint="db8b57b548079cb98992b7e5f0a46184">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1713" endLineNumber="1719"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1735" endLineNumber="1741"/>
+        </set>
+        <set lineCount="6" fingerprint="e10714dd9a5118526d66faa70369e0fe">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__1_init.py" startLineNumber="184" endLineNumber="190"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__1_init.py" startLineNumber="179" endLineNumber="185"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="178" endLineNumber="184"/>
+        </set>
+        <set lineCount="6" fingerprint="f80bb47e0a9a6ccf6a6874dd0a627fbc">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="2047" endLineNumber="2052"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="2066" endLineNumber="2071"/>
+        </set>
+        <set lineCount="6" fingerprint="7507fc84f171abdbbf7a6cd0014e13f9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1018" endLineNumber="1025"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1075" endLineNumber="1082"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="769" endLineNumber="776"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="961" endLineNumber="968"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="980" endLineNumber="987"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="999" endLineNumber="1006"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1037" endLineNumber="1044"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1056" endLineNumber="1063"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1094" endLineNumber="1101"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1113" endLineNumber="1120"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1132" endLineNumber="1139"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1151" endLineNumber="1158"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1170" endLineNumber="1177"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1283" endLineNumber="1290"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1325" endLineNumber="1332"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1998" endLineNumber="2005"/>
+        </set>
+        <set lineCount="6" fingerprint="fc48f0a05c8896e7caaa34931fdc188c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="307" endLineNumber="312"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="374" endLineNumber="379"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="440" endLineNumber="445"/>
+        </set>
+        <set lineCount="6" fingerprint="bba0119da3baed25d163dd942dd8a29b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="778" endLineNumber="783"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="844" endLineNumber="849"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="739" endLineNumber="744"/>
+        </set>
+        <set lineCount="6" fingerprint="2d9aaf58da34661a3de1d3f65b16862a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="1022" endLineNumber="1027"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="1059" endLineNumber="1064"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="1086" endLineNumber="1091"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="1113" endLineNumber="1118"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="1140" endLineNumber="1145"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="1167" endLineNumber="1172"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="1204" endLineNumber="1209"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="1243" endLineNumber="1248"/>
+        </set>
+        <set lineCount="6" fingerprint="b475f3d26abda27d7384c4aaf1993ff2">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="286" endLineNumber="294"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="216" endLineNumber="227"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="231" endLineNumber="242"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="246" endLineNumber="257"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="261" endLineNumber="272"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="530" endLineNumber="539"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="543" endLineNumber="552"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="556" endLineNumber="565"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="605" endLineNumber="616"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="620" endLineNumber="629"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="633" endLineNumber="642"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="649" endLineNumber="661"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="665" endLineNumber="674"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="726" endLineNumber="735"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="849" endLineNumber="874"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="879" endLineNumber="895"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="900" endLineNumber="911"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="916" endLineNumber="927"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="932" endLineNumber="943"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="948" endLineNumber="959"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="964" endLineNumber="973"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="978" endLineNumber="993"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="998" endLineNumber="1017"/>
+        </set>
+        <set lineCount="6" fingerprint="05fc532cb54168d0bb0a848343fc4192">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="595" endLineNumber="601"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="806" endLineNumber="812"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="844" endLineNumber="850"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="882" endLineNumber="888"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="920" endLineNumber="926"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1027" endLineNumber="1033"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="730" endLineNumber="736"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="768" endLineNumber="774"/>
+        </set>
+        <set lineCount="6" fingerprint="a2174939e1f618e8cc4186c3adf353a4">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="602" endLineNumber="608"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="623" endLineNumber="628"/>
+        </set>
+        <set lineCount="6" fingerprint="e60dcd994d5dc8b3424d0495a358c13f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="76" endLineNumber="82"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="399" endLineNumber="405"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="520" endLineNumber="526"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="50" endLineNumber="56"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="102" endLineNumber="108"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="128" endLineNumber="134"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="951" endLineNumber="957"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="372" endLineNumber="378"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="426" endLineNumber="432"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="453" endLineNumber="459"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="487" endLineNumber="493"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="154" endLineNumber="160"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="180" endLineNumber="186"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="206" endLineNumber="212"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="295" endLineNumber="301"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="330" endLineNumber="336"/>
+        </set>
+        <set lineCount="6" fingerprint="b7fca379998f557a890c2daf6719e629">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="512" endLineNumber="517"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="578" endLineNumber="583"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="644" endLineNumber="649"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="541" endLineNumber="546"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="607" endLineNumber="612"/>
+        </set>
+        <set lineCount="6" fingerprint="838ba7e40c915d9ea60db3eb63261dc6">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="821" endLineNumber="826"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="885" endLineNumber="890"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="952" endLineNumber="957"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="1019" endLineNumber="1024"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="1075" endLineNumber="1080"/>
+        </set>
+        <set lineCount="6" fingerprint="07720a69cac3f12a3e1a7d13ce54acf3">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__2_mask.py" startLineNumber="7" endLineNumber="12"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__2_mask.py" startLineNumber="44" endLineNumber="49"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__2_mask.py" startLineNumber="29" endLineNumber="34"/>
+        </set>
+        <set lineCount="6" fingerprint="5e66d2a6f426fd91feceacbab5abee44">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="122" endLineNumber="127"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="163" endLineNumber="168"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="221" endLineNumber="226"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="270" endLineNumber="275"/>
+        </set>
+        <set lineCount="6" fingerprint="af44f7a7e5531802bb54ee068afe2396">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="192" endLineNumber="197"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__1_init.py" startLineNumber="201" endLineNumber="207"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__1_init.py" startLineNumber="193" endLineNumber="199"/>
+        </set>
+        <set lineCount="6" fingerprint="63a6f3f72790bef790ec31ab8356da96">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="302" endLineNumber="310"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="325" endLineNumber="333"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="347" endLineNumber="355"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="367" endLineNumber="375"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="424" endLineNumber="430"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="443" endLineNumber="449"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="462" endLineNumber="468"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="500" endLineNumber="506"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="519" endLineNumber="525"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="557" endLineNumber="563"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="576" endLineNumber="582"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="595" endLineNumber="601"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="614" endLineNumber="620"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="633" endLineNumber="639"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="652" endLineNumber="658"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="671" endLineNumber="677"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="701" endLineNumber="708"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="481" endLineNumber="487"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="538" endLineNumber="544"/>
+        </set>
+        <set lineCount="6" fingerprint="082b05055e2947fb7af9c43c984c487b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="760" endLineNumber="765"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1299" endLineNumber="1304"/>
+        </set>
+        <set lineCount="6" fingerprint="79e09d9fbfd3c6355aa6d66604808f6b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="744" endLineNumber="751"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1959" endLineNumber="1966"/>
+        </set>
+        <set lineCount="6" fingerprint="6d8e3528e88e9b92d3ada6e262c98b30">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1473" endLineNumber="1480"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1532" endLineNumber="1539"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1736" endLineNumber="1743"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="722" endLineNumber="729"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1413" endLineNumber="1420"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1433" endLineNumber="1440"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1453" endLineNumber="1460"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1492" endLineNumber="1499"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1512" endLineNumber="1519"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1551" endLineNumber="1558"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1571" endLineNumber="1578"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1591" endLineNumber="1598"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1611" endLineNumber="1618"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1631" endLineNumber="1638"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1652" endLineNumber="1659"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1674" endLineNumber="1682"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1694" endLineNumber="1701"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1755" endLineNumber="1762"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1777" endLineNumber="1784"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1798" endLineNumber="1805"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1819" endLineNumber="1826"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1840" endLineNumber="1847"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1859" endLineNumber="1866"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1878" endLineNumber="1885"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1897" endLineNumber="1904"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1916" endLineNumber="1923"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1937" endLineNumber="1944"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="2015" endLineNumber="2022"/>
+        </set>
+        <set lineCount="7" fingerprint="e21e715c350628e988ed8d09af5740e3">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="826" endLineNumber="832"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="699" endLineNumber="705"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__5_tcg.py" startLineNumber="648" endLineNumber="654"/>
+        </set>
+        <set lineCount="7" fingerprint="174a60256f3dfe1f997979933c88aa80">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__4_method.py" startLineNumber="63" endLineNumber="71"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__4_method.py" startLineNumber="13" endLineNumber="21"/>
+        </set>
+        <set lineCount="7" fingerprint="a961da751535084324b06181799e0e1f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="569" endLineNumber="577"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="497" endLineNumber="505"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="436" endLineNumber="444"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="409" endLineNumber="417"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="382" endLineNumber="390"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="340" endLineNumber="348"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="305" endLineNumber="313"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="190" endLineNumber="198"/>
+        </set>
+        <set lineCount="7" fingerprint="f679be9d44a7e91374753abd8912f491">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1074" endLineNumber="1082"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1017" endLineNumber="1025"/>
+        </set>
+        <set lineCount="7" fingerprint="6f9c8ddd7c2d861427054a38dcd48636">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__1_init.py" startLineNumber="151" endLineNumber="159"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__1_init.py" startLineNumber="149" endLineNumber="157"/>
+        </set>
+        <set lineCount="7" fingerprint="4571a2303e68f508de48797a1190bab1">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1325" endLineNumber="1334"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="769" endLineNumber="778"/>
+        </set>
+        <set lineCount="7" fingerprint="40d928be2bf5443f9ea46fd091136079">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="398" endLineNumber="405"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="75" endLineNumber="82"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="519" endLineNumber="526"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="329" endLineNumber="336"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="294" endLineNumber="301"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="205" endLineNumber="212"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="179" endLineNumber="186"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="153" endLineNumber="160"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="486" endLineNumber="493"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="452" endLineNumber="459"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="425" endLineNumber="432"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="371" endLineNumber="378"/>
+        </set>
+        <set lineCount="7" fingerprint="78446e18c4068ba4126f8f23ade297ab">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="367" endLineNumber="376"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="347" endLineNumber="356"/>
+        </set>
+        <set lineCount="7" fingerprint="d6f213671e4676338f50804ca2168489">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="537" endLineNumber="544"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="480" endLineNumber="487"/>
+        </set>
+        <set lineCount="7" fingerprint="3f1d0c483b7a25205719adaf745ed073">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1531" endLineNumber="1539"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1472" endLineNumber="1480"/>
+        </set>
+        <set lineCount="7" fingerprint="51f76cb6623f79c8d3b9894991008d59">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1726" endLineNumber="1732"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="734" endLineNumber="740"/>
+        </set>
+        <set lineCount="7" fingerprint="8698c5796e8aa5dea4d7ebbe9b22f3ab">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="622" endLineNumber="628"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="556" endLineNumber="562"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="756" endLineNumber="762"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="138" endLineNumber="144"/>
+        </set>
+        <set lineCount="7" fingerprint="2f11d6e125a877acabc203f93b745488">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="224" endLineNumber="236"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="166" endLineNumber="178"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="250" endLineNumber="262"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="240" endLineNumber="246"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="150" endLineNumber="162"/>
+        </set>
+        <set lineCount="7" fingerprint="8bdc00dc643673c2be4637deb29638fa">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="179" endLineNumber="186"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__1_init.py" startLineNumber="180" endLineNumber="187"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__1_init.py" startLineNumber="182" endLineNumber="188"/>
+        </set>
+        <set lineCount="7" fingerprint="af51320ca3e851f8592e46db3f818f6b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="870" endLineNumber="876"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="804" endLineNumber="812"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="675" endLineNumber="681"/>
+        </set>
+        <set lineCount="7" fingerprint="924e069abe9d5e8dd29acb4a2de162d3">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="1058" endLineNumber="1066"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="935" endLineNumber="943"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="746" endLineNumber="754"/>
+        </set>
+        <set lineCount="8" fingerprint="a11febe3c8be9f4b34865781db5f87bc">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1339" endLineNumber="1346"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1352" endLineNumber="1359"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1365" endLineNumber="1372"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1378" endLineNumber="1385"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1391" endLineNumber="1398"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1404" endLineNumber="1411"/>
+        </set>
+        <set lineCount="8" fingerprint="471c3233e982a7d9280b0798024ec65c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="613" endLineNumber="620"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="747" endLineNumber="754"/>
+        </set>
+        <set lineCount="8" fingerprint="9bd4aa401c2b0dbfddf34968dae92caa">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="928" endLineNumber="935"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="951" endLineNumber="958"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="975" endLineNumber="982"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="999" endLineNumber="1006"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1023" endLineNumber="1030"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1047" endLineNumber="1054"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1234" endLineNumber="1241"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1268" endLineNumber="1275"/>
+        </set>
+        <set lineCount="8" fingerprint="4f568930efa86f34c258cbf6e18e2ecb">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1220" endLineNumber="1227"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1325" endLineNumber="1332"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="937" endLineNumber="944"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1243" endLineNumber="1250"/>
+        </set>
+        <set lineCount="8" fingerprint="7c96a37ad68278979fd0113f53dd96b3">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__4_method.py" startLineNumber="7" endLineNumber="16"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__4_method.py" startLineNumber="6" endLineNumber="15"/>
+        </set>
+        <set lineCount="8" fingerprint="cf610bccd572947ad6658a2ba7c683c5">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="319" endLineNumber="326"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="166" endLineNumber="173"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="234" endLineNumber="241"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="517" endLineNumber="524"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="583" endLineNumber="590"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="649" endLineNumber="656"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="385" endLineNumber="392"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="451" endLineNumber="458"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1790" endLineNumber="1797"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="783" endLineNumber="790"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="849" endLineNumber="856"/>
+        </set>
+        <set lineCount="8" fingerprint="7f096a1db27451602783755c455778c2">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1071" endLineNumber="1078"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1093" endLineNumber="1100"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1125" endLineNumber="1132"/>
+        </set>
+        <set lineCount="8" fingerprint="bf13f0c1c97ee509d6ebeeb6ff86b292">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="289" endLineNumber="296"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="375" endLineNumber="382"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="441" endLineNumber="448"/>
+        </set>
+        <set lineCount="8" fingerprint="0e370bd09d2071ce69c74bf28cc7c9d1">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="517" endLineNumber="526"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="292" endLineNumber="301"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="327" endLineNumber="336"/>
+        </set>
+        <set lineCount="8" fingerprint="560f59eb915201f04f2aaafb8cde2cc5">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="165" endLineNumber="178"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="223" endLineNumber="236"/>
+        </set>
+        <set lineCount="8" fingerprint="2c8ef84b7ef7fb42e06c1a8cb7db7cb0">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="756" endLineNumber="763"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="556" endLineNumber="563"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="622" endLineNumber="629"/>
+        </set>
+        <set lineCount="8" fingerprint="f750260712408e2d7aec815025872ffc">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="369" endLineNumber="378"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="423" endLineNumber="432"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="450" endLineNumber="459"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="484" endLineNumber="493"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="151" endLineNumber="160"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="177" endLineNumber="186"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="203" endLineNumber="212"/>
+        </set>
+        <set lineCount="8" fingerprint="656da061c093a62003de2d586b3b67b3">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__1_init.py" startLineNumber="355" endLineNumber="362"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__1_init.py" startLineNumber="353" endLineNumber="360"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__1_init.py" startLineNumber="347" endLineNumber="354"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="344" endLineNumber="351"/>
+        </set>
+        <set lineCount="9" fingerprint="e360c4dd32340ae859c05e2fb4c2844c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1194" endLineNumber="1202"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="984" endLineNumber="992"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="960" endLineNumber="968"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="913" endLineNumber="921"/>
+        </set>
+        <set lineCount="9" fingerprint="32c7f09878d300766fa284d3dde6419e">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1245" endLineNumber="1256"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__5_tcg.py" startLineNumber="1224" endLineNumber="1235"/>
+        </set>
+        <set lineCount="9" fingerprint="a95b4d5d21cf2a406421616c89ce3cbd">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__2_mask.py" startLineNumber="33" endLineNumber="41"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__2_mask.py" startLineNumber="55" endLineNumber="63"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__2_mask.py" startLineNumber="18" endLineNumber="26"/>
+        </set>
+        <set lineCount="9" fingerprint="6a8040e693bec6df3de22b1859472a41">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1056" endLineNumber="1064"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1008" endLineNumber="1016"/>
+        </set>
+        <set lineCount="10" fingerprint="33708052e0144d8b0b768d80c0c4fdff">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__1_init.py" startLineNumber="53" endLineNumber="63"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="51" endLineNumber="61"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__1_init.py" startLineNumber="49" endLineNumber="59"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__1_init.py" startLineNumber="51" endLineNumber="61"/>
+        </set>
+        <set lineCount="10" fingerprint="ab56def57865b377e34d4be137543999">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="289" endLineNumber="301"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="324" endLineNumber="336"/>
+        </set>
+        <set lineCount="10" fingerprint="a5078d55e609122253b382b0add7211c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="148" endLineNumber="160"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="174" endLineNumber="186"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="200" endLineNumber="212"/>
+        </set>
+        <set lineCount="12" fingerprint="4422c9ba1c4c762cc6aabaa562ca9e4a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="827" endLineNumber="840"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="958" endLineNumber="971"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="1025" endLineNumber="1038"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="1081" endLineNumber="1094"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="769" endLineNumber="782"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="1127" endLineNumber="1138"/>
+        </set>
+        <set lineCount="12" fingerprint="a015c87ff7634796db45b9357e61d049">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__1_init.py" startLineNumber="65" endLineNumber="78"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="63" endLineNumber="76"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__1_init.py" startLineNumber="61" endLineNumber="74"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__1_init.py" startLineNumber="63" endLineNumber="76"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__1_init.py" startLineNumber="64" endLineNumber="77"/>
+        </set>
+        <set lineCount="12" fingerprint="b9bb291cc8b97d26db237dbb98f1b812">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1621" endLineNumber="1632"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1647" endLineNumber="1658"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1673" endLineNumber="1684"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1543" endLineNumber="1554"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1569" endLineNumber="1580"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1595" endLineNumber="1606"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1489" endLineNumber="1500"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1517" endLineNumber="1528"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1725" endLineNumber="1736"/>
+        </set>
+        <set lineCount="12" fingerprint="63591f796ecb97805ae6904e8b5a1d8a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1435" endLineNumber="1451"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1272" endLineNumber="1288"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1310" endLineNumber="1326"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1348" endLineNumber="1364"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1386" endLineNumber="1402"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1510" endLineNumber="1526"/>
+        </set>
+        <set lineCount="13" fingerprint="1579c7770c3badb8c93f4c7b5c5b829e">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="756" endLineNumber="774"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="718" endLineNumber="736"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1015" endLineNumber="1033"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="908" endLineNumber="926"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="870" endLineNumber="888"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="832" endLineNumber="850"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="794" endLineNumber="812"/>
+        </set>
+        <set lineCount="13" fingerprint="3aafd18d65f881222fa77a1e216c1a91">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1594" endLineNumber="1606"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1568" endLineNumber="1580"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1542" endLineNumber="1554"/>
+        </set>
+        <set lineCount="13" fingerprint="1da424d652421d87752d787bafb23778">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1502" endLineNumber="1522"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1465" endLineNumber="1485"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1378" endLineNumber="1398"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1340" endLineNumber="1360"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1302" endLineNumber="1322"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1264" endLineNumber="1284"/>
+        </set>
+        <set lineCount="13" fingerprint="07a4ea8e70378cf0aad50f57987ac777">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1009" endLineNumber="1029"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="972" endLineNumber="992"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="902" endLineNumber="922"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="864" endLineNumber="884"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="826" endLineNumber="846"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="788" endLineNumber="808"/>
+        </set>
+        <set lineCount="13" fingerprint="277ff38f6bc0155aeec573d702dbf156">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1672" endLineNumber="1684"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1646" endLineNumber="1658"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1620" endLineNumber="1632"/>
+        </set>
+        <set lineCount="14" fingerprint="cf2e981557269e45d635e5fae391d950">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="550" endLineNumber="563"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="616" endLineNumber="629"/>
+        </set>
+        <set lineCount="14" fingerprint="618a30bf84631dd5070543a6f2350aff">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__1_init.py" startLineNumber="355" endLineNumber="368"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__1_init.py" startLineNumber="363" endLineNumber="376"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="354" endLineNumber="367"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__1_init.py" startLineNumber="357" endLineNumber="370"/>
+        </set>
+        <set lineCount="15" fingerprint="581a3cdcd35b5e2184a4307bf80cb1b3">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="353" endLineNumber="367"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__1_init.py" startLineNumber="362" endLineNumber="376"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__1_init.py" startLineNumber="354" endLineNumber="368"/>
+        </set>
+        <set lineCount="15" fingerprint="e80dd8b8533ad01d465706820edfd3bb">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="314" endLineNumber="328"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="446" endLineNumber="460"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="380" endLineNumber="394"/>
+        </set>
+        <set lineCount="15" fingerprint="32049114b71a8c97bd1e3beac696ba1a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__1_init.py" startLineNumber="27" endLineNumber="49"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__1_init.py" startLineNumber="26" endLineNumber="48"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="25" endLineNumber="47"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__1_init.py" startLineNumber="22" endLineNumber="44"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__1_init.py" startLineNumber="23" endLineNumber="45"/>
+        </set>
+        <set lineCount="15" fingerprint="f0f4540b2248c08037d6674f9ac98035">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__1_init.py" startLineNumber="164" endLineNumber="178"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__1_init.py" startLineNumber="170" endLineNumber="185"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="161" endLineNumber="176"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__1_init.py" startLineNumber="162" endLineNumber="177"/>
+        </set>
+        <set lineCount="16" fingerprint="bbe66525c7b98691919a1cc719fa389d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__1_init.py" startLineNumber="22" endLineNumber="45"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="25" endLineNumber="48"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__1_init.py" startLineNumber="26" endLineNumber="49"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__1_init.py" startLineNumber="27" endLineNumber="50"/>
+        </set>
+        <set lineCount="17" fingerprint="e9aadd8931a3773169acdbd7c7a9908b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1125" endLineNumber="1141"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1093" endLineNumber="1109"/>
+        </set>
+        <set lineCount="17" fingerprint="ee6d79e0f9f66920ef883c2970be62a0">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1502" endLineNumber="1526"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1378" endLineNumber="1402"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1340" endLineNumber="1364"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1302" endLineNumber="1326"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1264" endLineNumber="1288"/>
+        </set>
+        <set lineCount="17" fingerprint="677e29cd144f53c2db8a10648631a301">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="140" endLineNumber="158"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__1_init.py" startLineNumber="143" endLineNumber="159"/>
+        </set>
+        <set lineCount="17" fingerprint="4e95d854ae63e876c509010a282e83c6">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1009" endLineNumber="1033"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="902" endLineNumber="926"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="864" endLineNumber="888"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="826" endLineNumber="850"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="788" endLineNumber="812"/>
+        </set>
+        <set lineCount="17" fingerprint="ed7422c1d7be732333468637813a795f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="1234" endLineNumber="1250"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="928" endLineNumber="944"/>
+        </set>
+        <set lineCount="18" fingerprint="0e5cfe5c1b2b6d1435d38969cbd03530">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1056" endLineNumber="1082"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1096" endLineNumber="1122"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1136" endLineNumber="1162"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1176" endLineNumber="1202"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__5_tcg.py" startLineNumber="1216" endLineNumber="1242"/>
+        </set>
+        <set lineCount="18" fingerprint="e7e59df33c3f8264ebf0e046ce61aabd">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="821" endLineNumber="840"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="952" endLineNumber="971"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="1019" endLineNumber="1038"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__6_tcg.py" startLineNumber="1075" endLineNumber="1094"/>
+        </set>
+        <set lineCount="19" fingerprint="0ad482c9de3516335a5b0fecf5f45641">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__1_init.py" startLineNumber="166" endLineNumber="186"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="157" endLineNumber="178"/>
+        </set>
+        <set lineCount="21" fingerprint="6f590a1169df01259b77f727f7089837">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__2_mask.py" startLineNumber="43" endLineNumber="63"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__2_mask.py" startLineNumber="6" endLineNumber="26"/>
+        </set>
+        <set lineCount="21" fingerprint="1cb8b8021b9d1e9a29805168fd893ec4">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="838" endLineNumber="858"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="772" endLineNumber="792"/>
+        </set>
+        <set lineCount="21" fingerprint="8154d668af3db9658b1281c8df994db9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="440" endLineNumber="460"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="374" endLineNumber="394"/>
+        </set>
+        <set lineCount="21" fingerprint="c69720995c9983a19eeb515c6ea81c46">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="638" endLineNumber="658"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="572" endLineNumber="592"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="506" endLineNumber="526"/>
+        </set>
+        <set lineCount="21" fingerprint="77dfb2173b2848e8334b947ae31da59b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="223" endLineNumber="243"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__5_tcg.py" startLineNumber="155" endLineNumber="175"/>
+        </set>
+        <set lineCount="24" fingerprint="c95f7d276c202ba514f8a18421a63ddc">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__1_init.py" startLineNumber="80" endLineNumber="106"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="78" endLineNumber="104"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__1_init.py" startLineNumber="78" endLineNumber="104"/>
+        </set>
+        <set lineCount="24" fingerprint="34d64482da36557f79d71ea8ccc2033c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__1_init.py" startLineNumber="352" endLineNumber="376"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="343" endLineNumber="367"/>
+        </set>
+        <set lineCount="26" fingerprint="eae871b2dd17365b03e00b70cde7c2f0">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="80" endLineNumber="139"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__1_init.py" startLineNumber="80" endLineNumber="139"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__1_init.py" startLineNumber="78" endLineNumber="137"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__1_init.py" startLineNumber="81" endLineNumber="139"/>
+        </set>
+        <set lineCount="26" fingerprint="4d2f44eaa25488dc56bda4205bc83b97">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="160" endLineNumber="189"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__1_init.py" startLineNumber="161" endLineNumber="190"/>
+        </set>
+        <set lineCount="27" fingerprint="8664522aedbab5c00ebc4073fd63b804">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__1_init.py" startLineNumber="1" endLineNumber="59"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="1" endLineNumber="58"/>
+        </set>
+        <set lineCount="29" fingerprint="687576effad30423f7aa0772e0b395a9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__1_init.py" startLineNumber="23" endLineNumber="63"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="21" endLineNumber="61"/>
+        </set>
+        <set lineCount="33" fingerprint="51f0409c32195f8f764e3cb8c230215b">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__1_init.py" startLineNumber="80" endLineNumber="147"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="80" endLineNumber="147"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__1_init.py" startLineNumber="78" endLineNumber="145"/>
+        </set>
+        <set lineCount="42" fingerprint="802d0617885340cc9e6db97047069ce5">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Parental Rating/pr__1_init.py" startLineNumber="78" endLineNumber="156"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__1_init.py" startLineNumber="78" endLineNumber="156"/>
+        </set>
+        <set lineCount="136" fingerprint="3d877972288c15596f7055e764417348">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/EPG/epg__1_init.py" startLineNumber="202" endLineNumber="337"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__1_init.py" startLineNumber="208" endLineNumber="350"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__1_init.py" startLineNumber="200" endLineNumber="342"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__1_init.py" startLineNumber="210" endLineNumber="352"/>
+        </set>
+        <set lineCount="143" fingerprint="334516fe5c378ed98e4663851bd6ae7f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Single Channel List/scl__1_init.py" startLineNumber="193" endLineNumber="343"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__1_init.py" startLineNumber="201" endLineNumber="352"/>
+        </set>
+        <set lineCount="147" fingerprint="e264cdd4678b028f97674c55b7736aad">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Installation Based On Menu/ibom__1_init.py" startLineNumber="209" endLineNumber="363"/>
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Vestel/Teletext/txt__1_init.py" startLineNumber="207" endLineNumber="362"/>
+        </set>
+        <summary duplicateFileCount="15" duplicateLineCount="4015" duplicateBlockCount="381" totalFileCount="26" totalRawLineCount="10605" totalSignificantLineCount="7600" processingTime="151"/>
+    </check>
+</simian>

@@ -1,0 +1,203 @@
+<clones>
+<systeminfo processor="nicad6" system="Kivy" granularity="functions-blind" threshold="20%" minlines="5" maxlines="2500"/>
+<cloneinfo npcs="574" npairs="123"/>
+<runinfo ncompares="17338" cputime="21886"/>
+<classinfo nclasses="34"/>
+
+<class classid="1" nclones="3" nlines="12" similarity="100">
+<source file="systems/Kivy/tests/test_uix_widget.py" startline="41" endline="53" pcid="40"></source>
+<source file="systems/Kivy/tests/test_uix_widget.py" startline="54" endline="66" pcid="41"></source>
+<source file="systems/Kivy/tests/test_uix_widget.py" startline="67" endline="79" pcid="42"></source>
+</class>
+
+<class classid="2" nclones="2" nlines="7" similarity="100">
+<source file="systems/Kivy/tests/test_uix_slider.py" startline="23" endline="33" pcid="49"></source>
+<source file="systems/Kivy/tests/test_module_inspector.py" startline="52" endline="62" pcid="418"></source>
+</class>
+
+<class classid="3" nclones="2" nlines="10" similarity="90">
+<source file="systems/Kivy/tests/test_uix_stacklayout.py" startline="18" endline="30" pcid="53"></source>
+<source file="systems/Kivy/tests/test_uix_stacklayout.py" startline="31" endline="43" pcid="54"></source>
+</class>
+
+<class classid="4" nclones="2" nlines="11" similarity="90">
+<source file="systems/Kivy/tests/test_uix_stacklayout.py" startline="44" endline="57" pcid="55"></source>
+<source file="systems/Kivy/tests/test_uix_stacklayout.py" startline="58" endline="71" pcid="56"></source>
+</class>
+
+<class classid="5" nclones="2" nlines="12" similarity="91">
+<source file="systems/Kivy/tests/test_uix_boxlayout.py" startline="14" endline="27" pcid="61"></source>
+<source file="systems/Kivy/tests/test_uix_anchorlayout.py" startline="11" endline="24" pcid="489"></source>
+</class>
+
+<class classid="6" nclones="2" nlines="5" similarity="100">
+<source file="systems/Kivy/tests/test_uix_boxlayout.py" startline="96" endline="101" pcid="67"></source>
+<source file="systems/Kivy/tests/test_uix_boxlayout.py" startline="102" endline="107" pcid="68"></source>
+</class>
+
+<class classid="7" nclones="2" nlines="6" similarity="100">
+<source file="systems/Kivy/tests/test_lang.py" startline="113" endline="119" pcid="80"></source>
+<source file="systems/Kivy/tests/test_lang.py" startline="120" endline="126" pcid="81"></source>
+</class>
+
+<class classid="8" nclones="4" nlines="7" similarity="100">
+<source file="systems/Kivy/tests/test_lang.py" startline="127" endline="140" pcid="82"></source>
+<source file="systems/Kivy/tests/test_lang.py" startline="141" endline="158" pcid="83"></source>
+<source file="systems/Kivy/tests/test_lang.py" startline="159" endline="176" pcid="84"></source>
+<source file="systems/Kivy/tests/test_lang.py" startline="177" endline="196" pcid="85"></source>
+</class>
+
+<class classid="9" nclones="4" nlines="9" similarity="100">
+<source file="systems/Kivy/tests/test_lang.py" startline="197" endline="213" pcid="86"></source>
+<source file="systems/Kivy/tests/test_lang.py" startline="248" endline="264" pcid="89"></source>
+<source file="systems/Kivy/tests/test_lang.py" startline="214" endline="230" pcid="87"></source>
+<source file="systems/Kivy/tests/test_lang.py" startline="231" endline="247" pcid="88"></source>
+</class>
+
+<class classid="10" nclones="2" nlines="8" similarity="87">
+<source file="systems/Kivy/tests/test_urlrequest/test_urlrequest_requests.py" startline="53" endline="63" pcid="107"></source>
+<source file="systems/Kivy/tests/test_urlrequest/test_urlrequest_urllib.py" startline="15" endline="24" pcid="121"></source>
+</class>
+
+<class classid="11" nclones="9" nlines="18" similarity="85">
+<source file="systems/Kivy/tests/test_urlrequest/test_urlrequest_requests.py" startline="65" endline="85" pcid="108"></source>
+<source file="systems/Kivy/tests/test_urlrequest/test_urlrequest_requests.py" startline="225" endline="247" pcid="115"></source>
+<source file="systems/Kivy/tests/test_urlrequest/test_urlrequest_requests.py" startline="157" endline="177" pcid="112"></source>
+<source file="systems/Kivy/tests/test_urlrequest/test_urlrequest_requests.py" startline="133" endline="155" pcid="111"></source>
+<source file="systems/Kivy/tests/test_urlrequest/test_urlrequest_requests.py" startline="203" endline="223" pcid="114"></source>
+<source file="systems/Kivy/tests/test_urlrequest/test_urlrequest_requests.py" startline="87" endline="109" pcid="109"></source>
+<source file="systems/Kivy/tests/test_urlrequest/test_urlrequest_requests.py" startline="305" endline="325" pcid="118"></source>
+<source file="systems/Kivy/tests/test_urlrequest/test_urlrequest_requests.py" startline="111" endline="131" pcid="110"></source>
+<source file="systems/Kivy/tests/test_urlrequest/test_urlrequest_requests.py" startline="179" endline="201" pcid="113"></source>
+</class>
+
+<class classid="12" nclones="2" nlines="23" similarity="91">
+<source file="systems/Kivy/tests/test_urlrequest/test_urlrequest_requests.py" startline="249" endline="274" pcid="116"></source>
+<source file="systems/Kivy/tests/test_urlrequest/test_urlrequest_requests.py" startline="276" endline="303" pcid="117"></source>
+</class>
+
+<class classid="13" nclones="2" nlines="7" similarity="85">
+<source file="systems/Kivy/tests/test_clipboard.py" startline="21" endline="28" pcid="152"></source>
+<source file="systems/Kivy/tests/test_clipboard.py" startline="29" endline="36" pcid="153"></source>
+</class>
+
+<class classid="14" nclones="3" nlines="5" similarity="80">
+<source file="systems/Kivy/tests/test_mouse_hover_event.py" startline="90" endline="95" pcid="167"></source>
+<source file="systems/Kivy/tests/test_mouse_hover_event.py" startline="109" endline="114" pcid="170"></source>
+<source file="systems/Kivy/tests/test_mouse_hover_event.py" startline="103" endline="108" pcid="169"></source>
+</class>
+
+<class classid="15" nclones="5" nlines="8" similarity="87">
+<source file="systems/Kivy/tests/test_mouse_hover_event.py" startline="115" endline="124" pcid="171"></source>
+<source file="systems/Kivy/tests/test_mouse_hover_event.py" startline="134" endline="143" pcid="173"></source>
+<source file="systems/Kivy/tests/test_mouse_hover_event.py" startline="154" endline="163" pcid="175"></source>
+<source file="systems/Kivy/tests/test_mouse_hover_event.py" startline="125" endline="133" pcid="172"></source>
+<source file="systems/Kivy/tests/test_mouse_hover_event.py" startline="144" endline="153" pcid="174"></source>
+</class>
+
+<class classid="16" nclones="2" nlines="6" similarity="100">
+<source file="systems/Kivy/tests/test_mouse_hover_event.py" startline="175" endline="181" pcid="177"></source>
+<source file="systems/Kivy/tests/test_mouse_hover_event.py" startline="182" endline="188" pcid="178"></source>
+</class>
+
+<class classid="17" nclones="2" nlines="12" similarity="83">
+<source file="systems/Kivy/tests/test_mouse_hover_event.py" startline="189" endline="204" pcid="179"></source>
+<source file="systems/Kivy/tests/test_mouse_hover_event.py" startline="205" endline="219" pcid="180"></source>
+</class>
+
+<class classid="18" nclones="2" nlines="9" similarity="88">
+<source file="systems/Kivy/tests/test_mouse_hover_event.py" startline="220" endline="230" pcid="181"></source>
+<source file="systems/Kivy/tests/test_mouse_hover_event.py" startline="231" endline="241" pcid="182"></source>
+</class>
+
+<class classid="19" nclones="2" nlines="6" similarity="100">
+<source file="systems/Kivy/tests/pyinstaller/test_pyinstaller.py" startline="102" endline="108" pcid="233"></source>
+<source file="systems/Kivy/tests/pyinstaller/test_pyinstaller.py" startline="110" endline="115" pcid="234"></source>
+</class>
+
+<class classid="20" nclones="2" nlines="5" similarity="100">
+<source file="systems/Kivy/tests/test_utils.py" startline="100" endline="105" pcid="250"></source>
+<source file="systems/Kivy/tests/test_utils.py" startline="106" endline="111" pcid="251"></source>
+</class>
+
+<class classid="21" nclones="2" nlines="31" similarity="80">
+<source file="systems/Kivy/tests/test_uix_actionbar.py" startline="120" endline="174" pcid="281"></source>
+<source file="systems/Kivy/tests/test_uix_actionbar.py" startline="308" endline="360" pcid="284"></source>
+</class>
+
+<class classid="22" nclones="3" nlines="7" similarity="85">
+<source file="systems/Kivy/tests/test_app.py" startline="45" endline="55" pcid="291"></source>
+<source file="systems/Kivy/tests/test_app.py" startline="112" endline="122" pcid="300"></source>
+<source file="systems/Kivy/tests/test_app.py" startline="61" endline="71" pcid="294"></source>
+</class>
+
+<class classid="23" nclones="2" nlines="9" similarity="88">
+<source file="systems/Kivy/tests/test_multistroke.py" startline="230" endline="240" pcid="344"></source>
+<source file="systems/Kivy/tests/test_multistroke.py" startline="241" endline="251" pcid="345"></source>
+</class>
+
+<class classid="24" nclones="2" nlines="14" similarity="92">
+<source file="systems/Kivy/tests/test_multistroke.py" startline="353" endline="369" pcid="353"></source>
+<source file="systems/Kivy/tests/test_multistroke.py" startline="370" endline="387" pcid="354"></source>
+</class>
+
+<class classid="25" nclones="3" nlines="5" similarity="80">
+<source file="systems/Kivy/tests/test_clock.py" startline="29" endline="35" pcid="388"></source>
+<source file="systems/Kivy/tests/test_clock.py" startline="59" endline="65" pcid="392"></source>
+<source file="systems/Kivy/tests/test_clock.py" startline="52" endline="58" pcid="391"></source>
+</class>
+
+<class classid="26" nclones="3" nlines="6" similarity="83">
+<source file="systems/Kivy/tests/test_clock.py" startline="36" endline="43" pcid="389"></source>
+<source file="systems/Kivy/tests/test_clock.py" startline="74" endline="82" pcid="394"></source>
+<source file="systems/Kivy/tests/test_clock.py" startline="44" endline="51" pcid="390"></source>
+</class>
+
+<class classid="27" nclones="2" nlines="6" similarity="83">
+<source file="systems/Kivy/tests/test_clock.py" startline="108" endline="120" pcid="398"></source>
+<source file="systems/Kivy/tests/test_clock.py" startline="121" endline="133" pcid="399"></source>
+</class>
+
+<class classid="28" nclones="2" nlines="25" similarity="92">
+<source file="systems/Kivy/tests/test_module_inspector.py" startline="75" endline="113" pcid="421"></source>
+<source file="systems/Kivy/tests/test_module_inspector.py" startline="114" endline="154" pcid="422"></source>
+</class>
+
+<class classid="29" nclones="2" nlines="6" similarity="83">
+<source file="systems/Kivy/tests/test_uix_translate_coordinates.py" startline="25" endline="32" pcid="428"></source>
+<source file="systems/Kivy/tests/test_uix_translate_coordinates.py" startline="34" endline="41" pcid="429"></source>
+</class>
+
+<class classid="30" nclones="2" nlines="12" similarity="100">
+<source file="systems/Kivy/tests/test_widget.py" startline="63" endline="75" pcid="436"></source>
+<source file="systems/Kivy/tests/test_widget.py" startline="76" endline="88" pcid="437"></source>
+</class>
+
+<class classid="31" nclones="3" nlines="9" similarity="100">
+<source file="systems/Kivy/tests/test_graphics_svg.py" startline="38" endline="53" pcid="483"></source>
+<source file="systems/Kivy/tests/test_graphics_svg.py" startline="54" endline="69" pcid="484"></source>
+<source file="systems/Kivy/tests/test_graphics_svg.py" startline="70" endline="84" pcid="485"></source>
+</class>
+
+<class classid="32" nclones="2" nlines="13" similarity="100">
+<source file="systems/Kivy/tests/test_uix_anchorlayout.py" startline="34" endline="50" pcid="492"></source>
+<source file="systems/Kivy/tests/test_uix_anchorlayout.py" startline="51" endline="67" pcid="493"></source>
+</class>
+
+<class classid="33" nclones="2" nlines="11" similarity="81">
+<source file="systems/Kivy/tests/test_audio.py" startline="34" endline="45" pcid="526"></source>
+<source file="systems/Kivy/tests/test_audio.py" startline="46" endline="57" pcid="527"></source>
+</class>
+
+<class classid="34" nclones="8" nlines="5" similarity="80">
+<source file="systems/Kivy/tests/test_vector.py" startline="36" endline="41" pcid="538"></source>
+<source file="systems/Kivy/tests/test_vector.py" startline="84" endline="89" pcid="547"></source>
+<source file="systems/Kivy/tests/test_vector.py" startline="67" endline="72" pcid="544"></source>
+<source file="systems/Kivy/tests/test_vector.py" startline="120" endline="125" pcid="554"></source>
+<source file="systems/Kivy/tests/test_vector.py" startline="42" endline="47" pcid="539"></source>
+<source file="systems/Kivy/tests/test_vector.py" startline="57" endline="62" pcid="542"></source>
+<source file="systems/Kivy/tests/test_vector.py" startline="78" endline="83" pcid="546"></source>
+<source file="systems/Kivy/tests/test_vector.py" startline="126" endline="131" pcid="555"></source>
+</class>
+
+</clones>

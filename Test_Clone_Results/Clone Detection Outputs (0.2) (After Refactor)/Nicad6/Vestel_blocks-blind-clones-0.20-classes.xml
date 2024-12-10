@@ -1,0 +1,244 @@
+<clones>
+<systeminfo processor="nicad6" system="Vestel" granularity="blocks-blind" threshold="20%" minlines="5" maxlines="2500"/>
+<cloneinfo npcs="939" npairs="1346"/>
+<runinfo ncompares="21137" cputime="31303"/>
+<classinfo nclasses="23"/>
+
+<class classid="1" nclones="2" nlines="8" similarity="87">
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="6" endline="14" pcid="1"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="6" endline="13" pcid="675"></source>
+</class>
+
+<class classid="2" nclones="2" nlines="18" similarity="83">
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="32" endline="56" pcid="8"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="60" endline="84" pcid="12"></source>
+</class>
+
+<class classid="3" nclones="78" nlines="11" similarity="80">
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="88" endline="105" pcid="16"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1737" endline="1752" pcid="351"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1938" endline="1956" pcid="391"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1390" endline="1410" pcid="283"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1349" endline="1367" pcid="275"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="205" endline="221" pcid="38"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1799" endline="1816" pcid="363"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1756" endline="1774" pcid="355"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="848" endline="866" pcid="169"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1225" endline="1242" pcid="249"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1246" endline="1263" pcid="253"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="388" endline="403" pcid="75"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1454" endline="1470" pcid="295"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1414" endline="1430" pcid="287"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1632" endline="1649" pcid="331"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1434" endline="1450" pcid="291"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1474" endline="1489" pcid="299"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="830" endline="844" pcid="165"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1612" endline="1628" pcid="327"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1493" endline="1509" pcid="303"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1778" endline="1795" pcid="359"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1513" endline="1529" pcid="307"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1592" endline="1608" pcid="323"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1208" endline="1221" pcid="245"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1190" endline="1204" pcid="241"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1267" endline="1280" pcid="257"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="813" endline="826" pcid="161"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="795" endline="809" pcid="157"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1533" endline="1548" pcid="311"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1999" endline="2012" pcid="404"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1860" endline="1875" pcid="375"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1960" endline="1973" pcid="395"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1841" endline="1856" pcid="371"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1917" endline="1934" pcid="387"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1371" endline="1386" pcid="279"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1898" endline="1913" pcid="383"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1552" endline="1568" pcid="315"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1879" endline="1894" pcid="379"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1572" endline="1588" pcid="319"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1820" endline="1837" pcid="367"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="891" endline="907" pcid="177"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="326" endline="344" pcid="63"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="303" endline="322" pcid="59"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="267" endline="283" pcid="51"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="368" endline="384" pcid="71"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="348" endline="364" pcid="67"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1695" endline="1711" pcid="343"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1309" endline="1322" pcid="266"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="407" endline="421" pcid="79"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1114" endline="1129" pcid="225"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1000" endline="1015" pcid="201"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1133" endline="1148" pcid="229"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1019" endline="1034" pcid="205"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="981" endline="996" pcid="197"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="596" endline="611" pcid="119"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1038" endline="1053" pcid="209"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1095" endline="1110" pcid="221"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="558" endline="573" pcid="111"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="962" endline="977" pcid="193"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1057" endline="1072" pcid="213"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="425" endline="440" pcid="83"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="501" endline="516" pcid="99"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1076" endline="1091" pcid="217"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="577" endline="592" pcid="115"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="653" endline="668" pcid="131"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1152" endline="1167" pcid="233"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="520" endline="535" pcid="103"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="539" endline="554" pcid="107"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="482" endline="497" pcid="95"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="444" endline="459" pcid="87"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1171" endline="1186" pcid="237"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="463" endline="478" pcid="91"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="615" endline="630" pcid="123"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="634" endline="649" pcid="127"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1326" endline="1341" pcid="270"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1675" endline="1691" pcid="339"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="702" endline="719" pcid="139"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1653" endline="1671" pcid="335"></source>
+</class>
+
+<class classid="4" nclones="2" nlines="13" similarity="84">
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="109" endline="126" pcid="20"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="130" endline="147" pcid="24"></source>
+</class>
+
+<class classid="5" nclones="16" nlines="6" similarity="83">
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="151" endline="163" pcid="28"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="727" endline="736" pcid="762"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="225" endline="237" pcid="42"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="850" endline="875" pcid="774"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="880" endline="896" pcid="778"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="901" endline="912" pcid="782"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="917" endline="928" pcid="786"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="933" endline="944" pcid="790"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="949" endline="960" pcid="794"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="965" endline="974" pcid="798"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="979" endline="994" pcid="802"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="999" endline="1018" pcid="806"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="287" endline="295" pcid="55"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="251" endline="263" pcid="48"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="241" endline="247" pcid="45"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="167" endline="179" pcid="31"></source>
+</class>
+
+<class classid="6" nclones="6" nlines="13" similarity="84">
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="183" endline="201" pcid="34"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="2016" endline="2033" pcid="408"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="723" endline="741" pcid="143"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="941" endline="958" pcid="189"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="770" endline="787" pcid="152"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1715" endline="1733" pcid="347"></source>
+</class>
+
+<class classid="7" nclones="3" nlines="15" similarity="86">
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="745" endline="766" pcid="147"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1284" endline="1305" pcid="261"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="1977" endline="1995" pcid="399"></source>
+</class>
+
+<class classid="8" nclones="2" nlines="12" similarity="100">
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="2038" endline="2053" pcid="413"></source>
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="2057" endline="2072" pcid="417"></source>
+</class>
+
+<class classid="9" nclones="4" nlines="6" similarity="83">
+<source file="systems/Vestel/EPG/epg__4_method.py" startline="3" endline="9" pcid="436"></source>
+<source file="systems/Vestel/Single Channel List/scl__4_method.py" startline="3" endline="8" pcid="931"></source>
+<source file="systems/Vestel/Parental Rating/pr__4_method.py" startline="3" endline="9" pcid="472"></source>
+<source file="systems/Vestel/Teletext/txt__5_method.py" startline="5" endline="10" pcid="528"></source>
+</class>
+
+<class classid="10" nclones="2" nlines="5" similarity="100">
+<source file="systems/Vestel/EPG/epg__4_method.py" startline="97" endline="102" pcid="469"></source>
+<source file="systems/Vestel/Single Channel List/scl__4_method.py" startline="16" endline="21" pcid="937"></source>
+</class>
+
+<class classid="11" nclones="3" nlines="15" similarity="100">
+<source file="systems/Vestel/Parental Rating/pr__1_init.py" startline="161" endline="177" pcid="497"></source>
+<source file="systems/Vestel/Single Channel List/scl__1_init.py" startline="162" endline="178" pcid="851"></source>
+<source file="systems/Vestel/Teletext/txt__1_init.py" startline="170" endline="185" pcid="559"></source>
+</class>
+
+<class classid="12" nclones="2" nlines="7" similarity="100">
+<source file="systems/Vestel/Parental Rating/pr__1_init.py" startline="179" endline="187" pcid="503"></source>
+<source file="systems/Vestel/Single Channel List/scl__1_init.py" startline="180" endline="188" pcid="857"></source>
+</class>
+
+<class classid="13" nclones="3" nlines="7" similarity="100">
+<source file="systems/Vestel/Parental Rating/pr__1_init.py" startline="189" endline="196" pcid="506"></source>
+<source file="systems/Vestel/Teletext/txt__1_init.py" startline="198" endline="206" pcid="566"></source>
+<source file="systems/Vestel/Single Channel List/scl__1_init.py" startline="190" endline="198" pcid="860"></source>
+</class>
+
+<class classid="14" nclones="2" nlines="8" similarity="100">
+<source file="systems/Vestel/Parental Rating/pr__1_init.py" startline="344" endline="352" pcid="510"></source>
+<source file="systems/Vestel/Teletext/txt__1_init.py" startline="353" endline="361" pcid="609"></source>
+</class>
+
+<class classid="15" nclones="3" nlines="14" similarity="100">
+<source file="systems/Vestel/Parental Rating/pr__1_init.py" startline="354" endline="368" pcid="512"></source>
+<source file="systems/Vestel/Teletext/txt__1_init.py" startline="363" endline="377" pcid="611"></source>
+<source file="systems/Vestel/Single Channel List/scl__1_init.py" startline="355" endline="369" pcid="904"></source>
+</class>
+
+<class classid="16" nclones="2" nlines="135" similarity="100">
+<source file="systems/Vestel/Teletext/txt__1_init.py" startline="208" endline="351" pcid="569"></source>
+<source file="systems/Vestel/Single Channel List/scl__1_init.py" startline="200" endline="342" pcid="863"></source>
+</class>
+
+<class classid="17" nclones="2" nlines="7" similarity="100">
+<source file="systems/Vestel/Installation Based On Menu/ibom__2_mask.py" startline="5" endline="11" pcid="672"></source>
+<source file="systems/Vestel/Installation Based On Menu/ibom__2_mask.py" startline="13" endline="19" pcid="673"></source>
+</class>
+
+<class classid="18" nclones="3" nlines="9" similarity="80">
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="34" endline="42" pcid="682"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="44" endline="53" pcid="683"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="55" endline="65" pcid="684"></source>
+</class>
+
+<class classid="19" nclones="4" nlines="7" similarity="100">
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="120" endline="126" pcid="692"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="161" endline="167" pcid="698"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="219" endline="225" pcid="706"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="268" endline="274" pcid="713"></source>
+</class>
+
+<class classid="20" nclones="10" nlines="8" similarity="100">
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="724" endline="736" pcid="761"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="898" endline="912" pcid="781"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="914" endline="928" pcid="785"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="930" endline="944" pcid="789"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="996" endline="1018" pcid="805"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="946" endline="960" pcid="793"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="847" endline="875" pcid="773"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="962" endline="974" pcid="797"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="877" endline="896" pcid="777"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="976" endline="994" pcid="801"></source>
+</class>
+
+<class classid="21" nclones="7" nlines="18" similarity="80">
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="1020" endline="1055" pcid="809"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="1084" endline="1109" pcid="817"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="1057" endline="1082" pcid="813"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="1138" endline="1163" pcid="825"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="1111" endline="1136" pcid="821"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="1165" endline="1200" pcid="829"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="1241" endline="1261" pcid="837"></source>
+</class>
+
+<class classid="22" nclones="2" nlines="21" similarity="100">
+<source file="systems/Vestel/Single Channel List/scl__2_mask.py" startline="6" endline="26" pcid="913"></source>
+<source file="systems/Vestel/Single Channel List/scl__2_mask.py" startline="43" endline="63" pcid="920"></source>
+</class>
+
+<class classid="23" nclones="8" nlines="6" similarity="100">
+<source file="systems/Vestel/Single Channel List/scl__2_mask.py" startline="7" endline="12" pcid="914"></source>
+<source file="systems/Vestel/Single Channel List/scl__2_mask.py" startline="29" endline="34" pcid="918"></source>
+<source file="systems/Vestel/Single Channel List/scl__2_mask.py" startline="14" endline="19" pcid="915"></source>
+<source file="systems/Vestel/Single Channel List/scl__2_mask.py" startline="36" endline="41" pcid="919"></source>
+<source file="systems/Vestel/Single Channel List/scl__2_mask.py" startline="21" endline="26" pcid="916"></source>
+<source file="systems/Vestel/Single Channel List/scl__2_mask.py" startline="44" endline="49" pcid="921"></source>
+<source file="systems/Vestel/Single Channel List/scl__2_mask.py" startline="51" endline="56" pcid="922"></source>
+<source file="systems/Vestel/Single Channel List/scl__2_mask.py" startline="58" endline="63" pcid="923"></source>
+</class>
+
+</clones>

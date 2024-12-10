@@ -1,0 +1,94 @@
+<clones>
+<systeminfo processor="nicad6" system="Vestel" granularity="functions-blind" threshold="20%" minlines="5" maxlines="2500"/>
+<cloneinfo npcs="102" npairs="88"/>
+<runinfo ncompares="701" cputime="21023"/>
+<classinfo nclasses="13"/>
+
+<class classid="1" nclones="2" nlines="9" similarity="88">
+<source file="systems/Vestel/EPG/epg__5_tcg.py" startline="5" endline="14" pcid="1"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="5" endline="13" pcid="52"></source>
+</class>
+
+<class classid="2" nclones="4" nlines="7" similarity="85">
+<source file="systems/Vestel/EPG/epg__4_method.py" startline="2" endline="9" pcid="10"></source>
+<source file="systems/Vestel/Single Channel List/scl__4_method.py" startline="2" endline="8" pcid="100"></source>
+<source file="systems/Vestel/Teletext/txt__5_method.py" startline="4" endline="10" pcid="30"></source>
+<source file="systems/Vestel/Parental Rating/pr__4_method.py" startline="2" endline="9" pcid="15"></source>
+</class>
+
+<class classid="3" nclones="3" nlines="5" similarity="80">
+<source file="systems/Vestel/EPG/epg__4_method.py" startline="10" endline="15" pcid="11"></source>
+<source file="systems/Vestel/Parental Rating/pr__4_method.py" startline="10" endline="15" pcid="16"></source>
+<source file="systems/Vestel/Single Channel List/scl__4_method.py" startline="9" endline="14" pcid="101"></source>
+</class>
+
+<class classid="4" nclones="4" nlines="6" similarity="83">
+<source file="systems/Vestel/EPG/epg__4_method.py" startline="96" endline="102" pcid="14"></source>
+<source file="systems/Vestel/Installation Based On Menu/ibom__4_method.py" startline="66" endline="72" pcid="48"></source>
+<source file="systems/Vestel/Single Channel List/scl__4_method.py" startline="15" endline="21" pcid="102"></source>
+<source file="systems/Vestel/Parental Rating/pr__4_method.py" startline="16" endline="22" pcid="17"></source>
+</class>
+
+<class classid="5" nclones="3" nlines="16" similarity="100">
+<source file="systems/Vestel/Parental Rating/pr__1_init.py" startline="160" endline="177" pcid="22"></source>
+<source file="systems/Vestel/Teletext/txt__1_init.py" startline="169" endline="185" pcid="37"></source>
+<source file="systems/Vestel/Single Channel List/scl__1_init.py" startline="161" endline="178" pcid="92"></source>
+</class>
+
+<class classid="6" nclones="2" nlines="8" similarity="100">
+<source file="systems/Vestel/Parental Rating/pr__1_init.py" startline="178" endline="187" pcid="23"></source>
+<source file="systems/Vestel/Single Channel List/scl__1_init.py" startline="179" endline="188" pcid="93"></source>
+</class>
+
+<class classid="7" nclones="3" nlines="8" similarity="100">
+<source file="systems/Vestel/Parental Rating/pr__1_init.py" startline="188" endline="196" pcid="24"></source>
+<source file="systems/Vestel/Single Channel List/scl__1_init.py" startline="189" endline="198" pcid="94"></source>
+<source file="systems/Vestel/Teletext/txt__1_init.py" startline="197" endline="206" pcid="39"></source>
+</class>
+
+<class classid="8" nclones="2" nlines="9" similarity="100">
+<source file="systems/Vestel/Parental Rating/pr__1_init.py" startline="343" endline="352" pcid="26"></source>
+<source file="systems/Vestel/Teletext/txt__1_init.py" startline="352" endline="361" pcid="41"></source>
+</class>
+
+<class classid="9" nclones="3" nlines="15" similarity="100">
+<source file="systems/Vestel/Parental Rating/pr__1_init.py" startline="353" endline="368" pcid="27"></source>
+<source file="systems/Vestel/Teletext/txt__1_init.py" startline="362" endline="377" pcid="42"></source>
+<source file="systems/Vestel/Single Channel List/scl__1_init.py" startline="354" endline="369" pcid="97"></source>
+</class>
+
+<class classid="10" nclones="2" nlines="136" similarity="100">
+<source file="systems/Vestel/Teletext/txt__1_init.py" startline="207" endline="351" pcid="40"></source>
+<source file="systems/Vestel/Single Channel List/scl__1_init.py" startline="199" endline="342" pcid="95"></source>
+</class>
+
+<class classid="11" nclones="3" nlines="10" similarity="81">
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="33" endline="42" pcid="54"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="54" endline="65" pcid="56"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="43" endline="53" pcid="55"></source>
+</class>
+
+<class classid="12" nclones="10" nlines="9" similarity="100">
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="723" endline="736" pcid="68"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="975" endline="994" pcid="78"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="846" endline="875" pcid="71"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="876" endline="896" pcid="72"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="995" endline="1018" pcid="79"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="945" endline="960" pcid="76"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="913" endline="928" pcid="74"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="897" endline="912" pcid="73"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="961" endline="974" pcid="77"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="929" endline="944" pcid="75"></source>
+</class>
+
+<class classid="13" nclones="7" nlines="19" similarity="81">
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="1019" endline="1055" pcid="80"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="1083" endline="1109" pcid="82"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="1056" endline="1082" pcid="81"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="1137" endline="1163" pcid="84"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="1110" endline="1136" pcid="83"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="1164" endline="1200" pcid="85"></source>
+<source file="systems/Vestel/Single Channel List/scl__5_tcg.py" startline="1240" endline="1261" pcid="87"></source>
+</class>
+
+</clones>
