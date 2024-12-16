@@ -1,0 +1,251 @@
+<clones>
+<systeminfo processor="nicad6" system="functional" granularity="functions-blind" threshold="20%" minlines="5" maxlines="2500"/>
+<cloneinfo npcs="469" npairs="138"/>
+<runinfo ncompares="11126" cputime="19175"/>
+<classinfo nclasses="43"/>
+
+<class classid="1" nclones="3" nlines="15" similarity="80">
+<source file="systems/Table10/HomeRenamed/functional/4175_1.py" startline="52" endline="68" pcid="5"></source>
+<source file="systems/Table10/HomeRenamed/functional/4175_1.py" startline="69" endline="86" pcid="6"></source>
+<source file="systems/Table10/HomeRenamed/functional/4175_1.py" startline="87" endline="101" pcid="7"></source>
+</class>
+
+<class classid="2" nclones="2" nlines="6" similarity="83">
+<source file="systems/Table10/HomeRenamed/functional/71_1.py" startline="9" endline="17" pcid="9"></source>
+<source file="systems/Table10/HomeRenamed/functional/71_1.py" startline="29" endline="37" pcid="11"></source>
+</class>
+
+<class classid="3" nclones="2" nlines="19" similarity="94">
+<source file="systems/Table10/HomeRenamed/functional/71_1.py" startline="58" endline="79" pcid="14"></source>
+<source file="systems/Table10/HomeRenamed/functional/71_1.py" startline="87" endline="109" pcid="16"></source>
+</class>
+
+<class classid="4" nclones="2" nlines="7" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/2154_1.py" startline="29" endline="39" pcid="46"></source>
+<source file="systems/Table10/HomeRenamed/functional/2154_1.py" startline="48" endline="58" pcid="47"></source>
+</class>
+
+<class classid="5" nclones="2" nlines="15" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/2593_1.py" startline="11" endline="28" pcid="49"></source>
+<source file="systems/Table10/HomeRenamed/functional/2586_1.py" startline="11" endline="28" pcid="420"></source>
+</class>
+
+<class classid="6" nclones="2" nlines="8" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/960_1.py" startline="8" endline="22" pcid="50"></source>
+<source file="systems/Table10/HomeRenamed/functional/960_1.py" startline="23" endline="35" pcid="51"></source>
+</class>
+
+<class classid="7" nclones="2" nlines="12" similarity="91">
+<source file="systems/Table10/HomeRenamed/functional/3817_1.py" startline="54" endline="68" pcid="54"></source>
+<source file="systems/Table10/HomeRenamed/functional/3817_1.py" startline="112" endline="127" pcid="56"></source>
+</class>
+
+<class classid="8" nclones="3" nlines="17" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/3817_1.py" startline="89" endline="111" pcid="55"></source>
+<source file="systems/Table10/HomeRenamed/functional/3820_1.py" startline="171" endline="193" pcid="322"></source>
+<source file="systems/Table10/HomeRenamed/functional/3812_1.py" startline="177" endline="199" pcid="223"></source>
+</class>
+
+<class classid="9" nclones="3" nlines="11" similarity="90">
+<source file="systems/Table10/HomeRenamed/functional/3817_1.py" startline="138" endline="160" pcid="57"></source>
+<source file="systems/Table10/HomeRenamed/functional/3812_1.py" startline="281" endline="301" pcid="227"></source>
+<source file="systems/Table10/HomeRenamed/functional/3820_1.py" startline="294" endline="314" pcid="327"></source>
+</class>
+
+<class classid="10" nclones="3" nlines="6" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/3817_1.py" startline="166" endline="172" pcid="59"></source>
+<source file="systems/Table10/HomeRenamed/functional/3820_1.py" startline="338" endline="347" pcid="330"></source>
+<source file="systems/Table10/HomeRenamed/functional/3812_1.py" startline="325" endline="334" pcid="230"></source>
+</class>
+
+<class classid="11" nclones="8" nlines="6" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/2150_1.py" startline="45" endline="52" pcid="85"></source>
+<source file="systems/Table10/HomeRenamed/functional/843_1.py" startline="47" endline="54" pcid="312"></source>
+<source file="systems/Table10/HomeRenamed/functional/1207_1.py" startline="59" endline="66" pcid="456"></source>
+<source file="systems/Table10/HomeRenamed/functional/1532_1.py" startline="293" endline="302" pcid="468"></source>
+<source file="systems/Table10/HomeRenamed/functional/3911_1.py" startline="124" endline="131" pcid="112"></source>
+<source file="systems/Table10/HomeRenamed/functional/3662_1.py" startline="45" endline="52" pcid="99"></source>
+<source file="systems/Table10/HomeRenamed/functional/1532_1.py" startline="340" endline="347" pcid="469"></source>
+<source file="systems/Table10/HomeRenamed/functional/2066_1.py" startline="45" endline="52" pcid="149"></source>
+</class>
+
+<class classid="12" nclones="2" nlines="13" similarity="83">
+<source file="systems/Table10/HomeRenamed/functional/4760_1.py" startline="117" endline="135" pcid="89"></source>
+<source file="systems/Table10/HomeRenamed/functional/4766_1.py" startline="85" endline="104" pcid="153"></source>
+</class>
+
+<class classid="13" nclones="2" nlines="10" similarity="80">
+<source file="systems/Table10/HomeRenamed/functional/44_1.py" startline="8" endline="19" pcid="101"></source>
+<source file="systems/Table10/HomeRenamed/functional/44_1.py" startline="44" endline="56" pcid="105"></source>
+</class>
+
+<class classid="14" nclones="2" nlines="11" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/4048_1.py" startline="85" endline="97" pcid="115"></source>
+<source file="systems/Table10/HomeRenamed/functional/4388_1.py" startline="118" endline="130" pcid="464"></source>
+</class>
+
+<class classid="15" nclones="2" nlines="5" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/27_1.py" startline="20" endline="27" pcid="118"></source>
+<source file="systems/Table10/HomeRenamed/functional/27_1.py" startline="49" endline="56" pcid="120"></source>
+</class>
+
+<class classid="16" nclones="2" nlines="8" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/27_1.py" startline="89" endline="99" pcid="123"></source>
+<source file="systems/Table10/HomeRenamed/functional/27_1.py" startline="185" endline="195" pcid="129"></source>
+</class>
+
+<class classid="17" nclones="3" nlines="9" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/27_1.py" startline="149" endline="160" pcid="126"></source>
+<source file="systems/Table10/HomeRenamed/functional/27_1.py" startline="161" endline="172" pcid="127"></source>
+<source file="systems/Table10/HomeRenamed/functional/27_1.py" startline="173" endline="184" pcid="128"></source>
+</class>
+
+<class classid="18" nclones="2" nlines="9" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/27_1.py" startline="196" endline="207" pcid="130"></source>
+<source file="systems/Table10/HomeRenamed/functional/27_1.py" startline="232" endline="243" pcid="133"></source>
+</class>
+
+<class classid="19" nclones="4" nlines="9" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/27_1.py" startline="208" endline="219" pcid="131"></source>
+<source file="systems/Table10/HomeRenamed/functional/27_1.py" startline="244" endline="255" pcid="134"></source>
+<source file="systems/Table10/HomeRenamed/functional/27_1.py" startline="220" endline="231" pcid="132"></source>
+<source file="systems/Table10/HomeRenamed/functional/27_1.py" startline="256" endline="265" pcid="135"></source>
+</class>
+
+<class classid="20" nclones="2" nlines="6" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/4824_1.py" startline="10" endline="20" pcid="136"></source>
+<source file="systems/Table10/HomeRenamed/functional/4824_1.py" startline="21" endline="31" pcid="137"></source>
+</class>
+
+<class classid="21" nclones="2" nlines="6" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/1039_1.py" startline="9" endline="15" pcid="139"></source>
+<source file="systems/Table10/HomeRenamed/functional/1045_1.py" startline="9" endline="15" pcid="450"></source>
+</class>
+
+<class classid="22" nclones="3" nlines="7" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/4809_1.py" startline="27" endline="36" pcid="141"></source>
+<source file="systems/Table10/HomeRenamed/functional/4809_1.py" startline="65" endline="74" pcid="144"></source>
+<source file="systems/Table10/HomeRenamed/functional/4809_1.py" startline="37" endline="46" pcid="142"></source>
+</class>
+
+<class classid="23" nclones="4" nlines="16" similarity="83">
+<source file="systems/Table10/HomeRenamed/functional/2584_1.py" startline="90" endline="108" pcid="155"></source>
+<source file="systems/Table10/HomeRenamed/functional/4158_1.py" startline="156" endline="174" pcid="440"></source>
+<source file="systems/Table10/HomeRenamed/functional/2584_1.py" startline="130" endline="146" pcid="157"></source>
+<source file="systems/Table10/HomeRenamed/functional/2584_1.py" startline="109" endline="129" pcid="156"></source>
+</class>
+
+<class classid="24" nclones="2" nlines="11" similarity="90">
+<source file="systems/Table10/HomeRenamed/functional/34_1.py" startline="100" endline="116" pcid="178"></source>
+<source file="systems/Table10/HomeRenamed/functional/34_1.py" startline="117" endline="133" pcid="179"></source>
+</class>
+
+<class classid="25" nclones="8" nlines="16" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/202_1.py" startline="69" endline="87" pcid="188"></source>
+<source file="systems/Table10/HomeRenamed/functional/202_1.py" startline="164" endline="182" pcid="193"></source>
+<source file="systems/Table10/HomeRenamed/functional/202_1.py" startline="183" endline="201" pcid="194"></source>
+<source file="systems/Table10/HomeRenamed/functional/202_1.py" startline="88" endline="106" pcid="189"></source>
+<source file="systems/Table10/HomeRenamed/functional/202_1.py" startline="145" endline="163" pcid="192"></source>
+<source file="systems/Table10/HomeRenamed/functional/202_1.py" startline="202" endline="218" pcid="195"></source>
+<source file="systems/Table10/HomeRenamed/functional/202_1.py" startline="126" endline="144" pcid="191"></source>
+<source file="systems/Table10/HomeRenamed/functional/202_1.py" startline="107" endline="125" pcid="190"></source>
+</class>
+
+<class classid="26" nclones="2" nlines="16" similarity="93">
+<source file="systems/Table10/HomeRenamed/functional/436_1.py" startline="54" endline="72" pcid="217"></source>
+<source file="systems/Table10/HomeRenamed/functional/436_1.py" startline="74" endline="90" pcid="218"></source>
+</class>
+
+<class classid="27" nclones="2" nlines="10" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/3812_1.py" startline="103" endline="114" pcid="220"></source>
+<source file="systems/Table10/HomeRenamed/functional/3820_1.py" startline="101" endline="112" pcid="319"></source>
+</class>
+
+<class classid="28" nclones="2" nlines="17" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/3812_1.py" startline="115" endline="135" pcid="221"></source>
+<source file="systems/Table10/HomeRenamed/functional/3820_1.py" startline="113" endline="133" pcid="320"></source>
+</class>
+
+<class classid="29" nclones="2" nlines="14" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/3812_1.py" startline="200" endline="219" pcid="224"></source>
+<source file="systems/Table10/HomeRenamed/functional/3820_1.py" startline="194" endline="213" pcid="323"></source>
+</class>
+
+<class classid="30" nclones="2" nlines="5" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/3812_1.py" startline="268" endline="280" pcid="226"></source>
+<source file="systems/Table10/HomeRenamed/functional/3820_1.py" startline="281" endline="293" pcid="326"></source>
+</class>
+
+<class classid="31" nclones="2" nlines="8" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/3812_1.py" startline="335" endline="345" pcid="231"></source>
+<source file="systems/Table10/HomeRenamed/functional/3820_1.py" startline="348" endline="358" pcid="331"></source>
+</class>
+
+<class classid="32" nclones="2" nlines="8" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/3812_1.py" startline="359" endline="368" pcid="232"></source>
+<source file="systems/Table10/HomeRenamed/functional/3820_1.py" startline="372" endline="381" pcid="332"></source>
+</class>
+
+<class classid="33" nclones="2" nlines="8" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/3812_1.py" startline="370" endline="380" pcid="233"></source>
+<source file="systems/Table10/HomeRenamed/functional/3820_1.py" startline="383" endline="393" pcid="333"></source>
+</class>
+
+<class classid="34" nclones="2" nlines="18" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/3812_1.py" startline="422" endline="447" pcid="241"></source>
+<source file="systems/Table10/HomeRenamed/functional/3820_1.py" startline="435" endline="461" pcid="341"></source>
+</class>
+
+<class classid="35" nclones="2" nlines="6" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/3812_1.py" startline="448" endline="455" pcid="242"></source>
+<source file="systems/Table10/HomeRenamed/functional/3820_1.py" startline="462" endline="469" pcid="342"></source>
+</class>
+
+<class classid="36" nclones="6" nlines="8" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/52_1.py" startline="22" endline="34" pcid="251"></source>
+<source file="systems/Table10/HomeRenamed/functional/52_1.py" startline="69" endline="81" pcid="253"></source>
+<source file="systems/Table10/HomeRenamed/functional/52_1.py" startline="186" endline="198" pcid="258"></source>
+<source file="systems/Table10/HomeRenamed/functional/52_1.py" startline="136" endline="148" pcid="256"></source>
+<source file="systems/Table10/HomeRenamed/functional/52_1.py" startline="113" endline="125" pcid="255"></source>
+<source file="systems/Table10/HomeRenamed/functional/52_1.py" startline="208" endline="220" pcid="259"></source>
+</class>
+
+<class classid="37" nclones="2" nlines="12" similarity="83">
+<source file="systems/Table10/HomeRenamed/functional/52_1.py" startline="158" endline="175" pcid="257"></source>
+<source file="systems/Table10/HomeRenamed/functional/52_1.py" startline="230" endline="249" pcid="260"></source>
+</class>
+
+<class classid="38" nclones="2" nlines="7" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/47_1.py" startline="280" endline="292" pcid="282"></source>
+<source file="systems/Table10/HomeRenamed/functional/47_1.py" startline="293" endline="305" pcid="283"></source>
+</class>
+
+<class classid="39" nclones="2" nlines="7" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/47_1.py" startline="482" endline="491" pcid="287"></source>
+<source file="systems/Table10/HomeRenamed/functional/47_1.py" startline="702" endline="711" pcid="289"></source>
+</class>
+
+<class classid="40" nclones="2" nlines="9" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/47_1.py" startline="552" endline="565" pcid="288"></source>
+<source file="systems/Table10/HomeRenamed/functional/47_1.py" startline="763" endline="774" pcid="290"></source>
+</class>
+
+<class classid="41" nclones="5" nlines="6" similarity="85">
+<source file="systems/Table10/HomeRenamed/functional/26_1.py" startline="105" endline="114" pcid="302"></source>
+<source file="systems/Table10/HomeRenamed/functional/26_1.py" startline="162" endline="172" pcid="307"></source>
+<source file="systems/Table10/HomeRenamed/functional/26_1.py" startline="152" endline="161" pcid="306"></source>
+<source file="systems/Table10/HomeRenamed/functional/26_1.py" startline="173" endline="180" pcid="308"></source>
+<source file="systems/Table10/HomeRenamed/functional/26_1.py" startline="128" endline="139" pcid="304"></source>
+</class>
+
+<class classid="42" nclones="2" nlines="8" similarity="100">
+<source file="systems/Table10/HomeRenamed/functional/4399_1.py" startline="64" endline="74" pcid="370"></source>
+<source file="systems/Table10/HomeRenamed/functional/4399_1.py" startline="75" endline="83" pcid="371"></source>
+</class>
+
+<class classid="43" nclones="2" nlines="20" similarity="95">
+<source file="systems/Table10/HomeRenamed/functional/87_1.py" startline="116" endline="143" pcid="423"></source>
+<source file="systems/Table10/HomeRenamed/functional/87_1.py" startline="144" endline="170" pcid="424"></source>
+</class>
+
+</clones>

@@ -1,0 +1,14 @@
+<clones>
+<systeminfo processor="nicad6" system="B" granularity="blocks" threshold="0%" minlines="5" maxlines="2500"/>
+<cloneinfo npcs="1402" npairs="6"/>
+<runinfo ncompares="8210" cputime="19114"/>
+<classinfo nclasses="1"/>
+
+<class classid="1" nclones="4" nlines="14" similarity="100">
+<source file="systems/B/14.py" startline="198" endline="213" pcid="558"></source>
+<source file="systems/B/14.py" startline="249" endline="264" pcid="561"></source>
+<source file="systems/B/14.py" startline="232" endline="247" pcid="560"></source>
+<source file="systems/B/14.py" startline="215" endline="230" pcid="559"></source>
+</class>
+
+</clones>

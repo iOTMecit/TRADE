@@ -1,0 +1,59 @@
+<clones>
+<systeminfo processor="nicad6" system="C" granularity="blocks" threshold="0%" minlines="5" maxlines="2500"/>
+<cloneinfo npcs="1171" npairs="14"/>
+<runinfo ncompares="8717" cputime="18259"/>
+<classinfo nclasses="10"/>
+
+<class classid="1" nclones="2" nlines="5" similarity="100">
+<source file="systems/C/59.py" startline="12" endline="18" pcid="168"></source>
+<source file="systems/C/59.py" startline="34" endline="40" pcid="174"></source>
+</class>
+
+<class classid="2" nclones="2" nlines="6" similarity="100">
+<source file="systems/C/59.py" startline="55" endline="61" pcid="178"></source>
+<source file="systems/C/69.py" startline="44" endline="50" pcid="476"></source>
+</class>
+
+<class classid="3" nclones="2" nlines="5" similarity="100">
+<source file="systems/C/160.py" startline="28" endline="36" pcid="184"></source>
+<source file="systems/C/137.py" startline="19" endline="27" pcid="1032"></source>
+</class>
+
+<class classid="4" nclones="3" nlines="6" similarity="100">
+<source file="systems/C/116.py" startline="425" endline="442" pcid="328"></source>
+<source file="systems/C/117.py" startline="200" endline="217" pcid="491"></source>
+<source file="systems/C/95.py" startline="152" endline="167" pcid="614"></source>
+</class>
+
+<class classid="5" nclones="2" nlines="5" similarity="100">
+<source file="systems/C/96.py" startline="756" endline="762" pcid="441"></source>
+<source file="systems/C/96.py" startline="815" endline="821" pcid="443"></source>
+</class>
+
+<class classid="6" nclones="2" nlines="7" similarity="100">
+<source file="systems/C/117.py" startline="158" endline="174" pcid="489"></source>
+<source file="systems/C/95.py" startline="90" endline="106" pcid="611"></source>
+</class>
+
+<class classid="7" nclones="2" nlines="5" similarity="100">
+<source file="systems/C/117.py" startline="185" endline="198" pcid="490"></source>
+<source file="systems/C/95.py" startline="118" endline="131" pcid="612"></source>
+</class>
+
+<class classid="8" nclones="2" nlines="5" similarity="100">
+<source file="systems/C/98.py" startline="378" endline="382" pcid="700"></source>
+<source file="systems/C/98.py" startline="409" endline="415" pcid="704"></source>
+</class>
+
+<class classid="9" nclones="3" nlines="5" similarity="100">
+<source file="systems/C/64.py" startline="74" endline="80" pcid="864"></source>
+<source file="systems/C/64.py" startline="97" endline="103" pcid="869"></source>
+<source file="systems/C/64.py" startline="121" endline="127" pcid="874"></source>
+</class>
+
+<class classid="10" nclones="2" nlines="5" similarity="100">
+<source file="systems/C/81.py" startline="427" endline="434" pcid="1022"></source>
+<source file="systems/C/81.py" startline="456" endline="463" pcid="1025"></source>
+</class>
+
+</clones>

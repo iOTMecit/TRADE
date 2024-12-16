@@ -1,0 +1,89 @@
+<clones>
+<systeminfo processor="nicad6" system="Kivy-functional" granularity="blocks-blind" threshold="20%" minlines="5" maxlines="2500"/>
+<cloneinfo npcs="265" npairs="71"/>
+<runinfo ncompares="1662" cputime="17701"/>
+<classinfo nclasses="13"/>
+
+<class classid="1" nclones="2" nlines="5" similarity="100">
+<source file="systems/Kivy-functional/functional/76_1.py" startline="103" endline="108" pcid="36"></source>
+<source file="systems/Kivy-functional/functional/76_1.py" startline="111" endline="115" pcid="37"></source>
+</class>
+
+<class classid="2" nclones="3" nlines="5" similarity="80">
+<source file="systems/Kivy-functional/functional/48_1.py" startline="37" endline="43" pcid="53"></source>
+<source file="systems/Kivy-functional/functional/48_1.py" startline="45" endline="51" pcid="54"></source>
+<source file="systems/Kivy-functional/functional/48_1.py" startline="75" endline="82" pcid="58"></source>
+</class>
+
+<class classid="3" nclones="2" nlines="8" similarity="87">
+<source file="systems/Kivy-functional/functional/48_1.py" startline="109" endline="120" pcid="62"></source>
+<source file="systems/Kivy-functional/functional/48_1.py" startline="122" endline="133" pcid="64"></source>
+</class>
+
+<class classid="4" nclones="10" nlines="8" similarity="80">
+<source file="systems/Kivy-functional/functional/55_1.py" startline="62" endline="70" pcid="102"></source>
+<source file="systems/Kivy-functional/functional/55_1.py" startline="72" endline="79" pcid="103"></source>
+<source file="systems/Kivy-functional/functional/55_1.py" startline="125" endline="133" pcid="107"></source>
+<source file="systems/Kivy-functional/functional/55_1.py" startline="135" endline="143" pcid="108"></source>
+<source file="systems/Kivy-functional/functional/55_1.py" startline="210" endline="218" pcid="119"></source>
+<source file="systems/Kivy-functional/functional/55_1.py" startline="190" endline="198" pcid="117"></source>
+<source file="systems/Kivy-functional/functional/55_1.py" startline="113" endline="123" pcid="106"></source>
+<source file="systems/Kivy-functional/functional/55_1.py" startline="200" endline="208" pcid="118"></source>
+<source file="systems/Kivy-functional/functional/55_1.py" startline="220" endline="228" pcid="120"></source>
+<source file="systems/Kivy-functional/functional/55_1.py" startline="290" endline="298" pcid="127"></source>
+</class>
+
+<class classid="5" nclones="2" nlines="14" similarity="80">
+<source file="systems/Kivy-functional/functional/55_1.py" startline="81" endline="94" pcid="104"></source>
+<source file="systems/Kivy-functional/functional/55_1.py" startline="96" endline="111" pcid="105"></source>
+</class>
+
+<class classid="6" nclones="2" nlines="24" similarity="95">
+<source file="systems/Kivy-functional/functional/55_1.py" startline="230" endline="262" pcid="121"></source>
+<source file="systems/Kivy-functional/functional/55_1.py" startline="384" endline="415" pcid="135"></source>
+</class>
+
+<class classid="7" nclones="2" nlines="10" similarity="90">
+<source file="systems/Kivy-functional/functional/55_1.py" startline="264" endline="274" pcid="122"></source>
+<source file="systems/Kivy-functional/functional/55_1.py" startline="350" endline="360" pcid="130"></source>
+</class>
+
+<class classid="8" nclones="2" nlines="5" similarity="80">
+<source file="systems/Kivy-functional/functional/52_1.py" startline="26" endline="32" pcid="157"></source>
+<source file="systems/Kivy-functional/functional/52_1.py" startline="35" endline="41" pcid="158"></source>
+</class>
+
+<class classid="9" nclones="2" nlines="15" similarity="86">
+<source file="systems/Kivy-functional/functional/56_1.py" startline="83" endline="96" pcid="188"></source>
+<source file="systems/Kivy-functional/functional/56_1.py" startline="119" endline="133" pcid="191"></source>
+</class>
+
+<class classid="10" nclones="2" nlines="7" similarity="100">
+<source file="systems/Kivy-functional/functional/74_1.py" startline="54" endline="63" pcid="214"></source>
+<source file="systems/Kivy-functional/functional/75_1.py" startline="16" endline="24" pcid="248"></source>
+</class>
+
+<class classid="11" nclones="10" nlines="17" similarity="83">
+<source file="systems/Kivy-functional/functional/74_1.py" startline="66" endline="85" pcid="216"></source>
+<source file="systems/Kivy-functional/functional/74_1.py" startline="226" endline="247" pcid="223"></source>
+<source file="systems/Kivy-functional/functional/74_1.py" startline="180" endline="201" pcid="221"></source>
+<source file="systems/Kivy-functional/functional/74_1.py" startline="134" endline="155" pcid="219"></source>
+<source file="systems/Kivy-functional/functional/74_1.py" startline="112" endline="131" pcid="218"></source>
+<source file="systems/Kivy-functional/functional/74_1.py" startline="88" endline="109" pcid="217"></source>
+<source file="systems/Kivy-functional/functional/74_1.py" startline="359" endline="378" pcid="228"></source>
+<source file="systems/Kivy-functional/functional/74_1.py" startline="204" endline="223" pcid="222"></source>
+<source file="systems/Kivy-functional/functional/74_1.py" startline="306" endline="325" pcid="226"></source>
+<source file="systems/Kivy-functional/functional/74_1.py" startline="158" endline="177" pcid="220"></source>
+</class>
+
+<class classid="12" nclones="2" nlines="22" similarity="91">
+<source file="systems/Kivy-functional/functional/74_1.py" startline="250" endline="274" pcid="224"></source>
+<source file="systems/Kivy-functional/functional/74_1.py" startline="277" endline="303" pcid="225"></source>
+</class>
+
+<class classid="13" nclones="2" nlines="16" similarity="87">
+<source file="systems/Kivy-functional/functional/75_1.py" startline="113" endline="132" pcid="262"></source>
+<source file="systems/Kivy-functional/functional/75_1.py" startline="136" endline="155" pcid="264"></source>
+</class>
+
+</clones>

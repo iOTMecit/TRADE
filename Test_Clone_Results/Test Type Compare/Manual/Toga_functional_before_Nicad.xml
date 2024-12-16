@@ -1,0 +1,200 @@
+<clones>
+<systeminfo processor="nicad6" system="functional" granularity="blocks-blind" threshold="20%" minlines="5" maxlines="2500"/>
+<cloneinfo npcs="448" npairs="187"/>
+<runinfo ncompares="3358" cputime="18066"/>
+<classinfo nclasses="30"/>
+
+<class classid="1" nclones="8" nlines="5" similarity="80">
+<source file="systems/TogaRenamed/functional/71_1.py" startline="131" endline="138" pcid="6"></source>
+<source file="systems/TogaRenamed/functional/71_1.py" startline="205" endline="212" pcid="19"></source>
+<source file="systems/TogaRenamed/functional/71_1.py" startline="140" endline="147" pcid="8"></source>
+<source file="systems/TogaRenamed/functional/89_1.py" startline="34" endline="41" pcid="124"></source>
+<source file="systems/TogaRenamed/functional/71_1.py" startline="149" endline="156" pcid="10"></source>
+<source file="systems/TogaRenamed/functional/72_1.py" startline="132" endline="139" pcid="237"></source>
+<source file="systems/TogaRenamed/functional/86_1.py" startline="36" endline="42" pcid="399"></source>
+<source file="systems/TogaRenamed/functional/71_1.py" startline="158" endline="165" pcid="12"></source>
+</class>
+
+<class classid="2" nclones="2" nlines="25" similarity="96">
+<source file="systems/TogaRenamed/functional/122_1.py" startline="182" endline="216" pcid="37"></source>
+<source file="systems/TogaRenamed/functional/122_1.py" startline="346" endline="381" pcid="40"></source>
+</class>
+
+<class classid="3" nclones="14" nlines="43" similarity="80">
+<source file="systems/TogaRenamed/functional/154_1.py" startline="7" endline="51" pcid="63"></source>
+<source file="systems/TogaRenamed/functional/149_1.py" startline="7" endline="51" pcid="444"></source>
+<source file="systems/TogaRenamed/functional/149_1.py" startline="99" endline="143" pcid="446"></source>
+<source file="systems/TogaRenamed/functional/149_1.py" startline="53" endline="97" pcid="445"></source>
+<source file="systems/TogaRenamed/functional/154_1.py" startline="99" endline="143" pcid="65"></source>
+<source file="systems/TogaRenamed/functional/149_1.py" startline="171" endline="217" pcid="448"></source>
+<source file="systems/TogaRenamed/functional/154_1.py" startline="171" endline="217" pcid="67"></source>
+<source file="systems/TogaRenamed/functional/154_1.py" startline="53" endline="97" pcid="64"></source>
+<source file="systems/TogaRenamed/functional/150_1.py" startline="9" endline="53" pcid="393"></source>
+<source file="systems/TogaRenamed/functional/146_1.py" startline="9" endline="55" pcid="410"></source>
+<source file="systems/TogaRenamed/functional/147_1.py" startline="9" endline="56" pcid="383"></source>
+<source file="systems/TogaRenamed/functional/147_1.py" startline="331" endline="378" pcid="388"></source>
+<source file="systems/TogaRenamed/functional/147_1.py" startline="541" endline="601" pcid="391"></source>
+<source file="systems/TogaRenamed/functional/147_1.py" startline="218" endline="277" pcid="386"></source>
+</class>
+
+<class classid="4" nclones="6" nlines="22" similarity="90">
+<source file="systems/TogaRenamed/functional/154_1.py" startline="145" endline="169" pcid="66"></source>
+<source file="systems/TogaRenamed/functional/152_1.py" startline="124" endline="148" pcid="298"></source>
+<source file="systems/TogaRenamed/functional/152_1.py" startline="150" endline="172" pcid="299"></source>
+<source file="systems/TogaRenamed/functional/149_1.py" startline="145" endline="169" pcid="447"></source>
+<source file="systems/TogaRenamed/functional/152_1.py" startline="98" endline="122" pcid="297"></source>
+<source file="systems/TogaRenamed/functional/152_1.py" startline="72" endline="96" pcid="296"></source>
+</class>
+
+<class classid="5" nclones="2" nlines="7" similarity="85">
+<source file="systems/TogaRenamed/functional/129_1.py" startline="5" endline="14" pcid="68"></source>
+<source file="systems/TogaRenamed/functional/132_1.py" startline="9" endline="18" pcid="442"></source>
+</class>
+
+<class classid="6" nclones="3" nlines="7" similarity="85">
+<source file="systems/TogaRenamed/functional/96_1.py" startline="66" endline="83" pcid="77"></source>
+<source file="systems/TogaRenamed/functional/96_1.py" startline="648" endline="665" pcid="96"></source>
+<source file="systems/TogaRenamed/functional/96_1.py" startline="354" endline="371" pcid="88"></source>
+</class>
+
+<class classid="7" nclones="2" nlines="11" similarity="90">
+<source file="systems/TogaRenamed/functional/96_1.py" startline="85" endline="113" pcid="79"></source>
+<source file="systems/TogaRenamed/functional/96_1.py" startline="373" endline="401" pcid="90"></source>
+</class>
+
+<class classid="8" nclones="2" nlines="40" similarity="89">
+<source file="systems/TogaRenamed/functional/96_1.py" startline="226" endline="295" pcid="85"></source>
+<source file="systems/TogaRenamed/functional/96_1.py" startline="458" endline="531" pcid="92"></source>
+</class>
+
+<class classid="9" nclones="3" nlines="12" similarity="83">
+<source file="systems/TogaRenamed/functional/96_1.py" startline="297" endline="325" pcid="86"></source>
+<source file="systems/TogaRenamed/functional/96_1.py" startline="591" endline="619" pcid="94"></source>
+<source file="systems/TogaRenamed/functional/96_1.py" startline="909" endline="933" pcid="107"></source>
+</class>
+
+<class classid="10" nclones="2" nlines="10" similarity="90">
+<source file="systems/TogaRenamed/functional/96_1.py" startline="327" endline="352" pcid="87"></source>
+<source file="systems/TogaRenamed/functional/96_1.py" startline="621" endline="646" pcid="95"></source>
+</class>
+
+<class classid="11" nclones="2" nlines="25" similarity="91">
+<source file="systems/TogaRenamed/functional/96_1.py" startline="403" endline="456" pcid="91"></source>
+<source file="systems/TogaRenamed/functional/96_1.py" startline="533" endline="589" pcid="93"></source>
+</class>
+
+<class classid="12" nclones="2" nlines="5" similarity="100">
+<source file="systems/TogaRenamed/functional/96_1.py" startline="756" endline="762" pcid="101"></source>
+<source file="systems/TogaRenamed/functional/96_1.py" startline="815" endline="821" pcid="103"></source>
+</class>
+
+<class classid="13" nclones="2" nlines="9" similarity="80">
+<source file="systems/TogaRenamed/functional/96_1.py" startline="863" endline="883" pcid="104"></source>
+<source file="systems/TogaRenamed/functional/96_1.py" startline="885" endline="907" pcid="105"></source>
+</class>
+
+<class classid="14" nclones="2" nlines="7" similarity="85">
+<source file="systems/TogaRenamed/functional/96_1.py" startline="1192" endline="1205" pcid="118"></source>
+<source file="systems/TogaRenamed/functional/96_1.py" startline="1207" endline="1223" pcid="119"></source>
+</class>
+
+<class classid="15" nclones="2" nlines="5" similarity="80">
+<source file="systems/TogaRenamed/functional/164_1.py" startline="26" endline="36" pcid="141"></source>
+<source file="systems/TogaRenamed/functional/164_1.py" startline="38" endline="46" pcid="143"></source>
+</class>
+
+<class classid="16" nclones="2" nlines="5" similarity="100">
+<source file="systems/TogaRenamed/functional/97_1.py" startline="141" endline="157" pcid="185"></source>
+<source file="systems/TogaRenamed/functional/104_1.py" startline="36" endline="52" pcid="228"></source>
+</class>
+
+<class classid="17" nclones="2" nlines="5" similarity="100">
+<source file="systems/TogaRenamed/functional/97_1.py" startline="159" endline="175" pcid="186"></source>
+<source file="systems/TogaRenamed/functional/104_1.py" startline="54" endline="70" pcid="229"></source>
+</class>
+
+<class classid="18" nclones="2" nlines="5" similarity="100">
+<source file="systems/TogaRenamed/functional/97_1.py" startline="177" endline="193" pcid="187"></source>
+<source file="systems/TogaRenamed/functional/104_1.py" startline="72" endline="88" pcid="230"></source>
+</class>
+
+<class classid="19" nclones="16" nlines="14" similarity="80">
+<source file="systems/TogaRenamed/functional/157_1.py" startline="10" endline="29" pcid="210"></source>
+<source file="systems/TogaRenamed/functional/135_1.py" startline="73" endline="92" pcid="419"></source>
+<source file="systems/TogaRenamed/functional/135_1.py" startline="31" endline="50" pcid="417"></source>
+<source file="systems/TogaRenamed/functional/157_1.py" startline="94" endline="115" pcid="214"></source>
+<source file="systems/TogaRenamed/functional/135_1.py" startline="10" endline="29" pcid="416"></source>
+<source file="systems/TogaRenamed/functional/157_1.py" startline="52" endline="71" pcid="212"></source>
+<source file="systems/TogaRenamed/functional/157_1.py" startline="73" endline="92" pcid="213"></source>
+<source file="systems/TogaRenamed/functional/135_1.py" startline="94" endline="115" pcid="420"></source>
+<source file="systems/TogaRenamed/functional/157_1.py" startline="31" endline="50" pcid="211"></source>
+<source file="systems/TogaRenamed/functional/135_1.py" startline="52" endline="71" pcid="418"></source>
+<source file="systems/TogaRenamed/functional/135_1.py" startline="224" endline="245" pcid="425"></source>
+<source file="systems/TogaRenamed/functional/157_1.py" startline="117" endline="139" pcid="215"></source>
+<source file="systems/TogaRenamed/functional/157_1.py" startline="224" endline="245" pcid="219"></source>
+<source file="systems/TogaRenamed/functional/135_1.py" startline="117" endline="139" pcid="421"></source>
+<source file="systems/TogaRenamed/functional/135_1.py" startline="169" endline="191" pcid="423"></source>
+<source file="systems/TogaRenamed/functional/157_1.py" startline="169" endline="191" pcid="217"></source>
+</class>
+
+<class classid="20" nclones="2" nlines="20" similarity="100">
+<source file="systems/TogaRenamed/functional/157_1.py" startline="141" endline="167" pcid="216"></source>
+<source file="systems/TogaRenamed/functional/135_1.py" startline="141" endline="167" pcid="422"></source>
+</class>
+
+<class classid="21" nclones="2" nlines="23" similarity="100">
+<source file="systems/TogaRenamed/functional/157_1.py" startline="193" endline="222" pcid="218"></source>
+<source file="systems/TogaRenamed/functional/135_1.py" startline="193" endline="222" pcid="424"></source>
+</class>
+
+<class classid="22" nclones="2" nlines="18" similarity="100">
+<source file="systems/TogaRenamed/functional/157_1.py" startline="247" endline="269" pcid="220"></source>
+<source file="systems/TogaRenamed/functional/135_1.py" startline="247" endline="269" pcid="426"></source>
+</class>
+
+<class classid="23" nclones="2" nlines="19" similarity="89">
+<source file="systems/TogaRenamed/functional/148_1.py" startline="9" endline="31" pcid="221"></source>
+<source file="systems/TogaRenamed/functional/148_1.py" startline="33" endline="54" pcid="222"></source>
+</class>
+
+<class classid="24" nclones="2" nlines="28" similarity="100">
+<source file="systems/TogaRenamed/functional/152_1.py" startline="7" endline="37" pcid="294"></source>
+<source file="systems/TogaRenamed/functional/152_1.py" startline="39" endline="70" pcid="295"></source>
+</class>
+
+<class classid="25" nclones="2" nlines="12" similarity="100">
+<source file="systems/TogaRenamed/functional/100_1.py" startline="80" endline="104" pcid="324"></source>
+<source file="systems/TogaRenamed/functional/100_1.py" startline="130" endline="154" pcid="328"></source>
+</class>
+
+<class classid="26" nclones="3" nlines="14" similarity="85">
+<source file="systems/TogaRenamed/functional/100_1.py" startline="206" endline="225" pcid="334"></source>
+<source file="systems/TogaRenamed/functional/100_1.py" startline="242" endline="261" pcid="335"></source>
+<source file="systems/TogaRenamed/functional/100_1.py" startline="278" endline="297" pcid="336"></source>
+</class>
+
+<class classid="27" nclones="4" nlines="54" similarity="85">
+<source file="systems/TogaRenamed/functional/153_1.py" startline="9" endline="68" pcid="346"></source>
+<source file="systems/TogaRenamed/functional/153_1.py" startline="130" endline="187" pcid="348"></source>
+<source file="systems/TogaRenamed/functional/153_1.py" startline="189" endline="245" pcid="349"></source>
+<source file="systems/TogaRenamed/functional/153_1.py" startline="70" endline="128" pcid="347"></source>
+</class>
+
+<class classid="28" nclones="2" nlines="5" similarity="100">
+<source file="systems/TogaRenamed/functional/68_1.py" startline="5" endline="12" pcid="365"></source>
+<source file="systems/TogaRenamed/functional/68_1.py" startline="24" endline="29" pcid="368"></source>
+</class>
+
+<class classid="29" nclones="4" nlines="74" similarity="100">
+<source file="systems/TogaRenamed/functional/147_1.py" startline="58" endline="136" pcid="384"></source>
+<source file="systems/TogaRenamed/functional/147_1.py" startline="460" endline="539" pcid="390"></source>
+<source file="systems/TogaRenamed/functional/147_1.py" startline="138" endline="216" pcid="385"></source>
+<source file="systems/TogaRenamed/functional/147_1.py" startline="380" endline="458" pcid="389"></source>
+</class>
+
+<class classid="30" nclones="2" nlines="46" similarity="97">
+<source file="systems/TogaRenamed/functional/147_1.py" startline="279" endline="329" pcid="387"></source>
+<source file="systems/TogaRenamed/functional/147_1.py" startline="603" endline="652" pcid="392"></source>
+</class>
+
+</clones>

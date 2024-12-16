@@ -1,0 +1,338 @@
+<clones>
+<systeminfo processor="nicad6" system="unit" granularity="functions-blind" threshold="20%" minlines="5" maxlines="2500"/>
+<cloneinfo npcs="490" npairs="135"/>
+<runinfo ncompares="14623" cputime="20223"/>
+<classinfo nclasses="61"/>
+
+<class classid="1" nclones="3" nlines="16" similarity="88">
+<source file="systems/Table10/TogaRenamed/unit/64_1.py" startline="60" endline="80" pcid="7"></source>
+<source file="systems/Table10/TogaRenamed/unit/64_1.py" startline="104" endline="127" pcid="13"></source>
+<source file="systems/Table10/TogaRenamed/unit/64_1.py" startline="81" endline="103" pcid="10"></source>
+</class>
+
+<class classid="2" nclones="3" nlines="10" similarity="80">
+<source file="systems/Table10/TogaRenamed/unit/64_1.py" startline="129" endline="145" pcid="16"></source>
+<source file="systems/Table10/TogaRenamed/unit/64_1.py" startline="181" endline="201" pcid="19"></source>
+<source file="systems/Table10/TogaRenamed/unit/64_1.py" startline="203" endline="223" pcid="20"></source>
+</class>
+
+<class classid="3" nclones="2" nlines="11" similarity="81">
+<source file="systems/Table10/TogaRenamed/unit/64_1.py" startline="224" endline="245" pcid="21"></source>
+<source file="systems/Table10/TogaRenamed/unit/64_1.py" startline="246" endline="267" pcid="22"></source>
+</class>
+
+<class classid="4" nclones="2" nlines="9" similarity="88">
+<source file="systems/Table10/TogaRenamed/unit/107_1.py" startline="25" endline="35" pcid="26"></source>
+<source file="systems/Table10/TogaRenamed/unit/94_1.py" startline="35" endline="45" pcid="427"></source>
+</class>
+
+<class classid="5" nclones="3" nlines="6" similarity="83">
+<source file="systems/Table10/TogaRenamed/unit/107_1.py" startline="113" endline="121" pcid="32"></source>
+<source file="systems/Table10/TogaRenamed/unit/88_1.py" startline="37" endline="45" pcid="206"></source>
+<source file="systems/Table10/TogaRenamed/unit/118_1.py" startline="217" endline="225" pcid="193"></source>
+</class>
+
+<class classid="6" nclones="2" nlines="6" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/107_1.py" startline="220" endline="235" pcid="36"></source>
+<source file="systems/Table10/TogaRenamed/unit/94_1.py" startline="233" endline="248" pcid="434"></source>
+</class>
+
+<class classid="7" nclones="7" nlines="11" similarity="90">
+<source file="systems/Table10/TogaRenamed/unit/107_1.py" startline="313" endline="328" pcid="43"></source>
+<source file="systems/Table10/TogaRenamed/unit/107_1.py" startline="450" endline="465" pcid="52"></source>
+<source file="systems/Table10/TogaRenamed/unit/107_1.py" startline="352" endline="368" pcid="46"></source>
+<source file="systems/Table10/TogaRenamed/unit/107_1.py" startline="404" endline="420" pcid="49"></source>
+<source file="systems/Table10/TogaRenamed/unit/107_1.py" startline="335" endline="351" pcid="45"></source>
+<source file="systems/Table10/TogaRenamed/unit/107_1.py" startline="386" endline="403" pcid="48"></source>
+<source file="systems/Table10/TogaRenamed/unit/107_1.py" startline="369" endline="385" pcid="47"></source>
+</class>
+
+<class classid="8" nclones="3" nlines="9" similarity="88">
+<source file="systems/Table10/TogaRenamed/unit/107_1.py" startline="466" endline="480" pcid="53"></source>
+<source file="systems/Table10/TogaRenamed/unit/107_1.py" startline="493" endline="507" pcid="56"></source>
+<source file="systems/Table10/TogaRenamed/unit/107_1.py" startline="508" endline="522" pcid="57"></source>
+</class>
+
+<class classid="9" nclones="2" nlines="9" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/95_1.py" startline="56" endline="77" pcid="63"></source>
+<source file="systems/Table10/TogaRenamed/unit/116_1.py" startline="85" endline="106" pcid="249"></source>
+</class>
+
+<class classid="10" nclones="2" nlines="8" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/95_1.py" startline="89" endline="106" pcid="64"></source>
+<source file="systems/Table10/TogaRenamed/unit/117_1.py" startline="157" endline="174" pcid="153"></source>
+</class>
+
+<class classid="11" nclones="3" nlines="6" similarity="85">
+<source file="systems/Table10/TogaRenamed/unit/95_1.py" startline="117" endline="131" pcid="65"></source>
+<source file="systems/Table10/TogaRenamed/unit/108_1.py" startline="59" endline="75" pcid="166"></source>
+<source file="systems/Table10/TogaRenamed/unit/117_1.py" startline="184" endline="198" pcid="154"></source>
+</class>
+
+<class classid="12" nclones="7" nlines="7" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/95_1.py" startline="151" endline="167" pcid="67"></source>
+<source file="systems/Table10/TogaRenamed/unit/112_1.py" startline="199" endline="215" pcid="279"></source>
+<source file="systems/Table10/TogaRenamed/unit/117_1.py" startline="237" endline="255" pcid="157"></source>
+<source file="systems/Table10/TogaRenamed/unit/117_1.py" startline="199" endline="217" pcid="155"></source>
+<source file="systems/Table10/TogaRenamed/unit/117_1.py" startline="218" endline="236" pcid="156"></source>
+<source file="systems/Table10/TogaRenamed/unit/116_1.py" startline="424" endline="442" pcid="267"></source>
+<source file="systems/Table10/TogaRenamed/unit/117_1.py" startline="256" endline="274" pcid="158"></source>
+</class>
+
+<class classid="13" nclones="2" nlines="5" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/101_1.py" startline="77" endline="90" pcid="74"></source>
+<source file="systems/Table10/TogaRenamed/unit/101_1.py" startline="106" endline="119" pcid="76"></source>
+</class>
+
+<class classid="14" nclones="4" nlines="5" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/101_1.py" startline="91" endline="105" pcid="75"></source>
+<source file="systems/Table10/TogaRenamed/unit/101_1.py" startline="120" endline="134" pcid="77"></source>
+<source file="systems/Table10/TogaRenamed/unit/98_1.py" startline="191" endline="205" pcid="313"></source>
+<source file="systems/Table10/TogaRenamed/unit/98_1.py" startline="222" endline="236" pcid="315"></source>
+</class>
+
+<class classid="15" nclones="2" nlines="8" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/101_1.py" startline="233" endline="246" pcid="82"></source>
+<source file="systems/Table10/TogaRenamed/unit/101_1.py" startline="260" endline="273" pcid="83"></source>
+</class>
+
+<class classid="16" nclones="2" nlines="5" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/101_1.py" startline="284" endline="294" pcid="84"></source>
+<source file="systems/Table10/TogaRenamed/unit/101_1.py" startline="345" endline="355" pcid="87"></source>
+</class>
+
+<class classid="17" nclones="2" nlines="11" similarity="90">
+<source file="systems/Table10/TogaRenamed/unit/101_1.py" startline="295" endline="317" pcid="85"></source>
+<source file="systems/Table10/TogaRenamed/unit/101_1.py" startline="356" endline="378" pcid="88"></source>
+</class>
+
+<class classid="18" nclones="2" nlines="10" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/101_1.py" startline="318" endline="334" pcid="86"></source>
+<source file="systems/Table10/TogaRenamed/unit/101_1.py" startline="379" endline="395" pcid="89"></source>
+</class>
+
+<class classid="19" nclones="2" nlines="6" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="27" endline="36" pcid="92"></source>
+<source file="systems/Table10/TogaRenamed/unit/137_1.py" startline="18" endline="27" pcid="482"></source>
+</class>
+
+<class classid="20" nclones="2" nlines="6" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="57" endline="66" pcid="96"></source>
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="68" endline="77" pcid="97"></source>
+</class>
+
+<class classid="21" nclones="2" nlines="16" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="257" endline="281" pcid="105"></source>
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="282" endline="307" pcid="106"></source>
+</class>
+
+<class classid="22" nclones="2" nlines="21" similarity="95">
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="337" endline="371" pcid="108"></source>
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="372" endline="407" pcid="110"></source>
+</class>
+
+<class classid="23" nclones="2" nlines="20" similarity="85">
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="408" endline="444" pcid="112"></source>
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="445" endline="488" pcid="114"></source>
+</class>
+
+<class classid="24" nclones="2" nlines="19" similarity="94">
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="588" endline="621" pcid="121"></source>
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="622" endline="655" pcid="122"></source>
+</class>
+
+<class classid="25" nclones="2" nlines="10" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="833" endline="851" pcid="131"></source>
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="949" endline="967" pcid="136"></source>
+</class>
+
+<class classid="26" nclones="4" nlines="14" similarity="80">
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="852" endline="878" pcid="132"></source>
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="923" endline="948" pcid="135"></source>
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="1038" endline="1067" pcid="140"></source>
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="968" endline="994" pcid="137"></source>
+</class>
+
+<class classid="27" nclones="2" nlines="11" similarity="90">
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="879" endline="900" pcid="133"></source>
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="995" endline="1015" pcid="138"></source>
+</class>
+
+<class classid="28" nclones="2" nlines="11" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="901" endline="922" pcid="134"></source>
+<source file="systems/Table10/TogaRenamed/unit/160_1.py" startline="1016" endline="1037" pcid="139"></source>
+</class>
+
+<class classid="29" nclones="2" nlines="20" similarity="80">
+<source file="systems/Table10/TogaRenamed/unit/134_1.py" startline="7" endline="41" pcid="143"></source>
+<source file="systems/Table10/TogaRenamed/unit/137_1.py" startline="33" endline="72" pcid="484"></source>
+</class>
+
+<class classid="30" nclones="2" nlines="34" similarity="91">
+<source file="systems/Table10/TogaRenamed/unit/134_1.py" startline="42" endline="87" pcid="144"></source>
+<source file="systems/Table10/TogaRenamed/unit/137_1.py" startline="73" endline="123" pcid="485"></source>
+</class>
+
+<class classid="31" nclones="2" nlines="12" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/117_1.py" startline="26" endline="41" pcid="148"></source>
+<source file="systems/Table10/TogaRenamed/unit/119_1.py" startline="7" endline="22" pcid="281"></source>
+</class>
+
+<class classid="32" nclones="2" nlines="30" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/117_1.py" startline="42" endline="80" pcid="149"></source>
+<source file="systems/Table10/TogaRenamed/unit/119_1.py" startline="23" endline="59" pcid="282"></source>
+</class>
+
+<class classid="33" nclones="2" nlines="6" similarity="83">
+<source file="systems/Table10/TogaRenamed/unit/113_1.py" startline="81" endline="91" pcid="176"></source>
+<source file="systems/Table10/TogaRenamed/unit/113_1.py" startline="92" endline="102" pcid="177"></source>
+</class>
+
+<class classid="34" nclones="2" nlines="9" similarity="88">
+<source file="systems/Table10/TogaRenamed/unit/118_1.py" startline="21" endline="31" pcid="187"></source>
+<source file="systems/Table10/TogaRenamed/unit/88_1.py" startline="9" endline="19" pcid="204"></source>
+</class>
+
+<class classid="35" nclones="2" nlines="6" similarity="83">
+<source file="systems/Table10/TogaRenamed/unit/118_1.py" startline="258" endline="272" pcid="196"></source>
+<source file="systems/Table10/TogaRenamed/unit/118_1.py" startline="273" endline="287" pcid="197"></source>
+</class>
+
+<class classid="36" nclones="2" nlines="24" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/118_1.py" startline="374" endline="408" pcid="203"></source>
+<source file="systems/Table10/TogaRenamed/unit/94_1.py" startline="314" endline="348" pcid="440"></source>
+</class>
+
+<class classid="37" nclones="2" nlines="6" similarity="83">
+<source file="systems/Table10/TogaRenamed/unit/88_1.py" startline="28" endline="36" pcid="205"></source>
+<source file="systems/Table10/TogaRenamed/unit/81_1.py" startline="480" endline="486" pcid="422"></source>
+</class>
+
+<class classid="38" nclones="3" nlines="21" similarity="80">
+<source file="systems/Table10/TogaRenamed/unit/88_1.py" startline="65" endline="97" pcid="209"></source>
+<source file="systems/Table10/TogaRenamed/unit/88_1.py" startline="131" endline="163" pcid="211"></source>
+<source file="systems/Table10/TogaRenamed/unit/88_1.py" startline="98" endline="130" pcid="210"></source>
+</class>
+
+<class classid="39" nclones="4" nlines="9" similarity="88">
+<source file="systems/Table10/TogaRenamed/unit/88_1.py" startline="252" endline="268" pcid="219"></source>
+<source file="systems/Table10/TogaRenamed/unit/88_1.py" startline="269" endline="285" pcid="220"></source>
+<source file="systems/Table10/TogaRenamed/unit/88_1.py" startline="286" endline="302" pcid="221"></source>
+<source file="systems/Table10/TogaRenamed/unit/88_1.py" startline="303" endline="319" pcid="222"></source>
+</class>
+
+<class classid="40" nclones="2" nlines="11" similarity="90">
+<source file="systems/Table10/TogaRenamed/unit/88_1.py" startline="320" endline="338" pcid="223"></source>
+<source file="systems/Table10/TogaRenamed/unit/88_1.py" startline="339" endline="357" pcid="224"></source>
+</class>
+
+<class classid="41" nclones="2" nlines="6" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/59_1.py" startline="11" endline="18" pcid="227"></source>
+<source file="systems/Table10/TogaRenamed/unit/59_1.py" startline="33" endline="40" pcid="230"></source>
+</class>
+
+<class classid="42" nclones="2" nlines="5" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/116_1.py" startline="241" endline="249" pcid="257"></source>
+<source file="systems/Table10/TogaRenamed/unit/116_1.py" startline="310" endline="318" pcid="261"></source>
+</class>
+
+<class classid="43" nclones="2" nlines="5" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/116_1.py" startline="251" endline="263" pcid="258"></source>
+<source file="systems/Table10/TogaRenamed/unit/116_1.py" startline="320" endline="332" pcid="262"></source>
+</class>
+
+<class classid="44" nclones="2" nlines="5" similarity="80">
+<source file="systems/Table10/TogaRenamed/unit/116_1.py" startline="345" endline="353" pcid="263"></source>
+<source file="systems/Table10/TogaRenamed/unit/116_1.py" startline="369" endline="379" pcid="264"></source>
+</class>
+
+<class classid="45" nclones="2" nlines="5" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/116_1.py" startline="390" endline="401" pcid="265"></source>
+<source file="systems/Table10/TogaRenamed/unit/116_1.py" startline="412" endline="423" pcid="266"></source>
+</class>
+
+<class classid="46" nclones="2" nlines="6" similarity="83">
+<source file="systems/Table10/TogaRenamed/unit/112_1.py" startline="36" endline="47" pcid="273"></source>
+<source file="systems/Table10/TogaRenamed/unit/112_1.py" startline="48" endline="58" pcid="274"></source>
+</class>
+
+<class classid="47" nclones="2" nlines="7" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/98_1.py" startline="174" endline="190" pcid="312"></source>
+<source file="systems/Table10/TogaRenamed/unit/98_1.py" startline="206" endline="221" pcid="314"></source>
+</class>
+
+<class classid="48" nclones="2" nlines="7" similarity="85">
+<source file="systems/Table10/TogaRenamed/unit/98_1.py" startline="326" endline="337" pcid="322"></source>
+<source file="systems/Table10/TogaRenamed/unit/98_1.py" startline="347" endline="358" pcid="323"></source>
+</class>
+
+<class classid="49" nclones="2" nlines="13" similarity="92">
+<source file="systems/Table10/TogaRenamed/unit/98_1.py" startline="480" endline="505" pcid="330"></source>
+<source file="systems/Table10/TogaRenamed/unit/98_1.py" startline="519" endline="544" pcid="332"></source>
+</class>
+
+<class classid="50" nclones="2" nlines="6" similarity="83">
+<source file="systems/Table10/TogaRenamed/unit/98_1.py" startline="507" endline="517" pcid="331"></source>
+<source file="systems/Table10/TogaRenamed/unit/98_1.py" startline="546" endline="556" pcid="333"></source>
+</class>
+
+<class classid="51" nclones="3" nlines="17" similarity="82">
+<source file="systems/Table10/TogaRenamed/unit/98_1.py" startline="557" endline="580" pcid="334"></source>
+<source file="systems/Table10/TogaRenamed/unit/98_1.py" startline="659" endline="681" pcid="338"></source>
+<source file="systems/Table10/TogaRenamed/unit/98_1.py" startline="620" endline="642" pcid="336"></source>
+</class>
+
+<class classid="52" nclones="5" nlines="12" similarity="83">
+<source file="systems/Table10/TogaRenamed/unit/90_1.py" startline="214" endline="235" pcid="368"></source>
+<source file="systems/Table10/TogaRenamed/unit/90_1.py" startline="307" endline="328" pcid="372"></source>
+<source file="systems/Table10/TogaRenamed/unit/90_1.py" startline="261" endline="282" pcid="370"></source>
+<source file="systems/Table10/TogaRenamed/unit/90_1.py" startline="284" endline="305" pcid="371"></source>
+<source file="systems/Table10/TogaRenamed/unit/90_1.py" startline="330" endline="352" pcid="373"></source>
+</class>
+
+<class classid="53" nclones="2" nlines="5" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/142_1.py" startline="39" endline="45" pcid="379"></source>
+<source file="systems/Table10/TogaRenamed/unit/142_1.py" startline="46" endline="52" pcid="380"></source>
+</class>
+
+<class classid="54" nclones="2" nlines="8" similarity="87">
+<source file="systems/Table10/TogaRenamed/unit/79_1.py" startline="62" endline="78" pcid="387"></source>
+<source file="systems/Table10/TogaRenamed/unit/79_1.py" startline="132" endline="149" pcid="389"></source>
+</class>
+
+<class classid="55" nclones="2" nlines="5" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/81_1.py" startline="48" endline="54" pcid="398"></source>
+<source file="systems/Table10/TogaRenamed/unit/81_1.py" startline="56" endline="62" pcid="399"></source>
+</class>
+
+<class classid="56" nclones="2" nlines="26" similarity="85">
+<source file="systems/Table10/TogaRenamed/unit/81_1.py" startline="274" endline="313" pcid="411"></source>
+<source file="systems/Table10/TogaRenamed/unit/81_1.py" startline="356" endline="389" pcid="414"></source>
+</class>
+
+<class classid="57" nclones="2" nlines="9" similarity="88">
+<source file="systems/Table10/TogaRenamed/unit/81_1.py" startline="314" endline="333" pcid="412"></source>
+<source file="systems/Table10/TogaRenamed/unit/81_1.py" startline="390" endline="409" pcid="415"></source>
+</class>
+
+<class classid="58" nclones="2" nlines="6" similarity="100">
+<source file="systems/Table10/TogaRenamed/unit/81_1.py" startline="426" endline="434" pcid="418"></source>
+<source file="systems/Table10/TogaRenamed/unit/81_1.py" startline="455" endline="463" pcid="420"></source>
+</class>
+
+<class classid="59" nclones="2" nlines="5" similarity="80">
+<source file="systems/Table10/TogaRenamed/unit/87_1.py" startline="15" endline="23" pcid="442"></source>
+<source file="systems/Table10/TogaRenamed/unit/87_1.py" startline="24" endline="32" pcid="443"></source>
+</class>
+
+<class classid="60" nclones="2" nlines="23" similarity="87">
+<source file="systems/Table10/TogaRenamed/unit/99_1.py" startline="146" endline="183" pcid="471"></source>
+<source file="systems/Table10/TogaRenamed/unit/99_1.py" startline="184" endline="226" pcid="472"></source>
+</class>
+
+<class classid="61" nclones="2" nlines="14" similarity="92">
+<source file="systems/Table10/TogaRenamed/unit/137_1.py" startline="144" endline="168" pcid="487"></source>
+<source file="systems/Table10/TogaRenamed/unit/137_1.py" startline="169" endline="193" pcid="488"></source>
+</class>
+
+</clones>

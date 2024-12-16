@@ -1,0 +1,62 @@
+<clones>
+<systeminfo processor="nicad6" system="functional" granularity="functions-blind" threshold="20%" minlines="5" maxlines="2500"/>
+<cloneinfo npcs="77" npairs="80"/>
+<runinfo ncompares="424" cputime="19329"/>
+<classinfo nclasses="7"/>
+
+<class classid="1" nclones="4" nlines="7" similarity="85">
+<source file="systems/Table10/After/VestelRenamed/functional/5_1.py" startline="2" endline="9" pcid="2"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/12_1.py" startline="3" endline="10" pcid="70"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/26_1.py" startline="2" endline="8" pcid="66"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/6_1.py" startline="2" endline="9" pcid="51"></source>
+</class>
+
+<class classid="2" nclones="3" nlines="5" similarity="80">
+<source file="systems/Table10/After/VestelRenamed/functional/5_1.py" startline="10" endline="15" pcid="3"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/26_1.py" startline="9" endline="14" pcid="67"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/6_1.py" startline="10" endline="15" pcid="52"></source>
+</class>
+
+<class classid="3" nclones="5" nlines="6" similarity="83">
+<source file="systems/Table10/After/VestelRenamed/functional/5_1.py" startline="16" endline="22" pcid="4"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/6_1.py" startline="16" endline="22" pcid="53"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/12_1.py" startline="11" endline="17" pcid="71"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/26_1.py" startline="15" endline="21" pcid="68"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/18_1.py" startline="66" endline="72" pcid="47"></source>
+</class>
+
+<class classid="4" nclones="2" nlines="9" similarity="88">
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="5" endline="13" pcid="6"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/1_1.py" startline="5" endline="14" pcid="56"></source>
+</class>
+
+<class classid="5" nclones="3" nlines="10" similarity="81">
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="33" endline="42" pcid="8"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="54" endline="65" pcid="10"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="43" endline="53" pcid="9"></source>
+</class>
+
+<class classid="6" nclones="10" nlines="9" similarity="100">
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="723" endline="736" pcid="22"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="995" endline="1018" pcid="33"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="975" endline="994" pcid="32"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="876" endline="896" pcid="26"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="961" endline="974" pcid="31"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="897" endline="912" pcid="27"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="846" endline="875" pcid="25"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="945" endline="960" pcid="30"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="913" endline="928" pcid="28"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="929" endline="944" pcid="29"></source>
+</class>
+
+<class classid="7" nclones="7" nlines="19" similarity="81">
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="1019" endline="1055" pcid="34"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="1083" endline="1109" pcid="36"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="1056" endline="1082" pcid="35"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="1110" endline="1136" pcid="37"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="1137" endline="1163" pcid="38"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="1164" endline="1200" pcid="39"></source>
+<source file="systems/Table10/After/VestelRenamed/functional/22_1.py" startline="1240" endline="1261" pcid="41"></source>
+</class>
+
+</clones>

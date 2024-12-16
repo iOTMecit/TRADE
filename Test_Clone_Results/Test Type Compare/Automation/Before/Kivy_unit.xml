@@ -1,0 +1,212 @@
+<clones>
+<systeminfo processor="nicad6" system="unit" granularity="functions-blind" threshold="20%" minlines="5" maxlines="2500"/>
+<cloneinfo npcs="574" npairs="106"/>
+<runinfo ncompares="14853" cputime="21693"/>
+<classinfo nclasses="36"/>
+
+<class classid="1" nclones="2" nlines="12" similarity="91">
+<source file="systems/Table10/KivyRenamed/unit/22_1.py" startline="117" endline="137" pcid="18"></source>
+<source file="systems/Table10/KivyRenamed/unit/22_1.py" startline="435" endline="450" pcid="31"></source>
+</class>
+
+<class classid="2" nclones="2" nlines="20" similarity="80">
+<source file="systems/Table10/KivyRenamed/unit/22_1.py" startline="344" endline="370" pcid="28"></source>
+<source file="systems/Table10/KivyRenamed/unit/22_1.py" startline="372" endline="401" pcid="29"></source>
+</class>
+
+<class classid="3" nclones="2" nlines="32" similarity="84">
+<source file="systems/Table10/KivyRenamed/unit/22_1.py" startline="641" endline="691" pcid="39"></source>
+<source file="systems/Table10/KivyRenamed/unit/22_1.py" startline="795" endline="840" pcid="53"></source>
+</class>
+
+<class classid="4" nclones="3" nlines="6" similarity="83">
+<source file="systems/Table10/KivyRenamed/unit/22_1.py" startline="655" endline="660" pcid="42"></source>
+<source file="systems/Table10/KivyRenamed/unit/22_1.py" startline="905" endline="911" pcid="65"></source>
+<source file="systems/Table10/KivyRenamed/unit/22_1.py" startline="810" endline="815" pcid="56"></source>
+</class>
+
+<class classid="5" nclones="2" nlines="11" similarity="90">
+<source file="systems/Table10/KivyRenamed/unit/22_1.py" startline="947" endline="961" pcid="67"></source>
+<source file="systems/Table10/KivyRenamed/unit/22_1.py" startline="962" endline="976" pcid="68"></source>
+</class>
+
+<class classid="6" nclones="2" nlines="22" similarity="82">
+<source file="systems/Table10/KivyRenamed/unit/22_1.py" startline="1040" endline="1070" pcid="71"></source>
+<source file="systems/Table10/KivyRenamed/unit/22_1.py" startline="1071" endline="1105" pcid="73"></source>
+</class>
+
+<class classid="7" nclones="2" nlines="12" similarity="100">
+<source file="systems/Table10/KivyRenamed/unit/53_1.py" startline="63" endline="75" pcid="99"></source>
+<source file="systems/Table10/KivyRenamed/unit/53_1.py" startline="76" endline="88" pcid="100"></source>
+</class>
+
+<class classid="8" nclones="2" nlines="7" similarity="100">
+<source file="systems/Table10/KivyRenamed/unit/9_1.py" startline="23" endline="33" pcid="114"></source>
+<source file="systems/Table10/KivyRenamed/unit/51_1.py" startline="52" endline="62" pcid="338"></source>
+</class>
+
+<class classid="9" nclones="2" nlines="9" similarity="88">
+<source file="systems/Table10/KivyRenamed/unit/43_1.py" startline="230" endline="240" pcid="173"></source>
+<source file="systems/Table10/KivyRenamed/unit/43_1.py" startline="241" endline="251" pcid="174"></source>
+</class>
+
+<class classid="10" nclones="2" nlines="14" similarity="92">
+<source file="systems/Table10/KivyRenamed/unit/43_1.py" startline="353" endline="369" pcid="182"></source>
+<source file="systems/Table10/KivyRenamed/unit/43_1.py" startline="370" endline="387" pcid="183"></source>
+</class>
+
+<class classid="11" nclones="3" nlines="9" similarity="100">
+<source file="systems/Table10/KivyRenamed/unit/59_1.py" startline="38" endline="53" pcid="185"></source>
+<source file="systems/Table10/KivyRenamed/unit/59_1.py" startline="70" endline="84" pcid="187"></source>
+<source file="systems/Table10/KivyRenamed/unit/59_1.py" startline="54" endline="69" pcid="186"></source>
+</class>
+
+<class classid="12" nclones="2" nlines="7" similarity="85">
+<source file="systems/Table10/KivyRenamed/unit/17_1.py" startline="21" endline="28" pcid="191"></source>
+<source file="systems/Table10/KivyRenamed/unit/17_1.py" startline="29" endline="36" pcid="192"></source>
+</class>
+
+<class classid="13" nclones="3" nlines="7" similarity="85">
+<source file="systems/Table10/KivyRenamed/unit/36_1.py" startline="45" endline="55" pcid="200"></source>
+<source file="systems/Table10/KivyRenamed/unit/36_1.py" startline="61" endline="71" pcid="203"></source>
+<source file="systems/Table10/KivyRenamed/unit/36_1.py" startline="112" endline="122" pcid="209"></source>
+</class>
+
+<class classid="14" nclones="8" nlines="5" similarity="80">
+<source file="systems/Table10/KivyRenamed/unit/72_1.py" startline="36" endline="41" pcid="286"></source>
+<source file="systems/Table10/KivyRenamed/unit/72_1.py" startline="84" endline="89" pcid="295"></source>
+<source file="systems/Table10/KivyRenamed/unit/72_1.py" startline="67" endline="72" pcid="292"></source>
+<source file="systems/Table10/KivyRenamed/unit/72_1.py" startline="57" endline="62" pcid="290"></source>
+<source file="systems/Table10/KivyRenamed/unit/72_1.py" startline="42" endline="47" pcid="287"></source>
+<source file="systems/Table10/KivyRenamed/unit/72_1.py" startline="120" endline="125" pcid="302"></source>
+<source file="systems/Table10/KivyRenamed/unit/72_1.py" startline="126" endline="131" pcid="303"></source>
+<source file="systems/Table10/KivyRenamed/unit/72_1.py" startline="78" endline="83" pcid="294"></source>
+</class>
+
+<class classid="15" nclones="2" nlines="31" similarity="80">
+<source file="systems/Table10/KivyRenamed/unit/33_1.py" startline="120" endline="174" pcid="332"></source>
+<source file="systems/Table10/KivyRenamed/unit/33_1.py" startline="308" endline="360" pcid="335"></source>
+</class>
+
+<class classid="16" nclones="2" nlines="25" similarity="92">
+<source file="systems/Table10/KivyRenamed/unit/51_1.py" startline="75" endline="113" pcid="341"></source>
+<source file="systems/Table10/KivyRenamed/unit/51_1.py" startline="114" endline="154" pcid="342"></source>
+</class>
+
+<class classid="17" nclones="2" nlines="12" similarity="91">
+<source file="systems/Table10/KivyRenamed/unit/12_1.py" startline="14" endline="27" pcid="382"></source>
+<source file="systems/Table10/KivyRenamed/unit/62_1.py" startline="11" endline="24" pcid="516"></source>
+</class>
+
+<class classid="18" nclones="4" nlines="14" similarity="85">
+<source file="systems/Table10/KivyRenamed/unit/12_1.py" startline="28" endline="44" pcid="384"></source>
+<source file="systems/Table10/KivyRenamed/unit/12_1.py" startline="79" endline="94" pcid="387"></source>
+<source file="systems/Table10/KivyRenamed/unit/12_1.py" startline="45" endline="61" pcid="385"></source>
+<source file="systems/Table10/KivyRenamed/unit/12_1.py" startline="62" endline="78" pcid="386"></source>
+</class>
+
+<class classid="19" nclones="5" nlines="5" similarity="80">
+<source file="systems/Table10/KivyRenamed/unit/10_1.py" startline="35" endline="41" pcid="392"></source>
+<source file="systems/Table10/KivyRenamed/unit/10_1.py" startline="76" endline="82" pcid="397"></source>
+<source file="systems/Table10/KivyRenamed/unit/10_1.py" startline="67" endline="74" pcid="396"></source>
+<source file="systems/Table10/KivyRenamed/unit/10_1.py" startline="43" endline="49" pcid="393"></source>
+<source file="systems/Table10/KivyRenamed/unit/10_1.py" startline="58" endline="65" pcid="395"></source>
+</class>
+
+<class classid="20" nclones="3" nlines="15" similarity="88">
+<source file="systems/Table10/KivyRenamed/unit/10_1.py" startline="149" endline="169" pcid="399"></source>
+<source file="systems/Table10/KivyRenamed/unit/10_1.py" startline="191" endline="213" pcid="401"></source>
+<source file="systems/Table10/KivyRenamed/unit/10_1.py" startline="170" endline="190" pcid="400"></source>
+</class>
+
+<class classid="21" nclones="3" nlines="19" similarity="82">
+<source file="systems/Table10/KivyRenamed/unit/10_1.py" startline="214" endline="239" pcid="402"></source>
+<source file="systems/Table10/KivyRenamed/unit/10_1.py" startline="240" endline="265" pcid="403"></source>
+<source file="systems/Table10/KivyRenamed/unit/10_1.py" startline="266" endline="295" pcid="404"></source>
+</class>
+
+<class classid="22" nclones="2" nlines="6" similarity="100">
+<source file="systems/Table10/KivyRenamed/unit/14_1.py" startline="113" endline="119" pcid="417"></source>
+<source file="systems/Table10/KivyRenamed/unit/14_1.py" startline="120" endline="126" pcid="418"></source>
+</class>
+
+<class classid="23" nclones="4" nlines="7" similarity="100">
+<source file="systems/Table10/KivyRenamed/unit/14_1.py" startline="127" endline="140" pcid="419"></source>
+<source file="systems/Table10/KivyRenamed/unit/14_1.py" startline="177" endline="196" pcid="422"></source>
+<source file="systems/Table10/KivyRenamed/unit/14_1.py" startline="159" endline="176" pcid="421"></source>
+<source file="systems/Table10/KivyRenamed/unit/14_1.py" startline="141" endline="158" pcid="420"></source>
+</class>
+
+<class classid="24" nclones="4" nlines="9" similarity="100">
+<source file="systems/Table10/KivyRenamed/unit/14_1.py" startline="197" endline="213" pcid="423"></source>
+<source file="systems/Table10/KivyRenamed/unit/14_1.py" startline="248" endline="264" pcid="426"></source>
+<source file="systems/Table10/KivyRenamed/unit/14_1.py" startline="231" endline="247" pcid="425"></source>
+<source file="systems/Table10/KivyRenamed/unit/14_1.py" startline="214" endline="230" pcid="424"></source>
+</class>
+
+<class classid="25" nclones="3" nlines="5" similarity="80">
+<source file="systems/Table10/KivyRenamed/unit/23_1.py" startline="90" endline="95" pcid="443"></source>
+<source file="systems/Table10/KivyRenamed/unit/23_1.py" startline="109" endline="114" pcid="446"></source>
+<source file="systems/Table10/KivyRenamed/unit/23_1.py" startline="103" endline="108" pcid="445"></source>
+</class>
+
+<class classid="26" nclones="5" nlines="8" similarity="87">
+<source file="systems/Table10/KivyRenamed/unit/23_1.py" startline="115" endline="124" pcid="447"></source>
+<source file="systems/Table10/KivyRenamed/unit/23_1.py" startline="134" endline="143" pcid="449"></source>
+<source file="systems/Table10/KivyRenamed/unit/23_1.py" startline="154" endline="163" pcid="451"></source>
+<source file="systems/Table10/KivyRenamed/unit/23_1.py" startline="144" endline="153" pcid="450"></source>
+<source file="systems/Table10/KivyRenamed/unit/23_1.py" startline="125" endline="133" pcid="448"></source>
+</class>
+
+<class classid="27" nclones="2" nlines="6" similarity="100">
+<source file="systems/Table10/KivyRenamed/unit/23_1.py" startline="175" endline="181" pcid="453"></source>
+<source file="systems/Table10/KivyRenamed/unit/23_1.py" startline="182" endline="188" pcid="454"></source>
+</class>
+
+<class classid="28" nclones="2" nlines="12" similarity="83">
+<source file="systems/Table10/KivyRenamed/unit/23_1.py" startline="189" endline="204" pcid="455"></source>
+<source file="systems/Table10/KivyRenamed/unit/23_1.py" startline="205" endline="219" pcid="456"></source>
+</class>
+
+<class classid="29" nclones="2" nlines="9" similarity="88">
+<source file="systems/Table10/KivyRenamed/unit/23_1.py" startline="220" endline="230" pcid="457"></source>
+<source file="systems/Table10/KivyRenamed/unit/23_1.py" startline="231" endline="241" pcid="458"></source>
+</class>
+
+<class classid="30" nclones="2" nlines="22" similarity="81">
+<source file="systems/Table10/KivyRenamed/unit/35_1.py" startline="1097" endline="1121" pcid="491"></source>
+<source file="systems/Table10/KivyRenamed/unit/35_1.py" startline="1124" endline="1148" pcid="493"></source>
+</class>
+
+<class classid="31" nclones="2" nlines="11" similarity="81">
+<source file="systems/Table10/KivyRenamed/unit/70_1.py" startline="34" endline="45" pcid="513"></source>
+<source file="systems/Table10/KivyRenamed/unit/70_1.py" startline="46" endline="57" pcid="514"></source>
+</class>
+
+<class classid="32" nclones="2" nlines="13" similarity="100">
+<source file="systems/Table10/KivyRenamed/unit/62_1.py" startline="34" endline="50" pcid="519"></source>
+<source file="systems/Table10/KivyRenamed/unit/62_1.py" startline="51" endline="67" pcid="520"></source>
+</class>
+
+<class classid="33" nclones="2" nlines="5" similarity="100">
+<source file="systems/Table10/KivyRenamed/unit/30_1.py" startline="100" endline="105" pcid="535"></source>
+<source file="systems/Table10/KivyRenamed/unit/30_1.py" startline="106" endline="111" pcid="536"></source>
+</class>
+
+<class classid="34" nclones="3" nlines="12" similarity="100">
+<source file="systems/Table10/KivyRenamed/unit/7_1.py" startline="41" endline="53" pcid="560"></source>
+<source file="systems/Table10/KivyRenamed/unit/7_1.py" startline="67" endline="79" pcid="562"></source>
+<source file="systems/Table10/KivyRenamed/unit/7_1.py" startline="54" endline="66" pcid="561"></source>
+</class>
+
+<class classid="35" nclones="2" nlines="10" similarity="90">
+<source file="systems/Table10/KivyRenamed/unit/11_1.py" startline="18" endline="30" pcid="567"></source>
+<source file="systems/Table10/KivyRenamed/unit/11_1.py" startline="31" endline="43" pcid="568"></source>
+</class>
+
+<class classid="36" nclones="2" nlines="11" similarity="90">
+<source file="systems/Table10/KivyRenamed/unit/11_1.py" startline="44" endline="57" pcid="569"></source>
+<source file="systems/Table10/KivyRenamed/unit/11_1.py" startline="58" endline="71" pcid="570"></source>
+</class>
+
+</clones>

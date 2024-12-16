@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='utf-8'?>
+<simian version="4.0.0"><set lineCount="11" fingerprint="a8c1f21745c68b4205aa1349f01b24a7">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="277" endLineNumber="288" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="250" endLineNumber="261" />
+        </set>
+        <set lineCount="11" fingerprint="0096904c7e6429b64ce5dc881b07c47e">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="96" endLineNumber="106" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="81" endLineNumber="91" />
+        </set>
+        <set lineCount="10" fingerprint="af5d237138bf8a4c5d39908ab1e0ed4a">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="66" endLineNumber="76" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="88" endLineNumber="98" />
+        </set>
+        <set lineCount="10" fingerprint="a91ee33b934b736727496c5957a45b4f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="112" endLineNumber="122" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="134" endLineNumber="144" />
+        </set>
+        <set lineCount="10" fingerprint="049c38ccc6d6604488b54252981411e2">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="158" endLineNumber="168" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="180" endLineNumber="190" />
+        </set>
+        <set lineCount="8" fingerprint="535b99b1f5be833aa0012c41bfe25044">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="128" endLineNumber="136" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="213" endLineNumber="221" />
+        </set>
+        <set lineCount="7" fingerprint="d1488cb38de842722e1530985d586a0c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/48_1.py" startLineNumber="181" endLineNumber="189" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/48_1.py" startLineNumber="144" endLineNumber="152" />
+        </set>
+        <set lineCount="7" fingerprint="098b37b2895bb71665ba844ba6862d5f">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="387" endLineNumber="395" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="304" endLineNumber="312" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="233" endLineNumber="241" />
+        </set>
+        <set lineCount="7" fingerprint="a80ffbf8c54cfbf933d2200c18ed57a8">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/75_1.py" startLineNumber="147" endLineNumber="155" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/75_1.py" startLineNumber="121" endLineNumber="129" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/75_1.py" startLineNumber="99" endLineNumber="107" />
+        </set>
+        <set lineCount="7" fingerprint="edd1d70b24368e30bd17be4d04f57b42">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="353" endLineNumber="359" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="267" endLineNumber="273" />
+        </set>
+        <set lineCount="6" fingerprint="f9e17683c4877432d8a6473110c9573d">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="190" endLineNumber="195" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="200" endLineNumber="205" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="210" endLineNumber="215" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="220" endLineNumber="225" />
+        </set>
+        <set lineCount="6" fingerprint="dd0fe515c8224085661af9c24606fbec">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="372" endLineNumber="378" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="348" endLineNumber="354" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="318" endLineNumber="324" />
+        </set>
+        <set lineCount="6" fingerprint="330e18ae5a61db459ae7060a3b2262b9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="77" endLineNumber="83" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="123" endLineNumber="129" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="169" endLineNumber="175" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="215" endLineNumber="221" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="371" endLineNumber="377" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="317" endLineNumber="323" />
+        </set>
+        <set lineCount="5" fingerprint="d3aba73521c6e9ac45c27e3949efb9b2">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="297" endLineNumber="302" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="227" endLineNumber="232" />
+        </set>
+        <set lineCount="5" fingerprint="09c27a9d2ea9711607fcae9827332a36">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/56_1.py" startLineNumber="155" endLineNumber="159" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/56_1.py" startLineNumber="129" endLineNumber="133" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/56_1.py" startLineNumber="92" endLineNumber="96" />
+        </set>
+        <set lineCount="5" fingerprint="fb6a0448f37a92461434d9deb9426a87">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="290" endLineNumber="295" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="262" endLineNumber="267" />
+        </set>
+        <set lineCount="5" fingerprint="1b0f2a85d6ff08ca5e604a021419a501">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="297" endLineNumber="301" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="269" endLineNumber="273" />
+        </set>
+        <set lineCount="5" fingerprint="b554ab36160ffe962436370de9cd5606">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/48_1.py" startLineNumber="122" endLineNumber="128" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/48_1.py" startLineNumber="109" endLineNumber="115" />
+        </set>
+        <set lineCount="5" fingerprint="b85d84b6f2957c4afcec7bb1abc0ffb9">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="223" endLineNumber="227" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="138" endLineNumber="142" />
+        </set>
+        <set lineCount="5" fingerprint="b5990a2f0ab9a085030cef6570ff9658">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="362" endLineNumber="367" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="309" endLineNumber="314" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="229" endLineNumber="234" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="207" endLineNumber="212" />
+        </set>
+        <set lineCount="5" fingerprint="6c4890964c0e11c569f170dfc9647f5c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="316" endLineNumber="321" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="237" endLineNumber="242" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="191" endLineNumber="196" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="145" endLineNumber="150" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="99" endLineNumber="104" />
+        </set>
+        <set lineCount="5" fingerprint="63919def196602b89ce83004f30f7a0c">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="334" endLineNumber="338" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="307" endLineNumber="311" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="227" endLineNumber="231" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/74_1.py" startLineNumber="205" endLineNumber="209" />
+        </set>
+        <set lineCount="5" fingerprint="60127722b4688be1c57b7229a3c80cee">
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="135" endLineNumber="139" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="125" endLineNumber="129" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="113" endLineNumber="117" />
+            <block sourceFile="/home/vestel/Desktop/Tez/CloneDetection/simian-academic/simian-4.0.0/Kivy-functional/functional/55_1.py" startLineNumber="62" endLineNumber="66" />
+        </set>
+        </simian>

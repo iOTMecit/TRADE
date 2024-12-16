@@ -1,0 +1,20 @@
+<clones>
+<systeminfo processor="nicad6" system="functional" granularity="functions-blind" threshold="20%" minlines="5" maxlines="2500"/>
+<cloneinfo npcs="250" npairs="8"/>
+<runinfo ncompares="2143" cputime="19463"/>
+<classinfo nclasses="2"/>
+
+<class classid="1" nclones="2" nlines="10" similarity="80">
+<source file="systems/Table10/After/HomeRenamed/functional/44_1.py" startline="8" endline="19" pcid="64"></source>
+<source file="systems/Table10/After/HomeRenamed/functional/44_1.py" startline="44" endline="56" pcid="68"></source>
+</class>
+
+<class classid="2" nclones="5" nlines="6" similarity="85">
+<source file="systems/Table10/After/HomeRenamed/functional/26_1.py" startline="105" endline="114" pcid="135"></source>
+<source file="systems/Table10/After/HomeRenamed/functional/26_1.py" startline="152" endline="161" pcid="139"></source>
+<source file="systems/Table10/After/HomeRenamed/functional/26_1.py" startline="173" endline="180" pcid="141"></source>
+<source file="systems/Table10/After/HomeRenamed/functional/26_1.py" startline="162" endline="172" pcid="140"></source>
+<source file="systems/Table10/After/HomeRenamed/functional/26_1.py" startline="128" endline="139" pcid="137"></source>
+</class>
+
+</clones>

@@ -1,0 +1,229 @@
+<clones>
+<systeminfo processor="nicad6" system="Home-Functional" granularity="blocks-blind" threshold="20%" minlines="5" maxlines="2500"/>
+<cloneinfo npcs="730" npairs="148"/>
+<runinfo ncompares="11802" cputime="19595"/>
+<classinfo nclasses="37"/>
+
+<class classid="1" nclones="2" nlines="9" similarity="88">
+<source file="systems/Home-Functional/functional/4175_1.py" startline="75" endline="86" pcid="8"></source>
+<source file="systems/Home-Functional/functional/4175_1.py" startline="92" endline="101" pcid="11"></source>
+</class>
+
+<class classid="2" nclones="2" nlines="5" similarity="80">
+<source file="systems/Home-Functional/functional/71_1.py" startline="10" endline="17" pcid="15"></source>
+<source file="systems/Home-Functional/functional/71_1.py" startline="30" endline="37" pcid="17"></source>
+</class>
+
+<class classid="3" nclones="2" nlines="18" similarity="94">
+<source file="systems/Home-Functional/functional/71_1.py" startline="59" endline="79" pcid="20"></source>
+<source file="systems/Home-Functional/functional/71_1.py" startline="88" endline="109" pcid="22"></source>
+</class>
+
+<class classid="4" nclones="2" nlines="8" similarity="100">
+<source file="systems/Home-Functional/functional/2593_1.py" startline="18" endline="28" pcid="73"></source>
+<source file="systems/Home-Functional/functional/2586_1.py" startline="18" endline="28" pcid="646"></source>
+</class>
+
+<class classid="5" nclones="4" nlines="11" similarity="84">
+<source file="systems/Home-Functional/functional/3817_1.py" startline="55" endline="68" pcid="81"></source>
+<source file="systems/Home-Functional/functional/3817_1.py" startline="113" endline="127" pcid="88"></source>
+<source file="systems/Home-Functional/functional/3812_1.py" startline="201" endline="219" pcid="336"></source>
+<source file="systems/Home-Functional/functional/3820_1.py" startline="195" endline="213" pcid="502"></source>
+</class>
+
+<class classid="6" nclones="4" nlines="7" similarity="85">
+<source file="systems/Home-Functional/functional/3817_1.py" startline="57" endline="62" pcid="82"></source>
+<source file="systems/Home-Functional/functional/3820_1.py" startline="121" endline="127" pcid="495"></source>
+<source file="systems/Home-Functional/functional/3812_1.py" startline="123" endline="129" pcid="329"></source>
+<source file="systems/Home-Functional/functional/3817_1.py" startline="115" endline="121" pcid="89"></source>
+</class>
+
+<class classid="7" nclones="3" nlines="16" similarity="100">
+<source file="systems/Home-Functional/functional/3817_1.py" startline="90" endline="111" pcid="85"></source>
+<source file="systems/Home-Functional/functional/3812_1.py" startline="178" endline="199" pcid="333"></source>
+<source file="systems/Home-Functional/functional/3820_1.py" startline="172" endline="193" pcid="499"></source>
+</class>
+
+<class classid="8" nclones="3" nlines="10" similarity="90">
+<source file="systems/Home-Functional/functional/3817_1.py" startline="139" endline="160" pcid="92"></source>
+<source file="systems/Home-Functional/functional/3820_1.py" startline="295" endline="314" pcid="511"></source>
+<source file="systems/Home-Functional/functional/3812_1.py" startline="282" endline="301" pcid="343"></source>
+</class>
+
+<class classid="9" nclones="3" nlines="5" similarity="100">
+<source file="systems/Home-Functional/functional/3817_1.py" startline="167" endline="172" pcid="96"></source>
+<source file="systems/Home-Functional/functional/3820_1.py" startline="339" endline="347" pcid="517"></source>
+<source file="systems/Home-Functional/functional/3812_1.py" startline="326" endline="334" pcid="349"></source>
+</class>
+
+<class classid="10" nclones="2" nlines="5" similarity="100">
+<source file="systems/Home-Functional/functional/4760_1.py" startline="65" endline="70" pcid="141"></source>
+<source file="systems/Home-Functional/functional/4760_1.py" startline="78" endline="83" pcid="144"></source>
+</class>
+
+<class classid="11" nclones="2" nlines="12" similarity="81">
+<source file="systems/Home-Functional/functional/4760_1.py" startline="118" endline="135" pcid="150"></source>
+<source file="systems/Home-Functional/functional/4766_1.py" startline="86" endline="104" pcid="227"></source>
+</class>
+
+<class classid="12" nclones="2" nlines="7" similarity="100">
+<source file="systems/Home-Functional/functional/27_1.py" startline="90" endline="99" pcid="188"></source>
+<source file="systems/Home-Functional/functional/27_1.py" startline="186" endline="195" pcid="194"></source>
+</class>
+
+<class classid="13" nclones="3" nlines="8" similarity="100">
+<source file="systems/Home-Functional/functional/27_1.py" startline="150" endline="160" pcid="191"></source>
+<source file="systems/Home-Functional/functional/27_1.py" startline="174" endline="184" pcid="193"></source>
+<source file="systems/Home-Functional/functional/27_1.py" startline="162" endline="172" pcid="192"></source>
+</class>
+
+<class classid="14" nclones="2" nlines="8" similarity="100">
+<source file="systems/Home-Functional/functional/27_1.py" startline="197" endline="207" pcid="195"></source>
+<source file="systems/Home-Functional/functional/27_1.py" startline="233" endline="243" pcid="198"></source>
+</class>
+
+<class classid="15" nclones="4" nlines="8" similarity="100">
+<source file="systems/Home-Functional/functional/27_1.py" startline="209" endline="219" pcid="196"></source>
+<source file="systems/Home-Functional/functional/27_1.py" startline="257" endline="265" pcid="200"></source>
+<source file="systems/Home-Functional/functional/27_1.py" startline="221" endline="231" pcid="197"></source>
+<source file="systems/Home-Functional/functional/27_1.py" startline="245" endline="255" pcid="199"></source>
+</class>
+
+<class classid="16" nclones="2" nlines="5" similarity="100">
+<source file="systems/Home-Functional/functional/4824_1.py" startline="11" endline="20" pcid="201"></source>
+<source file="systems/Home-Functional/functional/4824_1.py" startline="22" endline="31" pcid="202"></source>
+</class>
+
+<class classid="17" nclones="3" nlines="6" similarity="100">
+<source file="systems/Home-Functional/functional/4809_1.py" startline="28" endline="36" pcid="206"></source>
+<source file="systems/Home-Functional/functional/4809_1.py" startline="38" endline="46" pcid="207"></source>
+<source file="systems/Home-Functional/functional/4809_1.py" startline="66" endline="74" pcid="209"></source>
+</class>
+
+<class classid="18" nclones="2" nlines="10" similarity="90">
+<source file="systems/Home-Functional/functional/4766_1.py" startline="56" endline="65" pcid="223"></source>
+<source file="systems/Home-Functional/functional/4766_1.py" startline="67" endline="77" pcid="224"></source>
+</class>
+
+<class classid="19" nclones="4" nlines="15" similarity="100">
+<source file="systems/Home-Functional/functional/2584_1.py" startline="91" endline="108" pcid="230"></source>
+<source file="systems/Home-Functional/functional/2584_1.py" startline="131" endline="146" pcid="232"></source>
+<source file="systems/Home-Functional/functional/4158_1.py" startline="159" endline="174" pcid="689"></source>
+<source file="systems/Home-Functional/functional/2584_1.py" startline="112" endline="129" pcid="231"></source>
+</class>
+
+<class classid="20" nclones="2" nlines="10" similarity="90">
+<source file="systems/Home-Functional/functional/34_1.py" startline="101" endline="116" pcid="271"></source>
+<source file="systems/Home-Functional/functional/34_1.py" startline="118" endline="133" pcid="275"></source>
+</class>
+
+<class classid="21" nclones="8" nlines="15" similarity="100">
+<source file="systems/Home-Functional/functional/202_1.py" startline="70" endline="87" pcid="290"></source>
+<source file="systems/Home-Functional/functional/202_1.py" startline="89" endline="106" pcid="291"></source>
+<source file="systems/Home-Functional/functional/202_1.py" startline="184" endline="201" pcid="296"></source>
+<source file="systems/Home-Functional/functional/202_1.py" startline="108" endline="125" pcid="292"></source>
+<source file="systems/Home-Functional/functional/202_1.py" startline="127" endline="144" pcid="293"></source>
+<source file="systems/Home-Functional/functional/202_1.py" startline="203" endline="218" pcid="297"></source>
+<source file="systems/Home-Functional/functional/202_1.py" startline="146" endline="163" pcid="294"></source>
+<source file="systems/Home-Functional/functional/202_1.py" startline="165" endline="182" pcid="295"></source>
+</class>
+
+<class classid="22" nclones="2" nlines="15" similarity="93">
+<source file="systems/Home-Functional/functional/436_1.py" startline="55" endline="72" pcid="323"></source>
+<source file="systems/Home-Functional/functional/436_1.py" startline="75" endline="90" pcid="324"></source>
+</class>
+
+<class classid="23" nclones="2" nlines="47" similarity="87">
+<source file="systems/Home-Functional/functional/3812_1.py" startline="70" endline="135" pcid="325"></source>
+<source file="systems/Home-Functional/functional/3820_1.py" startline="72" endline="133" pcid="491"></source>
+</class>
+
+<class classid="24" nclones="2" nlines="55" similarity="89">
+<source file="systems/Home-Functional/functional/3812_1.py" startline="137" endline="219" pcid="331"></source>
+<source file="systems/Home-Functional/functional/3820_1.py" startline="135" endline="213" pcid="497"></source>
+</class>
+
+<class classid="25" nclones="2" nlines="6" similarity="83">
+<source file="systems/Home-Functional/functional/3812_1.py" startline="247" endline="255" pcid="340"></source>
+<source file="systems/Home-Functional/functional/3820_1.py" startline="239" endline="246" pcid="506"></source>
+</class>
+
+<class classid="26" nclones="2" nlines="24" similarity="95">
+<source file="systems/Home-Functional/functional/3812_1.py" startline="257" endline="306" pcid="341"></source>
+<source file="systems/Home-Functional/functional/3820_1.py" startline="271" endline="319" pcid="509"></source>
+</class>
+
+<class classid="27" nclones="2" nlines="7" similarity="100">
+<source file="systems/Home-Functional/functional/3812_1.py" startline="308" endline="324" pcid="347"></source>
+<source file="systems/Home-Functional/functional/3820_1.py" startline="321" endline="337" pcid="515"></source>
+</class>
+
+<class classid="28" nclones="2" nlines="7" similarity="100">
+<source file="systems/Home-Functional/functional/3812_1.py" startline="336" endline="345" pcid="352"></source>
+<source file="systems/Home-Functional/functional/3820_1.py" startline="349" endline="358" pcid="520"></source>
+</class>
+
+<class classid="29" nclones="2" nlines="77" similarity="100">
+<source file="systems/Home-Functional/functional/3812_1.py" startline="347" endline="455" pcid="356"></source>
+<source file="systems/Home-Functional/functional/3820_1.py" startline="360" endline="469" pcid="524"></source>
+</class>
+
+<class classid="30" nclones="8" nlines="5" similarity="80">
+<source file="systems/Home-Functional/functional/52_1.py" startline="25" endline="34" pcid="388"></source>
+<source file="systems/Home-Functional/functional/52_1.py" startline="72" endline="81" pcid="390"></source>
+<source file="systems/Home-Functional/functional/52_1.py" startline="189" endline="198" pcid="395"></source>
+<source file="systems/Home-Functional/functional/52_1.py" startline="94" endline="103" pcid="391"></source>
+<source file="systems/Home-Functional/functional/52_1.py" startline="139" endline="148" pcid="393"></source>
+<source file="systems/Home-Functional/functional/52_1.py" startline="116" endline="125" pcid="392"></source>
+<source file="systems/Home-Functional/functional/52_1.py" startline="211" endline="220" pcid="396"></source>
+<source file="systems/Home-Functional/functional/52_1.py" startline="46" endline="57" pcid="389"></source>
+</class>
+
+<class classid="31" nclones="7" nlines="11" similarity="81">
+<source file="systems/Home-Functional/functional/47_1.py" startline="44" endline="55" pcid="401"></source>
+<source file="systems/Home-Functional/functional/47_1.py" startline="122" endline="134" pcid="407"></source>
+<source file="systems/Home-Functional/functional/47_1.py" startline="109" endline="120" pcid="406"></source>
+<source file="systems/Home-Functional/functional/47_1.py" startline="83" endline="94" pcid="404"></source>
+<source file="systems/Home-Functional/functional/47_1.py" startline="96" endline="107" pcid="405"></source>
+<source file="systems/Home-Functional/functional/47_1.py" startline="57" endline="68" pcid="402"></source>
+<source file="systems/Home-Functional/functional/47_1.py" startline="70" endline="81" pcid="403"></source>
+</class>
+
+<class classid="32" nclones="2" nlines="6" similarity="100">
+<source file="systems/Home-Functional/functional/47_1.py" startline="281" endline="292" pcid="437"></source>
+<source file="systems/Home-Functional/functional/47_1.py" startline="294" endline="305" pcid="438"></source>
+</class>
+
+<class classid="33" nclones="2" nlines="8" similarity="100">
+<source file="systems/Home-Functional/functional/47_1.py" startline="553" endline="565" pcid="444"></source>
+<source file="systems/Home-Functional/functional/47_1.py" startline="764" endline="774" pcid="449"></source>
+</class>
+
+<class classid="34" nclones="5" nlines="5" similarity="83">
+<source file="systems/Home-Functional/functional/26_1.py" startline="106" endline="114" pcid="468"></source>
+<source file="systems/Home-Functional/functional/26_1.py" startline="163" endline="172" pcid="473"></source>
+<source file="systems/Home-Functional/functional/26_1.py" startline="153" endline="161" pcid="472"></source>
+<source file="systems/Home-Functional/functional/26_1.py" startline="174" endline="180" pcid="474"></source>
+<source file="systems/Home-Functional/functional/26_1.py" startline="129" endline="139" pcid="470"></source>
+</class>
+
+<class classid="35" nclones="2" nlines="7" similarity="100">
+<source file="systems/Home-Functional/functional/4399_1.py" startline="65" endline="74" pcid="582"></source>
+<source file="systems/Home-Functional/functional/4399_1.py" startline="76" endline="83" pcid="583"></source>
+</class>
+
+<class classid="36" nclones="6" nlines="5" similarity="80">
+<source file="systems/Home-Functional/functional/87_1.py" startline="28" endline="34" pcid="650"></source>
+<source file="systems/Home-Functional/functional/87_1.py" startline="46" endline="52" pcid="654"></source>
+<source file="systems/Home-Functional/functional/87_1.py" startline="37" endline="43" pcid="652"></source>
+<source file="systems/Home-Functional/functional/87_1.py" startline="64" endline="70" pcid="658"></source>
+<source file="systems/Home-Functional/functional/87_1.py" startline="55" endline="61" pcid="656"></source>
+<source file="systems/Home-Functional/functional/87_1.py" startline="73" endline="79" pcid="660"></source>
+</class>
+
+<class classid="37" nclones="2" nlines="19" similarity="94">
+<source file="systems/Home-Functional/functional/87_1.py" startline="117" endline="143" pcid="664"></source>
+<source file="systems/Home-Functional/functional/87_1.py" startline="145" endline="170" pcid="666"></source>
+</class>
+
+</clones>

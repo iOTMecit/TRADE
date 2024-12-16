@@ -1,0 +1,122 @@
+<clones>
+<systeminfo processor="nicad6" system="A-Deleted" granularity="blocks" threshold="0%" minlines="5" maxlines="2500"/>
+<cloneinfo npcs="2258" npairs="33"/>
+<runinfo ncompares="28804" cputime="27631"/>
+<classinfo nclasses="22"/>
+
+<class classid="1" nclones="2" nlines="5" similarity="100">
+<source file="systems/A-Deleted/3820.py" startline="92" endline="99" pcid="246"></source>
+<source file="systems/A-Deleted/3812.py" startline="94" endline="101" pcid="334"></source>
+</class>
+
+<class classid="2" nclones="2" nlines="9" similarity="100">
+<source file="systems/A-Deleted/3820.py" startline="102" endline="112" pcid="247"></source>
+<source file="systems/A-Deleted/3812.py" startline="104" endline="114" pcid="335"></source>
+</class>
+
+<class classid="3" nclones="2" nlines="16" similarity="100">
+<source file="systems/A-Deleted/3820.py" startline="114" endline="133" pcid="248"></source>
+<source file="systems/A-Deleted/3812.py" startline="116" endline="135" pcid="336"></source>
+</class>
+
+<class classid="4" nclones="2" nlines="7" similarity="100">
+<source file="systems/A-Deleted/3820.py" startline="160" endline="169" pcid="252"></source>
+<source file="systems/A-Deleted/3812.py" startline="166" endline="175" pcid="340"></source>
+</class>
+
+<class classid="5" nclones="3" nlines="16" similarity="100">
+<source file="systems/A-Deleted/3820.py" startline="172" endline="193" pcid="253"></source>
+<source file="systems/A-Deleted/3817.py" startline="90" endline="111" pcid="1445"></source>
+<source file="systems/A-Deleted/3812.py" startline="178" endline="199" pcid="341"></source>
+</class>
+
+<class classid="6" nclones="2" nlines="13" similarity="100">
+<source file="systems/A-Deleted/3820.py" startline="195" endline="213" pcid="256"></source>
+<source file="systems/A-Deleted/3812.py" startline="201" endline="219" pcid="344"></source>
+</class>
+
+<class classid="7" nclones="2" nlines="8" similarity="100">
+<source file="systems/A-Deleted/3820.py" startline="282" endline="293" pcid="264"></source>
+<source file="systems/A-Deleted/3812.py" startline="269" endline="280" pcid="350"></source>
+</class>
+
+<class classid="8" nclones="2" nlines="9" similarity="100">
+<source file="systems/A-Deleted/3820.py" startline="295" endline="314" pcid="265"></source>
+<source file="systems/A-Deleted/3812.py" startline="282" endline="301" pcid="351"></source>
+</class>
+
+<class classid="9" nclones="2" nlines="10" similarity="100">
+<source file="systems/A-Deleted/3820.py" startline="321" endline="337" pcid="269"></source>
+<source file="systems/A-Deleted/3812.py" startline="308" endline="324" pcid="355"></source>
+</class>
+
+<class classid="10" nclones="3" nlines="5" similarity="100">
+<source file="systems/A-Deleted/3820.py" startline="339" endline="347" pcid="271"></source>
+<source file="systems/A-Deleted/3812.py" startline="326" endline="334" pcid="357"></source>
+<source file="systems/A-Deleted/3817.py" startline="167" endline="172" pcid="1456"></source>
+</class>
+
+<class classid="11" nclones="2" nlines="7" similarity="100">
+<source file="systems/A-Deleted/3820.py" startline="349" endline="358" pcid="274"></source>
+<source file="systems/A-Deleted/3812.py" startline="336" endline="345" pcid="360"></source>
+</class>
+
+<class classid="12" nclones="2" nlines="77" similarity="100">
+<source file="systems/A-Deleted/3820.py" startline="360" endline="469" pcid="278"></source>
+<source file="systems/A-Deleted/3812.py" startline="347" endline="455" pcid="364"></source>
+</class>
+
+<class classid="13" nclones="2" nlines="6" similarity="100">
+<source file="systems/A-Deleted/759.py" startline="12" endline="20" pcid="711"></source>
+<source file="systems/A-Deleted/759.py" startline="23" endline="29" pcid="713"></source>
+</class>
+
+<class classid="14" nclones="2" nlines="11" similarity="100">
+<source file="systems/A-Deleted/734.py" startline="837" endline="850" pcid="807"></source>
+<source file="systems/A-Deleted/734.py" startline="852" endline="863" pcid="810"></source>
+</class>
+
+<class classid="15" nclones="2" nlines="7" similarity="100">
+<source file="systems/A-Deleted/3946.py" startline="106" endline="116" pcid="1202"></source>
+<source file="systems/A-Deleted/3946.py" startline="223" endline="233" pcid="1207"></source>
+</class>
+
+<class classid="16" nclones="4" nlines="5" similarity="100">
+<source file="systems/A-Deleted/3946.py" startline="185" endline="192" pcid="1205"></source>
+<source file="systems/A-Deleted/3946.py" startline="369" endline="376" pcid="1214"></source>
+<source file="systems/A-Deleted/3946.py" startline="308" endline="315" pcid="1210"></source>
+<source file="systems/A-Deleted/3946.py" startline="382" endline="387" pcid="1216"></source>
+</class>
+
+<class classid="17" nclones="2" nlines="8" similarity="100">
+<source file="systems/A-Deleted/4362.py" startline="200" endline="215" pcid="1365"></source>
+<source file="systems/A-Deleted/4362.py" startline="264" endline="279" pcid="1378"></source>
+</class>
+
+<class classid="18" nclones="2" nlines="7" similarity="100">
+<source file="systems/A-Deleted/1271.py" startline="17" endline="37" pcid="1403"></source>
+<source file="systems/A-Deleted/4157.py" startline="17" endline="37" pcid="1586"></source>
+</class>
+
+<class classid="19" nclones="3" nlines="10" similarity="100">
+<source file="systems/A-Deleted/3965.py" startline="39" endline="50" pcid="1560"></source>
+<source file="systems/A-Deleted/3965.py" startline="99" endline="110" pcid="1564"></source>
+<source file="systems/A-Deleted/3965.py" startline="66" endline="77" pcid="1562"></source>
+</class>
+
+<class classid="20" nclones="2" nlines="5" similarity="100">
+<source file="systems/A-Deleted/1894.py" startline="129" endline="137" pcid="1736"></source>
+<source file="systems/A-Deleted/1894.py" startline="178" endline="186" pcid="1742"></source>
+</class>
+
+<class classid="21" nclones="2" nlines="13" similarity="100">
+<source file="systems/A-Deleted/639.py" startline="65" endline="92" pcid="2116"></source>
+<source file="systems/A-Deleted/639.py" startline="94" endline="119" pcid="2121"></source>
+</class>
+
+<class classid="22" nclones="2" nlines="5" similarity="100">
+<source file="systems/A-Deleted/1741.py" startline="17" endline="24" pcid="2177"></source>
+<source file="systems/A-Deleted/1379.py" startline="17" endline="24" pcid="2206"></source>
+</class>
+
+</clones>
