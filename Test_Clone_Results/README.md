@@ -15,6 +15,10 @@ Clone detection results that used in the Section 5 (Before)
 
 Clone detection results that used in the Section 5 (After)
 
+## Manual
+
+Tool outputs that used for manual forecasting and results.
+
 ## SyntaxFree_Uniqeu
 
 Output of the syntax-error cleaned versions of the projects. These outputs were also filtered to get uniqeu values in Simian and CPD.
