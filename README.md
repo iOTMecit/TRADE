@@ -8,6 +8,7 @@ Code clones in test scripts can significantly reduce maintainability. They can l
 ## File Structure
 - `Clone Detection Tools`: contains the installation stages of clone detection tools 
 - `DataSet`: the original code of the open source projects used before and after the refactor and the unit test/functional test versions.
+- `Evaluation Scripts`: contains all the codes used throughout this study.
 - `Open Source Projects`: contains the release versions of the open source projects used in this study and the source files in that release. 
 - `Test Refactoring Tool`: contains the automatic refactor tool.
 - `Test_Clone_Results`: contains the output before and after automatic refactor.
