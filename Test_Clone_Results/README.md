@@ -14,3 +14,11 @@ Clone detection results that used in the Section 5 (Before)
 ## Clone Detection Outputs(0.2) (After Refactor)
 
 Clone detection results that used in the Section 5 (After)
+
+## SyntaxFree_Uniqeu
+
+Output of the syntax-error cleaned versions of the projects. These outputs were also filtered to get uniqeu values in Simian and CPD.
+
+## Test Type Compare
+
+Clone detection results that used in the Section 6.2
