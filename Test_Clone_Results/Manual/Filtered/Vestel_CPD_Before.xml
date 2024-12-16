@@ -1,0 +1,634 @@
+Found a 71 line (340 tokens) duplication in the following files: 
+Starting at line 80 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__1_init.py & Finished at line 150
+Starting at line 77 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__1_init.py & Finished at line 147
+Starting at line 77 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__1_init.py & Finished at line 147
+Starting at line 78 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__1_init.py & Finished at line 148
+Starting at line 75 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__1_init.py & Finished at line 145
+Found a 17 line (141 tokens) duplication in the following files: 
+Starting at line 701 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 717
+Starting at line 768 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 784
+Starting at line 826 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 842
+Starting at line 892 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 908
+Starting at line 957 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 973
+Starting at line 1024 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 1040
+Starting at line 1080 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 1096
+Found a 29 line (127 tokens) duplication in the following files: 
+Starting at line 158 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__1_init.py & Finished at line 186
+Starting at line 161 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__1_init.py & Finished at line 189
+Starting at line 155 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__1_init.py & Finished at line 183
+Starting at line 156 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__1_init.py & Finished at line 184
+Found a 11 line (100 tokens) duplication in the following files: 
+Starting at line 973 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 983
+Starting at line 1096 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 1106
+Found a 6 line (68 tokens) duplication in the following files: 
+Starting at line 987 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 992
+Starting at line 1108 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 1113
+Found a 9 line (65 tokens) duplication in the following files: 
+Starting at line 68 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 76
+Starting at line 1262 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 1270
+Starting at line 1300 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 1308
+Starting at line 1338 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 1346
+Starting at line 1376 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 1384
+Starting at line 1426 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 1434
+Starting at line 1463 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 1471
+Starting at line 1500 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 1508
+Found a 6 line (64 tokens) duplication in the following files: 
+Starting at line 783 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 788
+Starting at line 794 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 799
+Found a 13 line (62 tokens) duplication in the following files: 
+Starting at line 718 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 730
+Starting at line 756 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 768
+Starting at line 794 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 806
+Starting at line 832 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 844
+Starting at line 870 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 882
+Starting at line 908 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 920
+Starting at line 978 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 990
+Starting at line 1015 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 1027
+Starting at line 1433 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 1445
+Found a 10 line (59 tokens) duplication in the following files: 
+Starting at line 927 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 936
+Starting at line 950 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 959
+Starting at line 974 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 983
+Starting at line 998 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1007
+Starting at line 1022 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1031
+Starting at line 1046 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1055
+Starting at line 1233 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1242
+Starting at line 1270 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1279
+Starting at line 1438 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1447
+Found a 10 line (54 tokens) duplication in the following files: 
+Starting at line 1070 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1079
+Starting at line 1094 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1103
+Starting at line 1124 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1133
+Starting at line 1154 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1163
+Found a 5 line (54 tokens) duplication in the following files: 
+Starting at line 758 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 762
+Starting at line 770 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 774
+Found a 6 line (53 tokens) duplication in the following files: 
+Starting at line 562 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 567
+Starting at line 601 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 606
+Found a 24 line (52 tokens) duplication in the following files: 
+Starting at line 27 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__1_init.py & Finished at line 50
+Starting at line 21 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__1_init.py & Finished at line 44
+Starting at line 24 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__1_init.py & Finished at line 47
+Starting at line 25 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__1_init.py & Finished at line 48
+Starting at line 22 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__1_init.py & Finished at line 45
+Found a 16 line (52 tokens) duplication in the following files: 
+Starting at line 64 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__1_init.py & Finished at line 79
+Starting at line 61 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__1_init.py & Finished at line 76
+Starting at line 61 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__1_init.py & Finished at line 76
+Starting at line 62 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__1_init.py & Finished at line 77
+Starting at line 59 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__1_init.py & Finished at line 74
+Found a 6 line (52 tokens) duplication in the following files: 
+Starting at line 551 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 556
+Starting at line 557 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 562
+Found a 5 line (49 tokens) duplication in the following files: 
+Starting at line 53 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 57
+Starting at line 268 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 272
+Found a 9 line (48 tokens) duplication in the following files: 
+Starting at line 12 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__4_method.py & Finished at line 20
+Starting at line 8 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__5_method.py & Finished at line 16
+Found a 1 line (48 tokens) duplication in the following files: 
+Starting at line 735 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 735
+Starting at line 736 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 736
+Found a 12 line (47 tokens) duplication in the following files: 
+Starting at line 189 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 200
+Starting at line 304 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 315
+Starting at line 339 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 350
+Starting at line 381 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 392
+Starting at line 408 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 419
+Starting at line 435 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 446
+Starting at line 496 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 507
+Starting at line 568 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 579
+Found a 4 line (47 tokens) duplication in the following files: 
+Starting at line 765 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 768
+Starting at line 779 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 782
+Found a 5 line (47 tokens) duplication in the following files: 
+Starting at line 51 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 55
+Starting at line 360 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 364
+Found a 7 line (47 tokens) duplication in the following files: 
+Starting at line 365 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 371
+Starting at line 405 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 411
+Found a 5 line (46 tokens) duplication in the following files: 
+Starting at line 138 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 142
+Starting at line 206 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 210
+Starting at line 272 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 276
+Starting at line 357 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 361
+Starting at line 423 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 427
+Starting at line 489 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 493
+Starting at line 555 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 559
+Starting at line 621 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 625
+Starting at line 687 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 691
+Starting at line 755 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 759
+Starting at line 821 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 825
+Starting at line 887 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 891
+Starting at line 1288 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1292
+Found a 4 line (46 tokens) duplication in the following files: 
+Starting at line 12 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__3_macro.py & Finished at line 15
+Starting at line 13 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__3_macro.py & Finished at line 16
+Found a 9 line (46 tokens) duplication in the following files: 
+Starting at line 128 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 136
+Starting at line 430 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 438
+Found a 3 line (45 tokens) duplication in the following files: 
+Starting at line 8 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__2_mask.py & Finished at line 10
+Starting at line 5 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__2_mask.py & Finished at line 7
+Found a 7 line (45 tokens) duplication in the following files: 
+Starting at line 689 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 695
+Starting at line 756 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 762
+Starting at line 814 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 820
+Starting at line 880 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 886
+Starting at line 945 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 951
+Starting at line 1012 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 1018
+Starting at line 1068 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 1074
+Found a 7 line (44 tokens) duplication in the following files: 
+Starting at line 2046 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 2052
+Starting at line 2065 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 2071
+Found a 6 line (44 tokens) duplication in the following files: 
+Starting at line 615 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 620
+Starting at line 829 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 834
+Found a 11 line (44 tokens) duplication in the following files: 
+Starting at line 745 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 755
+Starting at line 934 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 944
+Starting at line 1057 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 1067
+Found a 7 line (43 tokens) duplication in the following files: 
+Starting at line 152 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__1_init.py & Finished at line 158
+Starting at line 149 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__1_init.py & Finished at line 155
+Starting at line 150 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__1_init.py & Finished at line 156
+Starting at line 147 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__1_init.py & Finished at line 153
+Found a 7 line (43 tokens) duplication in the following files: 
+Starting at line 435 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 441
+Starting at line 972 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 978
+Starting at line 991 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 997
+Starting at line 1010 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1016
+Starting at line 1029 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1035
+Starting at line 1048 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1054
+Starting at line 1067 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1073
+Starting at line 1086 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1092
+Starting at line 1105 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1111
+Starting at line 1124 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1130
+Starting at line 1143 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1149
+Starting at line 1162 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1168
+Starting at line 1181 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1187
+Found a 7 line (43 tokens) duplication in the following files: 
+Starting at line 454 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 460
+Starting at line 473 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 479
+Starting at line 1445 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1451
+Found a 7 line (43 tokens) duplication in the following files: 
+Starting at line 530 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 536
+Starting at line 1524 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1530
+Found a 7 line (43 tokens) duplication in the following files: 
+Starting at line 549 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 555
+Starting at line 587 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 593
+Starting at line 1543 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1549
+Found a 7 line (43 tokens) duplication in the following files: 
+Starting at line 568 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 574
+Starting at line 1563 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1569
+Starting at line 1583 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1589
+Found a 7 line (43 tokens) duplication in the following files: 
+Starting at line 625 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 631
+Starting at line 1623 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1629
+Found a 4 line (43 tokens) duplication in the following files: 
+Starting at line 1142 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1145
+Starting at line 1172 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1175
+Found a 11 line (43 tokens) duplication in the following files: 
+Starting at line 1338 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1348
+Starting at line 1351 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1361
+Starting at line 1364 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1374
+Starting at line 1377 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1387
+Starting at line 1390 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1400
+Starting at line 1403 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1413
+Found a 16 line (42 tokens) duplication in the following files: 
+Starting at line 149 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 164
+Starting at line 165 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 180
+Starting at line 223 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 238
+Starting at line 239 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 254
+Starting at line 249 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 264
+Found a 9 line (42 tokens) duplication in the following files: 
+Starting at line 712 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 720
+Starting at line 1705 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1713
+Found a 5 line (42 tokens) duplication in the following files: 
+Starting at line 748 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 752
+Starting at line 759 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 763
+Starting at line 771 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 775
+Found a 5 line (41 tokens) duplication in the following files: 
+Starting at line 912 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 916
+Starting at line 959 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 963
+Starting at line 983 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 987
+Starting at line 1007 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1011
+Starting at line 1031 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1035
+Starting at line 1055 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1059
+Starting at line 1079 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1083
+Starting at line 1193 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1197
+Found a 5 line (41 tokens) duplication in the following files: 
+Starting at line 1285 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1289
+Starting at line 1454 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1458
+Found a 5 line (41 tokens) duplication in the following files: 
+Starting at line 1291 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1295
+Starting at line 1460 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1464
+Found a 5 line (41 tokens) duplication in the following files: 
+Starting at line 1297 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1301
+Starting at line 1466 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1470
+Found a 6 line (41 tokens) duplication in the following files: 
+Starting at line 943 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 948
+Starting at line 948 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 953
+Found a 5 line (41 tokens) duplication in the following files: 
+Starting at line 85 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 89
+Starting at line 91 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 95
+Starting at line 671 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 675
+Starting at line 681 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 685
+Found a 6 line (41 tokens) duplication in the following files: 
+Starting at line 297 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 302
+Starting at line 346 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 351
+Found a 4 line (40 tokens) duplication in the following files: 
+Starting at line 132 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 135
+Starting at line 200 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 203
+Starting at line 266 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 269
+Starting at line 351 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 354
+Starting at line 417 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 420
+Starting at line 483 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 486
+Starting at line 549 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 552
+Starting at line 615 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 618
+Starting at line 681 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 684
+Starting at line 749 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 752
+Starting at line 815 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 818
+Starting at line 881 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 884
+Starting at line 938 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 941
+Starting at line 1221 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1224
+Starting at line 1244 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1247
+Starting at line 1282 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1285
+Starting at line 1326 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1329
+Found a 4 line (40 tokens) duplication in the following files: 
+Starting at line 1457 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1460
+Starting at line 1497 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1500
+Starting at line 1522 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1525
+Starting at line 1548 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1551
+Starting at line 1574 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1577
+Starting at line 1600 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1603
+Starting at line 1626 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1629
+Starting at line 1652 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1655
+Starting at line 1678 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1681
+Starting at line 1704 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1707
+Starting at line 1730 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1733
+Found a 5 line (39 tokens) duplication in the following files: 
+Starting at line 46 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 50
+Starting at line 74 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 78
+Starting at line 194 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 198
+Starting at line 734 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 738
+Starting at line 951 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 955
+Starting at line 1726 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1730
+Starting at line 2026 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 2030
+Found a 6 line (39 tokens) duplication in the following files: 
+Starting at line 73 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 78
+Starting at line 151 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 156
+Starting at line 177 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 182
+Starting at line 203 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 208
+Starting at line 292 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 297
+Starting at line 327 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 332
+Starting at line 369 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 374
+Starting at line 396 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 401
+Starting at line 423 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 428
+Starting at line 450 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 455
+Starting at line 484 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 489
+Starting at line 517 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 522
+Starting at line 938 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 943
+Found a 10 line (39 tokens) duplication in the following files: 
+Starting at line 121 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 130
+Starting at line 162 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 171
+Starting at line 220 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 229
+Found a 12 line (38 tokens) duplication in the following files: 
+Starting at line 53 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__1_init.py & Finished at line 64
+Starting at line 50 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__1_init.py & Finished at line 61
+Starting at line 50 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__1_init.py & Finished at line 61
+Starting at line 48 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__1_init.py & Finished at line 59
+Found a 8 line (38 tokens) duplication in the following files: 
+Starting at line 838 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 845
+Starting at line 1380 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1387
+Found a 2 line (38 tokens) duplication in the following files: 
+Starting at line 14 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__2_mask.py & Finished at line 15
+Starting at line 7 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__2_mask.py & Finished at line 8
+Starting at line 21 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__2_mask.py & Finished at line 22
+Starting at line 29 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__2_mask.py & Finished at line 30
+Starting at line 36 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__2_mask.py & Finished at line 37
+Starting at line 44 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__2_mask.py & Finished at line 45
+Starting at line 58 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__2_mask.py & Finished at line 59
+Starting at line 13 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__2_mask.py & Finished at line 14
+Found a 4 line (38 tokens) duplication in the following files: 
+Starting at line 17 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__3_macro.py & Finished at line 20
+Starting at line 16 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__3_macro.py & Finished at line 19
+Found a 8 line (38 tokens) duplication in the following files: 
+Starting at line 49 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 56
+Starting at line 75 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 82
+Starting at line 101 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 108
+Starting at line 127 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 134
+Starting at line 153 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 160
+Starting at line 179 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 186
+Starting at line 205 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 212
+Starting at line 294 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 301
+Starting at line 329 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 336
+Starting at line 371 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 378
+Starting at line 398 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 405
+Starting at line 425 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 432
+Starting at line 452 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 459
+Starting at line 486 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 493
+Starting at line 519 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 526
+Starting at line 950 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 957
+Found a 6 line (38 tokens) duplication in the following files: 
+Starting at line 96 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 101
+Starting at line 122 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 127
+Starting at line 712 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 717
+Found a 9 line (38 tokens) duplication in the following files: 
+Starting at line 593 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 601
+Starting at line 1025 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 1033
+Found a 4 line (38 tokens) duplication in the following files: 
+Starting at line 478 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 481
+Starting at line 517 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 520
+Found a 7 line (38 tokens) duplication in the following files: 
+Starting at line 577 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 583
+Starting at line 624 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 630
+Found a 4 line (37 tokens) duplication in the following files: 
+Starting at line 8 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__3_macro.py & Finished at line 11
+Starting at line 25 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__3_macro.py & Finished at line 28
+Found a 9 line (37 tokens) duplication in the following files: 
+Starting at line 768 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 776
+Starting at line 793 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 801
+Starting at line 811 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 819
+Starting at line 828 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 836
+Starting at line 846 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 854
+Starting at line 868 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 876
+Starting at line 889 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 897
+Starting at line 909 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 917
+Starting at line 939 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 947
+Starting at line 960 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 968
+Starting at line 979 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 987
+Starting at line 998 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1006
+Starting at line 1017 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1025
+Starting at line 1036 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1044
+Starting at line 1055 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1063
+Starting at line 1074 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1082
+Starting at line 1093 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1101
+Starting at line 1112 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1120
+Starting at line 1131 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1139
+Starting at line 1150 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1158
+Starting at line 1169 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1177
+Starting at line 1188 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1196
+Starting at line 1206 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1214
+Starting at line 1223 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1231
+Starting at line 1244 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1252
+Starting at line 1265 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1273
+Starting at line 1282 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1290
+Starting at line 1307 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1315
+Starting at line 1324 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1332
+Starting at line 1997 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 2005
+Found a 7 line (37 tokens) duplication in the following files: 
+Starting at line 902 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 908
+Starting at line 932 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 938
+Starting at line 1686 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1692
+Found a 12 line (37 tokens) duplication in the following files: 
+Starting at line 62 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__4_method.py & Finished at line 73
+Starting at line 12 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__4_method.py & Finished at line 23
+Found a 6 line (37 tokens) duplication in the following files: 
+Starting at line 92 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 97
+Starting at line 158 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 163
+Starting at line 226 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 231
+Starting at line 291 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 296
+Starting at line 509 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 514
+Starting at line 575 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 580
+Starting at line 641 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 646
+Starting at line 707 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 712
+Starting at line 775 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 780
+Starting at line 841 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 846
+Found a 3 line (37 tokens) duplication in the following files: 
+Starting at line 97 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 99
+Starting at line 1343 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 1345
+Found a 6 line (37 tokens) duplication in the following files: 
+Starting at line 116 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 121
+Starting at line 157 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 162
+Starting at line 215 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 220
+Starting at line 264 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 269
+Found a 6 line (37 tokens) duplication in the following files: 
+Starting at line 240 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 245
+Starting at line 266 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 271
+Starting at line 292 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 297
+Starting at line 317 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 322
+Starting at line 337 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 342
+Found a 2 line (36 tokens) duplication in the following files: 
+Starting at line 265 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__1_init.py & Finished at line 266
+Starting at line 295 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__1_init.py & Finished at line 296
+Starting at line 273 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__1_init.py & Finished at line 274
+Starting at line 303 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__1_init.py & Finished at line 304
+Starting at line 262 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__1_init.py & Finished at line 263
+Starting at line 292 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__1_init.py & Finished at line 293
+Starting at line 263 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__1_init.py & Finished at line 264
+Starting at line 293 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__1_init.py & Finished at line 294
+Starting at line 271 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__1_init.py & Finished at line 272
+Starting at line 301 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__1_init.py & Finished at line 302
+Found a 4 line (36 tokens) duplication in the following files: 
+Starting at line 1298 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1301
+Starting at line 1987 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1990
+Found a 7 line (36 tokens) duplication in the following files: 
+Starting at line 104 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 110
+Starting at line 170 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 176
+Starting at line 209 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 215
+Starting at line 238 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 244
+Starting at line 275 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 281
+Starting at line 323 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 329
+Starting at line 360 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 366
+Starting at line 389 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 395
+Starting at line 426 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 432
+Starting at line 455 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 461
+Starting at line 492 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 498
+Starting at line 521 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 527
+Starting at line 558 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 564
+Starting at line 587 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 593
+Starting at line 624 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 630
+Starting at line 653 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 659
+Starting at line 690 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 696
+Starting at line 719 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 725
+Starting at line 758 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 764
+Starting at line 787 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 793
+Starting at line 824 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 830
+Starting at line 853 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 859
+Starting at line 890 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 896
+Found a 7 line (36 tokens) duplication in the following files: 
+Starting at line 288 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 294
+Starting at line 374 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 380
+Starting at line 440 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 446
+Starting at line 1315 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1321
+Found a 8 line (36 tokens) duplication in the following files: 
+Starting at line 916 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 923
+Starting at line 963 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 970
+Starting at line 987 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 994
+Starting at line 1011 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1018
+Starting at line 1035 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1042
+Starting at line 1059 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1066
+Starting at line 1197 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1204
+Found a 4 line (36 tokens) duplication in the following files: 
+Starting at line 1280 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1283
+Starting at line 1449 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1452
+Found a 3 line (36 tokens) duplication in the following files: 
+Starting at line 10 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__2_mask.py & Finished at line 12
+Starting at line 17 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__2_mask.py & Finished at line 19
+Starting at line 47 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__2_mask.py & Finished at line 49
+Starting at line 54 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__2_mask.py & Finished at line 56
+Found a 4 line (36 tokens) duplication in the following files: 
+Starting at line 285 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 288
+Starting at line 334 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 337
+Found a 6 line (35 tokens) duplication in the following files: 
+Starting at line 195 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 200
+Starting at line 735 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 740
+Starting at line 781 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 786
+Starting at line 952 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 957
+Starting at line 1727 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1732
+Found a 10 line (35 tokens) duplication in the following files: 
+Starting at line 301 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 310
+Starting at line 324 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 333
+Starting at line 346 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 355
+Starting at line 366 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 375
+Starting at line 386 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 395
+Starting at line 405 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 414
+Starting at line 423 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 432
+Starting at line 442 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 451
+Starting at line 461 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 470
+Starting at line 480 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 489
+Starting at line 499 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 508
+Starting at line 518 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 527
+Starting at line 537 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 546
+Starting at line 556 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 565
+Starting at line 575 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 584
+Starting at line 594 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 603
+Starting at line 613 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 622
+Starting at line 632 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 641
+Starting at line 651 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 660
+Starting at line 670 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 679
+Starting at line 700 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 709
+Starting at line 721 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 730
+Starting at line 743 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 752
+Starting at line 768 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 777
+Starting at line 793 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 802
+Starting at line 811 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 820
+Starting at line 828 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 837
+Starting at line 846 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 855
+Starting at line 868 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 877
+Starting at line 889 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 898
+Starting at line 909 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 918
+Starting at line 939 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 948
+Starting at line 960 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 969
+Starting at line 979 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 988
+Starting at line 998 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1007
+Starting at line 1017 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1026
+Starting at line 1036 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1045
+Starting at line 1055 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1064
+Starting at line 1074 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1083
+Starting at line 1093 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1102
+Starting at line 1112 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1121
+Starting at line 1131 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1140
+Starting at line 1150 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1159
+Starting at line 1169 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1178
+Starting at line 1188 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1197
+Starting at line 1206 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1215
+Starting at line 1223 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1232
+Starting at line 1244 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1253
+Starting at line 1265 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1274
+Starting at line 1282 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1291
+Starting at line 1307 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1316
+Starting at line 1324 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1333
+Starting at line 1347 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1356
+Starting at line 1369 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1378
+Starting at line 1412 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1421
+Starting at line 1432 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1441
+Starting at line 1452 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1461
+Starting at line 1472 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1481
+Starting at line 1491 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1500
+Starting at line 1511 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1520
+Starting at line 1531 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1540
+Starting at line 1550 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1559
+Starting at line 1570 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1579
+Starting at line 1590 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1599
+Starting at line 1610 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1619
+Starting at line 1630 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1639
+Starting at line 1651 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1660
+Starting at line 1673 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1682
+Starting at line 1693 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1702
+Starting at line 1713 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1722
+Starting at line 1735 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1744
+Starting at line 1754 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1763
+Starting at line 1776 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1785
+Starting at line 1797 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1806
+Starting at line 1818 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1827
+Starting at line 1839 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1848
+Starting at line 1858 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1867
+Starting at line 1877 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1886
+Starting at line 1896 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1905
+Starting at line 1915 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1924
+Starting at line 1936 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1945
+Starting at line 1958 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1967
+Starting at line 1975 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 1984
+Starting at line 1997 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 2006
+Starting at line 2014 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/EPG/epg__5_tcg.py & Finished at line 2023
+Found a 5 line (35 tokens) duplication in the following files: 
+Starting at line 94 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 98
+Starting at line 123 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 127
+Starting at line 160 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 164
+Starting at line 189 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 193
+Starting at line 228 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 232
+Starting at line 257 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 261
+Starting at line 313 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 317
+Starting at line 342 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 346
+Starting at line 379 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 383
+Starting at line 408 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 412
+Starting at line 445 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 449
+Starting at line 474 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 478
+Starting at line 511 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 515
+Starting at line 540 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 544
+Starting at line 577 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 581
+Starting at line 606 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 610
+Starting at line 643 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 647
+Starting at line 672 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 676
+Starting at line 709 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 713
+Starting at line 738 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 742
+Starting at line 777 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 781
+Starting at line 806 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 810
+Starting at line 843 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 847
+Starting at line 872 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 876
+Found a 4 line (35 tokens) duplication in the following files: 
+Starting at line 914 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 917
+Starting at line 961 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 964
+Starting at line 985 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 988
+Starting at line 1107 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1110
+Starting at line 1137 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1140
+Starting at line 1167 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1170
+Starting at line 1195 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1198
+Found a 8 line (35 tokens) duplication in the following files: 
+Starting at line 1303 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1310
+Starting at line 1472 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Installation Based On Menu/ibom__5_tcg.py & Finished at line 1479
+Found a 9 line (35 tokens) duplication in the following files: 
+Starting at line 595 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 603
+Starting at line 730 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 738
+Starting at line 768 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 776
+Starting at line 806 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 814
+Starting at line 844 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 852
+Starting at line 882 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 890
+Starting at line 920 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 928
+Starting at line 1282 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 1290
+Starting at line 1320 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 1328
+Starting at line 1358 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 1366
+Starting at line 1445 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Parental Rating/pr__5_tcg.py & Finished at line 1453
+Found a 6 line (35 tokens) duplication in the following files: 
+Starting at line 1025 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 1030
+Starting at line 1062 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 1067
+Starting at line 1089 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 1094
+Starting at line 1116 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 1121
+Starting at line 1143 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 1148
+Starting at line 1170 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 1175
+Starting at line 1207 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 1212
+Starting at line 1246 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 1251
+Starting at line 1318 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 1323
+Found a 8 line (35 tokens) duplication in the following files: 
+Starting at line 1076 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 1083
+Starting at line 1103 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 1110
+Found a 8 line (35 tokens) duplication in the following files: 
+Starting at line 1194 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 1201
+Starting at line 1233 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Single Channel List/scl__5_tcg.py & Finished at line 1240
+Found a 7 line (35 tokens) duplication in the following files: 
+Starting at line 807 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 813
+Starting at line 873 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 879
+Starting at line 1005 of /home/vestel/pmd-bin-7.0.0/VestelCode/Old Script/Teletext/txt__6_tcg.py & Finished at line 1011
