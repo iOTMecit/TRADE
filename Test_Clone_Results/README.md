@@ -21,7 +21,7 @@ Tool outputs that used for manual forecasting and results.
 
 ## SyntaxFree_Uniqeu
 
-Output of the syntax-error cleaned versions of the projects. These outputs were also filtered to get uniqeu values in Simian and CPD.
+Output of the syntax-error cleaned versions of the projects. These outputs were also filtered to get uniqeu values in Simian and CPD. Also used in Table 3
 
 ## Test Type Compare
 
