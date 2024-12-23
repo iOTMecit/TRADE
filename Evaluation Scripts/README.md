@@ -1,49 +1,32 @@
-# TRADE
 
-This project is a Python application designed to automatically refactor clones in python test code. Follow the steps below to download, install and run the project.
+## CPD-Filtering.py
 
-## Installation
+It was used to obtain unique clones from CPD results.
 
-### Requirements
+## CPDPair.py
 
-- Python 3.6 or higher
-- `pip` (Python package manager)
-- Git
+It was used to obtain clone pair information not available in CPD.
 
-### Step 1: Download the TRADE
+## DeleteErrors.py
 
-Download TRADE to your local machine
+It was used to clean up py files with syntax and parsing errors found in NiCAD logs from projects. 
 
-### Step 2: Add your code to "systems" folder
+## NicadCPDRelativeRecallUnique.py
 
-Put the python project to refactor into “Test Refactoring Tool/systems”.
+It was used to find unique clones between NiCAD and CPD clone outputs for the relative recall calculation in Chapter 4.3.
 
-### Step 3: Install the TRADE
+## NicadSimianRelativeRecallUnique.py
 
-To run TRADE from the terminal, navigate to the main directory where you downloaded TRADE and install it with the following command:
-```shell	
-	pip install .
-```
-### Step 4: Set the BASE_PATH Environment Variable	
+It was used to find unique clones between NiCAD and Simian clone outputs for the relative recall calculation in Chapter 4.3.
 
-The project requires the BASE_PATH environment variable to be set. This variable should point to the root directory of the project:
-```shell
-	export BASE_PATH=$(pwd)  # On Windows: set BASE_PATH=%cd%
-```
-### Step 5: Run the Project
+## RenamingPys.py
 
-You can now run the project directly from the terminal:
-```shell
-	TRADE --xml_path XML_PATH 
-```
-Replace XML_PATH with the actual path to the XML file you want to process. For example:
-```shell
-	TRADE --xml_path /path/to/your/file.xml
-```
-## Usage
-The project uses the BASE_PATH environment variable to dynamically handle file paths. Make sure to set this variable to the correct directory path before running the project.The project uses also an XML file that contains clone detection output data. The XML file should specify source code clones, along with details such as file paths, line numbers, and similarity metrics. You can specify the path to this XML file using the `--xml_path` argument.
+It was used to rename py files with the counter structure to avoid file loss due to the py files being the same in some projects.
 
+## Simian-Filtering.py
 
-## Contributing
-If you would like to contribute, please open an issue or submit a pull request.	
+It was used to obtain unique clones from Simian results.
 
+## SimianPair.py
+
+It was used to obtain clone pair information not available in Simian.
