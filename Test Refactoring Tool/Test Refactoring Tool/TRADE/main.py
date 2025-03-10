@@ -803,7 +803,7 @@ def refactor_functions_80(func1, func2, path1, path2, import_name, type):
 def parse_xml_and_compare(xml_file_path):
     tree = ET.parse(xml_file_path)
     base_path = os.getenv('BASE_PATH', os.path.dirname(os.path.abspath(__file__)))
- root = tree.getroot()
+    root = tree.getroot()
     multi_clone = 2
     multi_clone_ary = []
     multi_array_path = []
