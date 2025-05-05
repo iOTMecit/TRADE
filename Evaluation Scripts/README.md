@@ -22,6 +22,10 @@ It was used to find unique clones between NiCAD and Simian clone outputs for the
 
 It was used to rename py files with the counter structure to avoid file loss due to the py files being the same in some projects.
 
+## Seperate_Unit_and_Functional_Test.py
+
+It was used to find and separate unit and functional test cases in both open-source and industrial project codebases.
+
 ## Simian-Filtering.py
 
 It was used to obtain unique clones from Simian results.
