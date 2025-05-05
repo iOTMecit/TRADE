@@ -1,3 +1,7 @@
+## Clone_Lines_for_Density.py
+
+It was used to calculate the total number of cloned lines from Simian, CPD, and NiCad outputs to analyze clone density in test scripts.
+
 ## CPD-Filtering.py
 
 It was used to obtain unique clones from CPD results.
