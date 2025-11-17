@@ -16,7 +16,11 @@ exact_count = 0
 near_count = 0
 similar_count = 0
 
-
+def parse_args():
+    parser = argparse.ArgumentParser(description="Process and refactor files based on XML clone data.")
+    parser.add_argument('--xml_path', type=str, required=True, help="Path to the XML file to process")
+    return parser.parse_args()
+    
 def read_non_comment_lines(filepath, start_line=None, end_line=None):
     with open(filepath, 'r') as file:
         lines = file.readlines()
